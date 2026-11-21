@@ -1,0 +1,414 @@
+{
+  "products": [
+    {
+      "id": "graph-nexus",
+      "name": "Nexus",
+      "dir": "graph-nexus",
+      "groups": [
+        {
+          "title": "Overview",
+          "pages": [
+            {
+              "href": "index.html",
+              "title": "Documentation Home"
+            },
+            {
+              "href": "api.html",
+              "title": "API Index"
+            },
+            {
+              "href": "api-signatures.html",
+              "title": "API Signatures"
+            }
+          ]
+        },
+        {
+          "title": "Installing Nexus",
+          "pages": [
+            {
+              "href": "installing/installing-graph-nexus.html",
+              "title": "Installing Nexus"
+            },
+            {
+              "href": "installing/importing-graph-nexus.html",
+              "title": "Importing Nexus"
+            },
+            {
+              "href": "installing/graph-nexus-and-typescript.html",
+              "title": "Nexus and TypeScript"
+            },
+            {
+              "href": "installing/upgrading.html",
+              "title": "Upgrading"
+            },
+            {
+              "href": "installing/using-graph-nexus-with-angular.html",
+              "title": "Using Nexus with Angular"
+            },
+            {
+              "href": "installing/using-graph-nexus-with-react.html",
+              "title": "Using Nexus with React"
+            },
+            {
+              "href": "installing/using-graph-nexus-with-rollup.html",
+              "title": "Using Nexus with Rollup"
+            },
+            {
+              "href": "installing/using-graph-nexus-with-vue.html",
+              "title": "Using Nexus with Vue"
+            },
+            {
+              "href": "installing/using-graph-nexus-with-webpack.html",
+              "title": "Using Nexus with Webpack"
+            },
+            {
+              "href": "installing/using-graph-nexus-with-plain-javascript.html",
+              "title": "Using Nexus with plain JavaScript"
+            }
+          ]
+        },
+        {
+          "title": "Basics",
+          "pages": [
+            {
+              "href": "basics/architecture.html",
+              "title": "Architecture"
+            },
+            {
+              "href": "basics/chart-basics.html",
+              "title": "Chart Basics"
+            },
+            {
+              "href": "basics/combos.html",
+              "title": "Combos"
+            },
+            {
+              "href": "basics/events-basics.html",
+              "title": "Events Basics"
+            },
+            {
+              "href": "basics/layout-basics.html",
+              "title": "Layout Basics"
+            },
+            {
+              "href": "basics/loading-data.html",
+              "title": "Loading Data"
+            },
+            {
+              "href": "basics/map-mode.html",
+              "title": "Map Mode"
+            },
+            {
+              "href": "basics/time-bar.html",
+              "title": "Time Bar"
+            }
+          ]
+        },
+        {
+          "title": "Features",
+          "pages": [
+            {
+              "href": "features/3d-view.html",
+              "title": "3D View"
+            },
+            {
+              "href": "features/aggregate-links.html",
+              "title": "Aggregate Links"
+            },
+            {
+              "href": "features/chart-export.html",
+              "title": "Chart Export"
+            },
+            {
+              "href": "features/combos-concepts.html",
+              "title": "Combos Concepts"
+            },
+            {
+              "href": "features/fonts-and-font-icons.html",
+              "title": "Fonts and Font Icons"
+            },
+            {
+              "href": "features/graph-centrality.html",
+              "title": "Graph Centrality"
+            },
+            {
+              "href": "features/graph-engine.html",
+              "title": "Graph Engine"
+            },
+            {
+              "href": "features/node-and-combo-styling.html",
+              "title": "Node and Combo Styling"
+            },
+            {
+              "href": "features/pdf-export.html",
+              "title": "PDF Export"
+            },
+            {
+              "href": "features/right-to-left-text.html",
+              "title": "Right-to-Left Text"
+            },
+            {
+              "href": "features/self-links.html",
+              "title": "Self Links"
+            },
+            {
+              "href": "features/time-zones.html",
+              "title": "Time Zones"
+            }
+          ]
+        },
+        {
+          "title": "Best Practices",
+          "pages": [
+            {
+              "href": "best-practices/asynchronous-javascript.html",
+              "title": "Asynchronous JavaScript"
+            },
+            {
+              "href": "best-practices/coding-and-testing-tips.html",
+              "title": "Coding and Testing Tips"
+            },
+            {
+              "href": "best-practices/cross-origin-images-cors.html",
+              "title": "Cross-Origin Images (CORS)"
+            },
+            {
+              "href": "best-practices/image-formats.html",
+              "title": "Image Formats"
+            },
+            {
+              "href": "best-practices/obfuscation-requirements.html",
+              "title": "Obfuscation Requirements"
+            },
+            {
+              "href": "best-practices/resizing-components.html",
+              "title": "Resizing Components"
+            },
+            {
+              "href": "best-practices/troubleshooting.html",
+              "title": "Troubleshooting"
+            }
+          ]
+        },
+        {
+          "title": "Third Party Integrations",
+          "pages": [
+            {
+              "href": "integrations/angular-reference.html",
+              "title": "Angular Reference"
+            },
+            {
+              "href": "integrations/neo4j-tutorial.html",
+              "title": "Neo4j Tutorial"
+            },
+            {
+              "href": "integrations/react-reference.html",
+              "title": "React Reference"
+            },
+            {
+              "href": "integrations/third-party-libraries.html",
+              "title": "Platforms and Dependencies"
+            },
+            {
+              "href": "integrations/vue-reference.html",
+              "title": "Vue Reference"
+            },
+            {
+              "href": "integrations/webgl.html",
+              "title": "WebGL"
+            }
+          ]
+        },
+        {
+          "title": "About Nexus",
+          "pages": [
+            {
+              "href": "about/accessibility.html",
+              "title": "Accessibility"
+            },
+            {
+              "href": "about/alpha-beta-features.html",
+              "title": "Alpha and Beta Features"
+            },
+            {
+              "href": "about/deprecation-process.html",
+              "title": "Deprecation Process"
+            },
+            {
+              "href": "about/performance.html",
+              "title": "Performance"
+            },
+            {
+              "href": "about/security.html",
+              "title": "Security"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "timeline",
+      "name": "Timeline",
+      "dir": "graph-nexus/timeline",
+      "groups": [
+        {
+          "title": "Timeline \u00b7 Overview",
+          "pages": [
+            {
+              "href": "docs.html",
+              "title": "Documentation Home"
+            },
+            {
+              "href": "api.html",
+              "title": "API Reference"
+            }
+          ]
+        },
+        {
+          "title": "Timeline \u00b7 Getting Started",
+          "pages": [
+            {
+              "href": "getting-started.html",
+              "title": "Getting Started"
+            },
+            {
+              "href": "updating.html",
+              "title": "Updating",
+              "sharedVariant": "js"
+            }
+          ]
+        },
+        {
+          "title": "Timeline \u00b7 Basics",
+          "pages": [
+            {
+              "href": "timeline-basics.html",
+              "title": "Timeline Essentials"
+            },
+            {
+              "href": "scales.html",
+              "title": "Scales"
+            }
+          ]
+        },
+        {
+          "title": "Timeline \u00b7 Items",
+          "pages": [
+            {
+              "href": "entities.html",
+              "title": "Entities"
+            },
+            {
+              "href": "events.html",
+              "title": "Events"
+            },
+            {
+              "href": "markers.html",
+              "title": "Markers"
+            },
+            {
+              "href": "time-series-charts.html",
+              "title": "Time Series Charts"
+            },
+            {
+              "href": "heatmap.html",
+              "title": "Heatmap"
+            },
+            {
+              "href": "font-icons.html",
+              "title": "Font Icons"
+            }
+          ]
+        },
+        {
+          "title": "Timeline \u00b7 Data and Time",
+          "pages": [
+            {
+              "href": "handling-data.html",
+              "title": "Handling Data",
+              "sharedVariant": "js"
+            },
+            {
+              "href": "updating-data.html",
+              "title": "Updating Data",
+              "sharedVariant": "js"
+            },
+            {
+              "href": "handling-time.html",
+              "title": "Handling Time"
+            },
+            {
+              "href": "time-zones.html",
+              "title": "Time Zones"
+            }
+          ]
+        },
+        {
+          "title": "Timeline \u00b7 Interaction",
+          "pages": [
+            {
+              "href": "handling-events.html",
+              "title": "Handling Events"
+            },
+            {
+              "href": "state-management.html",
+              "title": "State Management"
+            },
+            {
+              "href": "instance-methods.html",
+              "title": "Instance Methods"
+            }
+          ]
+        },
+        {
+          "title": "Timeline \u00b7 Integration",
+          "pages": [
+            {
+              "href": "graph-nexus-integration.html",
+              "title": "Nexus Integration"
+            },
+            {
+              "href": "export.html",
+              "title": "Export"
+            },
+            {
+              "href": "migration.html",
+              "title": "Migration"
+            }
+          ]
+        },
+        {
+          "title": "Timeline \u00b7 About",
+          "pages": [
+            {
+              "href": "architecture.html",
+              "title": "Architecture"
+            },
+            {
+              "href": "accessibility.html",
+              "title": "Accessibility"
+            },
+            {
+              "href": "obfuscation-requirements.html",
+              "title": "Obfuscation Requirements",
+              "sharedVariant": "js"
+            },
+            {
+              "href": "alpha-beta-features.html",
+              "title": "Alpha, Beta and Deprecated Features",
+              "sharedVariant": "js"
+            }
+          ]
+        }
+      ],
+      "variants": [
+        "js",
+        "react"
+      ],
+      "variantLabels": {
+        "js": "Plain JS",
+        "react": "React"
+      }
+    }
+  ]
+}
