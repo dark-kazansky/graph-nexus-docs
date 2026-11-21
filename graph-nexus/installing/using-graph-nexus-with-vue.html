@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Using Nexus with Vue — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="This quick start adds an interactive Nexus chart to a Vue app, using the Vue components shipped in the Nexus package. See the Vue Reference for every prope">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html" class="current" aria-current="page">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Using Nexus with Vue</h1>
+<h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2>
+<p>This quick start adds an interactive Nexus chart to a Vue app, using the Vue components shipped in the
+Nexus package. See the <a href="../integrations/vue-reference.html">Vue Reference</a> for every property and event.</p>
+<h2 id="requirements">Requirements<a class="heading-anchor" href="#requirements" aria-label="Link to this section">#</a></h2>
+<p>A current <a href="https://nodejs.org/">Node.js</a> LTS. Check with <code>node -v</code>.</p>
+
+<h2 id="create">Step 1: Create a Vue app<a class="heading-anchor" href="#create" aria-label="Link to this section">#</a></h2>
+<pre class="prettyprint"><code class="lang-bash">npm create vue@latest my-app
+cd my-app
+npm install</code></pre>
+<p>You don't need any of the optional features for this tutorial.</p>
+<h2 id="install">Step 2: Add Nexus to the app<a class="heading-anchor" href="#install" aria-label="Link to this section">#</a></h2>
+<p>Build the Nexus package from the Nexus repository (or use a tarball you were given):</p>
+<pre class="prettyprint"><code class="lang-bash">npm run build &amp;&amp; npm pack      # -&gt; graph-nexus-1.0.0.tgz</code></pre>
+<p>Then, from the <code>my-app</code> directory, install it and copy the bundled icons into the app's public folder:</p>
+<pre class="prettyprint"><code class="lang-bash">npm install file:./graph-nexus-1.0.0.tgz
+cp -R ./node_modules/graph-nexus/assets/icons ./public/icons</code></pre>
+<h2 id="chart">Step 3: Create a chart<a class="heading-anchor" href="#chart" aria-label="Link to this section">#</a></h2>
+<p>Replace <code>src/App.vue</code> with:</p>
+<pre class="prettyprint"><code class="lang-html">&lt;script setup&gt;
+import GraphNexus from &#x27;graph-nexus&#x27;;
+import { GraphNexusChart } from &#x27;graph-nexus/vue&#x27;;
+
+GraphNexus.paths({ images: &#x27;/&#x27; }); // icons/ lives in public/
+
+const data = {
+  type: &#x27;LinkChart&#x27;,
+  items: [
+    { type: &#x27;node&#x27;, id: &#x27;p1&#x27;, t: &#x27;Alice&#x27;, u: &#x27;icons/person.svg&#x27; },
+    { type: &#x27;node&#x27;, id: &#x27;p2&#x27;, t: &#x27;Bob&#x27;, u: &#x27;icons/person.svg&#x27; },
+    { type: &#x27;node&#x27;, id: &#x27;p3&#x27;, t: &#x27;Carol&#x27;, u: &#x27;icons/person.svg&#x27; },
+    { type: &#x27;node&#x27;, id: &#x27;b1&#x27;, t: &#x27;Bank&#x27;, u: &#x27;icons/money.svg&#x27; },
+    { type: &#x27;node&#x27;, id: &#x27;c1&#x27;, t: &#x27;Acme Ltd&#x27;, u: &#x27;icons/building.svg&#x27; },
+    { type: &#x27;link&#x27;, id: &#x27;l1&#x27;, id1: &#x27;p1&#x27;, id2: &#x27;b1&#x27;, a2: true, t: &#x27;$1,200&#x27; },
+    { type: &#x27;link&#x27;, id: &#x27;l2&#x27;, id1: &#x27;p2&#x27;, id2: &#x27;b1&#x27;, a2: true, t: &#x27;$800&#x27; },
+    { type: &#x27;link&#x27;, id: &#x27;l3&#x27;, id1: &#x27;b1&#x27;, id2: &#x27;c1&#x27;, a2: true, t: &#x27;$2,000&#x27; },
+    { type: &#x27;link&#x27;, id: &#x27;l4&#x27;, id1: &#x27;p3&#x27;, id2: &#x27;c1&#x27; },
+    { type: &#x27;link&#x27;, id: &#x27;l5&#x27;, id1: &#x27;p1&#x27;, id2: &#x27;p2&#x27; },
+  ],
+};
+
+let chart = null;
+function onReady(c) {
+  chart = c;
+  chart.layout(&#x27;organic&#x27;);
+}
+function onClick({ id }) {
+  if (id &amp;&amp; chart.getItem(id)) {
+    const neighbours = chart.graph().neighbours(id).nodes;
+    chart.foreground(node =&gt; node.id === id || neighbours.includes(node.id));
+  } else {
+    chart.foreground(() =&gt; true);
+  }
+}
+&lt;/script&gt;
+
+&lt;template&gt;
+  &lt;div class=&quot;chart&quot;&gt;
+    &lt;GraphNexusChart :data=&quot;data&quot; @ready=&quot;onReady&quot; @click=&quot;onClick&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;style&gt;
+html, body, #app { margin: 0; height: 100%; }
+.chart { width: 100vw; height: 100vh; }
+&lt;/style&gt;</code></pre>
+<p>Run <code>npm run dev</code>. You should see the network laid out, and you can drag, pan and zoom.</p>
+<h2 id="next">Step 4: Respond to clicks<a class="heading-anchor" href="#next" aria-label="Link to this section">#</a></h2>
+<p>Clicking a node now puts it and its neighbours in the foreground; clicking the background restores every item.
+<a href="../api.html#Chart_getItem">chart.getItem()</a> checks the clicked id,
+<a href="../api.html#Graph_neighbours">chart.graph().neighbours()</a> finds connected nodes and
+<a href="../api.html#Chart_foreground">chart.foreground()</a> fades the rest.</p>
+<p>The chart object passed to the ready handler is the full <a href="../api.html#Chart_load">Chart API</a>,
+so anything in the API reference can be called on it.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html"><span class="dir">Previous</span><span class="label">Using Nexus with Rollup</span></a>
+<a class="next" href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html"><span class="dir">Next</span><span class="label">Using Nexus with Webpack</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#requirements">Requirements</a></li>
+<li class="lvl-2"><a href="#create">Step 1: Create a Vue app</a></li>
+<li class="lvl-2"><a href="#install">Step 2: Add Nexus to the app</a></li>
+<li class="lvl-2"><a href="#chart">Step 3: Create a chart</a></li>
+<li class="lvl-2"><a href="#next">Step 4: Respond to clicks</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

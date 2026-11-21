@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Migration — Nexus Documentation (Plain JS) | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nexus Timeline 2.0 changes the way data is displayed and how users interact with it. This guide gives an overview of these changes to help you upgrade and ">
+<link rel="icon" href="../../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../../assets/doc.css">
+</head>
+<body data-root="../../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../../site/index.html">
+      <img class="logo-light" src="../../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../../site/index.html">Home</a>
+    <a href="../../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../../graph-nexus/timeline/js/migration.html" class="current" aria-current="page">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<div class="variant-toggle" role="group" aria-label="Code variant"><a href="../../../graph-nexus/timeline/js/migration.html" class="current" aria-current="true">Plain JS</a><a href="../../../graph-nexus/timeline/react/migration.html">React</a></div>
+<h1>Migration</h1>
+<span id="migration"></span>
+<p>Nexus Timeline 2.0 changes the way data is displayed and how users interact with it. This guide gives an overview of these changes to help you upgrade and make the most of the new features.</p>
+<p>The key changes are:</p>
+<ul>
+  <li>Nexus Timeline uses a new lens to visualize and examine large datasets.</li>
+  <li>The concept of closed groups and any related API are removed.</li>
+</ul>
+<p>You should be able to load your data into Nexus Timeline 2.0 without issues. However, your data may look very different, especially if you have more entities than can fit on the screen at one time. You may want to think about how to communicate this to your end users.</p>
+<h2 id="introducing-lens">Introducing lens<a class="heading-anchor" href="#introducing-lens" aria-label="Link to this section">#</a></h2>
+<p>In earlier versions, when the timeline contained more entities than could fit on the screen, Nexus Timeline collapsed entities into 'runs', or, if you've defined types or groups in your data, 'closed groups'. Both were opened using the expand control.</p>
+<p>Our users suggested that closed groups could sometimes open and close unpredictably when navigating the timeline, and that the design of narrow bands of data with lots of white space above and below could be improved.</p>
+<p>Nexus Timeline 2.0 draws all entities and their events, even if there isn't enough space to display each entity label. This results in an immediate visual impact from a dataset, with heatmaps that convey all your data from the first glance.</p>
+<p>If there are too many rows to label, instead of groups users can now open and close the lens. The lens enlarges a small set of entities in the timeline center and lets you scroll up and down through the whole dataset.</p>
+<h2 id="migration-tips">Migration tips<a class="heading-anchor" href="#migration-tips" aria-label="Link to this section">#</a></h2>
+<p>For any help implementing the changes, please contact support.</p>
+<p>Below is a list of suggestions to help you migrate:</p>
+<ul>
+  <li>If you don't have types or groups defined in your data, consider adding them to visually split up large datasets and to label the split data when there isn't enough space to label individual entities.</li>
+  <li>New <code class="black">lens</code> event returns the id of the entity at the center of the lens. Use the event to track the data that is currently in view.</li>
+  <li>New 'lensScrollbar' and 'lensControl' <code class="black">targetType</code> values are returned from pointer events when the user interacts with the lens scroll bar or the lens control. Check your event handler code to ensure the behavior is as you expect during the user interaction.</li>
+  <li>New 'lensScrollBar' <code class="black">dragType</code> is returned from pointer events when the user interacts with the lens scroll bar. Check your event handler code to ensure the behavior is as you expect during the user interaction.</li>
+  <li>A new <code class="black">label</code> property is added to the object passed to pointer event handlers which helps you determine if an entity is drawn large enough for labels and interactions, or if it's too small to be shown fully. For example, if you're adding tooltips or annotations, you may want to only display them against entities that have label.</li>
+  <li>Although we strongly recommend using the new lens feature, you can still recreate 'closed groups' of entities by manipulating your data.</li>
+</ul>
+<h2 id="removed-apis">Removed APIs<a class="heading-anchor" href="#removed-apis" aria-label="Link to this section">#</a></h2>
+<p>All APIs referencing open and closed groups have been removed. If you have any code which references them, you'll need to remove or modify it:</p>
+<ul>
+  <li><code class="black">expand</code> event</li>
+  <li><code class="black">expandedRowId</code></li>
+  <li><code class="black">expand</code> option of <code class="black">controls</code></li>
+  <li><code class="black">targetType</code> values: 'collapse', 'expand', 'entityGroupMore', 'entityGroupRun'</li>
+</ul>
+<p>In addition, the <code class="black">priority</code> option of <code class="black">entityType</code> remains in the API for file format compatibility but it doesn't have any effect.</p>
+<h2 id="other-api-changes">Other API changes<a class="heading-anchor" href="#other-api-changes" aria-label="Link to this section">#</a></h2>
+<p>We've removed support for the <code class="black">focus</code> action on groups, based on feedback that users were unsure what focusing a group meant or how to undo it. We recommend using filtering instead - if you want the user to see only the events associated with a certain group, filter other events out of your data. You can also programmatically focus all the entities in a group using the <code class="black">focus</code> API.</p>
+<p>The <code class="black">pointer-move</code> event now fires when the timeline moves beneath the pointer, as well as when the pointer moves over the timeline. This synchronizes your tooltips and annotations with moving timeline. No migration is required, but you can check that your tooltips and annotations behave as expected.</p>
+<p>Graph Nexus keeps most Nexus Timeline 2.0 presentation defaults while hiding event folds until they are explicitly enabled:</p>
+<div class="table-scroll"><table>
+<thead><tr><th>API</th><th>Default before 2.0</th><th>Nexus Timeline 2.0 default</th></tr></thead>
+<tbody>
+<tr><td><code class="black">color</code></td><td>'inverse'</td><td>'entity'</td></tr>
+<tr><td><code class="black">heatmapPadding</code></td><td>false</td><td>true</td></tr>
+<tr><td><code class="black">heatmapThreshold</code></td><td>250</td><td>100</td></tr>
+<tr><td><code class="black">showCircles</code></td><td>true</td><td>false</td></tr>
+<tr><td><code class="black">showEventFolds</code></td><td>false</td><td>false</td></tr>
+<tr><td><code class="black">showLines</code></td><td>'always'</td><td>'individualEvents'</td></tr>
+<tr><td><code class="black">standardRowHeight</code></td><td>18</td><td>24</td></tr>
+</tbody>
+</table></div>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../../graph-nexus/timeline/js/export.html"><span class="dir">Previous</span><span class="label">Export</span></a>
+<a class="next" href="../../../graph-nexus/timeline/js/architecture.html"><span class="dir">Next</span><span class="label">Architecture</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#introducing-lens">Introducing lens</a></li>
+<li class="lvl-2"><a href="#migration-tips">Migration tips</a></li>
+<li class="lvl-2"><a href="#removed-apis">Removed APIs</a></li>
+<li class="lvl-2"><a href="#other-api-changes">Other API changes</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../../assets/search-index.js"></script>
+<script src="../../../assets/docs.js"></script>
+</body>
+</html>

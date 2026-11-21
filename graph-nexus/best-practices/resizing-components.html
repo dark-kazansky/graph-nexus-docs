@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Resizing Components — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nexus chart and time bar components adapt to fit the size of their parent element in the DOM. Any changes in the size of the parent will be adopted by the ">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html" class="current" aria-current="page">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Resizing Components</h1><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>Nexus chart and time bar components adapt to fit the size of their parent element in the DOM.
+Any changes in the size of the parent will be adopted by the chart or time bar, making it easy to manipulate their size and shape.
+</p><h2 id="create">The Nexus container<a class="heading-anchor" href="#create" aria-label="Link to this section">#</a></h2><p>The GraphNexus.create() function creates a container that the chart sits inside. So when you create a chart or time bar,
+that element will be a child of the specified container.</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="kwd">var</span><span class="pln"> chart</span><span class="pun">;</span><span class="pln">
+</span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">({</span><span class="pln"> container</span><span class="pun">:</span><span class="pln"> </span><span class="str">'kl-chart'</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  chart </span><span class="pun">=</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">// Load your chart here!</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>Your html element structure should then look something like this:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'kl-chart'</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">'</span><span class="pln">width</span><span class="pun">:</span><span class="lit">600px</span><span class="pun">;</span><span class="pln"> height</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;</span><span class="atv">'</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;canvas</span><span class="pln"> </span><span class="atn">height</span><span class="pun">=</span><span class="atv">"500"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"600"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"GraphNexus-chart-1"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pun">-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">touch</span><span class="pun">-</span><span class="pln">action</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln"> touch</span><span class="pun">-</span><span class="pln">action</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln"> outline</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"8888"</span><span class="tag">&gt;&lt;/canvas&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre><p>Note that a Nexus component will not render to a container if the container's css <code>style</code> property has <code>display: none</code>, <code>width = 0</code> or <code>height = 0</code>.</p><h2 id="styling">Styling and CSS<a class="heading-anchor" href="#styling" aria-label="Link to this section">#</a></h2><p>As the chart resizes automatically you should make sure you target your CSS at the container, and not the Nexus element itself.</p><p>As Nexus elements adapt to fill the size of their parent, we advise using box-sizing to make sizing the chart simpler:</p><pre class="prettyprint prettyprinted"><code class="lang-css"><span class="pun">*</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  box</span><span class="pun">-</span><span class="pln">sizing</span><span class="pun">:</span><span class="pln"> border</span><span class="pun">-</span><span class="pln">box</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>Nexus elements adapt to fit the size of their parent, so you should be aware of other rules in css modules that
+may interfere with this. Modules such as css grid - where parent elements are
+sized based on their children - can cause unexpected behaviour.
+</p><h2 id="fullscreen">Fullscreen mode<a class="heading-anchor" href="#fullscreen" aria-label="Link to this section">#</a></h2><p>When you want to put the chart in fullscreen mode, you can use the hierarchy rules of css to control the size of the chart:</p><strong>HTML</strong><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'kl-main'</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">800px</span><span class="pun">;</span><span class="pln"> height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">600px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'fullScreen'</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'kl-chart'</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;canvas</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"GraphNexus-chart-1"</span><span class="tag">&gt;&lt;/canvas&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'fullscreenBtn'</span><span class="tag">&gt;</span><span class="pln">Fullscreen</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></code></pre><strong>JavaScript</strong><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// When the window is loaded</span><span class="pln">
+$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'load'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+  </span><span class="kwd">var</span><span class="pln"> chart</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="com">// Create Nexus chart as a child of the DOM element with id 'kl-chart'</span><span class="pln">
+  </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">({</span><span class="pln"> container</span><span class="pun">:</span><span class="pln"> </span><span class="str">'kl-chart'</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">:{</span><span class="pln">backColour</span><span class="pun">:</span><span class="pln"> </span><span class="str">'white'</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    chart </span><span class="pun">=</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+    </span><span class="com">// Load your chart here!</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  </span><span class="com">// Toggle fullscreen mode when the button is clicked</span><span class="pln">
+  $</span><span class="pun">(</span><span class="str">'#fullscreenBtn'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">fullScreenCapable</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">toggleFullScreen</span><span class="pun">(</span><span class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'fullScreen'</span><span class="pun">));</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>You can then set the styling for all child elements to inherit from the kl-main div, or
+select only the fullscreen div to make the chart fill the screen.
+</p><h2 id="before5-3">Resizing in older Nexus versions<a class="heading-anchor" href="#before5-3" aria-label="Link to this section">#</a></h2><p>In versions of Nexus before the 5.3 release, the chart element won't automatically resize
+to fit its parent. We recommend updating to use the new method of creating components,
+but if you are unable to, then you will need to use the <a href="../api.html#GraphNexus_setSize">setSize API</a> every time you want to change the
+size of the Nexus element.</p><p>When you create a Nexus component using 
+<a href="../api.html#GraphNexus_create">GraphNexus.create</a> without setting the container parameter,
+it uses the specified DOM element's <code class="inline">clientWidth</code> and <code class="inline">clientHeight</code>
+to set the size for the chart. Even if you intend to resize later it's useful to have a
+default height and width set in the DOM. We recommend <strong>not</strong> using percentage values.
+For example:</p><strong>HTML</strong><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'kl'</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">'</span><span class="pln">width</span><span class="pun">:</span><span class="lit">600px</span><span class="pun">;</span><span class="pln"> height</span><span class="pun">:</span><span class="lit">500px</span><span class="pun">;</span><span class="atv">'</span><span class="tag">&gt;&lt;/div&gt;</span></code></pre><strong>JavaScript</strong><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="kwd">var</span><span class="pln"> chart</span><span class="pun">;</span><span class="pln">
+</span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">(</span><span class="str">'kl'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  chart </span><span class="pun">=</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">// Load your chart here!</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>The resulting canvas element will look as follows:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;canvas</span><span class="pln"> </span><span class="atn">height</span><span class="pun">=</span><span class="atv">"500"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"600"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"kl"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pun">-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">touch</span><span class="pun">-</span><span class="pln">action</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">touch</span><span class="pun">-</span><span class="pln">action</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln"> outline</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"8888"</span><span class="tag">&gt;&lt;/canvas&gt;</span></code></pre><p>You can also pass a DOM element to GraphNexus.create and Nexus will generate
+an id for the element</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="kwd">var</span><span class="pln"> chart</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> el </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">createElement</span><span class="pun">(</span><span class="str">'div'</span><span class="pun">);</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">body</span><span class="pun">.</span><span class="pln">append</span><span class="pun">(</span><span class="pln">el</span><span class="pun">);</span><span class="pln">
+</span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">(</span><span class="pln">el</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  chart </span><span class="pun">=</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">// Load your chart here!</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>The resulting canvas element will look as follows:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;canvas</span><span class="pln"> </span><span class="atn">height</span><span class="pun">=</span><span class="atv">"500"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"600"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"GraphNexus-chart-1"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pun">-</span><span class="pln">ms</span><span class="pun">-</span><span class="pln">touch</span><span class="pun">-</span><span class="pln">action</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln"> touch</span><span class="pun">-</span><span class="pln">action</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln"> outline</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="atv">"</span><span class="pln"> </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"8888"</span><span class="tag">&gt;&lt;/canvas&gt;</span></code></pre><p>After the component has been created, any further changes to the size of the component
+should be made using <a href="../api.html#GraphNexus_setSize">GraphNexus.setSize</a>.
+</p><h3 id="setsize">Using setSize<a class="heading-anchor" href="#setsize" aria-label="Link to this section">#</a></h3><p>If you haven't set the container, Nexus components have to do internal calculations
+when they're created or resized to avoid issues with scaling and the localisation of chart events.</p><p>This means that any changes to the component's size using libraries or CSS will distort the chart
+and cause issues with user interaction. To prevent this use
+<a href="../api.html#GraphNexus_setSize">GraphNexus.setSize</a> every time the component size
+needs to change to update the size of the component.
+</p><h3 id="egs">Examples<a class="heading-anchor" href="#egs" aria-label="Link to this section">#</a></h3><p>In all these examples, we've used jQuery to make the code easier to read. You can use any libraries you wish.</p><h3 id="onresize">Browser resize<a class="heading-anchor" href="#onresize" aria-label="Link to this section">#</a></h3><p>Handling browser resize is pretty straightforward. The <code>window</code> object has an event called
+<code>onresize</code> which is invoked every time the browser window changes size. In modern browsers
+it is also invoked when the browser's zoom level is changed.</p><p>In this example, a chart is created, and then sized to be 50% of the window size.
+Then, if the browser is resized, this ratio is maintained. You can use any calculation you wish.</p><strong>HTML</strong><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;body&gt;</span><span class="pln">
+  </span><span class="com">&lt;!-- provide element for the chart with a default height and width --&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'kl'</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">width</span><span class="pun">:</span><span class="lit">800px</span><span class="pun">;</span><span class="pln">height</span><span class="pun">:</span><span class="lit">600px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span></code></pre><strong>JavaScript</strong><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// When the window is loaded</span><span class="pln">
+$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'load'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> chart</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="com">// Function to calculate and set the new size</span><span class="pln">
+  </span><span class="kwd">function</span><span class="pln"> resize</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> doc </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="pln">document</span><span class="pun">);</span><span class="pln">
+    </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">setSize</span><span class="pun">(</span><span class="str">'kl'</span><span class="pun">,</span><span class="pln"> doc</span><span class="pun">.</span><span class="pln">width</span><span class="pun">()</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">,</span><span class="pln"> doc</span><span class="pun">.</span><span class="pln">height</span><span class="pun">()</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">);</span><span class="pln">
+    </span><span class="com">// After resize, fit the chart to the window</span><span class="pln">
+    chart</span><span class="pun">.</span><span class="pln">zoom</span><span class="pun">(</span><span class="str">'fit'</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="com">// Create Nexus chart in DOM element with id 'kl'</span><span class="pln">
+  </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">(</span><span class="str">'kl'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    chart </span><span class="pun">=</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+    </span><span class="com">// Load your chart here!</span><span class="pln">
+
+    </span><span class="com">// Call resize to get desired chart size</span><span class="pln">
+    resize</span><span class="pun">();</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  </span><span class="com">// Add handler for window resize event</span><span class="pln">
+  $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'resize'</span><span class="pun">,</span><span class="pln"> resize</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>GraphNexus.setSize can also be passed a DOM element.</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// Function to calculate and set the new size</span><span class="pln">
+  </span><span class="kwd">function</span><span class="pln"> resize</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> doc </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="pln">document</span><span class="pun">);</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> klElement </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'kl'</span><span class="pun">);</span><span class="pln">
+    </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">setSize</span><span class="pun">(</span><span class="pln">klElement</span><span class="pun">,</span><span class="pln"> doc</span><span class="pun">.</span><span class="pln">width</span><span class="pun">()</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">,</span><span class="pln"> doc</span><span class="pun">.</span><span class="pln">height</span><span class="pun">()</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="lit">0.5</span><span class="pun">);</span><span class="pln">
+    </span><span class="com">// After resize, fit the chart to the window</span><span class="pln">
+    chart</span><span class="pun">.</span><span class="pln">zoom</span><span class="pun">(</span><span class="str">'fit'</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span></code></pre><h3 id="setSizeFullscreen">Using fullScreen mode<a class="heading-anchor" href="#setSizeFullscreen" aria-label="Link to this section">#</a></h3><p>This example shows you how to resize when using the 
+<a href="../api.html#GraphNexus_toggleFullScreen">GraphNexus.toggleFullScreen</a>
+function. Typically, you would use a parent element to go full screen, and then
+resize other elements, including the chart, accordingly.</p><strong>HTML</strong><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;body&gt;</span><span class="pln">
+  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'fullScreen'</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'kl'</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">800px</span><span class="pun">;</span><span class="pln"> height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">600px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'fsBtn'</span><span class="tag">&gt;</span><span class="pln">Fullscreen</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span></code></pre><strong>JavaScript</strong><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// When the window is loaded</span><span class="pln">
+$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'load'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+  </span><span class="kwd">var</span><span class="pln"> chart</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="com">// Function to set the size on enter and exit of fullscreen</span><span class="pln">
+  </span><span class="kwd">function</span><span class="pln"> resize</span><span class="pun">(</span><span class="pln">isFullScreen</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="pln">isFullScreen</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">setSize</span><span class="pun">(</span><span class="str">'kl'</span><span class="pun">,</span><span class="pln"> screen</span><span class="pun">.</span><span class="pln">width</span><span class="pun">,</span><span class="pln"> screen</span><span class="pun">.</span><span class="pln">height</span><span class="pun">);</span><span class="pln">
+      </span><span class="com">// Hide the button in fullscreen mode</span><span class="pln">
+      $</span><span class="pun">(</span><span class="str">'#fsBtn'</span><span class="pun">).</span><span class="pln">hide</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">setSize</span><span class="pun">(</span><span class="str">'kl'</span><span class="pun">,</span><span class="pln"> </span><span class="lit">800</span><span class="pun">,</span><span class="pln"> </span><span class="lit">600</span><span class="pun">);</span><span class="pln">
+      $</span><span class="pun">(</span><span class="str">'#fsBtn'</span><span class="pun">).</span><span class="pln">show</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="com">// After resize, fit the chart to the window</span><span class="pln">
+    chart</span><span class="pun">.</span><span class="pln">zoom</span><span class="pun">(</span><span class="str">'fit'</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+
+  </span><span class="com">// Create Nexus chart in DOM element with id 'kl'</span><span class="pln">
+  </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">({</span><span class="pln">id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'kl'</span><span class="pun">,</span><span class="pln"> options</span><span class="pun">:{</span><span class="pln">backColour</span><span class="pun">:</span><span class="pln"> </span><span class="str">'white'</span><span class="pun">}},</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">,</span><span class="pln"> result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    chart </span><span class="pun">=</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+    </span><span class="com">// Load your chart here!</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  </span><span class="com">// Toggle fullscreen mode when the button is clicked</span><span class="pln">
+  $</span><span class="pun">(</span><span class="str">'#fsBtn'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">evt</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pun">(</span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">fullScreenCapable</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">toggleFullScreen</span><span class="pun">(</span><span class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'fullScreen'</span><span class="pun">),</span><span class="pln"> resize</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/best-practices/obfuscation-requirements.html"><span class="dir">Previous</span><span class="label">Obfuscation Requirements</span></a>
+<a class="next" href="../../graph-nexus/best-practices/troubleshooting.html"><span class="dir">Next</span><span class="label">Troubleshooting</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#create">The Nexus container</a></li>
+<li class="lvl-2"><a href="#styling">Styling and CSS</a></li>
+<li class="lvl-2"><a href="#fullscreen">Fullscreen mode</a></li>
+<li class="lvl-2"><a href="#before5-3">Resizing in older Nexus versions</a></li>
+<li class="lvl-3"><a href="#setsize">Using setSize</a></li>
+<li class="lvl-3"><a href="#egs">Examples</a></li>
+<li class="lvl-3"><a href="#onresize">Browser resize</a></li>
+<li class="lvl-3"><a href="#setSizeFullscreen">Using fullScreen mode</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="262.68741"
+   height="161.72206"
+   viewBox="0 0 262.68741 161.72206"
+   version="1.1"
+   id="svg861"
+   sodipodi:docname="chart-export (6).svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview863"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.97062937"
+     inkscape:cx="131.35807"
+     inkscape:cy="79.845101"
+     inkscape:window-width="1312"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg861" />
+  <defs
+     id="defs827">
+    <clipPath
+       id="cut-out-clip-path"
+       clipPathUnits="objectBoundingBox">
+      <circle
+         cx="0.5"
+         cy="0.5"
+         id="ellipse824"
+         r="0.5" />
+    </clipPath>
+  </defs>
+  <g
+     id="g831"
+     transform="translate(-168.46175,-276.63899)">
+    <rect
+       height="715"
+       width="600"
+       x="0"
+       y="0"
+       fill="#ffffff"
+       fill-opacity="1"
+       stroke="none"
+       id="rect829" />
+  </g>
+  <g
+     id="g835"
+     transform="translate(-168.46175,-276.63899)">
+    <path
+       d="m 188.5,284.98528 h 223 a 11.5,11.5 0 0 1 11.5,11.5 v 122.02944 a 11.5,11.5 0 0 1 -11.5,11.5 h -223 a 11.5,11.5 0 0 1 -11.5,-11.5 V 296.48528 a 11.5,11.5 0 0 1 11.5,-11.5 z"
+       fill="#f0f0f0"
+       fill-opacity="0.8"
+       stroke="none"
+       id="path833" />
+  </g>
+  <g
+     id="g839"
+     transform="translate(-168.46175,-276.63899)">
+    <path
+       d="m 188.5,284.98528 h 223 a 11.5,11.5 0 0 1 11.5,11.5 v 122.02944 a 11.5,11.5 0 0 1 -11.5,11.5 h -223 a 11.5,11.5 0 0 1 -11.5,-11.5 V 296.48528 a 11.5,11.5 0 0 1 11.5,-11.5 z"
+       fill="none"
+       stroke="#2e3842"
+       stroke-opacity="1"
+       stroke-width="1"
+       id="path837" />
+  </g>
+  <g
+     id="g843"
+     transform="translate(-168.46175,-276.63899)">
+    <rect
+       height="29"
+       width="46"
+       x="177.5"
+       y="343"
+       fill="#2e3842"
+       fill-opacity="1"
+       stroke="none"
+       id="rect841" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="25px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="32.038246"
+     y="80.861015"
+     id="text845">Left</text>
+  <g
+     id="g849"
+     transform="translate(-168.46175,-276.63899)">
+    <rect
+       height="29"
+       width="62"
+       x="360.5"
+       y="343"
+       fill="#2e3842"
+       fill-opacity="1"
+       stroke="none"
+       id="rect847" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="25px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="223.03824"
+     y="80.861015"
+     id="text851">Right</text>
+  <circle
+     cx="90.18824"
+     cy="47.511009"
+     r="27"
+     fill="#58a773"
+     fill-opacity="1"
+     stroke="none"
+     id="circle853" />
+  <circle
+     cx="156.88824"
+     cy="47.511009"
+     r="27"
+     fill="#58a773"
+     fill-opacity="1"
+     stroke="none"
+     id="circle855" />
+  <circle
+     cx="90.18824"
+     cy="114.21102"
+     r="27"
+     fill="#58a773"
+     fill-opacity="1"
+     stroke="none"
+     id="circle857" />
+  <circle
+     cx="156.88824"
+     cy="114.21102"
+     r="27"
+     fill="#58a773"
+     fill-opacity="1"
+     stroke="none"
+     id="circle859" />
+</svg>

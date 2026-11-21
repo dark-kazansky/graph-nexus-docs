@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Node and Combo Styling — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="In charts, nodes can represent various concrete or abstract entities such as people, locations, servers or accounts, and can carry various levels of detail">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html" class="current" aria-current="page">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Node and Combo Styling</h1><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>In charts, nodes can represent various concrete or abstract entities
+such as people, locations, servers or accounts,
+and can carry various levels of detail and information.</p><p>Nexus supports a wide range of styling options
+that let you customise the way nodes look and display information.
+</p><p>For quick but impactful changes, you can for example change a node's colour,
+fill it with an image or a font icon, or add a contrasting border, glyph or a halo.</p><p class="text-center"><img src="../assets/features/ns-basic-overview.svg" style="max-width:800px"></p><p>You can find the full list of available APIs 
+in the <a href="../api.html#ItemFormat_Node">Node API Reference</a>.</p><p>More advanced styling in Nexus isn't advanced in the difficulty of implementation,
+but rather in the complex issues it can help you solve, such as:</p><ul><li>Large amounts of information or many types of information on a node</li><li>Dynamically changing data (such as names or numbers in varying length)</li><li>A need for interactive elements on nodes (such as buttons or editable fields)</li><li>A specific design language of your application</li></ul><p>Using the available <a href="../api.html#ItemFormat_Node">node styling APIs</a>,
+you can create custom and high-precision styling for your nodes
+to tackle any issues.</p><p class="text-center"><img src="../assets/features/ns-title-nodes.svg" style="max-width:900px"></p><h2 id="rectangularnodes">Node shapes and sizes<a class="heading-anchor" href="#rectangularnodes" aria-label="Link to this section">#</a></h2><p>By default, nodes in Nexus are drawn as circles with a default diameter of 56.
+You can also create square or rectangular nodes that behave exactly like circular nodes:</p><ul><li>To create a <strong>square node</strong> with a default height and width of 56 points, set the shape
+(<a href="../api.html#ItemFormat_Node_properties_sh">sh</a>)
+to 'box'.</li><li>To create a <strong>rectangular node</strong>, set the
+width (<a href="../api.html#ItemFormat_Node_properties_w">w</a>) and
+height (<a href="../api.html#ItemFormat_Node_properties_h">h</a>) properties.
+</li></ul><h3 id="enlargement-vs-custom-width-and-height">Enlargement vs. custom width and height<a class="heading-anchor" href="#enlargement-vs-custom-width-and-height" aria-label="Link to this section">#</a></h3><p>Circular and square nodes can be <strong>scaled by an enlargement factor</strong> using the
+<a href="../api.html#ItemFormat_Node_properties_e">e</a> property.
+This also scales any labels, node styling and node decorations.</p><p>Any node shape can be <strong>set to a custom width and height</strong> in the
+<a href="../api.html#ItemFormat_Node_properties_w">w</a>
+and <a href="../api.html#ItemFormat_Node_properties_h">h</a> properties.
+For circular and square nodes, you also need to set the
+<a href="../api.html#ItemFormat_Node_properties_sh">sh</a> property to 'circle' or 'box' respectively.
+</p><p> Note that nodes with set width and height cannot be simultaneously enlarged.</p><p>Either or both of the <a href="../api.html#ItemFormat_Node_properties_w">w</a>
+and <a href="../api.html#ItemFormat_Node_properties_h">h</a> properties can be set to 'auto'
+to automatically size nodes to fit any number or length of labels inside.
+This is especially useful
+when nodes contain multiple stacked labels or when the data inside labels comes in variable lengths.
+To make sure automatically sized nodes don't get too small, you can also set
+<a href="../api.html#ItemFormat_Node_properties_minWidth">minWidth</a> and/or
+<a href="../api.html#ItemFormat_Node_properties_minHeight">minHeight</a>.
+</p><h3 id="rounded-corners">Rounded corners<a class="heading-anchor" href="#rounded-corners" aria-label="Link to this section">#</a></h3><p>To make one or multiple corners of your square or rectangular nodes rounded, set the 
+<a href="../api.html#ItemFormat_Node_properties_borderRadius">borderRadius</a>
+option.</p><h2 id="advancedlabelstyling">Advanced label styling<a class="heading-anchor" href="#advancedlabelstyling" aria-label="Link to this section">#</a></h2><p>There are two main aspects to advanced label styling:</p><ul><li>Adding a node label with fully custom styling</li><li>Adding multiple labels on a single node</li></ul><p>Currently in beta, the 
+<a href="../api.html#ItemFormat_Node_properties_t">t</a> label property also accepts
+<strong>an object</strong> which can contain additional label styling:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">t</span><span class="pun">:</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'A text label'</span><span class="pun">,</span><span class="pln">
+    b</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rgb(88,167,115)'</span><span class="pln">
+  </span><span class="pun">}</span></code></pre><p>Also in beta, the <code class="black">t</code> label property also accepts
+<strong>an array of objects</strong> to add multiple labels on a node, where each label can
+be styled individually:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// by default, labels are stacked vertically downwards in the order of processing</span><span class="pln">
+t</span><span class="pun">:[</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'A text label'</span><span class="pun">,</span><span class="pln">   </span><span class="com">// A text label</span><span class="pln">
+    b</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rgb(88,167,115)'</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    fi</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">getFontIcon</span><span class="pun">(</span><span class="str">'fa-user'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">},</span><span class="pln">   </span><span class="com">// A font icon label</span><span class="pln">
+    fc</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rgb(97,195,230)'</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln">
+    fbc</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rgb(97,195,230)'</span><span class="pln">    </span><span class="com">// An empty label, e.g. for use as background or decoration</span><span class="pln">
+    minWidth</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+</span><span class="pun">],</span></code></pre><p>The text string or the font icon inside a label object is the <strong>label content</strong>.
+The following styling applies to the content:
+</p><div class="table-scroll"><table class="table"><thead><tr style="background: #f5f5f5;"><th style="width: 150px">Name</th><th style="width: 50px">API</th><th>Description</th></tr></thead><tbody><tr><td><strong>alignment</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_textAlignment">textAlignment</a></td><td>The alignment inside the label when
+<a href="../api.html#ItemFormat_Node_Label_properties_minHeight">minHeight</a> and/or
+<a href="../api.html#ItemFormat_Node_Label_properties_minWidth">minWidth</a>
+are set and labels are not sized automatically.
+Pass an object with
+<a href="../api.html#ItemFormat_Node_Label_properties_textAlignment_horizontal">horizontal</a> and/or
+<a href="../api.html#ItemFormat_Node_Label_properties_textAlignment_vertical">vertical</a> options.</td></tr><tr><td><strong>font colour</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_fc">fc</a></td><td>The font colour.</td></tr><tr><td><strong>font family</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_ff">ff</a></td><td>The font family.</td></tr><tr><td><strong>font size</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_fs">fs</a></td><td>The font size. Setting it to 'auto' sizes the font automatically depending on the node size.</td></tr><tr><td><strong>font style</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_fb">fb</a></td><td>The style variation of the font. This can either be 'regular' (default) or 'bold'.
+</td></tr></tbody></table></div><p>The shape that holds the content is the <strong>label container</strong>. The containter styling is done in the label object. The following styling applies to the container:
+</p><div class="table-scroll"><table class="table"><thead><tr style="background: #f5f5f5;"><th style="width: 150px">Name</th><th style="width: 50px">API</th><th>Description</th></tr></thead><tbody><tr><td><strong>border colour</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_b">b</a></td><td>The colour of the container's border.</td></tr><tr><td><strong>border radius</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_borderRadius">borderRadius</a></td><td>The radius of the container's corners.
+Set this for individual corners or as a single value to be applied to all corners.</td></tr><tr><td><strong>border width</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_bw">bw</a></td><td>The width of the container's border.</td></tr><tr><td><strong>colour</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_fbc">fbc</a></td><td>The colour of the container's background.</td></tr><tr><td><strong>max height</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_maxHeight">maxHeight</a></td><td>The maximum container height.
+Use this to limit the text height when
+<a href="../api.html#ItemFormat_Node_Label_properties_fs">fs</a> is set to 'auto'.</td></tr><tr><td><strong>max width</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_maxWidth">maxWidth</a></td><td>The maximum container width.
+Use it to reduce the text width before a line break when
+<a href="../api.html#ItemFormat_Node_Label_properties_textWrap">textWrap</a> is set
+or <a href="../api.html#ItemFormat_Node_Label_properties_fs">fs</a> is set to 'auto'.</td></tr><tr><td><strong>min height</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_minHeight">minHeight</a></td><td>The minimum container height. Will stretch to fit content if needed.</td></tr><tr><td><strong>min width</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_minWidth">minWidth</a></td><td>The minimum container width. Will stretch to fit content if needed.
+Use it to increase the text width before a line break when
+<a href="../api.html#ItemFormat_Node_Label_properties_textWrap">textWrap</a> is set.</td></tr><tr><td><strong>margin</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_margin">margin</a></td><td>The distance between the label and another label, or the label and its node.
+Calculated outside of label or node borders.</td></tr><tr><td><strong>padding</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_padding">padding</a></td><td>The distance between the content and the container. Calculated outside of label borders.
+The default padding is '2 2 0 2' (top, right and left).</td></tr><tr><td><strong>position</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_position">position</a></td><td>Label position in relation to the node. Pass strings
+to set position outside or an object with
+<a href="../api.html#ItemFormat_Node_Label_properties_position_horizontal">horizontal</a> and/or
+<a href="../api.html#ItemFormat_Node_Label_properties_position_vertical">vertical</a>
+options to set it inside.</td></tr><tr><td><strong>text wrapping</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_textWrap">textWrap</a></td><td>The text wrapping inside the container.
+Use this in combination with
+<a href="../api.html#ItemFormat_Node_Label_properties_minWidth">minWidth</a> or
+<a href="../api.html#ItemFormat_Node_Label_properties_maxWidth">maxWidth</a>
+to control where the line breaks.</td></tr><tr><td><strong>font icon</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_fi">fi</a></td><td>The font icon inside the container as the label content.</td></tr><tr><td><strong>text</strong></td><td><a href="../api.html#ItemFormat_Node_Label_properties_t">t</a></td><td>The text string inside the container as the label content.
+</td></tr></tbody></table></div><div class="notice"><div class="boxout" style="background-color: #00996412; margin-top: 10px"><div class="boxout-icon"></div><div class="boxout-body" style="padding-left: 42px">Styling that is not specified is inherited from the
+<a href="../api.html#ItemFormat_Node">node styles</a> that are specified for the node.
+</div></div></div><h2 id="labeltext">Label size and content<a class="heading-anchor" href="#labeltext" aria-label="Link to this section">#</a></h2><p>By default, a label is <strong>sized to fit the content</strong> inside the label.</p><p>You can set your own size using the
+<a href="../api.html#ItemFormat_Node_Label_properties_minWidth">minWidth</a> and
+<a href="../api.html#ItemFormat_Node_Label_properties_minHeight">minHeight</a> properties, 
+or set any of these properties to 'stretch' to fill the whole width/height of the node.
+</p><p>If a label is larger than its content, the content is aligned in the middle and centre by default.
+To change this, set the
+<code class="black">horizontal</code> and/or
+<code class="black">vertical</code> options inside the
+<a href="../api.html#ItemFormat_Node_Label_properties_textAlignment">textAlignment</a> object.</p><p>In both default size and custom size labels,
+you control the content inside to offer the best possible readability at any content length,
+label size or zoom level:</p><ul><li>Set
+<a href="../api.html#ItemFormat_Node_Label_properties_fs">fs</a> (font size)
+to 'auto' to scale the font to any label size and zoom level.
+You can also set <a href="../api.html#ItemFormat_Node_Label_properties_maxWidth">maxWidth</a>
+and <a href="../api.html#ItemFormat_Node_Label_properties_maxHeight">maxHeight</a>
+to set maximum width and height of the content.</li><li>Set <a href="../api.html#ItemFormat_Node_Label_properties_textWrap">textWrap</a>
+to 'normal' to wrap the content on whitespaces created by the space character.
+You can also set <a href="../api.html#ItemFormat_Node_Label_properties_maxWidth">maxWidth</a>
+to set the maximum label width before a line break.
+</li></ul><pre class="prettyprint prettyprinted"><div class="docs-playground"><span class="typ">Playground</span><span class="pln"> </span></div><code class="lang-js"><span class="pln">t</span><span class="pun">:[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Default size label'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Custom size and text alignment'</span><span class="pun">,</span><span class="pln">
+      minWidth</span><span class="pun">:</span><span class="pln"> </span><span class="lit">300</span><span class="pun">,</span><span class="pln">
+      minHeight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln">
+      fbc</span><span class="pun">:</span><span class="pln"> green</span><span class="pun">,</span><span class="pln">
+      textAlignment</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> horizontal</span><span class="pun">:</span><span class="pln"> </span><span class="str">'right'</span><span class="pun">,</span><span class="pln"> vertical</span><span class="pun">:</span><span class="pln"> </span><span class="str">'bottom'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Automatic font sizing'</span><span class="pun">,</span><span class="pln">
+      fs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'auto'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Minimum width stretched'</span><span class="pun">,</span><span class="pln">
+      minWidth</span><span class="pun">:</span><span class="pln"> </span><span class="str">'stretch'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Maximum width, text wrapping and auto font sizing'</span><span class="pun">,</span><span class="pln">
+      textWrap</span><span class="pun">:</span><span class="pln"> </span><span class="str">'normal'</span><span class="pun">,</span><span class="pln">
+      fs</span><span class="pun">:</span><span class="pln"> </span><span class="str">'auto'</span><span class="pun">,</span><span class="pln">
+      maxWidth</span><span class="pun">:</span><span class="pln"> </span><span class="lit">100</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+</span><span class="pun">],</span></code></pre><div class="images"><img src="../assets/features/ns-sizes.svg"></div><h2 id="labelpositioning">Label positioning<a class="heading-anchor" href="#labelpositioning" aria-label="Link to this section">#</a></h2><p>Labels can be anchored to nodes from the outside or from the inside.</p><p>By default, a label is located inside the node in its centre.
+To control the exact location of the label on the node, you can use the
+<a href="../api.html#ItemFormat_Node_Label_properties_position">position</a> property:</p><ul><li>To set the anchor point <strong>inside</strong>, use the
+<a href="../api.html#ItemFormat_Node_Label_properties_position_vertical">vertical</a>
+and <a href="../api.html#ItemFormat_Node_Label_properties_position_horizontal">horizontal</a>
+options to set the position to any world coordinates or relative to the node's corners.</li><li>To set the anchor point <strong>outside</strong>, pass a string compass value ('n' for north, 'ne' for north east etc.) directly
+in the <a href="../api.html#ItemFormat_Node_Label_properties_position">position</a> property.</li></ul><p>Note that if there are multiple labels with completely or partially overlapping positions,
+the label which was processed later will be drawn over the label which was processed earlier. 
+</p><pre class="prettyprint prettyprinted"><div class="docs-playground"><span class="typ">Playground</span><span class="pln"> </span></div><code class="lang-js"><span class="pln">t</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'top and left'</span><span class="pun">,</span><span class="pln">
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> vertical</span><span class="pun">:</span><span class="pln"> </span><span class="str">'top'</span><span class="pun">,</span><span class="pln"> horizontal</span><span class="pun">:</span><span class="pln"> </span><span class="str">'left'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">   </span><span class="com">// inside in the top left corner</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> 
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'50px and 50px'</span><span class="pun">,</span><span class="pln"> 
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> vertical</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pun">,</span><span class="pln"> horizontal</span><span class="pun">:</span><span class="pln"> </span><span class="lit">50</span><span class="pln"> </span><span class="pun">}</span><span class="pln">   </span><span class="com">// inside at given world coordinates</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> 
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'north'</span><span class="pun">,</span><span class="pln">
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="str">'n'</span><span class="pln">  </span><span class="com">// outside in the north position</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+</span><span class="pun">],</span></code></pre><div class="images"><img src="../assets/features/ns-position.svg"></div><h2 id="multipleinlinelabels">Multiple inline labels<a class="heading-anchor" href="#multipleinlinelabels" aria-label="Link to this section">#</a></h2><p>By default, multiple labels without any positioning are stacked vertically downwards in the order of processing.
+</p><p>If you want to place <strong>multiple labels on the same line</strong>, there are two ways to do it:</p><ul><li>If a label has no <a href="../api.html#ItemFormat_Node_Label_properties_position_vertical">vertical</a> position,
+any other labels with <code class="black">vertical: inherit</code> position are placed inline to the previous label.</li><li>If a label has a <a href="../api.html#ItemFormat_Node_Label_properties_position_vertical">vertical</a> position,
+any other labels with the same vertical position are placed inline to the previous label.
+</li></ul><pre class="prettyprint prettyprinted"><div class="docs-playground"><span class="typ">Playground</span><span class="pln"> </span></div><code class="lang-js"><span class="pln">t</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'no position'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> vertical</span><span class="pun">:</span><span class="pln"> </span><span class="str">'inherit'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">   </span><span class="com">// inline by setting vertical: 'inherit'</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'inline by inherit'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> vertical</span><span class="pun">:</span><span class="pln"> </span><span class="str">'bottom'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'vertical position'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> vertical</span><span class="pun">:</span><span class="pln"> </span><span class="str">'bottom'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">   </span><span class="com">// inline by setting the same vertical position</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'inline by vertical position'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+</span><span class="pun">]</span></code></pre><div class="images"><img src="../assets/features/ns-inherit.svg"></div><h2 id="marginandpadding">Margin, padding and border<a class="heading-anchor" href="#marginandpadding" aria-label="Link to this section">#</a></h2><p>Nexus APIs for padding and margin are similar to how <code>padding</code> and <code>margin</code> properties work in CSS.</p><p>The <a href="../api.html#ItemFormat_Node_Label_properties_padding">padding</a> API in Nexus
+sets the distance between the content edge and the container edge (or the inside edge of its border).</p><p>The <a href="../api.html#ItemFormat_Node_Label_properties_margin">margin</a> API in Nexus sets the distance between:</p><ul><li>the label edge (or the outside edge of its border) and another label edge (or the outside edge of its border)</li><li>the label edge (or the outside edge of its border) and the edge of its node (or the inside edge of its border)</li></ul><p>Both can be defined in any of the traditional CSS formats:</p><ul><li>A single number - same value applied all around.</li><li>An array of two, three or four numbers separated by commas.</li><li>A string of two, three or four numbers separated by spaces as shorthand properties - see 
+<a href="https://www.w3schools.com/css/css_margin.asp">W3Schools CSS margin</a> and
+<a href="https://www.w3schools.com/css/css_padding.asp">W3Schools CSS padding</a>
+for details.</li><li>An object containing individual properties, e.g. <code class="black">margin: { top: 30, bottom: 20 }</code>.</li></ul><p>Setting a colour in the <a href="../api.html#ItemFormat_Node_Label_properties_b">b</a> property sets a border around the label container.
+The border is drawn on the outer line, with half of the border placed inside and half outside the container.</p><p>When a label is positioned on an inside node edge,
+the inside of the label border is aligned with the node edge by default.
+</p><pre class="prettyprint prettyprinted"><div class="docs-playground"><span class="typ">Playground</span><span class="pln"> </span></div><code class="lang-js"><span class="pln">t</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'label 1'</span><span class="pun">,</span><span class="pln"> 
+      b</span><span class="pun">:</span><span class="pln"> </span><span class="str">'rgba(88,167,115,0.4)'</span><span class="pun">,</span><span class="pln">   </span><span class="com">// green border drawn equally inside and outside the label</span><span class="pln">
+      bw</span><span class="pun">:</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln">                      </span><span class="com">// border width</span><span class="pln">
+      padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln">                 </span><span class="com">// padding between border edge and text</span><span class="pln">
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        vertical</span><span class="pun">:</span><span class="pln"> </span><span class="str">'top'</span><span class="pun">,</span><span class="pln">           </span><span class="com">// inside of label border aligned to node edge</span><span class="pln">
+        horizontal</span><span class="pun">:</span><span class="pln"> </span><span class="str">'left'</span><span class="pln"> 
+    </span><span class="pun">}},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'label 2'</span><span class="pun">,</span><span class="pln">
+      position</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> vertical</span><span class="pun">:</span><span class="pln"> </span><span class="str">'inherit'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">  </span><span class="com">// 'inherit' aligns label with top of label 1 border</span><span class="pln">
+      margin</span><span class="pun">:</span><span class="pln"> </span><span class="str">'30 0 0 100'</span><span class="pun">,</span><span class="pln">               </span><span class="com">// top, right, bottom, left</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">]</span></code></pre><div class="images"><img src="../assets/features/ns-marginpadding.svg"></div><h2 id="advancedcombostyling">Advanced combo styling<a class="heading-anchor" href="#advancedcombostyling" aria-label="Link to this section">#</a></h2><p>Many of the advanced styling features described in this documentation 
+are also available for combos.</p><p><strong>Closed combos</strong> look and behave just like regular nodes,
+which means that they also have the same styling options including all of the features above.</p><p><strong>Open combos</strong> display all of their child nodes arranged within a combo border,
+and can be customised in a number of ways including:</p><ul><li>rectangular combos with <a href="../api.html#ItemFormat_Node_properties_oc_borderRadius">border radius</a></li><li>labels with <a href="#advancedlabelstyling">advanced label styling</a></li><li><a href="../api.html#ItemFormat_Node_properties_oc_g">custom glyphs</a></li></ul><p>Note that this feature is currently in beta.</p><p>For more details about combos, see the <a href="../basics/combos.html#style">Styling for combos</a> documentation.
+</p><p class="text-center"><img src="../assets/features/ns-title-combos.svg" style="max-width:900px"></p><p>By default, open combo labels are drawn <strong>outside and below the combo</strong>. 
+When adding labels inside open combos,
+you may need to consider how they fit in with the combo contents.</p><p>There are simple rules, based on the
+<a href="../api.html#ItemFormat_Node_Label_properties_position">position</a> property,
+that describe the positioning rules between open combo labels and combo contents:
+</p><div class="table-scroll"><table class="table"><tbody><tr><td style="text-align: center; vertical-align: middle"><img src="../assets/features/ns-table1.svg" style="max-width:150px"></td><td><p>Label above or below the content:</p><ul> <li>When a label has <code class="black">position: { vertical: 'top' }</code></li><li>When a label has <code class="black">position: { vertical: 'bottom' }</code></li></ul></td></tr><tr><td style="text-align: center; vertical-align: middle"><img src="../assets/features/ns-table2.svg" style="max-width:150px"></td><td><p>Label to the left or right of the content:</p><ul><li>When a label has <code class="black">position: { horizontal: 'left' }</code></li><li>When a label has <code class="black">position: { horizontal: 'right' }</code></li></ul></td></tr><tr><td style="text-align: center; vertical-align: middle"><img src="../assets/features/ns-table6.svg" style="max-width:150px"></td><td><p>Multiple inline labels to the left or right of the content:</p><ul><li>When a label has <code class="black">position.horizontal</code> set to 'left' or 'right'
+and <code class="black">position.vertical</code> set to 'middle' or 'inherit'</li></ul></td></tr><tr><td style="text-align: center; vertical-align: middle"><img src="../assets/features/ns-table3.svg" style="max-width:150px"></td><td><p>Label behind the content:</p><ul><li>When a label is set to <code class="black">position: { vertical: 'middle', horizontal: 'centre' }</code></li><li>When a label has
+<a href="../api.html#ItemFormat_Node_Label_properties_minWidth">minWidth</a> and
+<a href="../api.html#ItemFormat_Node_Label_properties_minHeight">minHeight</a> set to 'stretch'</li><li>When either
+<a href="../api.html#ItemFormat_Node_Label_properties_position_vertical">vertical</a> or
+<a href="../api.html#ItemFormat_Node_Label_properties_position_horizontal">horizontal</a> options are set to numbers</li><li>When a label that stretches across the combo's centre, for example
+<code class="black">position: { horizontal: 'left'}, minWidth: 'stretch'</code></li></ul></td></tr><tr><td style="text-align: center; vertical-align: middle"><img src="../assets/features/ns-table4.svg" style="max-width:150px"></td><td><p>Labels on both sides of the content:</p><ul><li>When labels are set to <code class="black">position: { horizontal: 'left' }</code> and <code class="black">position: { horizontal: 'right', vertical: 'inherit' }</code>
+</li></ul></td></tr></tbody></table></div>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/features/graph-engine.html"><span class="dir">Previous</span><span class="label">Graph Engine</span></a>
+<a class="next" href="../../graph-nexus/features/pdf-export.html"><span class="dir">Next</span><span class="label">PDF Export</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#rectangularnodes">Node shapes and sizes</a></li>
+<li class="lvl-3"><a href="#enlargement-vs-custom-width-and-height">Enlargement vs. custom width and height</a></li>
+<li class="lvl-3"><a href="#rounded-corners">Rounded corners</a></li>
+<li class="lvl-2"><a href="#advancedlabelstyling">Advanced label styling</a></li>
+<li class="lvl-2"><a href="#labeltext">Label size and content</a></li>
+<li class="lvl-2"><a href="#labelpositioning">Label positioning</a></li>
+<li class="lvl-2"><a href="#multipleinlinelabels">Multiple inline labels</a></li>
+<li class="lvl-2"><a href="#marginandpadding">Margin, padding and border</a></li>
+<li class="lvl-2"><a href="#advancedcombostyling">Advanced combo styling</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

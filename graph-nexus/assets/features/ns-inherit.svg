@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="457.04581"
+   height="299.06729"
+   viewBox="0 0 457.04581 299.06729"
+   version="1.1"
+   id="svg967"
+   sodipodi:docname="test2.svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview969"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.62332215"
+     inkscape:cx="227.00942"
+     inkscape:cy="146.79408"
+     inkscape:window-width="1312"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg967" />
+  <defs
+     id="defs933">
+    <clipPath
+       id="cut-out-clip-path"
+       clipPathUnits="objectBoundingBox">
+      <circle
+         cx="0.5"
+         cy="0.5"
+         id="ellipse930"
+         r="0.5" />
+    </clipPath>
+  </defs>
+  <g
+     id="g937"
+     transform="translate(-277.72678,-448.5397)">
+    <rect
+       height="1192"
+       width="1010"
+       x="0"
+       y="0"
+       fill="#ffffff"
+       fill-opacity="1"
+       stroke="none"
+       id="rect935" />
+  </g>
+  <g
+     id="g941"
+     transform="translate(-277.72678,-448.5397)">
+    <rect
+       height="250"
+       width="400"
+       x="305"
+       y="471"
+       fill="#2f3d45"
+       fill-opacity="1"
+       stroke="none"
+       id="rect939" />
+  </g>
+  <g
+     id="g945"
+     transform="translate(-277.72678,-448.5397)">
+    <rect
+       height="26.84"
+       width="115"
+       x="369"
+       y="582.58002"
+       fill="#58a773"
+       fill-opacity="1"
+       stroke="none"
+       id="rect943" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="23px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="148.77322"
+     y="147.54031"
+     id="text947">no position</text>
+  <g
+     id="g951"
+     transform="translate(-277.72678,-448.5397)">
+    <rect
+       height="26.84"
+       width="157"
+       x="484"
+       y="582.58002"
+       fill="#61c3e6"
+       fill-opacity="1"
+       stroke="none"
+       id="rect949" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="23px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="284.77322"
+     y="147.54031"
+     id="text953">inline by inherit</text>
+  <g
+     id="g957"
+     transform="translate(-277.72678,-448.5397)">
+    <rect
+       height="26.839996"
+       width="163"
+       x="297"
+       y="694.16003"
+       fill="#58a773"
+       fill-opacity="1"
+       stroke="none"
+       id="rect955" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="23px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="100.77322"
+     y="259.12027"
+     id="text959">vertical position</text>
+  <g
+     id="g963"
+     transform="translate(-277.72678,-448.5397)">
+    <rect
+       height="26.839996"
+       width="253"
+       x="460"
+       y="694.16003"
+       fill="#61c3e6"
+       fill-opacity="1"
+       stroke="none"
+       id="rect961" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="23px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="308.77322"
+     y="259.12027"
+     id="text965">inline by vertical position</text>
+</svg>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Neo4j Tutorial — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="This guide will help you integrate Nexus with Neo4j, one of many popular databases you can use with Nexus.">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html" class="current" aria-current="page">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Neo4j Tutorial</h1><div class="notice"><div class="boxout"><div class="boxout-body"><strong>Note:</strong> the Neo4j demo source files this tutorial refers to are not shipped with Nexus. Use the steps as a guide for wiring the Neo4j JavaScript driver into your own app.</div></div></div><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>This guide will help you integrate Nexus with Neo4j, one of many popular databases
+you can use with Nexus.</p><p>This tutorial uses the
+<a href="https://neo4j.com/docs/getting-started/current/languages-guides/neo4j-javascript/">Neo4j Javascript driver</a>
+to connect a simple Nexus application to a Neo4j database.
+The driver uses the Bolt protocol to connect to the database, and has three advantages over using a REST API/HTTP protocol:</p><ul><li>Speed – binary encoding means less data gets sent over the wire, and access is faster.</li><li>Performance – using Websockets, high volumes of queries are executed more quickly, giving
+higher throughput and lower latency.</li><li>Security – Bolt has TLS security built and enabled by default in to protect the data connection.
+</li></ul><p>For more information on how you can load your formatted data into Nexus, see also <a href="../basics/loading-data.html">Loading Data</a>.
+</p><div class="notice"><div class="boxout"><div class="boxout-icon"></div><div class="boxout-body" style="padding-left: 42px">The tutorial has been tested and verified with version 1.5.7 of Neo4j Desktop and version 5.5.0 of Neo4j.
+While other versions of Neo4j Desktop and Neo4j v5 may also work, they haven't been tested and verified as working.
+</div></div></div><h2 id="step1">Step 1: Setting up the environment<a class="heading-anchor" href="#step1" aria-label="Link to this section">#</a></h2><p>To connect our Nexus application to our Neo4j database locally, make sure you have
+the latest version of <a href="https://nodejs.org/">Node.js</a> installed.
+To check your version, you can run <code class="black">node -v</code> in the console.</p><p style="margin-top: 20px;">First, download our Neo4j Demo source files from the link below:
+</p> Download Neo4j Demo<p>This will download the demo as a <strong>neo4j.zip</strong> archive. Unzip it into a <strong>neo4j</strong> directory.</p><p>Next, download the Nexus package from the link below:
+</p> Download Nexus 7.5.0-6286156683<p>This will download Nexus as a <strong>graph-nexus-&lt;version&gt;.tgz</strong> file. Place this file in the <strong>neo4j</strong> directory.</p><p>In the terminal from the <strong>neo4j</strong> directory, add Nexus as a package dependency:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">npm add file:./graph-nexus-1.0.0.tgz</span></code></pre><p></p><p>Finally, download and install the Neo4j Desktop application from the
+<a href="https://neo4j.com/product/developer-tools/">Neo4j website</a>.
+Once you've installed it, continue to Step 2 of this tutorial.
+</p><h2 id="step2">Step 2: Creating a Neo4j database<a class="heading-anchor" href="#step2" aria-label="Link to this section">#</a></h2><p>Open the Neo4j Desktop application.</p><p>The application opens in an Example Project.
+Add a new database by clicking the <strong> Add</strong> button and selecting 'Local DBMS':
+</p><img src="../assets/integrations/neo4j-project.png" style="max-width:65%"><p>Set the database name to 'Movies' and the password to 'graph-nexus'. We will need these details later.</p><img src="../assets/integrations/neo4j-create.png" style="max-width:35%"><p>Hover the mouse over the Movies database to display the context menu.</p><p>Click the <strong>(...)</strong> button, locate the <strong>Open folder</strong> dropdown and select 'Import':
+</p><img src="../assets/integrations/neo4j-import.png" style="max-width:45%"><p>This opened your local directory to the imports folder of your Neo4j Desktop application.</p><p>Copy the two csv source files in <strong>../neo4j-data</strong> into this directory.
+Do not change the file names.</p><p>Back on the main app window, click the <strong>(...)</strong> button again and select 'Terminal' to open a new terminal tab.
+In the terminal, import our CSV files into a new database:
+</p><pre class="prettyprint prettyprinted"><code class="lang-sh"><span class="pln">bin</span><span class="pun">/</span><span class="pln">neo4j</span><span class="pun">-</span><span class="pln">admin database import full </span><span class="pun">--</span><span class="pln">nodes </span><span class="str">"import/vertex-data.csv"</span><span class="pln"> </span><span class="pun">--</span><span class="pln">relationships </span><span class="str">"import/edge-data.csv"</span><span class="pln"> </span><span class="pun">--</span><span class="pln">trim</span><span class="pun">-</span><span class="pln">strings</span><span class="pun">=</span><span class="pln">true movies</span></code></pre><p>We should also update our settings to specify which database to mount.
+Click the <strong>(...)</strong> button and select 'Settings'. 
+</p><p>In the Settings window, find the Initial DBMS Settings section to set Movies as our default database:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="pln">dbms</span><span class="pun">.</span><span class="pln">default_database</span><span class="pun">=</span><span class="typ">Movies</span></code></pre><p>Enter the database and click <strong>Apply</strong>. Your Settings window should now look like this:
+</p><img src="../assets/integrations/neo4j-settings.png" style="max-width:60%"><p>Now click the <strong>Start</strong> button to start the database.
+</p><p>We can check that our database was loaded correctly by opening the browser and running a query.</p><p>In the left-side vertical navigation bar,
+locate the <img src="../assets/integrations/neo4j-button.png">
+<strong>Graph Apps</strong> section and select <strong>Neo4j Browser</strong>.</p><p>Movies should be the active database in use (with the name displayed in the query window).
+In the query window, run the following query:
+</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="com">// Get some data</span><span class="pln">
+MATCH </span><span class="pun">(</span><span class="pln">n1</span><span class="pun">)-[</span><span class="pln">r</span><span class="pun">]-&gt;(</span><span class="pln">n2</span><span class="pun">)</span><span class="pln"> RETURN r</span><span class="pun">,</span><span class="pln"> n1</span><span class="pun">,</span><span class="pln"> n2 LIMIT </span><span class="lit">25</span></code></pre><p>Our Neo4j database is now live and ready for us to query.
+</p><h2 id="step3">Step 3: Connecting Nexus to the database<a class="heading-anchor" href="#step3" aria-label="Link to this section">#</a></h2><p>Returning to our demo source files, in <strong>../neo4j/neo4j-router.js</strong>, update the config
+object with the password that we set in <a href="#step2">Step 2</a> and save your changes.</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">const</span><span class="pln"> configs </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// The port here should match your server's connection status</span><span class="pln">
+  boltPath</span><span class="pun">:</span><span class="pln"> </span><span class="str">'bolt://localhost/'</span><span class="pun">,</span><span class="pln"> 
+  </span><span class="com">// The username for the database. The default username is neo4j.</span><span class="pln">
+  username</span><span class="pun">:</span><span class="pln"> </span><span class="str">'neo4j'</span><span class="pun">,</span><span class="pln">
+  </span><span class="com">// The password for the database. This is password we entered above in Step 2.</span><span class="pln">
+  password</span><span class="pun">:</span><span class="pln"> </span><span class="str">'graph-nexus'</span><span class="pun">,</span><span class="pln">
+</span><span class="pun">};</span></code></pre><p>Now in our <strong>neo4j</strong> demo source file directory, install the required node modules
+using npm and start the application:
+</p><pre class="prettyprint prettyprinted" style="margin-top: 20px;"><code class="lang-sh"><span class="pln">npm install </span><span class="pun">&amp;&amp;</span><span class="pln"> npm start</span></code></pre><p>If you navigate to <a href="http://localhost:8080/">localhost:8080</a>
+you should now see the Nexus app has loaded the data from the local server into the chart:</p><div class="text-center"><img src="../assets/integrations/neo4j-demo.png" class="framed" style="max-width:50%"></div><p>You have now successfully retrieved data from a Nexus app and loaded it into a chart.
+
+</p><h2 id="architecture">Understanding the application architecture<a class="heading-anchor" href="#architecture" aria-label="Link to this section">#</a></h2><p>Our application is performing three important steps to visualize data from Neo4j
+in a Nexus chart.</p><ul><li>Send a query to and retrieve data from a Neo4j database, </li><li>Convert this response JSON data into the required Nexus format, </li><li>Display it in our Nexus visualisation.</li></ul><p>Let's go through each step in detail.</p><h3 id="queries">Querying the Neo4J database<a class="heading-anchor" href="#queries" aria-label="Link to this section">#</a></h3><p>After running <span class="yarn"><code class="black">yarn start</code></span> or <span class="npm"><code class="black">npm start</code></span>,
+we create a new local endpoint ('/neo4jdb'), which will use the Neo4j JavaScript driver to
+make queries to our neo4j database. The install has already loaded the module
+into our node environment.</p><p>Our new endpoint receives two arguments, the first is either 'Movie' or 'Actor' and the second
+is the movie title or actor name. 
+These arguments are inserted into our prepared Cypher queries, and sent to the Neo4J database,
+which will return a JSON response using the Bolt protocol.</p><p>In <strong>neo4j-router.js</strong>, we import the driver, and then set it up using our
+authentication from the <code class="black">config</code> object. 
+</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">const</span><span class="pln"> neo4j </span><span class="pun">=</span><span class="pln"> require</span><span class="pun">(</span><span class="str">'neo4j-driver'</span><span class="pun">);</span><span class="pln">
+</span><span class="com">// Set up the Neo4j JavaScript driver</span><span class="pln">
+</span><span class="kwd">const</span><span class="pln"> driver </span><span class="pun">=</span><span class="pln"> neo4j</span><span class="pun">.</span><span class="pln">driver</span><span class="pun">(</span><span class="pln">
+    configs</span><span class="pun">.</span><span class="pln">boltPath</span><span class="pun">,</span><span class="pln">
+    neo4j</span><span class="pun">.</span><span class="pln">auth</span><span class="pun">.</span><span class="pln">basic</span><span class="pun">(</span><span class="pln">configs</span><span class="pun">.</span><span class="pln">username</span><span class="pun">,</span><span class="pln"> configs</span><span class="pun">.</span><span class="pln">password</span><span class="pun">),</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> disableLosslessIntegers</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">);</span></code></pre><div class="notice"><div class="boxout"><div class="boxout-icon"></div><div class="boxout-body" style="padding-left: 42px">Note that we have set <code class="black">disableLosslessIntegers</code> to true. This is
+because Neo4J supports 64-bit integers, but JavaScript engines only safely support 32-bit
+integers.<br>Setting this to true ensures we will always return native
+JavaScript numbers. However, if you are using this data in other applications besides
+JavaScript this setting may result in a loss of precision.</div></div></div><p>Once our driver is setup, we are able to create sessions in which to run queries.</p><p>Let's take a closer look at the <code class="black">setupEndpoint()</code> function:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">function</span><span class="pln"> setupEndpoint</span><span class="pun">(</span><span class="pln">app</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// We add a new endpoint onto our existing express app that accepts a query</span><span class="pln">
+    app</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'/neo4jdb/:queryType'</span><span class="pun">,</span><span class="pln">
+      async </span><span class="pun">(</span><span class="pln">req</span><span class="pun">,</span><span class="pln"> res</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Create a new session in which we can query the database</span><span class="pln">
+        </span><span class="kwd">const</span><span class="pln"> session </span><span class="pun">=</span><span class="pln"> await driver</span><span class="pun">.</span><span class="pln">session</span><span class="pun">();</span><span class="pln">
+        </span><span class="com">// Once our query has been completed, we close our session</span><span class="pln">
+        res</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="str">'finish'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> session</span><span class="pun">.</span><span class="pln">close</span><span class="pun">());</span><span class="pln">
+        </span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          </span><span class="com">// We send our query using the run method, using our Cypher query templates</span><span class="pln">
+          </span><span class="kwd">const</span><span class="pln"> response </span><span class="pun">=</span><span class="pln"> await session</span><span class="pun">.</span><span class="pln">run</span><span class="pun">(</span><span class="pln">queryTemplates</span><span class="pun">[</span><span class="pln">req</span><span class="pun">.</span><span class="pln">params</span><span class="pun">.</span><span class="pln">queryType</span><span class="pun">],</span><span class="pln">
+            </span><span class="pun">{</span><span class="pln"> nameParam</span><span class="pun">:</span><span class="pln"> req</span><span class="pun">.</span><span class="pln">query</span><span class="pun">.</span><span class="pln">name </span><span class="pun">});</span><span class="pln">
+          </span><span class="com">// We would also like to return our query as part of the response</span><span class="pln">
+          </span><span class="com">// Here we simply update the query with the arguments that were used</span><span class="pln">
+          let statement </span><span class="pun">=</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">summary</span><span class="pun">.</span><span class="pln">query</span><span class="pun">.</span><span class="pln">text</span><span class="pun">.</span><span class="pln">replace</span><span class="pun">(</span><span class="str">'$nameParam'</span><span class="pun">,</span><span class="pln"> 
+            </span><span class="pun">`</span><span class="str">"${response.summary.query.parameters.nameParam}"</span><span class="pun">`);</span><span class="pln">
+          statement </span><span class="pun">=</span><span class="pln"> statement</span><span class="pun">.</span><span class="pln">replace</span><span class="pun">(</span><span class="str">'RETURN'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'\\nRETURN'</span><span class="pun">);</span><span class="pln">
+          console</span><span class="pun">.</span><span class="pln">info</span><span class="pun">(`</span><span class="typ">Neo4j</span><span class="pln"> statement</span><span class="pun">:</span><span class="pln"> $</span><span class="pun">{</span><span class="pln">statement</span><span class="pun">}`);</span><span class="pln">
+          </span><span class="com">// We return to the client the response as well as the query we used.</span><span class="pln">
+          res</span><span class="pun">.</span><span class="pln">send</span><span class="pun">({</span><span class="pln"> rawItems</span><span class="pun">:</span><span class="pln"> response</span><span class="pun">.</span><span class="pln">records</span><span class="pun">,</span><span class="pln"> statement </span><span class="pun">});</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+          console</span><span class="pun">.</span><span class="pln">error</span><span class="pun">(</span><span class="str">'Unable to connect to Neo4j'</span><span class="pun">,</span><span class="pln"> configs</span><span class="pun">);</span><span class="pln">
+          res</span><span class="pun">.</span><span class="pln">send</span><span class="pun">({</span><span class="pln"> error</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Unable to connect to Neo4j'</span><span class="pln"> </span><span class="pun">});</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+      </span><span class="pun">});</span><span class="pln">
+  </span><span class="pun">}</span></code></pre><p>Our returned JSON response will be as follows:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="pun">{</span><span class="pln">
+  </span><span class="str">"records"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="str">"keys"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+            </span><span class="str">"actorName"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"movieTitle"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"actorId"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"movieId"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"degree"</span><span class="pln">
+        </span><span class="pun">],</span><span class="pln">
+        </span><span class="str">"length"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln">
+        </span><span class="str">"_fields"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+            </span><span class="str">"Marc Aden"</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"The Matrix"</span><span class="pun">,</span><span class="pln">
+            </span><span class="lit">108</span><span class="pun">,</span><span class="pln">
+            </span><span class="lit">90</span><span class="pun">,</span><span class="pln">
+            </span><span class="lit">1</span><span class="pln">
+        </span><span class="pun">],</span><span class="pln">
+        </span><span class="str">"_fieldLookup"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="str">"actorName"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"movieTitle"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"actorId"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"movieId"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln">
+            </span><span class="str">"degree"</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">...</span><span class="pln">
+  </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">}</span></code></pre><h3 id="convert">Converting to Nexus format<a class="heading-anchor" href="#convert" aria-label="Link to this section">#</a></h3><p>The <strong>neo4j-db.js</strong> file iterates through returned JSON data and converts it into the correct
+Nexus format.</p><p>As an example, when we receive the above JSON back from the server, the
+<code class="black">toNexusGraphFormat()</code> function parses our initial query response.
+It converts the 'Marc Aden' response to 2 objects in an array; one link and one node:
+</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="pln">items </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+  </span><span class="pun">{</span><span class="str">"id"</span><span class="pun">:</span><span class="str">"108"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"type"</span><span class="pun">:</span><span class="str">"node"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"t"</span><span class="pun">:</span><span class="str">"Marc Aden"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"d"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="str">"degree"</span><span class="pun">:</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="str">"type"</span><span class="pun">:</span><span class="str">"actor"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"expanded"</span><span class="pun">:</span><span class="kwd">true</span><span class="pun">},</span><span class="pln"> </span><span class="str">"tc"</span><span class="pun">:</span><span class="kwd">false</span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">{</span><span class="str">"id"</span><span class="pun">:</span><span class="str">"108-90"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"type"</span><span class="pun">:</span><span class="str">"link"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"id1"</span><span class="pun">:</span><span class="str">"108"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"id2"</span><span class="pun">:</span><span class="str">"90"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"c"</span><span class="pun">:</span><span class="str">"#C4C4C4"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"w"</span><span class="pun">:</span><span class="lit">3</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">]</span></code></pre><p>The <code class="black">items</code> array is now ready to be loaded into our chart using
+<a href="../api.html#Chart_expand">chart.expand()</a>.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/integrations/angular-reference.html"><span class="dir">Previous</span><span class="label">Angular Reference</span></a>
+<a class="next" href="../../graph-nexus/integrations/react-reference.html"><span class="dir">Next</span><span class="label">React Reference</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#step1">Step 1: Setting up the environment</a></li>
+<li class="lvl-2"><a href="#step2">Step 2: Creating a Neo4j database</a></li>
+<li class="lvl-2"><a href="#step3">Step 3: Connecting Nexus to the database</a></li>
+<li class="lvl-2"><a href="#architecture">Understanding the application architecture</a></li>
+<li class="lvl-3"><a href="#queries">Querying the Neo4J database</a></li>
+<li class="lvl-3"><a href="#convert">Converting to Nexus format</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>API Signatures — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Every public method and property, with its TypeScript signature from graph-nexus.d.ts (shipped in the package). Option and item shapes are in the typings a">
+<link rel="icon" href="../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../assets/doc.css">
+</head>
+<body data-root="../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../site/index.html">
+      <img class="logo-light" src="../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../site/index.html">Home</a>
+    <a href="../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group" open>
+<summary>Overview</summary><ul>
+<li><a href="../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../graph-nexus/api.html">API Index</a></li>
+<li><a href="../graph-nexus/api-signatures.html" class="current" aria-current="page">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>API Signatures</h1>
+<p>Every public method and property, with its TypeScript signature from <code>graph-nexus.d.ts</code> (shipped in the package). Option and item shapes are in the typings and on the <a href="api.html">API Index</a>.</p>
+<p>Methods that return a <code>Promise</code> also accept a trailing callback, for example <code>chart.layout('organic', {}, () =&gt; {})</code>.</p>
+<h2 id="GraphNexus">GraphNexus<a class="heading-anchor" href="#GraphNexus" aria-label="Link to this section">#</a></h2><p>The <code>GraphNexus</code> object: creates components and holds global settings.</p>
+<h3 id="sig-GraphNexus_create"><a href="api.html#GraphNexus_create">GraphNexus.create</a><a class="heading-anchor" href="#sig-GraphNexus_create" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">create(target: string | HTMLElement): Promise&lt;Chart&gt;
+create(def: ComponentDefinition &amp; { type?: &#x27;chart&#x27;; options?: ChartOptions }): Promise&lt;Chart&gt;
+create(def: ComponentDefinition &amp; { type: &#x27;timebar&#x27;; options?: TimeBarOptions }): Promise&lt;TimeBar&gt;
+create(def: TimelineComponentDefinition): Promise&lt;Timeline&gt;
+create(defs: ComponentDefinition[]): Promise&lt;(Chart | TimeBar | Timeline)[]&gt;
+create(def: ComponentDefinition): Promise&lt;Chart | TimeBar | Timeline&gt;</code></pre>
+<h3 id="sig-GraphNexus_createTimeline"><a href="api.html#GraphNexus_createTimeline">GraphNexus.createTimeline</a><a class="heading-anchor" href="#sig-GraphNexus_createTimeline" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">createTimeline(definition: string | HTMLElement | Omit&lt;TimelineComponentDefinition, &#x27;type&#x27;&gt;): Timeline</code></pre>
+<h3 id="sig-GraphNexus_components"><a href="api.html#GraphNexus_components">GraphNexus.components</a><a class="heading-anchor" href="#sig-GraphNexus_components" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">components: IdMap&lt;Chart | TimeBar | Timeline&gt;</code></pre>
+<h3 id="sig-GraphNexus_callbacks"><a href="api.html#GraphNexus_callbacks">GraphNexus.callbacks</a><a class="heading-anchor" href="#sig-GraphNexus_callbacks" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">callbacks(): GraphNexusStatic</code></pre>
+<h3 id="sig-GraphNexus_coords"><a href="api.html#GraphNexus_coords">GraphNexus.coords</a><a class="heading-anchor" href="#sig-GraphNexus_coords" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">coords(evt: Event): { x: number; y: number }</code></pre>
+<h3 id="sig-GraphNexus_corsAdapter"><a href="api.html#GraphNexus_corsAdapter">GraphNexus.corsAdapter</a><a class="heading-anchor" href="#sig-GraphNexus_corsAdapter" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">corsAdapter(adapter: ((url: string) =&gt; string) | null): void</code></pre>
+<h3 id="sig-GraphNexus_dashedLineSupport"><a href="api.html#GraphNexus_dashedLineSupport">GraphNexus.dashedLineSupport</a><a class="heading-anchor" href="#sig-GraphNexus_dashedLineSupport" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">dashedLineSupport(): boolean</code></pre>
+<h3 id="sig-GraphNexus_fullScreenCapable"><a href="api.html#GraphNexus_fullScreenCapable">GraphNexus.fullScreenCapable</a><a class="heading-anchor" href="#sig-GraphNexus_fullScreenCapable" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">fullScreenCapable(): boolean</code></pre>
+<h3 id="sig-GraphNexus_getFontIcon"><a href="api.html#GraphNexus_getFontIcon">GraphNexus.getFontIcon</a><a class="heading-anchor" href="#sig-GraphNexus_getFontIcon" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">getFontIcon(classes: string): number</code></pre>
+<h3 id="sig-GraphNexus_getGraphEngine"><a href="api.html#GraphNexus_getGraphEngine">GraphNexus.getGraphEngine</a><a class="heading-anchor" href="#sig-GraphNexus_getGraphEngine" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">getGraphEngine(opts?: { selfLinks?: boolean }): Graph</code></pre>
+<h3 id="sig-GraphNexus_info"><a href="api.html#GraphNexus_info">GraphNexus.info</a><a class="heading-anchor" href="#sig-GraphNexus_info" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">info(): { version: string; mode: string; webgl: boolean }</code></pre>
+<h3 id="sig-GraphNexus_mode"><a href="api.html#GraphNexus_mode">GraphNexus.mode</a><a class="heading-anchor" href="#sig-GraphNexus_mode" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">mode(value?: &#x27;auto&#x27; | &#x27;webgl&#x27; | &#x27;canvas&#x27;): string</code></pre>
+<h3 id="sig-GraphNexus_paths"><a href="api.html#GraphNexus_paths">GraphNexus.paths</a><a class="heading-anchor" href="#sig-GraphNexus_paths" aria-label="Link to this section">#</a></h3>
+<p>images: base for node image URLs; assets: base URL of the assets/ folder (bundled Leaflet) for dist builds.</p>
+<pre class="prettyprint"><code class="lang-ts">paths(value?: { images?: string; assets?: string }): { images?: string; assets?: string }</code></pre>
+<h3 id="sig-GraphNexus_setSize"><a href="api.html#GraphNexus_setSize">GraphNexus.setSize</a><a class="heading-anchor" href="#sig-GraphNexus_setSize" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">setSize(target: string | HTMLElement, width: number, height: number): void</code></pre>
+<h3 id="sig-GraphNexus_toggleFullScreen"><a href="api.html#GraphNexus_toggleFullScreen">GraphNexus.toggleFullScreen</a><a class="heading-anchor" href="#sig-GraphNexus_toggleFullScreen" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">toggleFullScreen(element: string | HTMLElement, handler?: (isFull: boolean) =&gt; void): void</code></pre>
+<h3 id="sig-GraphNexus_webGLSupport"><a href="api.html#GraphNexus_webGLSupport">GraphNexus.webGLSupport</a><a class="heading-anchor" href="#sig-GraphNexus_webGLSupport" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">webGLSupport(): boolean</code></pre>
+<h2 id="Chart">Chart<a class="heading-anchor" href="#Chart" aria-label="Link to this section">#</a></h2><p>A chart, returned by <code>GraphNexus.create()</code>.</p>
+<h3 id="sig-Chart_load"><a href="api.html#Chart_load">Chart.load</a><a class="heading-anchor" href="#sig-Chart_load" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">load(data: ChartData | Item[]): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_merge"><a href="api.html#Chart_merge">Chart.merge</a><a class="heading-anchor" href="#sig-Chart_merge" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">merge(items: ChartData | Item[]): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_expand"><a href="api.html#Chart_expand">Chart.expand</a><a class="heading-anchor" href="#sig-Chart_expand" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">expand(items: ChartData | Item[], opts?: ExpandOptions): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_setItem"><a href="api.html#Chart_setItem">Chart.setItem</a><a class="heading-anchor" href="#sig-Chart_setItem" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">setItem(item: Item): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_removeItem"><a href="api.html#Chart_removeItem">Chart.removeItem</a><a class="heading-anchor" href="#sig-Chart_removeItem" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">removeItem(ids: string | string[]): void</code></pre>
+<h3 id="sig-Chart_getItem"><a href="api.html#Chart_getItem">Chart.getItem</a><a class="heading-anchor" href="#sig-Chart_getItem" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">getItem(id: string): Item | null
+getItem(ids: string[]): (Item | null)[]</code></pre>
+<h3 id="sig-Chart_clear"><a href="api.html#Chart_clear">Chart.clear</a><a class="heading-anchor" href="#sig-Chart_clear" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">clear(): void</code></pre>
+<h3 id="sig-Chart_serialize"><a href="api.html#Chart_serialize">Chart.serialize</a><a class="heading-anchor" href="#sig-Chart_serialize" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">serialize(): ChartData</code></pre>
+<h3 id="sig-Chart_each"><a href="api.html#Chart_each">Chart.each</a><a class="heading-anchor" href="#sig-Chart_each" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">each(opts: { type?: &#x27;node&#x27; | &#x27;link&#x27; | &#x27;all&#x27;; items?: &#x27;underlying&#x27; | &#x27;toplevel&#x27; | &#x27;all&#x27; }, fn: (item: Item) =&gt; void): void</code></pre>
+<h3 id="sig-Chart_selection"><a href="api.html#Chart_selection">Chart.selection</a><a class="heading-anchor" href="#sig-Chart_selection" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">selection(): string[]
+selection(ids: string[]): string[]</code></pre>
+<h3 id="sig-Chart_setProperties"><a href="api.html#Chart_setProperties">Chart.setProperties</a><a class="heading-anchor" href="#sig-Chart_setProperties" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">setProperties(props: Partial&lt;Item&gt; &amp; { id: string } | (Partial&lt;Item&gt; &amp; { id: string })[], useRegEx?: boolean): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_animateProperties"><a href="api.html#Chart_animateProperties">Chart.animateProperties</a><a class="heading-anchor" href="#sig-Chart_animateProperties" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">animateProperties(props: Partial&lt;Item&gt; &amp; { id: string } | (Partial&lt;Item&gt; &amp; { id: string })[], opts?: { time?: number; easing?: &#x27;linear&#x27; | &#x27;cubic&#x27;; queue?: boolean }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_hide"><a href="api.html#Chart_hide">Chart.hide</a><a class="heading-anchor" href="#sig-Chart_hide" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">hide(ids: string | string[], opts?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_show"><a href="api.html#Chart_show">Chart.show</a><a class="heading-anchor" href="#sig-Chart_show" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">show(ids: string | string[], showLinks?: boolean, opts?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_filter"><a href="api.html#Chart_filter">Chart.filter</a><a class="heading-anchor" href="#sig-Chart_filter" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">filter(fn: (item: Item) =&gt; boolean, opts?: { type?: &#x27;node&#x27; | &#x27;link&#x27; | &#x27;all&#x27;; hideSingletons?: boolean; animate?: boolean; time?: number }): Promise&lt;{ shown: { nodes: string[]; links: string[] }; hidden: { nodes: string[]; links: string[] }; combos: { nodes: any[]; links: any[] } }&gt;</code></pre>
+<h3 id="sig-Chart_foreground"><a href="api.html#Chart_foreground">Chart.foreground</a><a class="heading-anchor" href="#sig-Chart_foreground" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">foreground(fn: (item: Item) =&gt; boolean, opts?: { type?: &#x27;node&#x27; | &#x27;link&#x27; | &#x27;all&#x27; }): Promise&lt;{ foreground: { nodes: string[]; links: string[] }; background: { nodes: string[]; links: string[] } }&gt;</code></pre>
+<h3 id="sig-Chart_ping"><a href="api.html#Chart_ping">Chart.ping</a><a class="heading-anchor" href="#sig-Chart_ping" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">ping(ids: string | string[], opts?: { c?: string; r?: number; w?: number; lw?: number; time?: number; repeat?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_layout"><a href="api.html#Chart_layout">Chart.layout</a><a class="heading-anchor" href="#sig-Chart_layout" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">layout(name?: LayoutName, opts?: LayoutOptions): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_arrange"><a href="api.html#Chart_arrange">Chart.arrange</a><a class="heading-anchor" href="#sig-Chart_arrange" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">arrange(name: &#x27;grid&#x27; | &#x27;circle&#x27; | &#x27;radial&#x27; | &#x27;concentric&#x27; | &#x27;lens&#x27; | &#x27;sequential&#x27;, ids: string[], opts?: { animate?: boolean; fit?: boolean; position?: &#x27;absolute&#x27; | &#x27;average&#x27; | &#x27;tidy&#x27;; tightness?: number; time?: number; x?: number; y?: number; gridShape?: ComboArrangement[&#x27;gridShape&#x27;] }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_zoom"><a href="api.html#Chart_zoom">Chart.zoom</a><a class="heading-anchor" href="#sig-Chart_zoom" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">zoom(how: &#x27;in&#x27; | &#x27;out&#x27; | &#x27;one&#x27; | &#x27;fit&#x27; | &#x27;height&#x27; | &#x27;selection&#x27;, opts?: { animate?: boolean; time?: number; ids?: string | string[] }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_pan"><a href="api.html#Chart_pan">Chart.pan</a><a class="heading-anchor" href="#sig-Chart_pan" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">pan(direction: &#x27;up&#x27; | &#x27;down&#x27; | &#x27;left&#x27; | &#x27;right&#x27; | &#x27;selection&#x27;, opts?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_viewOptions"><a href="api.html#Chart_viewOptions">Chart.viewOptions</a><a class="heading-anchor" href="#sig-Chart_viewOptions" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">viewOptions(): { zoom: number; offsetX: number; offsetY: number; width: number; height: number }
+viewOptions(val: { zoom?: number; offsetX?: number; offsetY?: number }, transition?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_camera"><a href="api.html#Chart_camera">Chart.camera</a><a class="heading-anchor" href="#sig-Chart_camera" aria-label="Link to this section">#</a></h3>
+<p>3D camera: angles in radians, focal (perspective) and orbit pivot in world units.</p>
+<pre class="prettyprint"><code class="lang-ts">camera(next?: Partial&lt;Camera3D&gt;, opts?: { animate?: boolean; time?: number }): Camera3D</code></pre>
+<h3 id="sig-Chart_viewCoordinates"><a href="api.html#Chart_viewCoordinates">Chart.viewCoordinates</a><a class="heading-anchor" href="#sig-Chart_viewCoordinates" aria-label="Link to this section">#</a></h3>
+<p>In 3D, z is the world depth; returns null for a point behind the camera.</p>
+<pre class="prettyprint"><code class="lang-ts">viewCoordinates(x: number, y: number, z?: number): { x: number; y: number } | null</code></pre>
+<h3 id="sig-Chart_worldCoordinates"><a href="api.html#Chart_worldCoordinates">Chart.worldCoordinates</a><a class="heading-anchor" href="#sig-Chart_worldCoordinates" aria-label="Link to this section">#</a></h3>
+<p>In 3D, the point on the camera-facing plane through the orbit pivot (z included).</p>
+<pre class="prettyprint"><code class="lang-ts">worldCoordinates(x: number, y: number): { x: number; y: number; z?: number }</code></pre>
+<h3 id="sig-Chart_getItemInfoAt"><a href="api.html#Chart_getItemInfoAt">Chart.getItemInfoAt</a><a class="heading-anchor" href="#sig-Chart_getItemInfoAt" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">getItemInfoAt(x: number, y: number): { id: string; subItem: object } | undefined</code></pre>
+<h3 id="sig-Chart_contains"><a href="api.html#Chart_contains">Chart.contains</a><a class="heading-anchor" href="#sig-Chart_contains" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">contains(shape: { x: number; y: number; w: number; h: number; sh?: &#x27;box&#x27; | &#x27;circle&#x27; }): string[]</code></pre>
+<h3 id="sig-Chart_labelPosition"><a href="api.html#Chart_labelPosition">Chart.labelPosition</a><a class="heading-anchor" href="#sig-Chart_labelPosition" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">labelPosition(id: string): { x1: number; x2: number; y1: number; y2: number; fs: number } | null</code></pre>
+<h3 id="sig-Chart_lock"><a href="api.html#Chart_lock">Chart.lock</a><a class="heading-anchor" href="#sig-Chart_lock" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">lock(val?: boolean): boolean</code></pre>
+<h3 id="sig-Chart_createLink"><a href="api.html#Chart_createLink">Chart.createLink</a><a class="heading-anchor" href="#sig-Chart_createLink" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">createLink(id: string, linkId: string, opts?: { style?: LinkStyle }): Promise&lt;string | null&gt;</code></pre>
+<h3 id="sig-Chart_getAggregateInfo"><a href="api.html#Chart_getAggregateInfo">Chart.getAggregateInfo</a><a class="heading-anchor" href="#sig-Chart_getAggregateInfo" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">getAggregateInfo(id: string): { isAggregate?: boolean; aggregateChildren?: string[]; parentAggregate?: string; aggregateDirection?: string } | null
+getAggregateInfo(ids: string[]): ({ isAggregate?: boolean; aggregateChildren?: string[]; parentAggregate?: string } | null)[]</code></pre>
+<h3 id="sig-Chart_toDataURL"><a href="api.html#Chart_toDataURL">Chart.toDataURL</a><a class="heading-anchor" href="#sig-Chart_toDataURL" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">toDataURL(width?: number, height?: number, opts?: { fit?: &#x27;view&#x27; | &#x27;chart&#x27; | &#x27;exact&#x27; | &#x27;oneToOne&#x27;; selection?: boolean; logo?: boolean; watermark?: boolean }): Promise&lt;string&gt;</code></pre>
+<h3 id="sig-Chart_export"><a href="api.html#Chart_export">Chart.export</a><a class="heading-anchor" href="#sig-Chart_export" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">export(opts: ExportOptions): Promise&lt;{ url: string; blob: Blob; warnings: { type: string; message: string }[] }&gt;</code></pre>
+<h3 id="sig-Chart_options"><a href="api.html#Chart_options">Chart.options</a><a class="heading-anchor" href="#sig-Chart_options" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">options(): ChartOptions
+options(val: ChartOptions): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Chart_graph"><a href="api.html#Chart_graph">Chart.graph</a><a class="heading-anchor" href="#sig-Chart_graph" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">graph(): Graph</code></pre>
+<h3 id="sig-Chart_combo"><a href="api.html#Chart_combo">Chart.combo</a><a class="heading-anchor" href="#sig-Chart_combo" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">combo(): Combo</code></pre>
+<h3 id="sig-Chart_map"><a href="api.html#Chart_map">Chart.map</a><a class="heading-anchor" href="#sig-Chart_map" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">map(): GraphMap</code></pre>
+<h3 id="sig-Chart_setContainer"><a href="api.html#Chart_setContainer">Chart.setContainer</a><a class="heading-anchor" href="#sig-Chart_setContainer" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">setContainer(element: string | HTMLElement | null): void</code></pre>
+<h3 id="sig-Chart_destroy"><a href="api.html#Chart_destroy">Chart.destroy</a><a class="heading-anchor" href="#sig-Chart_destroy" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">destroy(): void</code></pre>
+<h3 id="sig-Chart_on"><a href="api.html#Chart_on">Chart.on</a><a class="heading-anchor" href="#sig-Chart_on" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">on&lt;K extends keyof ChartEvents&gt;(name: K, handler: (props: ChartEvents[K]) =&gt; void): void
+on(name: &#x27;all&#x27;, handler: (e: { name: string; event: any }) =&gt; void): void</code></pre>
+<h3 id="sig-Chart_off"><a href="api.html#Chart_off">Chart.off</a><a class="heading-anchor" href="#sig-Chart_off" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">off(name?: string, handler?: Function): void</code></pre>
+<h3 id="sig-Chart_bind"><a href="api.html#Chart_bind">Chart.bind</a><a class="heading-anchor" href="#sig-Chart_bind" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">bind(name: string, handler: (...args: any[]) =&gt; any): void</code></pre>
+<h3 id="sig-Chart_unbind"><a href="api.html#Chart_unbind">Chart.unbind</a><a class="heading-anchor" href="#sig-Chart_unbind" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">unbind(name?: string, handler?: Function): void</code></pre>
+<h2 id="Graph">Graph<a class="heading-anchor" href="#Graph" aria-label="Link to this section">#</a></h2><p>Graph analysis, from <code>chart.graph()</code> or <code>GraphNexus.getGraphEngine()</code>.</p>
+<h3 id="sig-Graph_load"><a href="api.html#Graph_load">Graph.load</a><a class="heading-anchor" href="#sig-Graph_load" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">load(data: ChartData): void</code></pre>
+<h3 id="sig-Graph_clear"><a href="api.html#Graph_clear">Graph.clear</a><a class="heading-anchor" href="#sig-Graph_clear" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">clear(): void</code></pre>
+<h3 id="sig-Graph_degrees"><a href="api.html#Graph_degrees">Graph.degrees</a><a class="heading-anchor" href="#sig-Graph_degrees" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">degrees(opts?: { direction?: &#x27;from&#x27; | &#x27;to&#x27; | &#x27;any&#x27;; value?: string; all?: boolean }): IdMap&lt;number&gt;</code></pre>
+<h3 id="sig-Graph_pageRank"><a href="api.html#Graph_pageRank">Graph.pageRank</a><a class="heading-anchor" href="#sig-Graph_pageRank" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">pageRank(opts?: { directed?: boolean; value?: string; all?: boolean }): IdMap&lt;number&gt;</code></pre>
+<h3 id="sig-Graph_eigenCentrality"><a href="api.html#Graph_eigenCentrality">Graph.eigenCentrality</a><a class="heading-anchor" href="#sig-Graph_eigenCentrality" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">eigenCentrality(opts?: { value?: string; all?: boolean }): IdMap&lt;number&gt;</code></pre>
+<h3 id="sig-Graph_closeness"><a href="api.html#Graph_closeness">Graph.closeness</a><a class="heading-anchor" href="#sig-Graph_closeness" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">closeness(opts?: { direction?: &#x27;from&#x27; | &#x27;to&#x27; | &#x27;any&#x27;; normalization?: &#x27;unnormalized&#x27; | &#x27;chart&#x27; | &#x27;component&#x27;; value?: string; weights?: boolean; all?: boolean; onProgress?: (p: number) =&gt; void }): Promise&lt;IdMap&lt;number&gt;&gt;</code></pre>
+<h3 id="sig-Graph_betweenness"><a href="api.html#Graph_betweenness">Graph.betweenness</a><a class="heading-anchor" href="#sig-Graph_betweenness" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">betweenness(opts?: { directed?: boolean; normalization?: &#x27;unnormalized&#x27; | &#x27;chart&#x27; | &#x27;component&#x27;; value?: string; weights?: boolean; all?: boolean; onProgress?: (p: number) =&gt; void }): Promise&lt;IdMap&lt;number&gt;&gt;</code></pre>
+<h3 id="sig-Graph_distances"><a href="api.html#Graph_distances">Graph.distances</a><a class="heading-anchor" href="#sig-Graph_distances" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">distances(id: string, opts?: { direction?: &#x27;from&#x27; | &#x27;to&#x27; | &#x27;any&#x27;; value?: string; weights?: boolean; all?: boolean }): IdMap&lt;number&gt;</code></pre>
+<h3 id="sig-Graph_shortestPaths"><a href="api.html#Graph_shortestPaths">Graph.shortestPaths</a><a class="heading-anchor" href="#sig-Graph_shortestPaths" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">shortestPaths(id1: string, id2: string, opts?: { direction?: &#x27;from&#x27; | &#x27;to&#x27; | &#x27;any&#x27;; value?: string; weights?: boolean; all?: boolean }): { onePath: string[]; one: string[]; items: string[]; distance: number }</code></pre>
+<h3 id="sig-Graph_neighbours"><a href="api.html#Graph_neighbours">Graph.neighbours</a><a class="heading-anchor" href="#sig-Graph_neighbours" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">neighbours(ids: string | string[], opts?: { direction?: &#x27;from&#x27; | &#x27;to&#x27; | &#x27;any&#x27;; hops?: number; all?: boolean }): { nodes: string[]; links: string[] }</code></pre>
+<h3 id="sig-Graph_components"><a href="api.html#Graph_components">Graph.components</a><a class="heading-anchor" href="#sig-Graph_components" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">components(opts?: { all?: boolean }): { nodes: string[]; links: string[] }[]</code></pre>
+<h3 id="sig-Graph_clusters"><a href="api.html#Graph_clusters">Graph.clusters</a><a class="heading-anchor" href="#sig-Graph_clusters" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">clusters(opts?: { value?: string; factor?: number; consistent?: boolean; all?: boolean }): string[][]</code></pre>
+<h3 id="sig-Graph_kCores"><a href="api.html#Graph_kCores">Graph.kCores</a><a class="heading-anchor" href="#sig-Graph_kCores" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">kCores(opts?: { all?: boolean }): { maximumK: number; values: IdMap&lt;number&gt; }</code></pre>
+<h2 id="Combo">Combo<a class="heading-anchor" href="#Combo" aria-label="Link to this section">#</a></h2><p>Combo operations, from <code>chart.combo()</code>.</p>
+<h3 id="sig-Combo_combine"><a href="api.html#Combo_combine">Combo.combine</a><a class="heading-anchor" href="#sig-Combo_combine" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">combine(defs: ComboDefinition | ComboDefinition[], opts?: { arrange?: ComboArrangement[&#x27;name&#x27;] | ComboArrangement; select?: boolean; animate?: boolean; time?: number }): Promise&lt;string[]&gt;</code></pre>
+<h3 id="sig-Combo_uncombine"><a href="api.html#Combo_uncombine">Combo.uncombine</a><a class="heading-anchor" href="#sig-Combo_uncombine" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">uncombine(ids: string | string[], opts?: { full?: boolean; select?: boolean; animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Combo_open"><a href="api.html#Combo_open">Combo.open</a><a class="heading-anchor" href="#sig-Combo_open" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">open(ids: string | string[], opts?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Combo_close"><a href="api.html#Combo_close">Combo.close</a><a class="heading-anchor" href="#sig-Combo_close" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">close(ids: string | string[], opts?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Combo_isOpen"><a href="api.html#Combo_isOpen">Combo.isOpen</a><a class="heading-anchor" href="#sig-Combo_isOpen" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">isOpen(id: string): boolean</code></pre>
+<h3 id="sig-Combo_isCombo"><a href="api.html#Combo_isCombo">Combo.isCombo</a><a class="heading-anchor" href="#sig-Combo_isCombo" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">isCombo(ids: string | string[], opts?: { type?: &#x27;node&#x27; | &#x27;link&#x27; | &#x27;all&#x27; }): boolean</code></pre>
+<h3 id="sig-Combo_find"><a href="api.html#Combo_find">Combo.find</a><a class="heading-anchor" href="#sig-Combo_find" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">find(id: string, opts?: { parent?: &#x27;top&#x27; | &#x27;first&#x27; }): string | null
+find(ids: string[], opts?: { parent?: &#x27;top&#x27; | &#x27;first&#x27; }): (string | null)[]</code></pre>
+<h3 id="sig-Combo_info"><a href="api.html#Combo_info">Combo.info</a><a class="heading-anchor" href="#sig-Combo_info" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">info(id: string): { nodes: Node[]; links: Link[] } | null</code></pre>
+<h3 id="sig-Combo_reveal"><a href="api.html#Combo_reveal">Combo.reveal</a><a class="heading-anchor" href="#sig-Combo_reveal" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">reveal(ids?: string | string[]): string[]</code></pre>
+<h3 id="sig-Combo_transfer"><a href="api.html#Combo_transfer">Combo.transfer</a><a class="heading-anchor" href="#sig-Combo_transfer" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">transfer(ids: string | string[], comboId: string | null, opts?: { arrange?: ComboArrangement[&#x27;name&#x27;] | ComboArrangement }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Combo_arrange"><a href="api.html#Combo_arrange">Combo.arrange</a><a class="heading-anchor" href="#sig-Combo_arrange" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">arrange(ids: string | string[], opts?: ComboArrangement &amp; { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h2 id="Map">Map<a class="heading-anchor" href="#Map" aria-label="Link to this section">#</a></h2><p>Map mode, from <code>chart.map()</code>.</p>
+<h3 id="sig-Map_show"><a href="api.html#Map_show">Map.show</a><a class="heading-anchor" href="#sig-Map_show" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">show(): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Map_hide"><a href="api.html#Map_hide">Map.hide</a><a class="heading-anchor" href="#sig-Map_hide" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">hide(): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Map_isShown"><a href="api.html#Map_isShown">Map.isShown</a><a class="heading-anchor" href="#sig-Map_isShown" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">isShown(): boolean</code></pre>
+<h3 id="sig-Map_options"><a href="api.html#Map_options">Map.options</a><a class="heading-anchor" href="#sig-Map_options" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">options(): { animate?: boolean; leaflet?: any; padding?: number; tiles?: object | string | null; time?: number; transition?: string }
+options(val: { animate?: boolean; leaflet?: any; padding?: number; tiles?: object | string | null; time?: number; transition?: string }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-Map_leafletMap"><a href="api.html#Map_leafletMap">Map.leafletMap</a><a class="heading-anchor" href="#sig-Map_leafletMap" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">leafletMap(): any</code></pre>
+<h3 id="sig-Map_mapCoordinates"><a href="api.html#Map_mapCoordinates">Map.mapCoordinates</a><a class="heading-anchor" href="#sig-Map_mapCoordinates" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">mapCoordinates(x: number, y: number): { lat: number; lng: number } | null</code></pre>
+<h3 id="sig-Map_viewCoordinates"><a href="api.html#Map_viewCoordinates">Map.viewCoordinates</a><a class="heading-anchor" href="#sig-Map_viewCoordinates" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">viewCoordinates(lat: number, lng: number): { x: number; y: number } | null</code></pre>
+<h2 id="TimeBar">TimeBar<a class="heading-anchor" href="#TimeBar" aria-label="Link to this section">#</a></h2><p>A time bar, returned by <code>GraphNexus.create({ type: 'timebar' })</code>.</p>
+<h3 id="sig-TimeBar_load"><a href="api.html#TimeBar_load">TimeBar.load</a><a class="heading-anchor" href="#sig-TimeBar_load" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">load(data: { items: TimeBarItem[] }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-TimeBar_merge"><a href="api.html#TimeBar_merge">TimeBar.merge</a><a class="heading-anchor" href="#sig-TimeBar_merge" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">merge(items: TimeBarItem[] | { items: TimeBarItem[] }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-TimeBar_removeItem"><a href="api.html#TimeBar_removeItem">TimeBar.removeItem</a><a class="heading-anchor" href="#sig-TimeBar_removeItem" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">removeItem(ids: string | string[]): void</code></pre>
+<h3 id="sig-TimeBar_clear"><a href="api.html#TimeBar_clear">TimeBar.clear</a><a class="heading-anchor" href="#sig-TimeBar_clear" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">clear(): void</code></pre>
+<h3 id="sig-TimeBar_range"><a href="api.html#TimeBar_range">TimeBar.range</a><a class="heading-anchor" href="#sig-TimeBar_range" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">range(): { dt1: Date; dt2: Date }
+range(dt1: Date | number, dt2: Date | number, opts?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-TimeBar_getIds"><a href="api.html#TimeBar_getIds">TimeBar.getIds</a><a class="heading-anchor" href="#sig-TimeBar_getIds" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">getIds(dt1: Date | number, dt2: Date | number): string[]</code></pre>
+<h3 id="sig-TimeBar_inRange"><a href="api.html#TimeBar_inRange">TimeBar.inRange</a><a class="heading-anchor" href="#sig-TimeBar_inRange" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">inRange(item: string | TimeBarItem): boolean</code></pre>
+<h3 id="sig-TimeBar_zoom"><a href="api.html#TimeBar_zoom">TimeBar.zoom</a><a class="heading-anchor" href="#sig-TimeBar_zoom" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">zoom(how?: &#x27;in&#x27; | &#x27;out&#x27; | &#x27;fit&#x27;, opts?: { animate?: boolean; time?: number; id?: string | string[] }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-TimeBar_pan"><a href="api.html#TimeBar_pan">TimeBar.pan</a><a class="heading-anchor" href="#sig-TimeBar_pan" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">pan(direction?: &#x27;back&#x27; | &#x27;forward&#x27;, opts?: { animate?: boolean; time?: number }): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-TimeBar_play"><a href="api.html#TimeBar_play">TimeBar.play</a><a class="heading-anchor" href="#sig-TimeBar_play" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">play(opts?: { extend?: boolean }): void</code></pre>
+<h3 id="sig-TimeBar_pause"><a href="api.html#TimeBar_pause">TimeBar.pause</a><a class="heading-anchor" href="#sig-TimeBar_pause" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">pause(): void</code></pre>
+<h3 id="sig-TimeBar_mark"><a href="api.html#TimeBar_mark">TimeBar.mark</a><a class="heading-anchor" href="#sig-TimeBar_mark" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">mark(): (Date | { dt1: Date; dt2: Date })[]
+mark(marks: (Date | number | { dt1?: Date | number; dt2?: Date | number })[]): number</code></pre>
+<h3 id="sig-TimeBar_selection"><a href="api.html#TimeBar_selection">TimeBar.selection</a><a class="heading-anchor" href="#sig-TimeBar_selection" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">selection(): (string[] | null)[]
+selection(lines: { id?: string | string[]; index?: number; c?: string } | { id?: string | string[]; index?: number; c?: string }[]): (string[] | null)[]</code></pre>
+<h3 id="sig-TimeBar_options"><a href="api.html#TimeBar_options">TimeBar.options</a><a class="heading-anchor" href="#sig-TimeBar_options" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">options(): TimeBarOptions
+options(val: TimeBarOptions): Promise&lt;void&gt;</code></pre>
+<h3 id="sig-TimeBar_setContainer"><a href="api.html#TimeBar_setContainer">TimeBar.setContainer</a><a class="heading-anchor" href="#sig-TimeBar_setContainer" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">setContainer(element: string | HTMLElement | null): void</code></pre>
+<h3 id="sig-TimeBar_destroy"><a href="api.html#TimeBar_destroy">TimeBar.destroy</a><a class="heading-anchor" href="#sig-TimeBar_destroy" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">destroy(): void</code></pre>
+<h3 id="sig-TimeBar_on"><a href="api.html#TimeBar_on">TimeBar.on</a><a class="heading-anchor" href="#sig-TimeBar_on" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">on(name: string, handler: (props: any) =&gt; void): void</code></pre>
+<h3 id="sig-TimeBar_off"><a href="api.html#TimeBar_off">TimeBar.off</a><a class="heading-anchor" href="#sig-TimeBar_off" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">off(name?: string, handler?: Function): void</code></pre>
+<h3 id="sig-TimeBar_bind"><a href="api.html#TimeBar_bind">TimeBar.bind</a><a class="heading-anchor" href="#sig-TimeBar_bind" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">bind(name: string, handler: (...args: any[]) =&gt; any): void</code></pre>
+<h3 id="sig-TimeBar_unbind"><a href="api.html#TimeBar_unbind">TimeBar.unbind</a><a class="heading-anchor" href="#sig-TimeBar_unbind" aria-label="Link to this section">#</a></h3>
+<pre class="prettyprint"><code class="lang-ts">unbind(name?: string, handler?: Function): void</code></pre>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../graph-nexus/api.html"><span class="dir">Previous</span><span class="label">API Index</span></a>
+<a class="next" href="../graph-nexus/installing/installing-graph-nexus.html"><span class="dir">Next</span><span class="label">Installing Nexus</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#GraphNexus">GraphNexus</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_create">GraphNexus.create</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_createTimeline">GraphNexus.createTimeline</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_components">GraphNexus.components</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_callbacks">GraphNexus.callbacks</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_coords">GraphNexus.coords</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_corsAdapter">GraphNexus.corsAdapter</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_dashedLineSupport">GraphNexus.dashedLineSupport</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_fullScreenCapable">GraphNexus.fullScreenCapable</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_getFontIcon">GraphNexus.getFontIcon</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_getGraphEngine">GraphNexus.getGraphEngine</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_info">GraphNexus.info</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_mode">GraphNexus.mode</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_paths">GraphNexus.paths</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_setSize">GraphNexus.setSize</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_toggleFullScreen">GraphNexus.toggleFullScreen</a></li>
+<li class="lvl-3"><a href="#sig-GraphNexus_webGLSupport">GraphNexus.webGLSupport</a></li>
+<li class="lvl-2"><a href="#Chart">Chart</a></li>
+<li class="lvl-3"><a href="#sig-Chart_load">Chart.load</a></li>
+<li class="lvl-3"><a href="#sig-Chart_merge">Chart.merge</a></li>
+<li class="lvl-3"><a href="#sig-Chart_expand">Chart.expand</a></li>
+<li class="lvl-3"><a href="#sig-Chart_setItem">Chart.setItem</a></li>
+<li class="lvl-3"><a href="#sig-Chart_removeItem">Chart.removeItem</a></li>
+<li class="lvl-3"><a href="#sig-Chart_getItem">Chart.getItem</a></li>
+<li class="lvl-3"><a href="#sig-Chart_clear">Chart.clear</a></li>
+<li class="lvl-3"><a href="#sig-Chart_serialize">Chart.serialize</a></li>
+<li class="lvl-3"><a href="#sig-Chart_each">Chart.each</a></li>
+<li class="lvl-3"><a href="#sig-Chart_selection">Chart.selection</a></li>
+<li class="lvl-3"><a href="#sig-Chart_setProperties">Chart.setProperties</a></li>
+<li class="lvl-3"><a href="#sig-Chart_animateProperties">Chart.animateProperties</a></li>
+<li class="lvl-3"><a href="#sig-Chart_hide">Chart.hide</a></li>
+<li class="lvl-3"><a href="#sig-Chart_show">Chart.show</a></li>
+<li class="lvl-3"><a href="#sig-Chart_filter">Chart.filter</a></li>
+<li class="lvl-3"><a href="#sig-Chart_foreground">Chart.foreground</a></li>
+<li class="lvl-3"><a href="#sig-Chart_ping">Chart.ping</a></li>
+<li class="lvl-3"><a href="#sig-Chart_layout">Chart.layout</a></li>
+<li class="lvl-3"><a href="#sig-Chart_arrange">Chart.arrange</a></li>
+<li class="lvl-3"><a href="#sig-Chart_zoom">Chart.zoom</a></li>
+<li class="lvl-3"><a href="#sig-Chart_pan">Chart.pan</a></li>
+<li class="lvl-3"><a href="#sig-Chart_viewOptions">Chart.viewOptions</a></li>
+<li class="lvl-3"><a href="#sig-Chart_camera">Chart.camera</a></li>
+<li class="lvl-3"><a href="#sig-Chart_viewCoordinates">Chart.viewCoordinates</a></li>
+<li class="lvl-3"><a href="#sig-Chart_worldCoordinates">Chart.worldCoordinates</a></li>
+<li class="lvl-3"><a href="#sig-Chart_getItemInfoAt">Chart.getItemInfoAt</a></li>
+<li class="lvl-3"><a href="#sig-Chart_contains">Chart.contains</a></li>
+<li class="lvl-3"><a href="#sig-Chart_labelPosition">Chart.labelPosition</a></li>
+<li class="lvl-3"><a href="#sig-Chart_lock">Chart.lock</a></li>
+<li class="lvl-3"><a href="#sig-Chart_createLink">Chart.createLink</a></li>
+<li class="lvl-3"><a href="#sig-Chart_getAggregateInfo">Chart.getAggregateInfo</a></li>
+<li class="lvl-3"><a href="#sig-Chart_toDataURL">Chart.toDataURL</a></li>
+<li class="lvl-3"><a href="#sig-Chart_export">Chart.export</a></li>
+<li class="lvl-3"><a href="#sig-Chart_options">Chart.options</a></li>
+<li class="lvl-3"><a href="#sig-Chart_graph">Chart.graph</a></li>
+<li class="lvl-3"><a href="#sig-Chart_combo">Chart.combo</a></li>
+<li class="lvl-3"><a href="#sig-Chart_map">Chart.map</a></li>
+<li class="lvl-3"><a href="#sig-Chart_setContainer">Chart.setContainer</a></li>
+<li class="lvl-3"><a href="#sig-Chart_destroy">Chart.destroy</a></li>
+<li class="lvl-3"><a href="#sig-Chart_on">Chart.on</a></li>
+<li class="lvl-3"><a href="#sig-Chart_off">Chart.off</a></li>
+<li class="lvl-3"><a href="#sig-Chart_bind">Chart.bind</a></li>
+<li class="lvl-3"><a href="#sig-Chart_unbind">Chart.unbind</a></li>
+<li class="lvl-2"><a href="#Graph">Graph</a></li>
+<li class="lvl-3"><a href="#sig-Graph_load">Graph.load</a></li>
+<li class="lvl-3"><a href="#sig-Graph_clear">Graph.clear</a></li>
+<li class="lvl-3"><a href="#sig-Graph_degrees">Graph.degrees</a></li>
+<li class="lvl-3"><a href="#sig-Graph_pageRank">Graph.pageRank</a></li>
+<li class="lvl-3"><a href="#sig-Graph_eigenCentrality">Graph.eigenCentrality</a></li>
+<li class="lvl-3"><a href="#sig-Graph_closeness">Graph.closeness</a></li>
+<li class="lvl-3"><a href="#sig-Graph_betweenness">Graph.betweenness</a></li>
+<li class="lvl-3"><a href="#sig-Graph_distances">Graph.distances</a></li>
+<li class="lvl-3"><a href="#sig-Graph_shortestPaths">Graph.shortestPaths</a></li>
+<li class="lvl-3"><a href="#sig-Graph_neighbours">Graph.neighbours</a></li>
+<li class="lvl-3"><a href="#sig-Graph_components">Graph.components</a></li>
+<li class="lvl-3"><a href="#sig-Graph_clusters">Graph.clusters</a></li>
+<li class="lvl-3"><a href="#sig-Graph_kCores">Graph.kCores</a></li>
+<li class="lvl-2"><a href="#Combo">Combo</a></li>
+<li class="lvl-3"><a href="#sig-Combo_combine">Combo.combine</a></li>
+<li class="lvl-3"><a href="#sig-Combo_uncombine">Combo.uncombine</a></li>
+<li class="lvl-3"><a href="#sig-Combo_open">Combo.open</a></li>
+<li class="lvl-3"><a href="#sig-Combo_close">Combo.close</a></li>
+<li class="lvl-3"><a href="#sig-Combo_isOpen">Combo.isOpen</a></li>
+<li class="lvl-3"><a href="#sig-Combo_isCombo">Combo.isCombo</a></li>
+<li class="lvl-3"><a href="#sig-Combo_find">Combo.find</a></li>
+<li class="lvl-3"><a href="#sig-Combo_info">Combo.info</a></li>
+<li class="lvl-3"><a href="#sig-Combo_reveal">Combo.reveal</a></li>
+<li class="lvl-3"><a href="#sig-Combo_transfer">Combo.transfer</a></li>
+<li class="lvl-3"><a href="#sig-Combo_arrange">Combo.arrange</a></li>
+<li class="lvl-2"><a href="#Map">Map</a></li>
+<li class="lvl-3"><a href="#sig-Map_show">Map.show</a></li>
+<li class="lvl-3"><a href="#sig-Map_hide">Map.hide</a></li>
+<li class="lvl-3"><a href="#sig-Map_isShown">Map.isShown</a></li>
+<li class="lvl-3"><a href="#sig-Map_options">Map.options</a></li>
+<li class="lvl-3"><a href="#sig-Map_leafletMap">Map.leafletMap</a></li>
+<li class="lvl-3"><a href="#sig-Map_mapCoordinates">Map.mapCoordinates</a></li>
+<li class="lvl-3"><a href="#sig-Map_viewCoordinates">Map.viewCoordinates</a></li>
+<li class="lvl-2"><a href="#TimeBar">TimeBar</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_load">TimeBar.load</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_merge">TimeBar.merge</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_removeItem">TimeBar.removeItem</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_clear">TimeBar.clear</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_range">TimeBar.range</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_getIds">TimeBar.getIds</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_inRange">TimeBar.inRange</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_zoom">TimeBar.zoom</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_pan">TimeBar.pan</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_play">TimeBar.play</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_pause">TimeBar.pause</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_mark">TimeBar.mark</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_selection">TimeBar.selection</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_options">TimeBar.options</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_setContainer">TimeBar.setContainer</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_destroy">TimeBar.destroy</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_on">TimeBar.on</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_off">TimeBar.off</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_bind">TimeBar.bind</a></li>
+<li class="lvl-3"><a href="#sig-TimeBar_unbind">TimeBar.unbind</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

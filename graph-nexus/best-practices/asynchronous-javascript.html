@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Asynchronous JavaScript — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Functions can be either synchronous (sync, blocking) or asynchronous (async, non-blocking):">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html" class="current" aria-current="page">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Asynchronous JavaScript</h1><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>Functions can be either synchronous (sync, blocking) or asynchronous (async, non-blocking):</p><ul> <li>Synchronous functions - executed one after another,
+the program waits for each individual statement to finish and return a result before executing the next function.</li><li>Asynchronous functions - executed one after another,
+but the program doesn’t wait for the previous function to finish before executing the next.</li></ul><p>Asynchronous programming is often used in JavaScript applications.
+AJAX, DOM changes and setTimeout are all examples of common async functions.
+</p><h2 id="async">Asynchronous functions in Nexus<a class="heading-anchor" href="#async" aria-label="Link to this section">#</a></h2><p>Async functions in Nexus are clearly labelled in the <a href="../api.html">API Reference page</a>,
+for example:
+</p><p style="max-width: 686px;"><img alt="Example showing callbacks/promises label in API Reference page" src="../assets/best-practices/async-api.png" class="framed"></p><p>Nexus uses async functions to make sure long-running functions don’t block other interactions.</p><p>For example, if your chart contains thousands of nodes, you don’t want to wait
+for the layout to complete the entire computation every time you call <code class="black">chart.layout()</code>.
+You still want to pan and zoom the chart while you’re waiting for the call to complete.</p><p>These methods return a Promise, which is an object representing the state of the asynchronous method and its eventual result,
+and can be used to chain callback handlers using <code class="black">.then()</code>.</p><p>Promises provide a cleaner way to manage async workflows. For more details, see the 
+<a class="external" href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN Page on Promises</a>.
+</p><h3 id="then">.then() method<a class="heading-anchor" href="#then" aria-label="Link to this section">#</a></h3><p>The <code class="black">.then()</code> method is used to interact with completed promises.
+It takes two arguments as callbacks - one for a resolved promise and another for a rejected promise.
+The method can also be used to create promise chains. These are sequences of two or more async operations
+where each subsequent operation starts when the previous one succeeds, using the result from the previous step.</p><p>For more details, see the 
+<a class="external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">MDN Page on .then()</a>.
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="kwd">new</span><span class="pln"> </span><span class="typ">Promise</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">resolve</span><span class="pun">,</span><span class="pln"> reject</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+  setTimeout</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> resolve</span><span class="pun">(</span><span class="lit">1</span><span class="pun">),</span><span class="pln"> </span><span class="lit">1000</span><span class="pun">);</span><span class="pln">
+
+</span><span class="pun">}).</span><span class="pln">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">result</span><span class="pun">);</span><span class="pln"> </span><span class="com">// console: 1</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> result </span><span class="pun">*</span><span class="pln"> </span><span class="lit">2</span><span class="pun">;</span><span class="pln">
+
+</span><span class="pun">}).</span><span class="pln">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">result</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">result</span><span class="pun">);</span><span class="pln"> </span><span class="com">// console: 2</span><span class="pln">
+
+</span><span class="pun">});</span></code></pre><h3 id="asyncawait">Async/await<a class="heading-anchor" href="#asyncawait" aria-label="Link to this section">#</a></h3><p>Async/await is a special syntax for promises which removes the need to explicitly configure promise chains, 
+which makes asynchronous code even easier to read and debug.</p><p>The <code class="black">async</code> keyword means that a function is asynchronous.
+Asynchronous functions can contain one or more <code class="black">await</code> keywords.</p><p>The <code class="black">await</code> keyword inside an async function pauses the async function
+until the asynchronous operation is complete and the promise returns a result value (resolve or reject):
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">async </span><span class="kwd">function</span><span class="pln"> awaitAsyncFunction</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+  let promise </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Promise</span><span class="pun">((</span><span class="pln">resolve</span><span class="pun">,</span><span class="pln"> reject</span><span class="pun">)</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    setTimeout</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> resolve</span><span class="pun">(</span><span class="str">'Promise resolved'</span><span class="pun">),</span><span class="pln"> </span><span class="lit">1000</span><span class="pun">)</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  let result </span><span class="pun">=</span><span class="pln"> await promise</span><span class="pun">;</span><span class="pln"> </span><span class="com">// wait until the promise is resolved</span><span class="pln">
+  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">result</span><span class="pun">);</span><span class="pln">  </span><span class="com">// 'Promise resolved'</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+awaitAsyncFunction</span><span class="pun">();</span></code></pre><h3 id="errorhandling">Error handling<a class="heading-anchor" href="#errorhandling" aria-label="Link to this section">#</a></h3><p>When working with async functions, you can also handle errors as part of promise chains.</p><p>If you're using <code class="black">.then()</code>, you can add a
+<a class="external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">.catch()</a>
+method to the chain, for example:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="kwd">function</span><span class="pln"> rejectedPromise</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Promise</span><span class="pun">.</span><span class="pln">reject</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">'Promise rejected'</span><span class="pun">));</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+rejectedPromise</span><span class="pun">().</span><span class="kwd">catch</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>If you're using <code class="black">await</code>, you can wrap the calls in a
+<a class="external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try/catch block</a>:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="kwd">function</span><span class="pln"> rejectedPromise</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Promise</span><span class="pun">.</span><span class="pln">reject</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Error</span><span class="pun">(</span><span class="str">'Promise rejected'</span><span class="pun">));</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">try</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  await rejectedPromise</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">catch</span><span class="pun">(</span><span class="pln">error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  console</span><span class="pun">.</span><span class="pln">log</span><span class="pun">(</span><span class="pln">error</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre><h3 id="promiseSpecial">Special cases: getters and setters<a class="heading-anchor" href="#promiseSpecial" aria-label="Link to this section">#</a></h3><p>If you use certain promisified functions as getters,
+they’ll still return objects in a synchronous way. These functions are:
+</p><div><div class="table-scroll"><table class="table"><thead><tr><th>Signature</th><th>Getter</th><th>Setter</th></tr></thead><tbody><tr><td><a href="../api.html#Chart_options">chart.options()</a></td><td>Returns an Object containing the current chart options</td><td>Sets the options and returns a Promise</td></tr><tr><td><a href="../api.html#Chart_viewOptions">chart.viewOptions()</a></td><td>Returns an Object containing the current chart view options</td><td>Sets the view options and returns a Promise</td></tr><tr><td><a href="../api.html#Map_options">chart.map().options()</a></td><td>Returns an Object containing the current map options</td><td>Sets the map options and returns a Promise</td></tr><tr><td><a href="../api.html#TimeBar_options">timebar.options()</a></td><td>Returns an Object containing the current time bar options</td><td>Sets the options and returns a Promise</td></tr><tr><td><a href="../api.html#TimeBar_range">timebar.range()</a></td><td>Returns an Object containing the current time range</td><td>Sets the passed range as a new range and returns a Promise</td></tr></tbody></table></div></div><p>For example:</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// Getter</span><span class="pln">
+chart</span><span class="pun">.</span><span class="pln">options</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+
+</span><span class="com">// Setter</span><span class="pln">
+chart</span><span class="pun">.</span><span class="pln">options</span><span class="pun">({</span><span class="pln">arrows</span><span class="pun">:</span><span class="pln"> </span><span class="str">'normal'</span><span class="pun">}).</span><span class="pln">then</span><span class="pun">(</span><span class="pln"> </span><span class="pun">...</span><span class="pln"> </span><span class="pun">);</span><span class="pln">
+</span><span class="pun">&gt;</span><span class="pln"> </span><span class="typ">Promise</span><span class="pln"> object</span></code></pre><h3 id="promiseSupport">ES6 promise support<a class="heading-anchor" href="#promiseSupport" aria-label="Link to this section">#</a></h3><p>If you don’t know which browser your customers use, you can include an ES6 Promise polyfill library
+in your page or bundle to bundle your promisified code. Popular libraries include:</p><ul><li><a href="https://github.com/then/promise#api">Promise.js</a></li><li><a href="https://github.com/stefanpenner/es6-promise">ES6-promise</a></li><li><a href="https://github.com/getify/native-promise-only">Native Promise Only</a></li></ul><p>If you're using the
+<a href="https://babeljs.io/">Babel</a>
+ES6 Javascript compiler tool, you have to install 
+<a href="https://babeljs.io/docs/usage/polyfill/">the polyfill module</a>
+for promises.</p><p>For a full list of compliant Promise A+ libraries, see 
+<a href="https://promisesaplus.com/implementations">Conformant Implementations</a>.</p><p><strong>Note:</strong> The Nexus API doesn’t support the <code class="black">promisifyAll()</code> implementation.
+</p><h2 id="imageloading">Asynchronous image loading<a class="heading-anchor" href="#imageloading" aria-label="Link to this section">#</a></h2><p>The following functions return promises which are fulfilled either after all of the images have loaded,
+or immediately if all of the images are already loaded.</p><ul><li> <a href="../api.html#Chart_load">load()</a></li><li> <a href="../api.html#Chart_merge">merge()</a></li><li> <a href="../api.html#Chart_setItem">setItem()</a></li><li> <a href="../api.html#Chart_options">options()</a></li><li> <a href="../api.html#Chart_setProperties">setProperties()</a></li></ul><p>In many cases you won't need to wait for the promises to be fulfilled - they are mostly useful
+when you want to delay an action until after images have loaded.
+This example shows how you can load data and run a layout immediately,
+but keep the chart locked until all the images have loaded:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">lock</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> wait</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">});</span><span class="pln">
+chart</span><span class="pun">.</span><span class="pln">load</span><span class="pun">(</span><span class="pln">data</span><span class="pun">).</span><span class="pln">then</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  chart</span><span class="pun">.</span><span class="pln">lock</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+chart</span><span class="pun">.</span><span class="pln">layout</span><span class="pun">(</span><span class="str">"organic"</span><span class="pun">);</span></code></pre><h2 id="callbacks">Using Nexus with callbacks<a class="heading-anchor" href="#callbacks" aria-label="Link to this section">#</a></h2><p>In 7.0, Nexus was promisified by default and using callbacks was deprecated.</p><p>Although you will still be able to use callbacks for the full lifecycle of Nexus 7.x,
+we recommend migrating to promises as soon as possible.
+</p><p>If you cannot update your code to use promises yet, you can use the <code class="black">GraphNexus.callbacks()</code>
+wrapper to recreate the callback behaviour.
+</p><div class="notice"><div class="boxout" style="background-color: #00996412"><div class="boxout-icon"></div><div class="boxout-body" style="padding-left: 42px">The callbacks() wrapper also supports using both callbacks and promises simultaneously.
+</div></div></div><p>To use <code class="black">GraphNexus.callbacks()</code>, add the function at the start of your code to create a Nexus object:
+</p><h3 id="browser">Browser<a class="heading-anchor" href="#browser" aria-label="Link to this section">#</a></h3><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">// legacy script tag installing Nexus as a UMD bundle by referring to nexusgraph.js
+// no change required
+</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">'graph-nexus/umd'</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">'text/javascript'</span><span class="pln"> </span><span class="tag">/&gt;</span></code></pre><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="typ">GraphNexus</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">callbacks</span><span class="pun">();</span></code></pre><h3 id="node-and-modern-js">Node and Modern JS<a class="heading-anchor" href="#node-and-modern-js" aria-label="Link to this section">#</a></h3><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// creates a component with enabled callbacks</span><span class="pln">
+</span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">callbacks</span><span class="pun">().</span><span class="pln">create</span><span class="pun">(</span><span class="pln">args</span><span class="pun">,</span><span class="pln"> callbackFn</span><span class="pun">);</span></code></pre><h3 id="error-handling-for-asynchronous-functions-with-callbacks">Error handling for asynchronous functions with callbacks<a class="heading-anchor" href="#error-handling-for-asynchronous-functions-with-callbacks" aria-label="Link to this section">#</a></h3><p>If you want to add special error handling when using callbacks,
+you should listen for unhandled exceptions:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">//  browser</span><span class="pln">
+window</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">'error'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// do something with the error</span><span class="pln">
+  </span><span class="com">// the error may still be shown in the console depending on the browser</span><span class="pln">
+</span><span class="pun">});</span></code></pre><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">//  Node and Modern JS</span><span class="pln">
+process</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="str">'uncaughtException'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">)=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// do something with the error</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>See also Breaking changes for 7.0 for more details.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/features/time-zones.html"><span class="dir">Previous</span><span class="label">Time Zones</span></a>
+<a class="next" href="../../graph-nexus/best-practices/coding-and-testing-tips.html"><span class="dir">Next</span><span class="label">Coding and Testing Tips</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#async">Asynchronous functions in Nexus</a></li>
+<li class="lvl-3"><a href="#then">.then() method</a></li>
+<li class="lvl-3"><a href="#asyncawait">Async/await</a></li>
+<li class="lvl-3"><a href="#errorhandling">Error handling</a></li>
+<li class="lvl-3"><a href="#promiseSpecial">Special cases: getters and setters</a></li>
+<li class="lvl-3"><a href="#promiseSupport">ES6 promise support</a></li>
+<li class="lvl-2"><a href="#imageloading">Asynchronous image loading</a></li>
+<li class="lvl-2"><a href="#callbacks">Using Nexus with callbacks</a></li>
+<li class="lvl-3"><a href="#browser">Browser</a></li>
+<li class="lvl-3"><a href="#node-and-modern-js">Node and Modern JS</a></li>
+<li class="lvl-3"><a href="#error-handling-for-asynchronous-functions-with-callbacks">Error handling for asynchronous functions with callbacks</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

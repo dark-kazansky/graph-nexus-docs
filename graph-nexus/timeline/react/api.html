@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nexus Timeline API Reference (React) — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use the named Timeline export from graph-nexus/react. The wrapper accepts the following props and forwards other attributes to its host div.">
+<link rel="icon" href="../../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../../assets/doc.css">
+</head>
+<body data-root="../../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../../site/index.html">
+      <img class="logo-light" src="../../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../../site/index.html">Home</a>
+    <a href="../../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../../graph-nexus/timeline/react/docs.html">Documentation Home</a></li>
+<li><a href="../../../graph-nexus/timeline/react/api.html" class="current" aria-current="page">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../../graph-nexus/timeline/react/getting-started.html">Getting Started</a></li>
+<li><a href="../../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../../graph-nexus/timeline/react/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../../graph-nexus/timeline/react/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../../graph-nexus/timeline/react/entities.html">Entities</a></li>
+<li><a href="../../../graph-nexus/timeline/react/events.html">Events</a></li>
+<li><a href="../../../graph-nexus/timeline/react/markers.html">Markers</a></li>
+<li><a href="../../../graph-nexus/timeline/react/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../../graph-nexus/timeline/react/heatmap.html">Heatmap</a></li>
+<li><a href="../../../graph-nexus/timeline/react/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../../graph-nexus/timeline/react/handling-time.html">Handling Time</a></li>
+<li><a href="../../../graph-nexus/timeline/react/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../../graph-nexus/timeline/react/handling-events.html">Handling Events</a></li>
+<li><a href="../../../graph-nexus/timeline/react/state-management.html">State Management</a></li>
+<li><a href="../../../graph-nexus/timeline/react/instance-methods.html">Instance Methods</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../../graph-nexus/timeline/react/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../../graph-nexus/timeline/react/export.html">Export</a></li>
+<li><a href="../../../graph-nexus/timeline/react/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../../graph-nexus/timeline/react/architecture.html">Architecture</a></li>
+<li><a href="../../../graph-nexus/timeline/react/accessibility.html">Accessibility</a></li>
+<li><a href="../../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<div class="variant-toggle" role="group" aria-label="Code variant"><a href="../../../graph-nexus/timeline/js/api.html">Plain JS</a><a href="../../../graph-nexus/timeline/react/api.html" class="current" aria-current="true">React</a></div>
+<h1>Nexus Timeline API Reference (React)</h1>
+
+<h2 id="timeline-props">Timeline Props<a class="heading-anchor" href="#timeline-props" aria-label="Link to this section">#</a></h2>
+<p>Use the named <code class="black">Timeline</code> export from <code class="black">graph-nexus/react</code>. The wrapper accepts the following props and forwards other attributes to its host <code class="black">div</code>.</p>
+<div class="param"><span class="name">data</span><span class="type">TimelineData</span><p>The complete timeline data object: entities, events, optional types, ordering, charts, and stacks. The wrapper calls <code class="black">set(data)</code> when this reference changes.</p></div>
+<div class="param"><span class="name">options</span><span class="type"><a href="#timeline-options">TimelineOptions</a></span><p>Timeline options applied when this reference changes.</p></div>
+<div class="param"><span class="name">on</span><span class="type">Record&lt;TimelineEventName, handler&gt;</span><p>Event handlers keyed by names such as <code class="black">click</code>, <code class="black">range</code>, and <code class="black">focus</code>.</p></div>
+<div class="param"><span class="name">onReady</span><span class="type">(timeline: Timeline) =&gt; void</span><p>Receives the Timeline instance after creation. Use it instead of a component ref.</p></div>
+<div class="param"><span class="name">className</span><span class="type">string</span><p>Class name for the host element.</p></div>
+<div class="param"><span class="name">style</span><span class="type">CSSProperties</span><p>Styles for the host element, merged with 100% width and height defaults.</p></div>
+
+<h2 id="instance-methods">Instance Methods<a class="heading-anchor" href="#instance-methods" aria-label="Link to this section">#</a></h2>
+<p>Additional methods are available on the Timeline instance supplied to <code class="black">onReady</code>.</p>
+
+<div class="method" id="destroy"><div class="sig">destroy()</div>
+<p>Destroys the current instance of the timeline, freeing any allocated resources.</p>
+<p><strong>Parameters</strong> none</p>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<div class="method" id="export"><div class="sig">export(options) <span class="tag-beta">async</span></div>
+<p>Exports a static image of the timeline. The exported image is encoded in a blob URL.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">options</span><span class="type">ExportOptions</span><span class="required">required</span>
+<p>Options related to producing an export of the current view.</p>
+<div class="param"><span class="name">type</span><span class="type">'png'</span><span class="required">required</span><p>The file type of the output.</p></div>
+</div>
+<div class="returns"><span class="label">Returns</span><span class="type">Promise&lt;<a href="#ExportResult">ExportResult</a>&gt;</span></div>
+<p>A promise that will resolve with an object containing the blob URL of the exported image or reject with an error.</p>
+</div>
+
+<div class="method" id="fit"><div class="sig">fit()</div>
+<p>Fits all the events and time series chart data points into the viewport. If Scale Wrapping is used, fits the wrapped time range into the viewport.</p>
+<p><strong>Parameters</strong> none</p>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<div class="method" id="getEntity"><div class="sig">getEntity(entityId)</div>
+<p>Returns a copy of the entity with the specified id.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">entityId</span><span class="type">string</span><span class="required">required</span><p>The id of the entity.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type">object | null</span></div>
+<p>A copy of the <a href="#Entity">Entity</a> object, or null if there is no entity with the specified id.</p>
+</div>
+
+<div class="method" id="getEntityPosition"><div class="sig">getEntityPosition(entityId) <span class="tag-beta">beta</span></div>
+<p>Gets an object describing the position of an entity.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">entityId</span><span class="type">string</span><span class="required">required</span><p>The id of the entity.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type"><a href="#EntityPosition">EntityPosition</a> | null</span></div>
+<p>An EntityPosition object, or null if the entity is not shown in the timeline.</p>
+</div>
+
+<div class="method" id="getEvent"><div class="sig">getEvent(eventId)</div>
+<p>Returns a copy of the event with the specified id.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">eventId</span><span class="type">string</span><span class="required">required</span><p>The id of the event to be retrieved.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type">object | null</span></div>
+<p>A copy of the <a href="#Event">Event</a> object, or null if there is no event with the specified id.</p>
+</div>
+
+<div class="method" id="getEventPosition"><div class="sig">getEventPosition(eventId) <span class="tag-beta">beta</span></div>
+<p>Gets an object describing the position of an event.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">eventId</span><span class="type">string</span><span class="required">required</span><p>The id of the event.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type"><a href="#EventPosition">EventPosition</a> | null</span></div>
+<p>An EventPosition object, or null if the event is not in the current timeline range.</p>
+</div>
+
+<div class="method" id="getInRangeItems"><div class="sig">getInRangeItems(options)</div>
+<p>Returns an object detailing the ids of events and entities that are in the current range.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">options</span><span class="type">object</span>
+<p>Specifies which items are included.</p>
+<div class="param"><span class="name">focus</span><span class="type">boolean</span><span class="default">default: true</span><p>If there is an entity that is focused, then this option defines whether to include just the focused entity and its neighbors. Otherwise all events and entities in the current range are included.</p></div>
+</div>
+<div class="returns"><span class="label">Returns</span><span class="type">{ entities: Object, events: Object }</span></div>
+<p>Objects whose keys are the ids of entities and events in the current range.</p>
+</div>
+
+<div class="method" id="getPinnedEntityIds"><div class="sig">getPinnedEntityIds()</div>
+<p>Returns the ids of entities that are pinned.</p>
+<p><strong>Parameters</strong> none</p>
+<div class="returns"><span class="label">Returns</span><span class="type">string[]</span></div>
+</div>
+
+<div class="method" id="getRowEntityIds"><div class="sig">getRowEntityIds(rowId)</div>
+<p>Returns the ids of the entities in the specified row.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">rowId</span><span class="type">string</span><span class="required">required</span><p>The id of the row.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type">string[] | null</span></div>
+<p>An array of the entity ids, or null if there is no entity row with the specified id.</p>
+</div>
+
+<div class="method" id="inRange"><div class="sig">inRange(item, nanoseconds)</div>
+<p>Determines whether a time or event is within the timeline's visible range.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">item</span><span class="type">Date | number | <a href="#TimeRange">TimeRange</a> | string</span><span class="required">required</span><p>A Date in local time, a millisecond number in UTC, a TimeRange object, or the id of an event.</p></div>
+<div class="param"><span class="name">nanoseconds</span><span class="type">number</span><p>The number of nanoseconds to add to the Date or number.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type">boolean</span></div>
+<p>Whether the specified item is within the timeline's visible range.</p>
+</div>
+
+<div class="method" id="pan"><div class="sig">pan(direction, amount)</div>
+<p>Pans the timeline in the manner specified. The panning range is limited and depends on the timeline data.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">direction</span><span class="type">'left' | 'right'</span><span class="required">required</span><p>Specifies the direction to pan the timeline in.</p></div>
+<div class="param"><span class="name">amount</span><span class="type">number</span><span class="default">default: 0.3</span><p>How far to pan the timeline. The distance is measured as a multiple of the current timeline range.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<div class="method" id="ping"><div class="sig">ping(id, options)</div>
+<p>Plays an animated pulse effect on the specified events.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">id</span><span class="type">string | string[]</span><span class="required">required</span><p>The id or ids of the events to ping.</p></div>
+<div class="param"><span class="name">options</span><span class="type">object</span>
+<p>Options to control the animation.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><span class="default">default: '#909090'</span><p>The color to use for the animated effect.</p></div>
+<div class="param"><span class="name">mode</span><span class="type">'individual' | 'grouped'</span><span class="default">default: 'individual'</span><p>Whether the specified events should each have their own ping animation, or all events have a single outer ping animation.</p></div>
+<div class="param"><span class="name">repeat</span><span class="type">number</span><span class="default">default: 1</span><p>The number of times the animation should be repeated.</p></div>
+<div class="param"><span class="name">spread</span><span class="type">number</span><span class="default">default: 42</span><p>The distance between the start and the end of the ping stroke, in pixels.</p></div>
+<div class="param"><span class="name">strokeWidth</span><span class="type">number</span><span class="default">default: 12</span><p>The width of the ping stroke at the end of the animation, in pixels.</p></div>
+<div class="param"><span class="name">time</span><span class="type">number</span><span class="default">default: 800</span><p>The time the animation should take, in milliseconds.</p></div>
+</div>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<div class="method" id="setDragOptions"><div class="sig">setDragOptions(options)</div>
+<p>Controls the dragging behavior.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">options</span><span class="type"><a href="#DraggerOptions">DraggerOptions</a></span><p>Options to control the dragging behavior.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<div class="method" id="zoom"><div class="sig">zoom(direction)</div>
+<p>Zoom the timeline in the manner specified. The zooming range is limited and depends on the timeline data.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">direction</span><span class="type">'in' | 'out'</span><span class="required">required</span><p>Specifies how to zoom the timeline.</p></div>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<h2 id="handling-events">Handling Events<a class="heading-anchor" href="#handling-events" aria-label="Link to this section">#</a></h2>
+<p>Attach handlers through the <code class="black">on</code> prop, for example <code class="black">on={{ click: handleClick, range: handleRange }}</code>.</p>
+<p>When an event is invoked, any attached handler functions are passed a single object containing all the details of the event.</p>
+<p>To override the default behavior of an event, call the <code class="black">preventDefault()</code> function in the event handler.</p>
+<p>The wrapper forwards <code class="black">className</code> and <code class="black">style</code> to its host element.</p>
+<p>Timeline <code class="black">on</code> handlers for <code class="black">click</code>, <code class="black">context-menu</code>, <code class="black">double-click</code>, <code class="black">drag-*</code>, <code class="black">hover</code>, <code class="black">pointer-*</code>, and <code class="black">wheel</code> receive an event object with a common shape: <code class="black">button</code>, <code class="black">defaultPrevented</code>, <code class="black">endNanoseconds</code>, <code class="black">endTime</code>, <code class="black">entitiesInRow</code>, <code class="black">eventIds</code>, <code class="black">id</code>, <code class="black">label</code>, <code class="black">modifierKeys</code>, <code class="black">pointerId</code>, <code class="black">pointerType</code>, <code class="black">preventDefault()</code>, <code class="black">startNanoseconds</code>, <code class="black">startTime</code>, <code class="black">subItem</code>, <code class="black">targetType</code>, <code class="black">time</code>, <code class="black">timeNanoseconds</code>, <code class="black">x</code>, <code class="black">y</code>. Fields specific to an event, or event types with additional behavior, are called out below.</p>
+
+<div class="type-def" id="onTimelineChange"><div class="sig">change events in the <code class="black">on</code> map</div>
+<p>Invoked whenever the timeline triggers a change of state.</p>
+<p><strong>Parameters</strong></p>
+<div class="param"><span class="name">event</span><span class="type">object</span>
+<p>An object with details of the event.</p>
+<div class="param"><span class="name">focus</span><span class="type">string[]</span><p>The ids of the focused entities.</p></div>
+<div class="param"><span class="name">highlight</span><span class="type">string[]</span><p>The ids of the highlighted entities.</p></div>
+<div class="param"><span class="name">lens</span><span class="type">string | null</span><p>The id of the entity at the center of the lens.</p></div>
+<div class="param"><span class="name">pin</span><span class="type">string[]</span><p>The ids of the pinned entities.</p></div>
+<div class="param"><span class="name">range</span><span class="type">{ start: Date; startNanoseconds: number; end: Date; endNanoseconds: number }</span><p>An object containing the range of visible times.</p></div>
+<div class="param"><span class="name">why</span><span class="type">ChangeReason</span>
+<p>The reason this event was fired:</p>
+<ul><li>'auto' - The event was triggered by internal Nexus Timeline state.</li><li>'user' - The event was triggered by user action.</li></ul>
+</div>
+</div>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<div class="type-def" id="onTimelineDraw"><div class="sig">'draw' <span class="tag-beta">beta</span></div>
+<p>Invoked whenever the timeline is drawn.</p>
+<p><strong>Parameters</strong> none</p>
+<div class="returns"><span class="label">Returns</span><span class="type">void</span></div>
+</div>
+
+<div class="type-def" id="click"><div class="sig">'click'</div>
+<p>Fires when the user clicks or taps on the timeline.</p>
+<p><strong>Default actions:</strong></p>
+<ul><li>Focus control - Focuses or unfocuses the entity row.</li><li>Pin control - Pins or unpins the entity row.</li></ul>
+<div class="param"><span class="name">targetType</span><span class="type">'cell' | 'entity' | 'entityGroup' | 'entityRun' | 'event' | 'eventSummary' | 'focus' | 'fold' | 'glyph' | 'labelAreaBorder' | 'lensControl' | 'lensScrollbar' | 'pin' | 'scale' | 'timeSeriesChart' | null</span><p>The type of the targeted item.</p></div>
+</div>
+
+<div class="type-def" id="context-menu"><div class="sig">'context-menu'</div>
+<p>Fires on a right click or a long press on the timeline.</p>
+<p><strong>Default action:</strong></p>
+<ul><li>Suppresses the click event.</li></ul>
+</div>
+
+<div class="type-def" id="double-click"><div class="sig">'double-click'</div>
+<p>Fires on a double click or a double tap on the timeline.</p>
+<p><strong>Default actions:</strong></p>
+<ul>
+<li>On the background - Unfocuses any focused entity rows.</li>
+<li>On an entity row - Focuses or unfocuses the entity row.</li>
+<li>On the scale - Sets the timeline range to the <code class="black">startTime</code> and <code class="black">endTime</code> properties of the selected scale item.</li>
+</ul>
+</div>
+
+<div class="type-def" id="drag-start"><div class="sig">'drag-start'</div>
+<p>Invoked when a drag is started. Use the <a href="#setDragOptions">setDragOptions</a> instance method to set the dragging behavior.</p>
+<p><strong>Default actions:</strong></p>
+<ul>
+<li>On the background - Pans the timeline.</li>
+<li>On the scale - Draws a marquee range. On <code class="black">drag-end</code>, the default action is to zoom into the selected range.</li>
+<li>On the label area border - Adjusts the label area width.</li>
+</ul>
+<div class="param"><span class="name">dragType</span><span class="type">'lensScrollbar' | 'pan' | 'marqueeRange' | 'labelAreaWidth' | null</span><p>The type of drag.</p></div>
+</div>
+
+<div class="type-def" id="drag-move"><div class="sig">'drag-move'</div>
+<p>Invoked continuously as the cursor moves during a drag.</p>
+<div class="param"><span class="name">dragType</span><span class="type">'lensScrollbar' | 'pan' | 'marqueeRange' | 'labelAreaWidth' | null</span><p>The type of drag.</p></div>
+</div>
+
+<div class="type-def" id="drag-end"><div class="sig">'drag-end'</div>
+<p>Invoked when the drag is finished and pointer is released, or when the drag is canceled. On touch devices this fires when the finger or pointing device is lifted.</p>
+<p><strong>Default action:</strong></p>
+<ul><li>On <code class="black">MarqueeRange</code> drag type - the timeline will zoom into the selected range.</li></ul>
+<div class="param"><span class="name">dragType</span><span class="type">'lensScrollbar' | 'pan' | 'marqueeRange' | 'labelAreaWidth' | null</span><p>The type of drag.</p></div>
+</div>
+
+<div class="type-def" id="hover"><div class="sig">'hover'</div>
+<p>Invoked when the user hovers over the timeline. Pass the <code class="black">hover</code> property to the <a href="#timeline-props">options</a> prop to configure the hover delay.</p>
+</div>
+
+<div class="type-def" id="key-down"><div class="sig">'key-down'</div>
+<p>Invoked when the user presses a key.</p>
+<p><strong>Default actions:</strong></p>
+<ul><li>Escape key - Cancels an active drag.</li><li>Shift key - Draws a marquee range when dragging.</li></ul>
+<div class="param"><span class="name">keyCode</span><span class="type">number</span><p>The keyCode of the key pressed.</p></div>
+</div>
+
+<div class="type-def" id="key-up"><div class="sig">'key-up'</div>
+<p>Invoked when the user releases a key.</p>
+<div class="param"><span class="name">keyCode</span><span class="type">number</span><p>The keyCode of the key pressed.</p></div>
+</div>
+
+<div class="type-def" id="pointer-down"><div class="sig">'pointer-down'</div>
+<p>Invoked when a pointer presses down on the timeline.</p>
+</div>
+
+<div class="type-def" id="pointer-move"><div class="sig">'pointer-move'</div>
+<p>Invoked continuously as the pointer moves on the timeline, or the timeline moves beneath the pointer.</p>
+<p><strong>Default action:</strong></p>
+<ul><li>On a time series chart - Highlights the nearest data point.</li></ul>
+</div>
+
+<div class="type-def" id="pointer-up"><div class="sig">'pointer-up'</div>
+<p>Invoked when the pointer is released.</p>
+</div>
+
+<div class="type-def" id="wheel"><div class="sig">'wheel'</div>
+<p>Invoked continuously while the user is vertically or horizontally scrolling.</p>
+<p><strong>Default actions:</strong></p>
+<ul>
+<li>Vertical scrolling on the background - Zooms the timeline.</li>
+<li>Vertical scrolling on the lens - Scrolls the lens up or down.</li>
+<li>Horizontal scrolling - Pans the timeline.</li>
+</ul>
+<div class="param"><span class="name">deltaMode</span><span class="type">number</span><p>The unit of measurement for the delta value.</p></div>
+<div class="param"><span class="name">deltaX</span><span class="type">number</span></div>
+<div class="param"><span class="name">deltaY</span><span class="type">number</span><p>The number of units that the wheel scrolled in the y direction.</p></div>
+</div>
+
+<h2 id="timeline-options">Timeline Options<a class="heading-anchor" href="#timeline-options" aria-label="Link to this section">#</a></h2>
+<p>You can set various options and defaults on the timeline by setting the <a href="#timeline-props">options prop</a>.</p>
+<p>The <code class="black">options</code> prop accepts an object with the following properties:</p>
+
+<div class="param"><span class="name">backgroundColor</span><span class="type">string</span><span class="default">default: '#242c32'</span><p>The color of the timeline background.</p></div>
+
+<div class="param"><span class="name">controls</span><span class="type">object</span><p>Options relating to row controls.</p>
+<div class="param"><span class="name">focus</span><span class="type">object</span><p>Options for the focus control on entity rows.</p>
+<div class="param"><span class="name">show</span><span class="type">boolean</span><span class="default">default: true</span><p>Whether to show the control.</p></div>
+</div>
+<div class="param"><span class="name">pin</span><span class="type">object</span><p>Options for the pin control on entity rows.</p>
+<div class="param"><span class="name">show</span><span class="type">boolean</span><span class="default">default: true</span><p>Whether to show the control.</p></div>
+</div>
+</div>
+
+<div class="param"><span class="name">entities</span><span class="type">object</span><p>Options relating to entities.</p>
+<div class="param"><span class="name">glyphPosition</span><span class="type">'left' | 'right'</span><span class="default">default: 'left'</span><p>The position of the glyph.</p></div>
+<div class="param"><span class="name">labelBackgroundColor</span><span class="type">string | null</span><span class="default">default: null</span><p>The color to use for the background of entity labels. If null, backgroundColor is used.</p></div>
+<div class="param"><span class="name">showCircles</span><span class="type">boolean</span><span class="default">default: false</span><span class="required required-deprecated">DEPRECATED</span><p>Whether to show circles at the start of entity lines.</p></div>
+<div class="param"><span class="name">showLines</span><span class="type">'always' | 'individualEvents' | 'never'</span><span class="default">default: 'individualEvents'</span>
+<p>Controls when to show entity lines:</p>
+<ul><li>'always' - Always show entity lines.</li><li>'individualEvents' - Show entity lines with individual events only, not with the heatmap.</li><li>'never' - Never show entity lines.</li></ul>
+</div>
+<div class="param"><span class="name">standardRowHeight</span><span class="type">number</span><span class="default">default: 24</span><p>Standard height of entity rows in px, with a minimum value of 14.</p></div>
+<div class="param"><span class="name">truncateLabelsAt</span><span class="type">number</span><span class="default">default: 40</span><p>The number of characters to truncate entity labels at. Set to 0 to disable truncation. Only applies when the label area width mode is set to auto.</p></div>
+</div>
+
+<div class="param"><span class="name">events</span><span class="type">object</span><p>Options relating to events.</p>
+<div class="param"><span class="name">heatmapColor</span><span class="type">null | string | string[] | <a href="#HeatmapColorStep">HeatmapColorStep</a>[] | <a href="#HeatmapEventTypePriority">HeatmapEventTypePriority</a>[]</span><span class="default">default: null</span>
+<p>Controls how heatmap cell colors are chosen:</p>
+<ul>
+<li>null - The default color scheme is used, based on the event or entity color and an alpha applied based on the cell's value.</li>
+<li>string - All cells will use the color specified, with an alpha applied based on the cell's value.</li>
+<li>string[] - The array of colors specified will be used to assign colors based on each cell's value within the distribution of the cells in the visible range.</li>
+<li>heatmapColorStep[] - Colors are assigned to cells based on the step values provided.</li>
+<li>heatmapEventTypePriority[] - Colors are assigned to cells if they include an event of the specified event type. Event types are prioritised by the index values of the array; the first index is given the highest priority.</li>
+</ul>
+</div>
+<div class="param"><span class="name">heatmapDirection</span><span class="type">'any' | 'from' | 'to'</span><span class="default">default: 'any'</span>
+<p>The direction of the joins at each entity row for the underlying events that the heatmap will show:</p>
+<ul><li>'any' - Shows a heatmap for all underlying event directions.</li><li>'from' - Only shows a heatmap for entity rows that are the source of their underlying events.</li><li>'to' - Only shows a heatmap for entity rows that are the target of their underlying events.</li></ul>
+</div>
+<div class="param"><span class="name">heatmapPadding</span><span class="type">boolean</span><span class="default">default: true</span><p>Whether to apply padding to heatmap cells.</p></div>
+<div class="param"><span class="name">heatmapThreshold</span><span class="type">number</span><span class="default">default: 100</span><p>The number of visible events when the heatmap starts fading in.</p></div>
+<div class="param"><span class="name">heatmapValue</span><span class="type">string | null</span><span class="default">default: null</span><p>If a string, the value of the corresponding property on the event's data object is used for the heatmap. If null, the underlying event count is used.</p></div>
+<div class="param"><span class="name">joinStyle</span><span class="type">'auto' | 'horizontal'</span><span class="default">default: 'auto'</span>
+<p>Controls how events are drawn:</p>
+<ul>
+<li>'auto' - Automatically chooses the clearest way of drawing each event. Multi-directional events are drawn as a vertical line with horizontal arrowheads indicating the source/target role of each entity row, whereas uni-directional events are drawn as a single vertical arrow.</li>
+<li>'horizontal' - All events are drawn as a vertical line with horizontal arrowheads indicating the source/target role of each entity row.</li>
+</ul>
+</div>
+<div class="param"><span class="name">revealHeatmapAlpha</span><span class="type">number</span><span class="default">default: 1</span><p>Alpha applied to fade out rows that have no revealed events.</p></div>
+<div class="param"><span class="name">showEventFolds</span><span class="type">boolean</span><span class="default">default: true</span><p>Whether to show openable folds for events that occur at the same time. See the Event Folds docs for details.</p></div>
+<div class="param"><span class="name">showLines</span><span class="type">'all' | 'focus'</span><span class="default">default: 'all'</span>
+<p>Controls when to show event lines:</p>
+<ul><li>'all' - Show event lines for all individual events.</li><li>'focus' - Only show event lines for focused entities.</li></ul>
+</div>
+</div>
+
+<div class="param"><span class="name">focus</span><span class="type">object</span><p>Options relating to focus behavior.</p>
+<div class="param"><span class="name">backgroundColor</span><span class="type">string</span><span class="default">default: '#8b041b'</span><p>The background color to use for focused items.</p></div>
+<div class="param"><span class="name">reorder</span><span class="type">boolean</span><span class="default">default: true</span><p>Whether to reorder the entities on focus when the ordering is set to 'shorteneventlines'.</p></div>
+<div class="param"><span class="name">showEventsOnNeighbors</span><span class="type">boolean</span><span class="default">default: false</span><p>Controls if all events on neighbors of focused entities should be shown. For example, if entity A is focused and is linked to entity B via an event, this option controls if all events involving entity B should be shown.</p></div>
+</div>
+
+<div class="param"><span class="name">fontFamily</span><span class="type">string</span><span class="default">default: 'sans-serif'</span><p>The name of the font family to use across the timeline.</p></div>
+<div class="param"><span class="name">highlightColor</span><span class="type">string</span><span class="default">default: '#515f6c'</span><p>The color to use for the background of highlighted entities, highlighted scale intervals and the marquee drag area. A translucent version of this color will be applied.</p></div>
+<div class="param"><span class="name">hover</span><span class="type">number</span><span class="default">default: 150</span><p>The number of milliseconds delay before the hover event is triggered.</p></div>
+
+<div class="param"><span class="name">labelAreaWidth</span><span class="type"><a href="#LabelAreaWidth">LabelAreaWidth</a></span><p>Sets the mode of calculation for the width of the label area and the width, if the mode is fixed.</p></div>
+
+<div class="param"><span class="name">scaleGuide</span><span class="type">object</span><p>Options relating to the scale guide.</p>
+<div class="param"><span class="name">lineColor</span><span class="type">string</span><span class="default">default: '#e5e8eb'</span><p>The color of the line.</p></div>
+<div class="param"><span class="name">textColor</span><span class="type">string</span><span class="default">default: '#e5e8eb'</span><p>The color of the text.</p></div>
+<div class="param"><span class="name">textFormat</span><span class="type">string</span><span class="default">default: 'auto'</span><p>The date and time format. Set to auto to have the scale precision adapt to the current visible range. See Scale Localization for more details.</p></div>
+<div class="param"><span class="name">width</span><span class="type">number</span><span class="default">default: 1</span><p>The width of the line in pixels.</p></div>
+<div class="param"><span class="name">snapDistance</span><span class="type">number</span><span class="default">default: 10</span><p>The distance in pixels to snap the line to events. Set to 0 to disable snapping.</p></div>
+<div class="param"><span class="name">showAtBottom</span><span class="type">boolean</span><span class="default">default: false</span><p>Controls if the bottom time readout and scale guide line is shown.</p></div>
+<div class="param"><span class="name">showAtTop</span><span class="type">boolean</span><span class="default">default: false</span><p>Controls if the top time readout and scale guide line is shown.</p></div>
+</div>
+
+<div class="param"><span class="name">scales</span><span class="type">object</span><p>Options relating to the timeline scales.</p>
+<div class="param"><span class="name">backgroundColor</span><span class="type">string | null</span><span class="default">default: null</span><p>If null, backgroundColor is used.</p></div>
+<div class="param"><span class="name">borderColor</span><span class="type">string | null</span><span class="default">default: '#e5e8eb'</span><p>The color of the scale borders. If null, backgroundColor is used.</p></div>
+<div class="param"><span class="name">dateOrder</span><span class="type">'dmy' | 'mdy'</span><span class="default">default: 'mdy'</span>
+<p>The order of dates: 'dmy' for day-month-year, 'mdy' for month-day-year.</p></div>
+<div class="param"><span class="name">dateTimeFormats</span><span class="type">object</span>
+<p>Specifies the formats for displaying dates and times in the scale. See Localization for more details. Available keys: <code class="black">centiseconds</code>, <code class="black">date</code>, <code class="black">dateNoYear</code>, <code class="black">dateNoYearTime</code>, <code class="black">dateNoYearTimeSeconds</code>, <code class="black">dateTimeSeconds</code>, <code class="black">dayOfMonth</code>, <code class="black">dayOfMonthTime</code>, <code class="black">dayOfMonthTimeSeconds</code>, <code class="black">fullDayOfWeek</code>, <code class="black">fullDayOfWeekTime</code>, <code class="black">fullDayOfWeekTimeSeconds</code>, <code class="black">fullMonth</code>, <code class="black">fullMonthYear</code>, <code class="black">hundredMicroseconds</code>, <code class="black">hundredNanoseconds</code>, <code class="black">microseconds</code>, <code class="black">milliseconds</code>, <code class="black">nanoseconds</code>, <code class="black">shortDayOfWeek</code>, <code class="black">shortMonth</code>, <code class="black">tenMicroseconds</code>, <code class="black">tenNanoseconds</code>, <code class="black">time</code>, <code class="black">timeSeconds</code>, <code class="black">timeSecondsTenths</code>, <code class="black">timeMilliseconds</code>, <code class="black">timeMicroseconds</code>, <code class="black">timeNanoseconds</code>, <code class="black">year</code>. Each is a string of formatting codes and/or literal characters, e.g. one property might be set as <code class="black">'yyyy-MM-dd'</code>.</p>
+</div>
+<div class="param"><span class="name">dateTimeNames</span><span class="type">object</span>
+<p>Specifies names to use when displaying dates and times in the scale. See Localization for more details.</p>
+<div class="param"><span class="name">ampmNames</span><span class="type">string[]</span><p>The names of the AM and PM symbols.</p></div>
+<div class="param"><span class="name">fullDayOfWeekNames</span><span class="type">string[]</span><p>The full names of days of the week, starting with Sunday.</p></div>
+<div class="param"><span class="name">fullMonthNames</span><span class="type">string[]</span><p>The full names of months, starting with January.</p></div>
+<div class="param"><span class="name">fullMonthNamesInDate</span><span class="type">string[]</span><p>The full names of months as part of a date, starting with January.</p></div>
+<div class="param"><span class="name">shortDayOfWeekNames</span><span class="type">string[]</span><p>The short names of days of the week, starting with Sunday.</p></div>
+<div class="param"><span class="name">shortMonthNames</span><span class="type">string[]</span><p>The short names of months, starting with January.</p></div>
+</div>
+<div class="param"><span class="name">panLimit</span><span class="type">'auto' | 'off'</span><span class="default">default: 'auto'</span>
+<p>Controls how far the user can pan: 'auto' limits the range the user can pan so data is always in view; 'off' allows the user to pan to anywhere on the timeline (use for lazy loading content).</p></div>
+<div class="param"><span class="name">showAtBottom</span><span class="type">boolean</span><span class="default">default: true</span><p>Controls if the scale at the bottom of the timeline is shown.</p></div>
+<div class="param"><span class="name">showAtTop</span><span class="type">boolean</span><span class="default">default: true</span><p>Controls if the scale at the top of the timeline is shown.</p></div>
+<div class="param"><span class="name">textColor</span><span class="type">string</span><span class="default">default: '#e5e8eb'</span><p>The color of the scale's text. Also changes the color of the markers and their labels.</p></div>
+<div class="param"><span class="name">textSize</span><span class="type">number</span><span class="default">default: 14</span><p>The text size of the scale.</p></div>
+<div class="param"><span class="name">twelveHourClock</span><span class="type">boolean</span><span class="default">default: true</span><p>Whether a 12-hour clock should be used. False specifies a 24-hour clock.</p></div>
+<div class="param"><span class="name">wrapping</span><span class="type">'off' | 'day' | 'week' | 'month' | 'year'</span><span class="default">default: 'off'</span>
+<p>Controls Scale Wrapping, i.e. the way time is wrapped in the scale.</p></div>
+<div class="param"><span class="name">zoomOutLimit</span><span class="type">'auto' | object</span><span class="default">default: 'auto'</span>
+<p>Sets a limit for how far a user can zoom out. 'auto' - the limit is set by Nexus Timeline. Use the parameters to specify the limit - can be used for lazy loading content to improve performance and loading times for large datasets.</p>
+<div class="param"><span class="name">unit</span><span class="type">'year' | 'month' | 'week' | 'day' | 'hour' | 'minute' | 'second' | 'millisecond' | 'microsecond' | 'nanosecond'</span><span class="required">required</span><p>Sets the time interval of the limit.</p></div>
+<div class="param"><span class="name">value</span><span class="type">number</span><span class="default">default: 1</span><p>Sets the multiple of the time interval.</p></div>
+</div>
+</div>
+
+<div class="param"><span class="name">showLensHighlight</span><span class="type">boolean</span><span class="default">default: true</span><p>Controls whether the lens highlight is shown.</p></div>
+<div class="param"><span class="name">showWarnings</span><span class="type">boolean</span><span class="default">default: true</span><p>Controls if timeline warning messages are displayed in the console.</p></div>
+
+<div class="param"><span class="name">timeSeriesCharts</span><span class="type">object</span><p>Options relating to time series charts.</p>
+<div class="param"><span class="name">position</span><span class="type">'top' | 'bottom'</span><span class="default">default: 'top'</span><p>Position of time series charts in relation to the timeline.</p></div>
+<div class="param"><span class="name">sizePercent</span><span class="type">number</span><span class="default">default: 25</span><p>Percentage of the view height allocated to time series charts.</p></div>
+</div>
+
+<h2 id="data-formats">Data Formats<a class="heading-anchor" href="#data-formats" aria-label="Link to this section">#</a></h2>
+<p>Items in Nexus Timeline such as entities, events or time series charts are described as plain JavaScript objects whose properties configure the appearance of each item. Events also describe their relationship to other entities. The formats below describe the data structures used to define items in the timeline.</p>
+
+<div class="type-def" id="DraggerOptions"><div class="sig">DraggerOptions</div>
+<p>Options to set the drag.</p>
+<div class="param"><span class="name">type</span><span class="type">'lensScrollbar' | 'pan' | 'marqueeRange' | 'labelAreaWidth' | null</span><span class="required">required</span>
+<p>The type of drag:</p>
+<ul><li>'lensScrollbar' - Scrolls the lens.</li><li>'pan' - Pans the timeline.</li><li>'marqueeRange' - Draws a marquee range. On drag-end, the default action is to zoom into the selected range.</li><li>'labelAreaWidth' - Changes the width of the label area.</li><li>null - No dragging behavior.</li></ul>
+</div>
+</div>
+
+<div class="type-def" id="Entity"><div class="sig">Entity</div>
+<p>Defines an entity, an item drawn horizontally along the timeline.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><p>The color of the entity. If not specified, the value in the entity's type is used.</p></div>
+<div class="param"><span class="name">data</span><span class="type">any</span><p>Property for storing custom data for the entity.</p></div>
+<div class="param"><span class="name">fadeOutsideRange</span><span class="type">boolean</span><p>Controls if the entity line outside range of events should be faded.</p></div>
+<div class="param"><span class="name">fontIcon</span><span class="type"><a href="#FontIcon">FontIcon</a></span><span class="required required-deprecated">DEPRECATED</span><p>Options to define the entity's font icon.</p></div>
+<div class="param"><span class="name">glyph</span><span class="type">boolean | <a href="#Glyph">Glyph</a></span><p>The glyph drawn for the entity's label. If false or not specified, no glyph is drawn.</p></div>
+<div class="param"><span class="name">label</span><span class="type">string</span><p>The text for the label of the entity. If not specified, the entity's id is used.</p></div>
+<div class="param"><span class="name">labelColor</span><span class="type">string</span><p>The color of the entity labels. If not specified, the value in the entity's type is used.</p></div>
+<div class="param"><span class="name">lineWidth</span><span class="type">number</span><p>The line width in pixels. If not specified, the value in the entity's type is used.</p></div>
+<div class="param"><span class="name">type</span><span class="type">string</span><span class="default">default: 'default'</span><p>The type of the entity as declared in the entityTypes object. If not specified, the 'default' type is used.</p></div>
+</div>
+
+<div class="type-def" id="EntityPosition"><div class="sig">EntityPosition <span class="tag-beta">beta</span></div>
+<p>An object describing the entity position in view coordinates, which are measured in pixels relative to the top left corner of the timeline.</p>
+<div class="param"><span class="name">x1</span><span class="type">number</span><p>The x position at the left edge of the row containing the entity.</p></div>
+<div class="param"><span class="name">x2</span><span class="type">number</span><p>The x value at the right edge of the row containing the entity.</p></div>
+<div class="param"><span class="name">y1</span><span class="type">number</span><p>The y value at the top of the row containing the entity.</p></div>
+<div class="param"><span class="name">y2</span><span class="type">number</span><p>The y value at the bottom of the row containing the entity.</p></div>
+</div>
+
+<div class="type-def" id="EntityType"><div class="sig">EntityType</div>
+<p>Specifies the appearance and behavior of types of entities.</p>
+<div class="param"><span class="name">baseType</span><span class="type">string</span><span class="default">default: 'default'</span><p>The name of the entity type that this type inherits any unspecified properties from. The default type cannot have a baseType.</p></div>
+<div class="param"><span class="name">color</span><span class="type">string</span><span class="default">default: '#3ebd93'</span><p>The color of entities of this type.</p></div>
+<div class="param"><span class="name">fadeOutsideRange</span><span class="type">boolean</span><span class="default">default: false</span><p>Controls if entity lines outside their range of associated events are faded.</p></div>
+<div class="param"><span class="name">fontIcon</span><span class="type"><a href="#FontIcon">FontIcon</a></span><span class="required required-deprecated">DEPRECATED</span><p>Options to define the font icon for entities of this type.</p></div>
+<div class="param"><span class="name">glyph</span><span class="type">boolean | <a href="#Glyph">Glyph</a></span><p>The glyph drawn for the label of entities of this type. If false or not specified, no glyph is drawn.</p></div>
+<div class="param"><span class="name">groupBy</span><span class="type">string[]</span><p>An array specifying the names of properties on the entity's data object used for grouping entities of this type, innermost first. For example: ['city', 'state', 'country'] will group by city, then state, then country.</p></div>
+<div class="param"><span class="name">labelColor</span><span class="type">string</span><span class="default">default: '#e5e8eb'</span><p>The label color for entities of this type.</p></div>
+<div class="param"><span class="name">lineWidth</span><span class="type">number</span><span class="default">default: 1</span><p>The line width in pixels for entities of this type.</p></div>
+<div class="param"><span class="name">order</span><span class="type">number</span><p>A number specifying the display order for entities of this type. Entity types with lower values are placed higher. Entities with no specified order appear at the bottom.</p></div>
+<div class="param"><span class="name">priority</span><span class="type">number</span><span class="required required-deprecated">DEPRECATED</span><p>Previously specified the priority for grouping entities of this type. Now has no effect.</p></div>
+<div class="param"><span class="name">typeGlyph</span><span class="type">boolean | <a href="#Glyph">Glyph</a></span><p>The glyph drawn for the type's label. If false or not specified, no glyph is drawn.</p></div>
+<div class="param"><span class="name">typeLabel</span><span class="type">string | false</span><p>The label used for a group of the entities of this type. If false, no label is shown. If not specified, the type name is used.</p></div>
+</div>
+
+<div class="type-def" id="Event"><div class="sig">Event</div>
+<p>Defines an event, an item drawn on or between entities at a particular time.</p>
+<div class="param"><span class="name">color</span><span class="type">string | 'from' | 'to' | 'entity' | 'inverse'</span>
+<p>The color of the event. Can be either a single color or one of the following values. Also applies to events with more than 2 entities. If not specified, the value in the event's type is used.</p>
+<ul>
+<li>'from' - Event takes its color from its first 'from' entity.</li>
+<li>'to' - Event takes its color from its first 'to' entity.</li>
+<li>'entity' - Event has a color gradient matching the color of each entity it joins with.</li>
+<li>'inverse' - Event has a color gradient with each end matching the opposite entity's color. For events with more than 2 entities, the color gradient follows the 'from' coloring behavior.</li>
+</ul>
+</div>
+<div class="param"><span class="name">data</span><span class="type">any</span><p>Property for storing custom data for the event.</p></div>
+<div class="param"><span class="name">entityIds</span><span class="type">string[] | { from: string | string[]; to?: string | string[] }</span><span class="required">required</span>
+<p>The ids of entities connected to the event. An event must have at least one connected entity. entityIds may be provided as:</p>
+<ul>
+<li>An array of entity ids, where the event is directed from the first entity to the rest of the entities.</li>
+<li>An object with from and to properties which determine the event direction in relation to each entity. These properties can be either a single string entity id, or an array of entity ids.</li>
+</ul>
+</div>
+<div class="param"><span class="name">fontIcon</span><span class="type"><a href="#FontIcon">FontIcon</a></span><p>Options to define the event's font icon.</p></div>
+<div class="param"><span class="name">lineWidth</span><span class="type">number | string</span><span class="default">default: 1.5</span>
+<p>The width of the event line. If a number, used directly as the line width in px units. If a string, the value of the corresponding property on the event's data object is used instead, and an adjustment is applied to even the distribution of line widths throughout the dataset. If not specified, the value in the event's type is used.</p>
+</div>
+<div class="param"><span class="name">showArrows</span><span class="type">boolean</span><p>Controls if arrows on the event are shown. If not specified, the value in the event's type is used.</p></div>
+<div class="param"><span class="name">time</span><span class="type">Date | number | <a href="#TimeRange">TimeRange</a></span><span class="required">required</span><p>Either a Date in local time, a millisecond number in UTC, or a TimeRange object.</p></div>
+<div class="param"><span class="name">timeNanoseconds</span><span class="type">number</span><p>The number of nanoseconds to add to the time value.</p></div>
+<div class="param"><span class="name">type</span><span class="type">string</span><p>The type of the event as declared in the eventTypes object. If not specified, the 'default' type is used.</p></div>
+</div>
+
+<div class="type-def" id="EventModifierKeys"><div class="sig">EventModifierKeys</div>
+<p>A dictionary detailing which modifier keys were pressed when the event occurred.</p>
+<div class="param"><span class="name">alt</span><span class="type">boolean</span><p>If an alt key was held down when the event occurred.</p></div>
+<div class="param"><span class="name">consistentCtrl</span><span class="type">boolean</span><p>If a consistent control key was held down when the event occurred. cmd key on MacOS, ctrl key on other OSs.</p></div>
+<div class="param"><span class="name">ctrl</span><span class="type">boolean</span><p>If a control key was held down when the event occurred.</p></div>
+<div class="param"><span class="name">meta</span><span class="type">boolean</span><p>If the meta key was held down when the event occurred.</p></div>
+<div class="param"><span class="name">shift</span><span class="type">boolean</span><p>If a shift key was held down when the event occurred.</p></div>
+</div>
+
+<div class="type-def" id="EventPosition"><div class="sig">EventPosition <span class="tag-beta">beta</span></div>
+<p>An object describing the event position in view coordinates, which are measured in pixels relative to the top left corner of the timeline.</p>
+<div class="param"><span class="name">x1</span><span class="type">number</span><p>The x position corresponding to the start time of the event.</p></div>
+<div class="param"><span class="name">x2</span><span class="type">number</span><p>The x position corresponding to the end time of the event.</p></div>
+<div class="param"><span class="name">y1</span><span class="type">number</span><p>The y value of the top of the event.</p></div>
+<div class="param"><span class="name">y2</span><span class="type">number</span><p>The y value of the bottom of the event.</p></div>
+<div class="param"><span class="name">wrappedSegments</span><span class="type">{ x1: number; x2: number }[]</span><p>This property only applies when using Scale Wrapping. An array containing the x positions corresponding to the start and end times for each segment, ordered from left to right as they appear on the timeline. For most events, there is only one segment, so can be ignored.</p></div>
+</div>
+
+<div class="type-def" id="EventType"><div class="sig">EventType</div>
+<p>Defines the appearance of types of events.</p>
+<div class="param"><span class="name">baseType</span><span class="type">string</span><span class="default">default: 'default'</span><p>The name of the event type that this type inherits any unspecified properties from. The default type cannot have a baseType.</p></div>
+<div class="param"><span class="name">color</span><span class="type">string | 'from' | 'to' | 'entity' | 'inverse'</span><span class="default">default: 'entity'</span>
+<p>The color of events of this type, either a single color or one of these values. Also applies to events with more than 2 entities.</p>
+<ul>
+<li>'from' - Event takes its color from its first 'from' entity.</li>
+<li>'to' - Event takes its color from its first 'to' entity.</li>
+<li>'entity' - Event has a color gradient matching the color of each entity it joins with.</li>
+<li>'inverse' - Event has a color gradient with each end matching the opposite entity's color. For events with more than 2 entities, the color gradient follows the 'from' coloring behavior.</li>
+</ul>
+</div>
+<div class="param"><span class="name">fontIcon</span><span class="type"><a href="#FontIcon">FontIcon</a></span><p>Options to define the font icon for events of this type.</p></div>
+<div class="param"><span class="name">lineWidth</span><span class="type">number | string</span><span class="default">default: 1.5</span>
+<p>The width of the line for events of this type. If a number, used directly as the line width in px units. If a string, the value of the corresponding property on the event's data object is used instead, and an adjustment is applied to even the distribution of the line widths throughout the dataset.</p>
+</div>
+<div class="param"><span class="name">showArrows</span><span class="type">boolean</span><span class="default">default: true</span><p>Controls if arrows should be shown on events of this type.</p></div>
+</div>
+
+<div class="type-def" id="ExportResult"><div class="sig">ExportResult</div>
+<p>An object containing an image data URL.</p>
+<div class="param"><span class="name">url</span><span class="type">string</span><p>The URL containing the blob url for the exported image.</p></div>
+</div>
+
+<div class="type-def" id="FontIcon"><div class="sig">FontIcon</div>
+<p>Defines the attributes of a font icon.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><p>The color of the font icon. Default is the timeline's background color.</p></div>
+<div class="param"><span class="name">dx</span><span class="type">number</span><span class="default">default: 0</span><p>The horizontal offset as a percentage of the font icon's size.</p></div>
+<div class="param"><span class="name">dy</span><span class="type">number</span><span class="default">default: 0</span><p>The vertical offset as a percentage of the font icon's size.</p></div>
+<div class="param"><span class="name">fontFamily</span><span class="type">string</span><p>The name of the icon font family.</p></div>
+<div class="param"><span class="name">fontWeight</span><span class="type">number | string</span><span class="default">default: 'normal'</span><p>The weight of the font.</p></div>
+<div class="param"><span class="name">scale</span><span class="type">number</span><span class="default">default: 1</span><p>The scale factor of the font icon.</p></div>
+<div class="param"><span class="name">text</span><span class="type">string</span><p>The text of the font icon. Can be an escaped character code or the icon character itself.</p></div>
+</div>
+
+<div class="type-def" id="Glyph"><div class="sig">Glyph</div>
+<p>Defines the attributes of a glyph.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><p>The color of the glyph.</p></div>
+<div class="param"><span class="name">fontIcon</span><span class="type"><a href="#FontIcon">FontIcon</a></span><p>The font icon that is drawn on the glyph.</p></div>
+</div>
+
+<div class="type-def" id="HeatmapColorStep"><div class="sig">HeatmapColorStep</div>
+<p>Defines a color to be used for heatmap cells with a value greater than or equal to the step value.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><span class="required">required</span><p>The color to be used for heatmap cells that are greater than or equal to the step value.</p></div>
+<div class="param"><span class="name">value</span><span class="type">number</span><span class="required">required</span><p>The step value.</p></div>
+</div>
+
+<div class="type-def" id="HeatmapEventTypePriority"><div class="sig">HeatmapEventTypePriority</div>
+<p>Defines a color to be used for a heatmap cell that includes an event of the specified type.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><span class="required">required</span><p>The color to be used for the heatmap cell.</p></div>
+<div class="param"><span class="name">eventType</span><span class="type">string</span><span class="required">required</span><p>The event type that one of the heatmap cells underlying events must include.</p></div>
+</div>
+
+<div class="type-def" id="LabelAreaWidth"><div class="sig">LabelAreaWidth</div>
+<p>An object containing the mode of calculation for the width of the label area and the width.</p>
+<div class="param"><span class="name">mode</span><span class="type">'auto' | 'fixed'</span>
+<p>The mode of calculation for the width of the label area: 'auto' - The width is calculated automatically based on the visible entities. 'fixed' - The width is fixed, but draggable.</p></div>
+<div class="param"><span class="name">width</span><span class="type">number</span><p>The width of the label area.</p></div>
+</div>
+
+<div class="type-def" id="Marker"><div class="sig">Marker</div>
+<p>Defines a marker drawn across the timeline at a specified time.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><p>The color of the marker circle and line.</p></div>
+<div class="param"><span class="name">fontIcon</span><span class="type"><a href="#FontIcon">FontIcon</a></span><p>Options to define the marker's font icon.</p></div>
+<div class="param"><span class="name">label</span><span class="type">string</span><span class="required">required</span><p>The text for the label of the marker.</p></div>
+<div class="param"><span class="name">labelColor</span><span class="type">string</span><p>The color of the marker label.</p></div>
+<div class="param"><span class="name">showAtBottom</span><span class="type">boolean</span><p>Whether to show the marker label and circle at the bottom of the timeline.</p></div>
+<div class="param"><span class="name">showAtTop</span><span class="type">boolean</span><p>Whether to show the marker label and circle at the top of the timeline.</p></div>
+<div class="param"><span class="name">showLine</span><span class="type">boolean</span><p>Whether to show the vertical marker line.</p></div>
+<div class="param"><span class="name">time</span><span class="type">Date | number | <a href="#TimeRange">TimeRange</a></span><span class="required">required</span><p>The time that the marker is located at, either a Date in local time, a millisecond number in UTC, or a TimeRange object.</p></div>
+<div class="param"><span class="name">timeNanoseconds</span><span class="type">number</span><p>The number of nanoseconds to add to the time value.</p></div>
+</div>
+
+<div class="type-def" id="SubItem"><div class="sig">SubItem</div>
+<p>An object describing the targeted sub-item.</p>
+<div class="param"><span class="name">index</span><span class="type">number</span><p>The index of the sub-item.</p></div>
+<div class="param"><span class="name">subId</span><span class="type">string</span><p>Encoded information unique to the sub-item.</p></div>
+<div class="param"><span class="name">time</span><span class="type">Date</span><p>The time property of the sub-item.</p></div>
+<div class="param"><span class="name">timeNanoseconds</span><span class="type">number</span><p>The number of nanoseconds to add to the time value.</p></div>
+<div class="param"><span class="name">value</span><span class="type">number</span><p>The value property of the sub-item.</p></div>
+<div class="param"><span class="name">x</span><span class="type">number</span><p>The distance from the left edge of the Timeline element to the center of the sub-item.</p></div>
+<div class="param"><span class="name">y</span><span class="type">number</span><p>The distance from the top edge of the Timeline element to the center of the sub-item.</p></div>
+<div class="param"><span class="name">width</span><span class="type">number</span><p>The width of the sub-item in pixels.</p></div>
+<div class="param"><span class="name">height</span><span class="type">number</span><p>The height of the sub-item in pixels.</p></div>
+</div>
+
+<div class="type-def" id="TimelineData"><div class="sig">TimelineData</div>
+<p>Defines the data to load into the timeline.</p>
+<div class="param"><span class="name">entities</span><span class="type">object</span><span class="required">required</span><p>A dictionary of entities to be displayed in the timeline, where the keys are the entity ids and the values are <a href="#Entity">Entity</a> objects. Ids must be unique across both entities and events.</p></div>
+<div class="param"><span class="name">entityTypes</span><span class="type">object</span><p>A dictionary of entity types, where the keys are the entity type names and the values are <a href="#EntityType">EntityType</a> objects. May specify properties for the built-in 'default' entity type.</p></div>
+<div class="param"><span class="name">events</span><span class="type">object</span><span class="required">required</span><p>A dictionary of events to be displayed in the timeline, where the keys are the event ids and the values are <a href="#Event">Event</a> objects. Ids must be unique across both entities and events.</p></div>
+<div class="param"><span class="name">eventTypes</span><span class="type">object</span><p>A dictionary of event types, where the keys are the event type names and the values are <a href="#EventType">EventType</a> objects. May specify properties for the built-in 'default' event type.</p></div>
+<div class="param"><span class="name">ordering</span><span class="type">'firstevent' | 'lastevent' | 'keyorder' | 'alphabetical' | 'shorteneventlines'</span><span class="default">default: 'shorteneventlines'</span>
+<p>The ordering of entity groups, and entities within a group:</p>
+<ul>
+<li>'alphabetical' - Order alphabetically by the first letter of the entity labels.</li>
+<li>'firstevent' - Order by the time of the first event associated with the entity.</li>
+<li>'lastevent' - Order by the time of the last event of each entity (ascending).</li>
+<li>'keyorder' - Order by the indices of the entities data object.</li>
+<li>'shorteneventlines' - Order to shorten the vertical event lines between entities.</li>
+</ul>
+</div>
+<div class="param"><span class="name">timeSeriesCharts</span><span class="type">object</span><p>A dictionary of time series charts, where the keys are the time series chart ids and the values are <a href="#TimeSeriesChart">TimeSeriesChart</a> objects. Ids must be unique.</p></div>
+<div class="param"><span class="name">timeSeriesChartStacks</span><span class="type">object</span><p>A dictionary of time series chart stacks, where the keys are the time series chart stack ids and the values are <a href="#TimeSeriesChartStack">TimeSeriesChartStack</a> objects. Ids must be unique.</p></div>
+</div>
+
+<div class="type-def" id="TimeRange"><div class="sig">TimeRange</div>
+<p>A range of time.</p>
+<div class="param"><span class="name">end</span><span class="type">Date | number</span><span class="required">required</span><p>The end of the time range as a Date in local time, or a millisecond number in UTC.</p></div>
+<div class="param"><span class="name">endNanoseconds</span><span class="type">number</span><p>The number of nanoseconds to add to the end time value.</p></div>
+<div class="param"><span class="name">start</span><span class="type">Date | number</span><span class="required">required</span><p>The start of the time range as a Date in local time, or a millisecond number in UTC.</p></div>
+<div class="param"><span class="name">startNanoseconds</span><span class="type">number</span><p>The number of nanoseconds to add to the start time value.</p></div>
+</div>
+
+<div class="type-def" id="TimeSeriesChart"><div class="sig">TimeSeriesChart</div>
+<p>Defines a time series chart.</p>
+<div class="param"><span class="name">color</span><span class="type">string</span><p>The color of the line connecting data points in the time series chart. An alpha value is applied to the area under the chart.</p></div>
+<div class="param"><span class="name">data</span><span class="type"><a href="#TimeSeriesChartDataPoint">TimeSeriesChartDataPoint</a>[]</span><span class="required">required</span><p>The time series data.</p></div>
+<div class="param"><span class="name">fillAreaAlpha</span><span class="type">number</span><span class="default">default: 0.3</span><p>The alpha value applied to the area under the time series chart line. Set to 0 to remove the shaded area.</p></div>
+<div class="param"><span class="name">label</span><span class="type">string</span><p>The label of the time series chart. The label is not shown if the chart is in a stack.</p></div>
+<div class="param"><span class="name">labelColor</span><span class="type">string</span><p>The color of the label.</p></div>
+<div class="param"><span class="name">lineStyle</span><span class="type">'solid' | 'dashed'</span><span class="default">default: 'solid'</span><p>The style of line connecting data points in the time series chart.</p></div>
+<div class="param"><span class="name">type</span><span class="type">'linear' | 'step'</span><span class="default">default: 'linear'</span><p>The type of line connecting data points in the time series chart.</p></div>
+</div>
+
+<div class="type-def" id="TimeSeriesChartDataPoint"><div class="sig">TimeSeriesChartDataPoint</div>
+<p>A data point in a time series chart.</p>
+<div class="param"><span class="name">time</span><span class="type">Date | number</span><span class="required">required</span><p>Either a Date in local time or a millisecond number in UTC.</p></div>
+<div class="param"><span class="name">timeNanoseconds</span><span class="type">number</span><p>The number of nanoseconds to add to the time value.</p></div>
+<div class="param"><span class="name">value</span><span class="type">number</span><span class="required">required</span><p>The value of the data point.</p></div>
+</div>
+
+<div class="type-def" id="TimeSeriesChartStack"><div class="sig">TimeSeriesChartStack</div>
+<p>Defines a time series chart stack.</p>
+<div class="param"><span class="name">chartIds</span><span class="type">string[]</span><span class="required">required</span><p>The ids of the time series charts included in the stack.</p></div>
+<div class="param"><span class="name">label</span><span class="type">string</span><p>The label for the time series chart stack.</p></div>
+<div class="param"><span class="name">labelColor</span><span class="type">string</span><p>The color of the label for the time series chart stack.</p></div>
+</div>
+
+<h2 id="ColorFormats">Color Formats<a class="heading-anchor" href="#ColorFormats" aria-label="Link to this section">#</a></h2>
+<p>Colors can be specified as a string in several formats:</p>
+<ul>
+<li>One of the CSS named colors, e.g. 'red'</li>
+<li>Shorthand hexadecimal colors, e.g. '#F00'</li>
+<li>Hexadecimal colors, e.g. '#FF0000'</li>
+<li>rgb or rgba formats, e.g. 'rgb(255, 0, 0)' or 'rgba(255, 0, 0, 0.5)'</li>
+</ul>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../../graph-nexus/timeline/react/docs.html"><span class="dir">Previous</span><span class="label">Documentation Home</span></a>
+<a class="next" href="../../../graph-nexus/timeline/react/getting-started.html"><span class="dir">Next</span><span class="label">Getting Started</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#timeline-props">Timeline Props</a></li>
+<li class="lvl-2"><a href="#instance-methods">Instance Methods</a></li>
+<li class="lvl-2"><a href="#handling-events">Handling Events</a></li>
+<li class="lvl-2"><a href="#timeline-options">Timeline Options</a></li>
+<li class="lvl-2"><a href="#data-formats">Data Formats</a></li>
+<li class="lvl-2"><a href="#ColorFormats">Color Formats</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../../assets/search-index.js"></script>
+<script src="../../../assets/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Combos — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Data-heavy visualisations are often complex. To reduce clutter, you can combine multiple nodes into a single combined node. We call this a combo.">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html" class="current" aria-current="page">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Combos</h1><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>Data-heavy visualisations are often complex. To reduce clutter, you can combine multiple
+nodes into a single combined node. We call this a combo.</p><p class="text-center"><img src="../assets/basics/basicopen.gif"></p><p>Links are combined too. Notice how Debbie's links to Diane and Bob combine automatically into a single link, referred to as a combo link.</p><p>Combos have two states: open or closed. When they're open, you can see and interact with the items inside the combo border.</p><h2 id="create">Creating and removing combos <a class="heading-anchor" href="#create" aria-label="Link to this section">#</a></h2><p>There are two ways to create combos, each of which can be useful for different tasks:</p><ul><li>Combine the existing nodes using <a href="../api.html#Combo_combine">chart.combo().combine()</a>
+function.</li><li>Assign <code class="black">parentId</code> to nodes as they are added to the chart with <a href="../api.html#Chart_load">load</a>, 
+<a href="../api.html#Chart_merge">merge</a> and <a href="../api.html#Chart_expand">expand</a>.
+</li></ul><h3 id="create_combine">Combining existing nodes using chart.combo().combine()<a class="heading-anchor" href="#create_combine" aria-label="Link to this section">#</a></h3><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">combine</span><span class="pun">({</span><span class="pln"> ids</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'A'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'B'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'C'</span><span class="pun">]</span><span class="pln"> </span><span class="pun">});</span></pre><p>Use this approach for creating combos after the data is loaded, for example when you want to allow users to create their own combos.</p><p>The created combos are automatically assigned an id when they are created, prefixed with '_combo_' for nodes and '_combolink_' for links.</p><h3 id="create_parentId">Assigning a parentId to nodes as they are loaded<a class="heading-anchor" href="#create_parentId" aria-label="Link to this section">#</a></h3><p>The <a href="../api.html#ItemFormat_Node_properties_parentId">parentId</a> property of nodes can be set
+when loading data into the chart to define a combo hierarchy.
+This method can be used to create combos in a variety of ways:</p><p><strong>Note:</strong> Charts with combos created using this method which are serialized cannot
+be loaded in versions of Nexus older than 5.1.</p><p> </p><ul><li>Loading in data containing nodes and combos:</li></ul><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">load</span><span class="pun">({</span><span class="pln">
+  type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'LinkChart'</span><span class="pun">,</span><span class="pln">
+  items</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="com">// Create a new combo like any other node</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newcombo1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'blue'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+    </span><span class="com">// Create a child and set a parentId to define 'newcombo1' as a combo</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newchild1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'red'</span><span class="pun">,</span><span class="pln"> parentId</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newcombo1'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">});</span></code></pre><ul><li>Merging or expanding new data into an existing combo:</li></ul><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">expand</span><span class="pun">({</span><span class="pln">
+  </span><span class="com">// Create a new node and add it to the already present 'newcombo1'</span><span class="pln">
+  id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newchild2'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'red'</span><span class="pun">,</span><span class="pln"> parentId</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newcombo1'</span><span class="pln">
+</span><span class="pun">});</span></code></pre><ul><li>Merging or expanding data into nodes that are not combos:</li></ul><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">expand</span><span class="pun">({</span><span class="pln">
+  </span><span class="com">// Expand a new node into 'newchild2' to promote it from a node to a combo</span><span class="pln">
+  id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'grandchild1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'red'</span><span class="pun">,</span><span class="pln"> parentId</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newchild2'</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>Notice how the standard node is promoted to a combo by defining the <code class="black">parentId</code> on the new child node. 
+Nexus detects child nodes and promotes all nodes with children to combos.</p><p>Using <a href="../api.html#Chart_expand">chart.expand()</a> arranges the contents of new or modified combos by default.
+Disable this using the <a href="../api.html#Chart_expand_options_arrange_name">name</a>
+option or by using <a href="../api.html#Chart_merge">chart.merge()</a> instead.
+</p><h3 id="remove">Removing combos <a class="heading-anchor" href="#remove" aria-label="Link to this section">#</a></h3><p>To remove a combo, you have to remove all its child nodes. Empty combos are then deleted automatically.
+This can be done in two ways:</p><ul><li>Remove nodes all at once using the <a href="../api.html#Combo_uncombine">chart.combo().uncombine()</a>
+function.</li><p>The function moves all child nodes out of the combo, as long as the combo has no parent.
+If it does, the combo will not be uncombined.</p></ul><ul><li>Specify directly where the nodes are moved to by using the 
+<a href="../api.html#Combo_transfer">chart.combo().transfer()</a>
+function. See <a href="#transfer">Transferring nodes between combos</a>
+for more details.
+</li></ul><h2 id="open">Open and closed combos<a class="heading-anchor" href="#open" aria-label="Link to this section">#</a></h2><p>By default, combos are created in a closed state with a glyph marking the number of nodes they contain. 
+This is useful when looking at the bigger picture on a busy chart.</p><p>You can open the combo by double-clicking on the combo node. The <a href="../api.html#ChartEvents_double-click">double-click</a> 
+event toggles the open and closed state. The change is animated by default.</p><p class="text-center"><img src="../assets/basics/closetoopen.gif"></p><p>To create a combo in an open state, set the <a href="../api.html#Combo_combine_arguments_comboDefinition_open">open</a>
+option on <code class="black">chart.combo().combine()</code> to true:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">combine</span><span class="pun">({</span><span class="pln">
+  ids</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'A'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'B'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'C'</span><span class="pun">],</span><span class="pln">
+  open</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>To create multiple open combos, use an array of combo definitions:</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">combine</span><span class="pun">([</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln"> ids</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'A'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'B'</span><span class="pun">],</span><span class="pln"> open</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> 
+  </span><span class="pun">{</span><span class="pln"> ids</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'C'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'D'</span><span class="pun">],</span><span class="pln"> open</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">]);</span></code></pre><h2 id="layouts">Layouts inside open combos<a class="heading-anchor" href="#layouts" aria-label="Link to this section">#</a></h2><p>There are several automatic layout options available for arranging nodes inside open combos:
+'lens' (the default for circular combos), 'concentric', 'grid' (the default for rectangular combos), 'sequential' and 'none' (no arrangement).</p><p>For more information, see the section <a href="../basics/layout-basics.html#arrange">Arrangements - Layouts inside Combos</a>.</p><p>Arrangement can be set in multiple places:</p><ul><li><a href="../api.html#Chart_expand_options_arrange_name">name</a> setting for <code class="black">arrange</code> in <code class="black">chart.expand()</code></li><li><a href="../api.html#Combo_arrange_options_name">name</a> setting in <code class="black">combo().arrange()</code></li><li><a href="../api.html#Combo_combine_options_arrange">arrange</a> setting in <code class="black">combo().combine()</code></li><li><a href="../api.html#Combo_transfer_options_arrange">arrange</a> setting in <code class="black">combo().transfer()</code></li></ul><h2 id="comboAdapt">Adapting to changes<a class="heading-anchor" href="#comboAdapt" aria-label="Link to this section">#</a></h2><p class="text-center"><img src="../assets/basics/adapt.gif" style="max-width:60%"></p><p>When combos <a href="#resize">change their size</a> as a result of opening, closing, arranging items,
+transferring items or expanding with new items, other items in the chart
+move to adapt to these changes.
+Movement occurs on two levels:</p><ul><li><strong>Inside a parent combo</strong> - Items inside the parent combo (e.g. Sean and Debbie above)
+move to optimise the space in the parent combo when the child combo's size changes.</li><li><strong>At the top chart level</strong> - Layout items outside the combo (e.g. Tim, Michael and David above)
+adjust to optimise the layout space around the open/closed combo.</li></ul><p>By default, Nexus will push/pull adjacent nodes away/towards the opening/closing combo as it grows/shrinks.</p><p>This push/pull movement can result in a distorted layout so it may not be suitable for all charts.
+It may be less optimal particularly for charts with regular arrangements and layouts such as grid and sequential.</p><p>You can disable the movement at the <strong>top chart level</strong>,
+or at <strong>both levels</strong>, by setting the <code class="black">adapt</code> option to 'inCombo' or 'none' respectively.
+The <code class="black">adapt</code> option is available for
+<a href="../api.html#Combo_open">combo.open()</a>,
+<a href="../api.html#Combo_close">combo.close()</a>,
+<a href="../api.html#Combo_arrange">combo.arrange()</a> or
+<a href="../api.html#Combo_transfer">combo.transfer()</a>.</p><p>When disabling this movement to allow the rest of the chart to adapt to the combo size change,
+you will likely want to update the top level layout or combo arrangement in another way:</p><ul><li> Inside a parent combo - run <a href="../api.html#Combo_arrange">chart.combo().arrange()</a></li><li> At the top chart level - re-run or run an adaptive version of the layout:</li><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">layout</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">'organic'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> mode</span><span class="pun">:</span><span class="pln"> </span><span class="str">'adaptive'</span><span class="pun">,</span><span class="pln"> packing</span><span class="pun">:</span><span class="pln"> </span><span class="str">'adaptive'</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">};</span></code></pre></ul><div class="notice"><div class="boxout" style="background-color: #00996412"><div class="boxout-icon"></div><div class="boxout-body" style="padding-left: 42px">Charts adapt to changes to the size of existing combos only. 
+If you create a combo, the position of other items won't change to accommodate it.
+</div></div></div><h2 id="transfer">Transferring nodes between combos<a class="heading-anchor" href="#transfer" aria-label="Link to this section">#</a></h2><p>There's a parent-child relationship between a combo and the items inside.
+Moving a node between the chart and a combo (or between two combos) transfers
+the child to a new parent.</p><p>All transfers use the <a href="../api.html#Combo_transfer">chart.combo().transfer()</a> function:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">transfer</span><span class="pun">(</span><span class="pln">nodeId</span><span class="pun">,</span><span class="pln"> comboId</span><span class="pun">);</span></pre><p class="text-center"><img src="../assets/basics/combotransfer.gif"></p><p>To transfer an item out of a combo to the top level of the chart, use null as the second argument:</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">transfer</span><span class="pun">(</span><span class="pln">nodeId</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">);</span></pre><p>During a transfer between combos, the items inside source and destination combos are automatically arranged
+by the default <a href="../api.html#Combo_transfer_options_arrange">arrange</a>
+option. To stop items being rearranged on each transfer, use:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">transfer</span><span class="pun">(</span><span class="pln">nodeId</span><span class="pun">,</span><span class="pln"> comboId</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> arrange</span><span class="pun">:</span><span class="pln"> </span><span class="str">'none'</span><span class="pln"> </span><span class="pun">});</span></pre><p>A common way to transfer nodes is to handle the
+<a href="../api.html#ChartEvents_drag-start">drag-start</a> event to enable dragging between combos.</p><h2 id="style">Styling for combos<a class="heading-anchor" href="#style" aria-label="Link to this section">#</a></h2><p>When styling combos, you need to consider the style of the combo in both the closed and open state.</p><p>If you are creating a combo using <code class="black">chart.combo().combine()</code>,
+you can set these styles as part of the
+<a href="../api.html#Combo_combine_arguments_comboDefinition">combo definition</a> object:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">combine</span><span class="pun">({</span><span class="pln">
+  ids</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'A'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'B'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'C'</span><span class="pun">],</span><span class="pln">
+  style</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'blue'</span><span class="pun">,</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Closed combo'</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="com">// closed combo style</span><span class="pln">
+  openStyle</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'green'</span><span class="pun">,</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Open combo'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">  </span><span class="com">// open combo style</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>If you are creating a combo by assigning a <code class="black">parentId</code> to nodes as they are loaded,
+a closed combo is styled just like a normal node while the
+open combo is styled in the <a href="../api.html#ItemFormat_Node_properties_oc">oc</a> property:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">merge</span><span class="pun">([</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln"> 
+    id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newcombo1'</span><span class="pun">,</span><span class="pln"> 
+    type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> 
+    c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'blue'</span><span class="pun">,</span><span class="pln">          </span><span class="com">// closed combo style</span><span class="pln">
+    t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Closed combo'</span><span class="pun">,</span><span class="pln">
+    oc</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> 
+      c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'green'</span><span class="pun">,</span><span class="pln">       </span><span class="com">// open combo style</span><span class="pln">
+      t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Open combo'</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> 
+  </span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newchild1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> parentId</span><span class="pun">:</span><span class="pln"> </span><span class="str">'newcombo1'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">]);</span></code></pre><p><strong>Closed combos</strong> look and behave just like regular nodes and have the same styling options.
+See the
+<a href="../api.html#Combo_combine_arguments_comboDefinition_style">style</a> property
+for more details.</p><p>For styling options available for <strong>open combos</strong>, see the
+<a href="../api.html#ItemFormat_Node_properties_oc">oc</a> property.
+Open combos can also be styled using
+<a href="../features/node-and-combo-styling.html#advancedcombostyling">advanced combo styling</a>.
+</p><h3 id="default-styles">Default styles<a class="heading-anchor" href="#default-styles" aria-label="Link to this section">#</a></h3><p>If you don't set any styling, the following styles are used by default:</p><ul><li>Closed combo node inherits the style of the first node in the array of nodes it contains</li><li>Open combo uses a default grey</li><li>Combo link takes the colour of a link it contains</li><li>Closed combo counter glyph uses a default red and is shown by default</li></ul><p>You can configure your own styling when you create combos,
+or set default styles to be applied automatically using the 
+<a href="../api.html#ChartOptions_defaultStyles">defaultStyles</a> option:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">options</span><span class="pun">({</span><span class="pln">
+  defaultStyles</span><span class="pun">:{</span><span class="pln">
+    openCombos</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'yellow'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+    comboLinks</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> ls</span><span class="pun">:</span><span class="pln"> </span><span class="str">'dashed'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+    comboGlyph</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> fi</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">getFontIcon</span><span class="pun">(</span><span class="str">"fa-exclamation-circle"</span><span class="pun">)</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+</span></code></pre><h3 id="rectangular">Rectangular combos<a class="heading-anchor" href="#rectangular" aria-label="Link to this section">#</a></h3><p>The <a href="../api.html#ChartOptions_combos_shape">shape</a> property 
+in the <code class="black">combos</code> chart option controls the shape of all open combos in the chart.
+There are two combo shapes available in Nexus - 'circle' (default) and 'rectangle':
+</p><p class="text-center"><img src="../assets/basics/rect-combos.gif"></p><p>By default, the items inside rectangular combos are arranged using the 'grid' layout, introduced especially for rectangular combos to help increase node density and reduce white space.
+</p><h2 id="resize">Resizing combos<a class="heading-anchor" href="#resize" aria-label="Link to this section">#</a></h2><h3 id="manual-resize">Manual resize<a class="heading-anchor" href="#manual-resize" aria-label="Link to this section">#</a></h3><p>You can resize combos using the properties in the <code class="black">oc</code> options:</p><ul><li><a href="../api.html#ItemFormat_Node_properties_oc_w">w</a> - width of circular or rectangular combos</li><li><a href="../api.html#ItemFormat_Node_properties_oc_h">h</a> - height of rectangular combos</li></ul><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">setProperties</span><span class="pun">({</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'comboId'</span><span class="pun">,</span><span class="pln"> oc</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> w</span><span class="pun">:</span><span class="pln"> </span><span class="lit">500</span><span class="pln"> </span><span class="pun">}});</span></pre><p>Alternatively, to set up drag handles for a user to set the size of the combo, you can
+set the combo's <a href="../api.html#ChartOptions_selectedNode_re">re</a>
+property to true:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">setProperties</span><span class="pun">({</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'comboId'</span><span class="pun">,</span><span class="pln"> oc</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> re</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">}});</span></pre><h3 id="automatic-resize">Automatic resize<a class="heading-anchor" href="#automatic-resize" aria-label="Link to this section">#</a></h3><p>To automatically resize combos you can use <a href="../api.html#Combo_arrange">chart.combo().arrange()</a>:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">arrange</span><span class="pun">(</span><span class="str">'comboId'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> name</span><span class="pun">:</span><span class="pln"> </span><span class="str">'lens'</span><span class="pun">,</span><span class="pln"> resize</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">});</span></pre><p>To run a resize without a layout you can set <code class="black">name</code> to 'none'.</p><p>Some combo functions like <a href="../api.html#Chart_expand">expand</a> and
+<a href="../api.html#Combo_transfer">transfer</a> resize automatically when a
+combo's contents change. This can be controlled through the options parameter:
+</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">expand</span><span class="pun">(</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'childId'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'red'</span><span class="pun">,</span><span class="pln"> parentId</span><span class="pun">:</span><span class="pln"> </span><span class="str">'comboId'</span><span class="pln"> </span><span class="pun">},</span><span class="pln">
+  </span><span class="pun">{</span><span class="pln"> arrange</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> resize</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln"> </span><span class="pun">}}</span><span class="pln">
+</span><span class="pun">);</span></code></pre><p>To disable automatic resizing of these functions, set the resize option to false.</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">transfer</span><span class="pun">(</span><span class="pln">nodeId</span><span class="pun">,</span><span class="pln"> comboId</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> resize</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">});</span></pre><h2 id="reveal">Revealing links<a class="heading-anchor" href="#reveal" aria-label="Link to this section">#</a></h2><p>When a combo is created, links combine where possible 
+to decrease density of visualized connections and help prevent the hairball problem.</p><p>Sometimes it may be important to see every individual link between key nodes,
+even if those nodes are in a combo. You can do that with the <code class="black">chart.combo().reveal()</code> function:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">reveal</span><span class="pun">(</span><span class="pln">linkIds</span><span class="pun">);</span></pre><p>In a more advanced scenario, you can click on a node to reveal its links and bring their parents to the foreground:</p><p class="text-center"><img src="../assets/basics/reveal_lens_layout.png"></p><p>For a more detailed explanation of what's happening here, see the <a href="../features/combos-concepts.html#neighbours">Revealing links to neighbours</a>
+example in <a href="../features/combos-concepts.html">Combos Concepts</a>.</p><p>You can also configure Nexus to combine groups of links according to specified criteria, and display them as just one 'aggregate link'; see 
+<a href="../features/aggregate-links.html">Aggregate Links</a>.
+</p><h2 id="nested">Nested combos<a class="heading-anchor" href="#nested" aria-label="Link to this section">#</a></h2><p>Earlier we described the parent-child relationship between a combo and the items inside it. 
+When one of those items is another combo, we call that a nested combo.</p><p>Nested combos are a good way to represent subsets of data such as departments in organisations, or countries in regions. 
+In the example above, Middle East is the top parent and Afghanistan is the immediate parent of the selected node.
+</p><h2 id="find">Finding items<a class="heading-anchor" href="#find" aria-label="Link to this section">#</a></h2><p>You might need to traverse the ‘family tree’ of combo parents and children to find the items you need. Let’s look at some common traversal scenarios.</p><h3 id="child">All underlying items<a class="heading-anchor" href="#child" aria-label="Link to this section">#</a></h3><p>To find which underlying items belong to a specific combo node or combo link, use
+<a href="../api.html#Combo_info">chart.combo().info()</a>. For example:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">info</span><span class="pun">(</span><span class="str">'comboA'</span><span class="pun">);</span></pre><h3 id="parent">Parents of children<a class="heading-anchor" href="#parent" aria-label="Link to this section">#</a></h3><p>To find which parent combos contain specific child nodes and links, use
+<a href="../api.html#Combo_find">chart.combo().find()</a>. For example:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">find</span><span class="pun">([</span><span class="str">'childnode1'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'childnode2'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'childnode3'</span><span class="pun">]);</span></pre><h3 id="immediate">Immediate and top parents<a class="heading-anchor" href="#immediate" aria-label="Link to this section">#</a></h3><p>By default <a href="../api.html#Combo_find">chart.combo().find()</a> returns the parent
+at the top of the nested combo hierarchy. If you're are searching for items in a nested combo,
+you may want to find the immediate parent:
+</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">find</span><span class="pun">(</span><span class="str">'childnode1'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> parent</span><span class="pun">:</span><span class="pln"> </span><span class="str">'first'</span><span class="pln"> </span><span class="pun">});</span></pre><h3 id="visible">First visible parent<a class="heading-anchor" href="#visible" aria-label="Link to this section">#</a></h3><p>If you want to visually highlight a particular node inside a nested combo,
+for example as the result of a search, that node may be invisible because one of its parents is a closed combo. </p><p>To find and highlight the first visible parent, use:</p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="kwd">var</span><span class="pln"> firstVisibleNode </span><span class="pun">=</span><span class="pln"> searchResultId</span><span class="pun">;</span><span class="pln">
+</span><span class="com">// Walk the hierarchy to find the first visible node</span><span class="pln">
+</span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">firstVisibleNode</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">var</span><span class="pln"> parent </span><span class="pun">=</span><span class="pln"> chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">find</span><span class="pun">(</span><span class="pln">firstVisibleNode</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> parent</span><span class="pun">:</span><span class="pln"> </span><span class="str">'first'</span><span class="pln"> </span><span class="pun">});</span><span class="pln">
+  </span><span class="com">// If there's a parent and it's closed, keep walking up the hierarchy</span><span class="pln">
+  </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">parent </span><span class="pun">&amp;&amp;</span><span class="pln"> </span><span class="pun">!</span><span class="pln">chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">isOpen</span><span class="pun">(</span><span class="pln">parent</span><span class="pun">))</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    firstVisibleNode </span><span class="pun">=</span><span class="pln"> parent</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="com">// We can now highlight the visible item</span><span class="pln">
+chart</span><span class="pun">.</span><span class="pln">setProperties</span><span class="pun">({</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> firstVisibleParent</span><span class="pun">,</span><span class="pln"> b</span><span class="pun">:</span><span class="pln"> </span><span class="str">'red'</span><span class="pln"> </span><span class="pun">});</span></code></pre><p>If you're using <a href="../api.html#Chart_ping">chart.ping()</a>
+to do this, you don’t need to worry about finding the first visible parent. 
+Pinging a node will always ping its first visible parent.
+</p><h3 id="comboNode">Identify combo node or combo link<a class="heading-anchor" href="#comboNode" aria-label="Link to this section">#</a></h3><p>The <a href="../api.html#Combo_isCombo">chart.combo().isCombo()</a>
+function checks the ids of nodes and/or links to find out whether they are combo nodes or combo links. 
+For example, to check whether a selection contains a combo node, use:
+</p><pre class="prettyprint prettyprinted"><span class="kwd">var</span><span class="pln"> selectionContainsNodeCombo </span><span class="pun">=</span><span class="pln"> chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">isCombo</span><span class="pun">(</span><span class="pln">chart</span><span class="pun">.</span><span class="pln">selection</span><span class="pun">(),</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pln"> </span><span class="pun">});</span></pre><h2 id="combosAndApi">Combos and the Nexus API<a class="heading-anchor" href="#combosAndApi" aria-label="Link to this section">#</a></h2><p>Combos work differently with some Nexus chart functions. To understand why, we recommend you read
+<a href="../features/combos-concepts.html">Combos Concepts</a>. It describes the differences between a 'top level' and
+'underlying level' approach to your data, and how this influences the way you iterate over items, decide which
+items are visible, and run graph analysis.</p><p>For easy reference, these are the chart functions affected:</p><div class="table-scroll"><table class="table"><thead><tr><th>API function</th><th>Behaviour with combos</th><th>More information</th></tr></thead><tbody><tr><td><a href="../api.html#Chart_animateProperties">animateProperties()</a> and <a href="../api.html#Chart_setProperties">setProperties()</a></td><td>Setting <code class="black">hi: true</code> on a combo hides the items inside the combo but does not change their properties.
+Setting <code class="black">hi: false</code> on an item in a combo which is already set to <code class="black">hi: true</code> will change the item's property but the item remains hidden.</td><td><a href="../features/combos-concepts.html#hiding">Hiding and showing items</a></td></tr><tr><td><a href="../api.html#Chart_each">chart.each()</a></td><td>The <a href="../api.html#Chart_each_options_items">items</a> option lets you choose which items to iterate over based on where they exist in the chart.</td><td><a href="../features/combos-concepts.html#filter">Filtering and foregrounding items</a></td></tr><tr><td><a href="../api.html#Chart_filter">chart.filter()</a> and <a href="../api.html#Chart_foreground">chart.foreground()</a></td><td>By default, these functions will run against underlying items inside combos. To change this, set their 
+<a href="../api.html#Chart_each_options_items">items</a> option to 'toplevel'.</td><td><a href="../features/combos-concepts.html#filter">Filtering and foregrounding items</a></td></tr><tr><td><a href="../api.html#Graph">chart.graph()</a></td><td>Items inside combos are <strong>NOT</strong> traversed by the graph API, so you can only run graph analysis on the top-level chart items. 
+You'd need to load the underlying chart into the graph engine so you can run graph analysis against it.</td><td><a href="../features/combos-concepts.html#graph">Running graph analysis</a></td></tr><tr><td><a href="../api.html#Chart_hide">chart.hide()</a> and <a href="../api.html#Chart_show">chart.show()</a></td><td>If you hide/show a combo, the items inside it are hidden/shown too. 
+If you show an item in a hidden combo or nest of combos, the item and its parent(s) are shown.</td><td><a href="../features/combos-concepts.html#hiding">Hiding and showing items</a></td></tr><tr><td><a href="../api.html#Chart_arrange">chart.arrange()</a> and <a href="../api.html#Chart_layout">chart.layout()</a></td><td>These functions lay out the combo nodes themselves, but they do not apply to the items inside an open combo.
+Instead, Nexus uses the <a href="../api.html#Combo_arrange">chart.combo().arrange</a> 
+function to arrange the items inside an open combo.</td><td></td></tr><tr><td><a href="../api.html#Chart_contains">chart.contains()</a></td><td>You can use this function to return closed combo nodes, but not open combos or their contents.</td><td></td></tr><tr><td><a href="../api.html#Chart_removeItem">chart.removeItem()</a></td><td>Using this function to remove a combo from the chart also removes the nodes and links inside the combo.</td><td></td></tr><tr><td><a href="../api.html#Chart_selection">chart.selection()</a></td><td>You can use this function to select items inside open combos, but not in closed combos.</td><td></td></tr><tr><td><a href="../api.html#Chart_serialize">chart.serialize()</a></td><td>Combos and the items inside them are serialized in a different section of the chart format.</td><td></td></tr></tbody></table></div><h2 id="seeAlso">See also<a class="heading-anchor" href="#seeAlso" aria-label="Link to this section">#</a></h2><p>Continue to the <a href="../features/combos-concepts.html">Combos Concepts</a> to gain more detailed understanding of the key concepts behind combos.</p><p>See the complete list of Nexus <a href="../api.html#Combo">Combo Functions</a> in the API Reference. </p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/basics/chart-basics.html"><span class="dir">Previous</span><span class="label">Chart Basics</span></a>
+<a class="next" href="../../graph-nexus/basics/events-basics.html"><span class="dir">Next</span><span class="label">Events Basics</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#create">Creating and removing combos</a></li>
+<li class="lvl-3"><a href="#create_combine">Combining existing nodes using chart.combo().combine()</a></li>
+<li class="lvl-3"><a href="#create_parentId">Assigning a parentId to nodes as they are loaded</a></li>
+<li class="lvl-3"><a href="#remove">Removing combos</a></li>
+<li class="lvl-2"><a href="#open">Open and closed combos</a></li>
+<li class="lvl-2"><a href="#layouts">Layouts inside open combos</a></li>
+<li class="lvl-2"><a href="#comboAdapt">Adapting to changes</a></li>
+<li class="lvl-2"><a href="#transfer">Transferring nodes between combos</a></li>
+<li class="lvl-2"><a href="#style">Styling for combos</a></li>
+<li class="lvl-3"><a href="#default-styles">Default styles</a></li>
+<li class="lvl-3"><a href="#rectangular">Rectangular combos</a></li>
+<li class="lvl-2"><a href="#resize">Resizing combos</a></li>
+<li class="lvl-3"><a href="#manual-resize">Manual resize</a></li>
+<li class="lvl-3"><a href="#automatic-resize">Automatic resize</a></li>
+<li class="lvl-2"><a href="#reveal">Revealing links</a></li>
+<li class="lvl-2"><a href="#nested">Nested combos</a></li>
+<li class="lvl-2"><a href="#find">Finding items</a></li>
+<li class="lvl-3"><a href="#child">All underlying items</a></li>
+<li class="lvl-3"><a href="#parent">Parents of children</a></li>
+<li class="lvl-3"><a href="#immediate">Immediate and top parents</a></li>
+<li class="lvl-3"><a href="#visible">First visible parent</a></li>
+<li class="lvl-3"><a href="#comboNode">Identify combo node or combo link</a></li>
+<li class="lvl-2"><a href="#combosAndApi">Combos and the Nexus API</a></li>
+<li class="lvl-2"><a href="#seeAlso">See also</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

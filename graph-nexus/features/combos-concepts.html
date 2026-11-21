@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Combos Concepts — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="This page discusses the key concepts behind the combos feature in Nexus 4.0 or later. The design for combos is different to other Nexus features, so unders">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html" class="current" aria-current="page">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Combos Concepts</h1><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>This page discusses the key concepts behind the combos feature in Nexus 4.0 or later. The design for combos is different to other Nexus features, so understanding what’s happening under the hood will help you get to grips with the feature more quickly. </p><p>This page isn’t an introduction to what you can do with combos. The <a href="../basics/combos.html">Combos</a> page covers that, so we recommend you read that first.</p><h2 id="approaches">Two different approaches to data<a class="heading-anchor" href="#approaches" aria-label="Link to this section">#</a></h2><p>One of the most important concepts to understand when working with combos is the difference between a ‘top level’ and an ‘underlying level’ approach to the data. The approach you take depends on what kind of data you’re visualising. 
+For example, look at this network. Nodes b and c are children of a parent combo:</p><p class="text-center"><img src="../assets/features/shortestpath.png"></p><p></p><p>To identify the shortest path between nodes a and d, you have two options:</p><ul><li>ignore the combo parent and take the links between the child nodes, b and c, into account. This is the <i>underlying level </i>approach.</li><li>treat the combo parent as a single entity and ignore the links between the child nodes b and c. This is the <i>top level </i>approach.</li></ul><p>Let’s consider these options in more detail.</p><h3 id="underlying">Underlying level approach<a class="heading-anchor" href="#underlying" aria-label="Link to this section">#</a></h3><p>The underlying level approach ignores combos - we only consider nodes and links that are not combos. In other words, items in the underlying level cannot be parents.</p><p>The underlying level approach makes the most sense if you’re using combos to visually group items in your data, but where the combos themselves are not really considered to be ‘nodes’ from a data point of view. For example, consider a dataset of people who have been grouped into combos representing their country of birth. 
+The combos are a visual grouping, but they don’t have the same significance as the people. 
+When you want to know who is connected to whom, you want the answer to include people only, not countries. </p><h3 id="top">Top level approach<a class="heading-anchor" href="#top" aria-label="Link to this section">#</a></h3><p>The top level approach ignores anything that is inside a combo. In other words, items in the top level cannot be children.</p><p>The top level approach is useful where you’re using combos to <i>replace </i>the nodes they contain. 
+For example, a crime investigator might speculate that two nodes representing cars, one from a crime scene and another from a witness statement, actually represent the same car. 
+The investigator might use a combo to group the two cars together, and treat it as a single entity. 
+The combo exists in the ‘top level’ chart, and it makes sense to ask questions like “what entities are directly connected to this combo?”.</p><p>The underlying and the top level approaches are not mutually exclusive. An item can exist in both underlying and top levels, and there may be items which exist in neither. 
+But in the majority of cases, the graph traversals you’ll need to do can be done in one of the two levels. 
+You just need to decide which one is the most relevant to your data.</p><p>Let’s explore some of the most common scenarios where you need to consider which approach to use.</p><h2 id="iterating">Iterating over items<a class="heading-anchor" href="#iterating" aria-label="Link to this section">#</a></h2><p>At some point, you’ll need to iterate over items in the chart. The easiest way to do this is using <a href="../api.html#Chart_each">chart.each()</a>.</p><p>In Nexus v4.0 and later, chart.each() iterates over the underlying level. This is by far the most common iteration use case, but you can change it using the <a href="../api.html#Chart_each_options_items">items</a> option.</p><p>If you want to iterate over the top level chart, use <strong>items: ‘toplevel’</strong>:</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">each</span><span class="pun">({</span><span class="pln"> items</span><span class="pun">:</span><span class="pln"> </span><span class="str">'toplevel'</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">item</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// Top level nodes, links and combos are available here</span><span class="pln">
+</span><span class="pun">});</span></pre><p>If you want to iterate over all items in the chart, use <strong>items: ‘all’</strong>:</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">each</span><span class="pun">({</span><span class="pln"> items</span><span class="pun">:</span><span class="pln"> </span><span class="str">'all'</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">item</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// Every node, link and combo in the chart is available here</span><span class="pln">
+</span><span class="pun">});</span></pre><h2 id="visible">Controlling which items are visible<a class="heading-anchor" href="#visible" aria-label="Link to this section">#</a></h2><h3 id="filter">Filtering and foregrounding items<a class="heading-anchor" href="#filter" aria-label="Link to this section">#</a></h3><p>The <a href="../api.html#Chart_filter">chart.filter()</a> and <a href="../api.html#Chart_foreground">chart.foreground()</a> functions iterate over items in the chart so that you can apply your own business logic to decide whether that item should be visible, backgrounded or hidden. 
+You need to decide whether to iterate over all underlying level items, or just the top level items.</p><p>From Nexus 4.0 and later, the default behaviour of these functions is to iterate over underlying level items, but again you can change this using their respective <a href="../api.html#Chart_filter_options_items">items</a> options.</p><p>The following rules apply:</p><ul><li>If any item inside a combo is foregrounded, so is that combo.</li><li>If any item inside a combo is shown, so is that combo.</li></ul><p>These rules mean that it almost always makes sense to use filter or foreground at the underlying level. You decide whether your underlying nodes should be visible or not, and the rules above will take care of the parent combos.</p><p>However, if you want to override these rules, you can explicitly set the visibility properties of items by foregrounding open combos or hiding/showing items. Let’s look at these more closely.</p><h3 id="foregrounding">Foregrounding open combos<a class="heading-anchor" href="#foregrounding" aria-label="Link to this section">#</a></h3><p>There may be times when you filter and foreground items, but want to send open combos to the background even if they contain children that are in the foreground. For example, when you think that an open combo is distracting attention from the important items highlighted inside it. 
+To do this, set the <a href="../api.html#Chart_foreground_options_foregroundOpenCombos">foregroundOpenCombos</a> option in <a href="../api.html#Chart_foreground">chart.foreground()</a> to <strong>false</strong>:</p><pre class="prettyprint prettyprinted"><span class="pln">chart</span><span class="pun">.</span><span class="pln">foreground</span><span class="pun">(</span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">node</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// Decide whether to foreground an underlying node</span><span class="pln">
+</span><span class="pun">},</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> foregroundOpenCombos</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">}).</span><span class="kwd">then</span><span class="pun">(()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// do more after foreground</span><span class="pln">
+</span><span class="pun">});</span></pre><h3 id="hiding">Hiding and showing items<a class="heading-anchor" href="#hiding" aria-label="Link to this section">#</a></h3><p>Another way to control visibility is to pass a set of ids to the <a href="../api.html#Chart_hide">chart.hide()</a> or <a href="../api.html#Chart_show">chart.show()</a> functions. 
+You can pass the ids of any item. 
+Calling show on a combo will also show the items inside it. 
+Calling show on an item inside a hidden combo or a nest of combos will show that item and its parent(s).</p><p>Although it’s safer to rely on functions like filter and foreground, you can have complete control over visibility using <a href="../api.html#Chart_setProperties">chart.setProperties</a>, and setting the <a href="../api.html#ItemFormat_Node_properties_bg">bg</a> (background) or <a href="../api.html#ItemFormat_Node_properties_hi">hi</a> (hidden) property on any item. </p><p>Note that if you set <strong>hi: true</strong> on a combo, its children will always be hidden, even though their hi property may still be false.</p><p></p><h2 id="graph">Running graph analysis<a class="heading-anchor" href="#graph" aria-label="Link to this section">#</a></h2><p>There are two ways to run graph analysis functions such as neighbours, shortest paths, and centrality measures:</p><ul><li>Using the <a href="../api.html#Graph">chart.graph()</a> namespace, which runs analysis directly on your chart.</li><li>Creating an instance of the Nexus graph engine, using <a href="../api.html#GraphNexus_getGraphEngine">GraphNexus.getGraphEngine()</a> and loading any data you want.</li></ul><p>The important thing to understand is that the chart.graph() namespace only considers the top level chart. This is useful if you’re performing graph traversals or running SNA computations and want to take combo nodes into account but ignore the nodes inside them. </p><p>Sometimes, particularly when calculating neighbours or centrality measures, it makes more sense to run graph analysis against the underlying level. To do this, you need to build a separate graph engine and load in the underlying data:</p><pre class="prettyprint prettyprinted"><span class="kwd">var</span><span class="pln"> graphEngine </span><span class="pun">=</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">getGraphEngine</span><span class="pun">();</span><span class="pln">
+graphEngine</span><span class="pun">.</span><span class="pln">load</span><span class="pun">(</span><span class="pln">chart</span><span class="pun">.</span><span class="pln">serialize</span><span class="pun">());</span></pre><p>Note that combos and the items inside them are serialized in a different section of the chart object, so using <a href="../api.html#Chart_serialize">chart.serialize() </a> as the source of data for your graph engine will only bring in the underlying nodes and links.</p><p>So which approach makes the most sense for your application? </p>To answer this, you need to decide whether the combos themselves should be considered part of the data when running analysis. 
+If the answer is no, you should use the underlying level approach.
+Let's look at some examples.<h3 id="paths">Example 1: Finding shortest paths<a class="heading-anchor" href="#paths" aria-label="Link to this section">#</a></h3><p>In the chart below, we're treating the combos as single entities to find the shortest path between nodes a and b:</p><p class="text-center"><img src="../assets/features/shortestpathcombo.png"></p><p>If we want to take nodes inside combos into account, we'd run shortest path analysis against an instance of the graph engine:</p><pre class="prettyprint prettyprinted"><span class="pln">graphEngine</span><span class="pun">.</span><span class="pln">shortestPaths</span><span class="pun">(</span><span class="str">'a'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'b'</span><span class="pun">);</span></pre><p>Which gives us very different results:</p><p class="text-center"><img src="../assets/features/shortestpathnode.png"></p><h3 id="neighbours">Example 2: Revealing links to neighbours<a class="heading-anchor" href="#neighbours" aria-label="Link to this section">#</a></h3><p>One of the most common graph analysis calls at the underlying level is to ask for the direct neighbours of a node.</p><p>You can use this with <a href="../api.html#Combo_reveal">combo.reveal()</a> to reveal the links in the underlying level that connect a selected node to its direct neighbours:</p><pre class="prettyprint prettyprinted"><span class="kwd">var</span><span class="pln"> neighbours </span><span class="pun">=</span><span class="pln"> graphEngine</span><span class="pun">.</span><span class="pln">neighbours</span><span class="pun">(</span><span class="str">'7'</span><span class="pun">);</span><span class="pln">
+chart</span><span class="pun">.</span><span class="pln">combo</span><span class="pun">().</span><span class="pln">reveal</span><span class="pun">(</span><span class="pln">neighbours</span><span class="pun">.</span><span class="pln">links</span><span class="pun">);</span></pre><p class="text-center"><img src="../assets/features/shortestpathreveal.png"></p><p></p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/features/chart-export.html"><span class="dir">Previous</span><span class="label">Chart Export</span></a>
+<a class="next" href="../../graph-nexus/features/fonts-and-font-icons.html"><span class="dir">Next</span><span class="label">Fonts and Font Icons</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#approaches">Two different approaches to data</a></li>
+<li class="lvl-3"><a href="#underlying">Underlying level approach</a></li>
+<li class="lvl-3"><a href="#top">Top level approach</a></li>
+<li class="lvl-2"><a href="#iterating">Iterating over items</a></li>
+<li class="lvl-2"><a href="#visible">Controlling which items are visible</a></li>
+<li class="lvl-3"><a href="#filter">Filtering and foregrounding items</a></li>
+<li class="lvl-3"><a href="#foregrounding">Foregrounding open combos</a></li>
+<li class="lvl-3"><a href="#hiding">Hiding and showing items</a></li>
+<li class="lvl-2"><a href="#graph">Running graph analysis</a></li>
+<li class="lvl-3"><a href="#paths">Example 1: Finding shortest paths</a></li>
+<li class="lvl-3"><a href="#neighbours">Example 2: Revealing links to neighbours</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

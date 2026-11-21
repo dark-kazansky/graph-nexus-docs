@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="406.16498"
+   height="253.85309"
+   viewBox="0 0 406.16498 253.85309"
+   version="1.1"
+   id="svg871"
+   sodipodi:docname="chart-export (2).svg"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview873"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.57025472"
+     inkscape:cx="537.47911"
+     inkscape:cy="-23.673631"
+     inkscape:window-width="1312"
+     inkscape:window-height="969"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg871" />
+  <defs
+     id="defs827">
+    <clipPath
+       id="cut-out-clip-path"
+       clipPathUnits="objectBoundingBox">
+      <circle
+         cx="0.5"
+         cy="0.5"
+         id="ellipse824"
+         r="0.5" />
+    </clipPath>
+  </defs>
+  <g
+     id="g831"
+     transform="translate(-343.99915,-480.90302)">
+    <rect
+       height="1217"
+       width="1106"
+       x="0"
+       y="0"
+       fill="#ffffff"
+       fill-opacity="1"
+       stroke="none"
+       id="rect829" />
+  </g>
+  <g
+     id="g835"
+     transform="translate(-343.99915,-480.90302)">
+    <rect
+       height="253.8531"
+       width="406.16498"
+       x="343.99915"
+       y="480.90302"
+       fill="#2f3d45"
+       fill-opacity="1"
+       stroke="none"
+       id="rect833" />
+  </g>
+  <g
+     id="g839"
+     transform="translate(-343.99915,-480.90302)">
+    <rect
+       height="17.383863"
+       width="112.71078"
+       x="490.72623"
+       y="480.90302"
+       fill="#61c3e6"
+       fill-opacity="1"
+       stroke="none"
+       id="rect837" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="14.2158px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="203.08246"
+     y="9.1387024"
+     id="text841">Default size label</text>
+  <g
+     id="g845"
+     transform="translate(-343.99915,-480.90302)">
+    <rect
+       height="42.64732"
+       width="308.68536"
+       x="392.73895"
+       y="518.59509"
+       fill="#58a773"
+       fill-opacity="1"
+       stroke="none"
+       id="rect843" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="14.2158px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="256.39166"
+     y="72.094299"
+     id="text847">Custom size and text alignment</text>
+  <g
+     id="g851"
+     transform="translate(-343.99915,-480.90302)">
+    <rect
+       height="49.139454"
+       width="406.16498"
+       x="343.99915"
+       y="581.55066"
+       fill="#61c3e6"
+       fill-opacity="1"
+       stroke="none"
+       id="rect849" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="43.6191px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="203.08246"
+     y="124.48804"
+     id="text853">Automatic font sizing</text>
+  <g
+     id="g857"
+     transform="translate(-343.99915,-480.90302)">
+    <rect
+       height="17.38386"
+       width="406.16498"
+       x="343.99915"
+       y="650.99841"
+       fill="#58a773"
+       fill-opacity="1"
+       stroke="none"
+       id="rect855" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="14.2158px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="203.08246"
+     y="179.23407"
+     id="text859">Minimum width stretched</text>
+  <g
+     id="g863"
+     transform="translate(-343.99915,-480.90302)">
+    <rect
+       height="41.792789"
+       width="100.52583"
+       x="496.81873"
+       y="688.69049"
+       fill="#61c3e6"
+       fill-opacity="1"
+       stroke="none"
+       id="rect861" />
+  </g>
+  <text
+     font-family="sans-serif"
+     font-size="12.2722px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="203.08246"
+     y="215.95441"
+     id="text865">Maximum width,</text>
+  <text
+     font-family="sans-serif"
+     font-size="12.2722px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="203.08246"
+     y="229.20837"
+     id="text867">text wrapping and</text>
+  <text
+     font-family="sans-serif"
+     font-size="12.2722px"
+     fill="#ffffff"
+     fill-opacity="1"
+     dominant-baseline="central"
+     text-anchor="middle"
+     x="203.08246"
+     y="242.4624"
+     id="text869">auto font sizing</text>
+</svg>

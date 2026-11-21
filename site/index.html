@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Graph Nexus: interactive network charts and timelines for JavaScript</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Graph Nexus is a JavaScript SDK for interactive network charts and timelines: layouts, combos, graph analytics, 3D view and linked timelines, with no runtime dependencies.">
+<meta property="og:title" content="Graph Nexus: interactive network charts and timelines">
+<meta property="og:description" content="A JavaScript SDK for network visualization and timelines, with no runtime dependencies.">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../assets/doc.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="logo"><a href="index.html"><img class="logo-light" src="../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22"></a></div>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="index.html" class="current" aria-current="page">Home</a>
+    <a href="../graph-nexus/index.html">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="kicker">Graph Nexus SDK</span>
+      <h1>See how your data <br>connects</h1>
+      <p class="hero-sub">A JavaScript SDK for interactive network charts and timelines.
+        Load nodes and links, pick a layout, and let people explore the relationships in their data.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="../graph-nexus/installing/installing-graph-nexus.html">Install Nexus</a>
+        <a class="btn btn-ghost" href="../graph-nexus/index.html">Read the docs</a>
+      </div>
+      <ul class="hero-facts" aria-label="Package facts">
+        <li>No runtime dependencies</li>
+        <li>TypeScript typings</li>
+        <li>React, Vue and Angular wrappers</li>
+      </ul>
+    </div>
+    <figure class="frame hero-shot">
+      <video autoplay muted loop playsinline preload="auto" width="1600" height="948" poster="assets/hero.jpg" aria-label="A supply chain network of 44 companies starting as a grid. The organic layout untangles it, nodes grow by betweenness centrality to reveal chokepoints, and clicking a chip maker highlights its direct trading partners."><source src="assets/hero.mp4" type="video/mp4"><source src="assets/hero.webm" type="video/webm"></video>
+      <figcaption>Organic layout, then nodes sized by betweenness centrality and one supplier selected. Recorded from the Supplier network example.</figcaption>
+    </figure>
+  </section>
+
+  <section class="features reveal" aria-labelledby="features-title">
+    <div class="section-head">
+      <span class="kicker">What you can build</span>
+      <h2 id="features-title">Every animation here is drawn by Nexus</h2>
+      <p>Each one is recorded from an example that ships in the Examples folder, with its own data.</p>
+    </div>
+    <div class="feature-grid">
+      <a class="feature" href="../graph-nexus/basics/layout-basics.html">
+        <figure class="frame"><img src="assets/layouts.gif" width="720" height="408" loading="lazy" alt="The supplier network cycles through the automatic layouts, each named in a badge: organic; hierarchy as a tree under the plant; sequential as a flow from raw materials down to the plant; radial rings by distance from the plant; lens rings by connections; structural, grouping suppliers with the same buyer. A supplier is then dragged out of place and the tweak layout tidies it."></figure>
+        <h3>Automatic layouts</h3>
+        <p>Seven layouts arrange a chart in one call: organic, hierarchy, sequential, radial, lens, structural and tweak.</p>
+      </a>
+      <a class="feature" href="../graph-nexus/features/aggregate-links.html">
+        <figure class="frame"><img src="assets/combos.gif" width="800" height="461" loading="lazy" alt="Nine sites with one link per shipment group into three region combos: North, Central and South. The parallel links between regions then merge into one link per pair, labelled with the number of shipments."></figure>
+        <h3>Aggregate links and combos</h3>
+        <p>Merge parallel links into one with a count, split them by any property, and group nodes into combos that open and close.</p>
+      </a>
+      <a class="feature" href="../graph-nexus/features/node-and-combo-styling.html">
+        <figure class="frame"><img src="assets/node-styles.gif" width="800" height="456" loading="lazy" alt="A checkout request path built from styled card nodes: web storefront, API gateway, checkout, payments, card network and orders database. Each card shows an icon, status pill, latency, traffic and a CPU bar. Clicking Checkout, then Card network, brings each forward with its neighbours."></figure>
+        <h3>Rich node styling</h3>
+        <p>Turn nodes into service cards, KPI tiles and alert badges with multiple labels, font icons, status pills and progress bars.</p>
+      </a>
+      <a class="feature" href="../graph-nexus/features/3d-view.html">
+        <figure class="frame"><img src="assets/view-3d.gif" width="720" height="408" loading="lazy" alt="The supplier network drawn in 3D, turning one full circle around its centre."></figure>
+        <h3>3D view</h3>
+        <p>Switch the same chart into 3D with one option, then orbit the camera to see structure that overlaps in 2D.</p>
+      </a>
+      <a class="feature" href="../graph-nexus/timeline/js/docs.html">
+        <figure class="frame"><img src="assets/timeline.gif" width="800" height="460" loading="lazy" alt="A three week website relaunch: six people in three teams, tasks as bars, hand-offs as arrows between people, and kick-off, design freeze and launch markers. One person is focused, then the view zooms into the hand-off week."></figure>
+        <h3>Timelines</h3>
+        <p>Show people or things as rows and events over time: tasks as bars, hand-offs between rows, grouping, markers and zoom.</p>
+      </a>
+      <a class="feature" href="../graph-nexus/timeline/js/graph-nexus-integration.html">
+        <figure class="frame"><img src="assets/timeline-graph.gif" width="800" height="462" loading="lazy" alt="A week of messages between six colleagues: the timeline on the left, who messaged whom on the right. Zooming the timeline into Wednesday filters the chart to the four people who talked that day, then selecting Phuc focuses his row."></figure>
+        <h3>Linked chart and timeline</h3>
+        <p>Pair a timeline with a chart so a time range filters the network and a selection highlights both views.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="tagline" aria-label="Summary">
+    <p class="tagline-text">Load your data. Pick a layout. Let people explore what connects.</p>
+  </section>
+
+  <section class="steps reveal" aria-labelledby="steps-title">
+    <div class="section-head">
+      <span class="kicker">How it works</span>
+      <h2 id="steps-title">A working chart in three steps</h2>
+    </div>
+    <ol class="step-list">
+      <li class="step">
+        <span class="step-num">1</span>
+        <h3>Install the package</h3>
+        <pre><code>npm install file:./graph-nexus-1.0.0.tgz</code></pre>
+        <a href="../graph-nexus/installing/installing-graph-nexus.html">Installation guide</a>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <h3>Load nodes and links</h3>
+        <pre><code>const chart = await GraphNexus.create('chart');
+await chart.load({ type: 'LinkChart', items });</code></pre>
+        <a href="../graph-nexus/basics/loading-data.html">Loading data</a>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <h3>Lay it out and listen</h3>
+        <pre><code>await chart.layout('organic');
+chart.on('click', ({ id }) =&gt; show(id));</code></pre>
+        <a href="../graph-nexus/basics/events-basics.html">Events basics</a>
+      </li>
+    </ol>
+  </section>
+
+  <section class="more reveal" aria-labelledby="more-title">
+    <div class="section-head">
+      <span class="kicker">Also in the package</span>
+      <h2 id="more-title">More you get out of the box</h2>
+    </div>
+    <ul class="more-list">
+      <li><a href="../graph-nexus/features/graph-centrality.html"><strong>Graph analytics</strong><span>Degree, betweenness, closeness, PageRank and shortest paths.</span></a></li>
+      <li><a href="../graph-nexus/basics/map-mode.html"><strong>Map mode</strong><span>Place nodes on a Leaflet map by latitude and longitude.</span></a></li>
+      <li><a href="../graph-nexus/basics/time-bar.html"><strong>Time bar</strong><span>A compact histogram that filters the chart by time range.</span></a></li>
+      <li><a href="../graph-nexus/features/chart-export.html"><strong>Image and PDF export</strong><span>Save the chart as an image or a PDF report.</span></a></li>
+      <li><a href="../graph-nexus/features/fonts-and-font-icons.html"><strong>Fonts and font icons</strong><span>Font Awesome, Material Icons and bundled text fonts.</span></a></li>
+      <li><a href="../graph-nexus/integrations/webgl.html"><strong>WebGL rendering</strong><span>Draw large charts on the GPU, with canvas as a fallback.</span></a></li>
+    </ul>
+  </section>
+
+  <section class="final-cta reveal" aria-labelledby="cta-title">
+    <h2 id="cta-title">Start with your first chart</h2>
+    <p>Install the package and follow the guide. You will have an interactive chart running in a few minutes.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="../graph-nexus/installing/installing-graph-nexus.html">Install Nexus</a>
+      <a class="btn btn-ghost" href="../graph-nexus/index.html">Read the docs</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+<script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Upgrading — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="It’s worth understanding the difference between major and minor Nexus versions, because it affects the steps you should take before you upgrade. We use a f">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html" class="current" aria-current="page">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<div class="notice"><div class="boxout" style="background-color: #00996412"><div class="boxout-image"><img src="../../assets/nexus-mark.png" alt="Graph Nexus" width="98" height="47"></div><div class="boxout-body" style="padding-left: 42px; min-height: 40px;">There are many ways of upgrading Nexus - this document covers two of the most common.
+Contact the Nexus team if you need any help with your upgrade process.
+</div></div></div><h1>Upgrading</h1><h2 id="intro">Nexus versioning<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>It’s worth understanding the difference between major and minor Nexus versions,
+because it affects the steps you should take before you upgrade.
+We use a format similar to
+<a href="https://semver.org/">semantic versioning</a>,
+where releases are numbered in the format <strong>major.minor</strong>:</p><ul><li>Major versions (e.g., x.0) are released roughly once a year. In exceptional cases,
+they may contain breaking changes.</li><li>Minor versions (e.g., x.1, x.2, etc.) are released regularly throughout the year.
+They contain backwards-compatible features and fixes.
+</li></ul><h2 id="beforeUpgrading">Before you upgrade<a class="heading-anchor" href="#beforeUpgrading" aria-label="Link to this section">#</a></h2><p>It's important to read the Release Notes
+for details of new and updated features, enhancements, and bug fixes.
+Also check the deprecated items
+that we plan to stop supporting in the next major release. You can check
+the details of your current version using <code class="black">GraphNexus.info()</code> to work out
+what's changed.</p><p>Before you upgrade to a major version, it’s also important to check for:</p><ul><li>Breaking changes</li><li>End of support notices in the Release Notes</li></ul><p></p><p>If you can’t upgrade to the latest major version right away, you can always use a 
+Long Term Availability (LTA) release.
+</p><h2 id="howTo">How to upgrade<a class="heading-anchor" href="#howTo" aria-label="Link to this section">#</a></h2><h3 id="recommended-way---for-graph-nexus-installed-as-an-npm-package">Recommended way - for Nexus installed as an npm package<a class="heading-anchor" href="#recommended-way---for-graph-nexus-installed-as-an-npm-package" aria-label="Link to this section">#</a></h3><p>If you have installed Nexus 6.10 or later using our instructions for
+<a href="../installing/using-graph-nexus-with-plain-javascript.html">JavaScript</a>, <a href="../installing/using-graph-nexus-with-angular.html">Angular</a>,
+<a href="../installing/using-graph-nexus-with-react.html">React</a>, <a href="../installing/using-graph-nexus-with-vue.html">Vue</a>, <a href="../installing/using-graph-nexus-with-webpack.html">Webpack</a> or
+<a href="../installing/using-graph-nexus-with-rollup.html">Rollup</a>, you have installed Nexus as a npm package using <strong>graph-nexus-&lt;version&gt;.tgz</strong>,
+which is our recommended installation method.
+</p><p>To upgrade your package to the latest version,
+follow the steps to replace your existing <strong>graph-nexus-&lt;version&gt;.tgz</strong> package with the latest version and add it to your project:</p><ol> <li>First, build the latest Nexus package (<code>npm run build &amp;&amp; npm pack</code> in the Nexus repository).</li><li>Go to your project directory and remove any older <strong>graph-nexus-&lt;version&gt;.tgz</strong> packages that are already in your project. </li><li>Move the downloaded package in your project directory. Do not change the file name.</li><li>Using a package manager such as 
+<a href="https://www.npmjs.com/">npm</a> or 
+<a href="https://yarnpkg.com/">yarn</a>,
+remove the old version and install the package again from inside your project's directory:
+</li><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">npm uninstall nexusgraph
+npm install file:./graph-nexus-1.0.0.tgz</span></code></pre><li>To verify the upgrade was successful, run the following command from inside your project's directory:
+</li><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">node -p 'require("graph-nexus").info()'</span></code></pre><li>Run your compatibility tests in a developer environment before you deploy to production.</li></ol><h3 id="legacy-installations---for-applications-using-graph-nexus-umd-js">Legacy installations - for applications using graph-nexus.umd.js<a class="heading-anchor" href="#legacy-installations---for-applications-using-graph-nexus-umd-js" aria-label="Link to this section">#</a></h3><p>If you are using Nexus 6.9 or earlier,
+you have most likely installed Nexus as a UMD bundle by referring to <strong>graph-nexus.umd.js</strong>.</p><p>This is now a legacy installation method and we recommend following our instructions for
+<a href="../installing/using-graph-nexus-with-plain-javascript.html">JavaScript</a>, <a href="../installing/using-graph-nexus-with-angular.html">Angular</a>,
+<a href="../installing/using-graph-nexus-with-react.html">React</a>, <a href="../installing/using-graph-nexus-with-vue.html">Vue</a>, <a href="../installing/using-graph-nexus-with-webpack.html">Webpack</a> or
+<a href="../installing/using-graph-nexus-with-rollup.html">Rollup</a> to install Nexus as a npm package.</p><p>If you want to keep using <strong>graph-nexus.umd.js</strong> and need to upgrade to the latest version,
+follow these steps to overwrite your existing files with the new versions:
+</p><ol> <li>First, build the latest Nexus package (<code>npm run build &amp;&amp; npm pack</code> in the Nexus repository).</li><li>Unpack the <strong>graph-nexus-&lt;version&gt;.tgz</strong> archive. You can read more about this format and how to unpack it in the
+<a href="https://fileinfo.com/extension/tgz">File Format Database</a>.</li><li>Locate the <strong>graph-nexus.umd.js</strong> file in the unpacked archive.
+This should be located in <strong>nexusgraph-7.5.0-6286156683/js/</strong>.</li><li>Go to your project directory and replace your old <strong>graph-nexus.umd.js</strong> file with the new one.</li><li>If you're using map mode or PDF export, you will also need to replace the following files and change
+any existing references to point to the new files:
+</li><div class="table-scroll"><table class="table" style="margin-top: 20px;"><thead><tr><th>Old file</th><th>New file</th><th>Location in unpacked archive</th><th>Comment</th></tr></thead><tbody><tr><td>leaflet.js</td><td>leaflet.js</td><td>graph-nexus/assets/vendor/leaflet/</td><td>Required for map mode</td></tr><tr><td>pdfkit.standalone.js</td><td>pdfkit.standalone.cjs</td><td>nexusgraph-7.5.0-6286156683/pdf/</td><td>Required for PDF export</td></tr><tr><td>svg-to-pdfkit.js</td><td>svg-to-pdfkit.cjs</td><td>nexusgraph-7.5.0-6286156683/pdf/</td><td>Required for SVG to PDF export</td></tr></tbody></table></div><li>To verify the upgrade was successful, you can call <code class="black">GraphNexus.info()</code>
+to show information about your Nexus environment.
+</li><li>Run your compatibility tests in a developer environment before you deploy to production.</li></ol><h2 id="troubleshootingErrors">Troubleshooting<a class="heading-anchor" href="#troubleshootingErrors" aria-label="Link to this section">#</a></h2><h3 id="error-in-the-console-cannot-find-namespace-graphnexus">Error in the console: Cannot find namespace 'GraphNexus'<a class="heading-anchor" href="#error-in-the-console-cannot-find-namespace-graphnexus" aria-label="Link to this section">#</a></h3><p>If your TypeScript uses a Nexus namespace you could see this compilation error. For example:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">// Error: Cannot find namespace 'GraphNexus'
+function labelValue(label: GraphNexus.LinkEndLabel) {}</span></code></pre><p>This is because prior to version 6.10 Nexus came as a UMD bundle with a global variable and namespace <code class="black">'Nexus'</code>.</p><p>Nexus versions 6.10 and later come with both UMD and ESM bundles, and the TypeScript declaration has changed to make these bundles compatible with each other.
+</p><p>Below are some suggestions how to fix this compilation error:</p><h4 id="use-a-wildcard-import">Use a wildcard import<a class="heading-anchor" href="#use-a-wildcard-import" aria-label="Link to this section">#</a></h4><p>One way to fix the compilation error is to introduce a wildcard import at the top of your file to import Nexus types:
+</p><pre class="prettyprint prettyprinted"><code class="lang-typescript"><span class="kwd">import</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pun">,</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> kl </span><span class="kwd">from</span><span class="pln"> </span><span class="str">"graph-nexus"</span><span class="pun">;</span></code></pre><p>And then later in the same file you can refer to this wildcard:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">function</span><span class="pln"> labelValue</span><span class="pun">(</span><span class="pln">label</span><span class="pun">:</span><span class="pln"> kl</span><span class="pun">.</span><span class="typ">LinkEndLabel</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{}</span></code></pre><p>You can read more in the <a href="../installing/graph-nexus-and-typescript.html#definitions">Using Nexus type definitions</a> section of our TypeScript documentation.</p><h4 id="continue-using-graph-nexus-d-ts">Continue using graph-nexus.d.ts<a class="heading-anchor" href="#continue-using-graph-nexus-d-ts" aria-label="Link to this section">#</a></h4><p>If you don't need to access the latest Nexus type definitions, you can avoid this issue by continuing to use the <strong>graph-nexus.d.ts</strong> TypeScript declaration file that was used prior to version 6.10.</p><p>This file will be forward compatible with newer releases until the next major version.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/installing/graph-nexus-and-typescript.html"><span class="dir">Previous</span><span class="label">Nexus and TypeScript</span></a>
+<a class="next" href="../../graph-nexus/installing/using-graph-nexus-with-angular.html"><span class="dir">Next</span><span class="label">Using Nexus with Angular</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Nexus versioning</a></li>
+<li class="lvl-2"><a href="#beforeUpgrading">Before you upgrade</a></li>
+<li class="lvl-2"><a href="#howTo">How to upgrade</a></li>
+<li class="lvl-3"><a href="#recommended-way---for-graph-nexus-installed-as-an-npm-package">Recommended way - for Nexus installed as an npm package</a></li>
+<li class="lvl-3"><a href="#legacy-installations---for-applications-using-graph-nexus-umd-js">Legacy installations - for applications using graph-nexus.umd.js</a></li>
+<li class="lvl-2"><a href="#troubleshootingErrors">Troubleshooting</a></li>
+<li class="lvl-3"><a href="#error-in-the-console-cannot-find-namespace-graphnexus">Error in the console: Cannot find namespace &#x27;GraphNexus&#x27;</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

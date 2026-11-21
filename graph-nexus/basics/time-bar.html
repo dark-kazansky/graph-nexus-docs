@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Time Bar — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Nexus time bar lets users quickly spot how connected data evolves over time. It offers powerful ways to filter data through events on both the chart an">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html" class="current" aria-current="page">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Time Bar</h1><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>The Nexus time bar lets users quickly spot how connected data evolves over time. 
+It offers powerful ways to filter data through events on both the chart and time bar:</p><ul> <li><strong>Chart-driven filtering</strong>: select the chart items of interest so the time bar shows
+<em>when</em> they were involved in events.</li><li><strong>Time bar-driven filtering</strong>: focus on the time an event occurred so the chart shows
+<em>which</em> items were involved.</li></ul><div class="text-center"><img src="../assets/basics/tb_intro.png"></div><div class="alignedRow" style="display: flex; flex-direction: row;"><h2 id="features">Key features<a class="heading-anchor" href="#features" aria-label="Link to this section">#</a></h2><p>There are two ways that you can display data in the time bar:</p><h3 id="histogram">Histogram<a class="heading-anchor" href="#histogram" aria-label="Link to this section">#</a></h3><p>Each bar represents a period in time and is a cumulative count of all items within the range.
+Selection lines do the same, but on a different (usually sub)set of data.</p><p>Histogram bars can also display groups of data within them as a set of stacked bars.</p><img class="flex img-float-right" src="../assets/basics/tb_histogram.png"></div><div class="alignedRow" style="display: flex; flex-direction: row;"><h3 id="area-plot">Area Plot<a class="heading-anchor" href="#area-plot" aria-label="Link to this section">#</a></h3><p>Events and durations are represented as a distribution, with the value trailing off to each side.
+The height of the area at each point is a total of these distribution values,
+which creates a smooth shaded area.</p><p>As events are discrete, the height of the line only represents an estimate of the value at each
+point in time. The area under the curve will be filled.</p><img class="flex img-float-right" src="../assets/basics/tb_area.png"></div><h3 id="selection-lines">Selection lines<a class="heading-anchor" href="#selection-lines" aria-label="Link to this section">#</a></h3><p>Selection lines also count items within a range, and provide a useful way to highlight
+certain subsets of your data. To maintain clarity, selection lines use a different scale to
+the full data, to prevent them appearing too small.
+However, the scale of each selection line <em>is</em> the same as for other selection lines,
+as this enables direct comparison.
+</p><h3 id="dynamic-animation">Dynamic Animation<a class="heading-anchor" href="#dynamic-animation" aria-label="Link to this section">#</a></h3><p>The time bar can play through time to let you see how your data evolves. Other intuitive
+navigation controls let you move back and forth or zoom in and out easily.
+</p><h3 id="sliders">Sliders<a class="heading-anchor" href="#sliders" aria-label="Link to this section">#</a></h3><p>Dragging left and right sliders changes the time scale or selects a specific point in time.
+You can use these to focus on important data, or get a broad view of a larger period.
+</p><p class="text-center"><img src="../assets/basics/tb_annotation.svg" class="framed" style="max-width:800px"></p><div style="margin-top: 20px;"></div><p>You can customise any aspect of the time bar, from the time scales or day/month names to the colour schemes used.</p><p>Nexus also supports:</p><ul><li><strong>local time and UTC time </strong>- Nexus displays the literal date and time defined in your code. 
+You can choose to support the UTC recorded on a user’s server, or their local time zone.
+For more information, see the <a href="../features/time-zones.html">Time Zones</a> documentation.</li><li><strong>multiple time bars </strong>- this lets you show time scales at different levels of granularity for the same chart.</li><li><strong>integration with maps </strong>- the time bar works with a chart in map mode to provide advanced geo and time-based analysis.</li></ul><h2 id="importing">Getting time-based data into Nexus<a class="heading-anchor" href="#importing" aria-label="Link to this section">#</a></h2><p>The time bar and chart are independent of one another. Once you’ve loaded data into the chart,
+use the time bar object to load the same JSON data into the time bar:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">const</span><span class="pln"> data </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  items</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'id1'</span><span class="pun">,</span><span class="pln">  </span><span class="com">// 'id1' is the identity that the item relates to</span><span class="pln">
+      dt</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[...],</span><span class="pln">  </span><span class="com">// a time entry or array of time entries - Date objects or numbers,</span><span class="pln">
+                  </span><span class="com">// or a TimePeriod object</span><span class="pln">
+      v</span><span class="pun">:</span><span class="pln">  </span><span class="pun">[...],</span><span class="pln">  </span><span class="com">// an optional value or array of values for each time entry</span><span class="pln">
+                  </span><span class="com">// values must be numbers, there must be one for each time entry</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'id2'</span><span class="pun">,</span><span class="pln">
+      dt</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[...],</span><span class="pln">
+      v</span><span class="pun">:</span><span class="pln">  </span><span class="pun">[...]</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="pun">...</span><span class="pln">
+  </span><span class="pun">]</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+timebar</span><span class="pun">.</span><span class="pln">load</span><span class="pun">(</span><span class="pln">data</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// fit the time bar to the data:</span><span class="pln">
+  timebar</span><span class="pun">.</span><span class="pln">zoom</span><span class="pun">(</span><span class="str">'fit'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> animate</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln"> </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p>The <a href="../api.html#ItemFormat_Time_Bar_Item">time bar</a> object's 
+<a href="../api.html#ItemFormat_Time_Bar_Item_properties_dt">dt</a> property is a JavaScript date object or
+millisecond number. It can also be a <a href="../api.html#ItemFormat_TimePeriod">time period</a>
+object with <a href="../api.html#ItemFormat_TimePeriod_properties_dt1">dt1</a> and/or 
+<a href="../api.html#ItemFormat_TimePeriod_properties_dt2">dt2</a> properties representing the start
+and/or end of the time period. </p><p>The <a href="../api.html#ItemFormat_Time_Bar_Item_properties_v">v</a> (value) property adds useful details. For
+example, in a financial investigation you could use it to show the
+total transaction value at certain times.
+</p><h2 id="connecting">Connecting chart and time bar data<a class="heading-anchor" href="#connecting" aria-label="Link to this section">#</a></h2><p>You can attach any chart event to the time bar:</p><p> For the chart to update whenever the time bar range changes, you need to listen for the time bar <a href="../api.html#TimeBarEvents_change">change</a> event and filter the chart. 
+Use:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="com">// When the time bar range changes</span><span class="pln">
+timebar</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="str">'change'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// filter the chart to show only items in the new range</span><span class="pln">
+  chart</span><span class="pun">.</span><span class="pln">filter</span><span class="pun">(</span><span class="pln">timebar</span><span class="pun">.</span><span class="pln">inRange</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> animate</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'link'</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// and then adjust the chart's layout</span><span class="pln">
+    chart</span><span class="pun">.</span><span class="pln">layout</span><span class="pun">(</span><span class="str">'organic'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> mode</span><span class="pun">:</span><span class="pln"> </span><span class="str">'adaptive'</span><span class="pun">,</span><span class="pln"> animate</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln"> time</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1000</span><span class="pln"> </span><span class="pun">});</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p></p><p> For the time bar to show a selection line that represents items selected on the chart, you need to listen for the chart <a href="../api.html#ChartEvents_selection-change">selection-change</a> event. 
+Use:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="pln">chart</span><span class="pun">.</span><span class="pln">on</span><span class="pun">(</span><span class="str">'selection-change'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  timebar</span><span class="pun">.</span><span class="pln">selection</span><span class="pun">({</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> chart</span><span class="pun">.</span><span class="pln">selection</span><span class="pun">()</span><span class="pln"> </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">});</span></code></pre><p></p><h2 id="seealso">See also<a class="heading-anchor" href="#seealso" aria-label="Link to this section">#</a></h2><p> Every time bar <a href="../api.html#TimeBar">function</a>, <a href="../api.html#TimeBarEvents">event</a> and <a href="../api.html#TimeBarOptions">option</a> is documented in the <a href="../api.html">API Reference</a>.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/basics/map-mode.html"><span class="dir">Previous</span><span class="label">Map Mode</span></a>
+<a class="next" href="../../graph-nexus/features/3d-view.html"><span class="dir">Next</span><span class="label">3D View</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#features">Key features</a></li>
+<li class="lvl-3"><a href="#histogram">Histogram</a></li>
+<li class="lvl-3"><a href="#area-plot">Area Plot</a></li>
+<li class="lvl-3"><a href="#selection-lines">Selection lines</a></li>
+<li class="lvl-3"><a href="#dynamic-animation">Dynamic Animation</a></li>
+<li class="lvl-3"><a href="#sliders">Sliders</a></li>
+<li class="lvl-2"><a href="#importing">Getting time-based data into Nexus</a></li>
+<li class="lvl-2"><a href="#connecting">Connecting chart and time bar data</a></li>
+<li class="lvl-2"><a href="#seealso">See also</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

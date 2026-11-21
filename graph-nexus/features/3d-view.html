@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>3D View — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The 3D view draws the chart through an orbit camera. Nodes take an optional z coordinate, and users can rotate the network to pull apart clusters that over">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html" class="current" aria-current="page">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>3D View</h1>
+<p>The 3D view draws the chart through an orbit camera. Nodes take an optional <code class="black">z</code> coordinate, and users can rotate the network to pull apart clusters that overlap in 2D. It is the same chart: items, styles, events and the rest of the API work as before.</p>
+<figure>
+<img src="../assets/features/3d-enron-3d.png" alt="The Enron email network laid out in 3D, nodes sized and coloured by degree" class="img-full">
+<figcaption>The Enron network from the Centrality demo in 3D. Nearer nodes draw larger and on top.</figcaption>
+</figure>
+
+<h2 id="enable">Turning on the 3D View<a class="heading-anchor" href="#enable" aria-label="Link to this section">#</a></h2>
+<p>Set the chart <code class="black">view3d</code> option and run a force layout:</p>
+<pre>chart.options({ view3d: true });
+chart.layout('organic'); // places nodes in x, y and z, then fits</pre>
+<p>Turning it off restores the 2D picture; <code class="black">z</code> values are kept but ignored. With a level camera and every <code class="black">z</code> at 0, the 3D view draws the same picture as 2D, apart from arrowheads (see <a href="#links">Links and Arrowheads</a>).</p>
+<figure>
+<img src="../assets/features/3d-enron-2d.png" alt="The same Enron network laid out in 2D" class="img-full">
+<figcaption>The same network in 2D, for comparison.</figcaption>
+</figure>
+
+<h2 id="nodes">Node Depth<a class="heading-anchor" href="#nodes" aria-label="Link to this section">#</a></h2>
+<p>Give nodes a <code class="black">z</code> property in world units. Positive <code class="black">z</code> is away from the viewer when the camera is level. Nodes without <code class="black">z</code> sit at 0.</p>
+<pre>chart.load({ type: 'LinkChart', items: [
+  { type: 'node', id: 'a', x: 0, y: 0, z: -150 },
+  { type: 'node', id: 'b', x: 120, y: 40, z: 200 },
+  { type: 'link', id: 'ab', id1: 'a', id2: 'b', a2: true },
+]});</pre>
+
+<h2 id="camera">The Camera<a class="heading-anchor" href="#camera" aria-label="Link to this section">#</a></h2>
+<p><a href="../api.html#Chart_camera">chart.camera()</a> returns the camera, and <code class="black">chart.camera(values, { animate, time })</code> changes it:</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Property</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><code class="black">yaw</code></td><td>Turn about the vertical axis, in radians.</td></tr>
+<tr><td><code class="black">pitch</code></td><td>Tilt up or down, in radians, kept just short of ±90°.</td></tr>
+<tr><td><code class="black">focal</code></td><td>Distance from the eye to the orbit pivot, in world units (default 1500). Smaller values give stronger perspective.</td></tr>
+<tr><td><code class="black">targetX</code>, <code class="black">targetY</code>, <code class="black">targetZ</code></td><td>The orbit pivot.</td></tr>
+</tbody>
+</table></div>
+<pre>chart.camera({ yaw: Math.PI / 4, pitch: -0.3 }, { animate: true, time: 400 });</pre>
+<p><code class="black">zoom('fit')</code> moves the pivot to the middle of the nodes. If the drawing is too big to sit in front of the camera, it also moves the camera back by raising <code class="black">focal</code>. Fit never brings the camera closer than the <code class="black">focal</code> you last set. Zoom and pan work as in 2D: pan is a screen-plane offset applied after the camera turns, so <code class="black">viewOptions()</code>, <code class="black">zoom()</code> and <code class="black">pan()</code> behave as before. <code class="black">pan('selection')</code> moves the pivot to the selection, which brings a clicked node to the centre.</p>
+<figure>
+<img src="../assets/features/3d-enron-side.png" alt="The Enron network turned 80 degrees round, showing its depth" class="img-full">
+<figcaption>The same drawing turned about 80° round: the network has real depth, and the small components sit on a sphere around it.</figcaption>
+</figure>
+
+<h2 id="interaction">Interaction<a class="heading-anchor" href="#interaction" aria-label="Link to this section">#</a></h2>
+<div class="table-scroll"><table>
+<thead><tr><th>Gesture</th><th>Effect in 3D</th></tr></thead>
+<tbody>
+<tr><td>Left-drag on the background</td><td>Rotate (also in <code class="black">handMode</code>)</td></tr>
+<tr><td>Right-drag, or shift-drag</td><td>Pan</td></tr>
+<tr><td>Alt-drag</td><td>Selection marquee</td></tr>
+<tr><td>Wheel, double-click</td><td>Zoom, as in 2D</td></tr>
+<tr><td>Left-drag on a node</td><td>Move it in the plane facing the camera, at its own depth</td></tr>
+<tr><td>Click where nodes overlap</td><td>Selects the nearest one</td></tr>
+<tr><td>Navigation arrows</td><td>Rotate by 22.5° (the arrow keys still pan)</td></tr>
+</tbody>
+</table></div>
+<p>The browser's context menu is suppressed in 3D, but the <code class="black">context-menu</code> event still fires. <a href="../api.html#Chart_viewCoordinates">viewCoordinates(x, y, z)</a> projects a world point (null when it is behind the camera). <a href="../api.html#Chart_worldCoordinates">worldCoordinates(x, y)</a> returns the point on the camera-facing plane through the pivot, including <code class="black">z</code>.</p>
+
+<h2 id="layouts">Layouts<a class="heading-anchor" href="#layouts" aria-label="Link to this section">#</a></h2>
+<p>With <code class="black">view3d</code> on, every layout has depth. <code class="black">organic</code>, <code class="black">tweak</code> and <code class="black">structural</code> place nodes in 3D directly; the largest component sits in the middle, and smaller components are spread on a sphere around it rather than on a flat arc. <code class="black">radial</code> and <code class="black">lens</code> turn their rings into concentric spheres around the same centre. <code class="black">hierarchy</code> and <code class="black">sequential</code> become cone trees: levels stay on their axis and each level is a ring around it. Pass <code class="black">dimensions: 2</code> or <code class="black">3</code> in the layout options to choose explicitly.</p>
+
+<h2 id="links">Links and Arrowheads<a class="heading-anchor" href="#links" aria-label="Link to this section">#</a></h2>
+<p>Arrowheads on straight links are 3D cones pointing along the link in space. They shorten as the link turns toward or away from you, look like small discs when seen end-on, and shrink with distance. They follow the same size rule as 2D heads, so side-on they look the same.</p>
+<p>Links start and end at the rim of each node's disc as drawn, never at its centre, and each node covers the ends and arrowheads of its own links. A link leaving toward the camera starts where it clears the disc on screen, so lines and arrowheads stay off the node's label. A link between other nodes that passes in front of a node in 3D still draws over it.</p>
+<figure>
+<img src="../assets/features/3d-arrows.png" alt="A hub node with links in several directions; arrowheads drawn as cones, some seen end-on as discs" class="img-full">
+<figcaption>Cone arrowheads: links pointing toward the viewer show their heads end-on as discs on the rim (Node 1 and Node 7), and side-on links have the usual triangle.</figcaption>
+</figure>
+<p>Curved links (reciprocal pairs, <code class="black">off</code>, horizontal or vertical paths) and links with <code class="black">b1</code> or <code class="black">b2</code> back-off are drawn in screen space and keep the flat 2D head.</p>
+
+<h2 id="appearance">Appearance Options<a class="heading-anchor" href="#appearance" aria-label="Link to this section">#</a></h2>
+<p><code class="black">view3d</code> can be an object instead of <code class="black">true</code>:</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Option</th><th>Default</th><th>Effect</th></tr></thead>
+<tbody>
+<tr><td><code class="black">fog</code></td><td>false</td><td>Fade with depth: opacity falls from 1 on the nearest node to 0.2 on the farthest.</td></tr>
+<tr><td><code class="black">shading</code></td><td>false</td><td>Shade round nodes like spheres, with a highlight at the top left and a darker rim. Box nodes, donuts and images are not shaded.</td></tr>
+<tr><td><code class="black">labelMinRadius</code></td><td>0</td><td>Hide labels on discs smaller than this radius on screen, in px (for example 16). The selected node keeps its label.</td></tr>
+</tbody>
+</table></div>
+<pre>chart.options({ view3d: { fog: true, labelMinRadius: 16 } });</pre>
+<figure>
+<img src="../assets/features/3d-fog.png" alt="The Enron network in 3D with fog: far nodes are faded" class="img-full">
+<figcaption><code class="black">fog: true</code>: the far side fades.</figcaption>
+</figure>
+<figure>
+<img src="../assets/features/3d-shading.png" alt="The Enron network in 3D with sphere shading on the nodes" class="img-full">
+<figcaption><code class="black">shading: true</code>: nodes shaded like spheres.</figcaption>
+</figure>
+<p>Without these options, nodes are flat discs facing the camera, styled exactly as in 2D. Give them a border (<code class="black">b</code>, <code class="black">bw</code>) for a rim.</p>
+
+<h2 id="rendering">Canvas and WebGL<a class="heading-anchor" href="#rendering" aria-label="Link to this section">#</a></h2>
+<p>Both modes draw links, nodes, halos and open combos far to near, so nearer items cover farther ones. The overview window shows the scene as the camera sees it, and clicking it pans there. Combo children keep their depth relative to the combo as it moves.</p>
+
+<h2 id="limits">Limitations<a class="heading-anchor" href="#limits" aria-label="Link to this section">#</a></h2>
+<ul>
+<li>Nodes are flat discs facing the camera; there is no real lighting model.</li>
+<li>Map mode is always 2D: <code class="black">view3d</code> is ignored while a map is shown. Bands and the time bar stay 2D.</li>
+<li>Labels, glyphs and arrowheads are drawn on the 2D canvas. In WebGL mode they sit above every node body and link; in canvas mode they are depth-sorted with their node.</li>
+<li>Arrangements inside a combo (lens, grid, concentric, sequential) are flat: the children lie in the combo's own depth plane.</li>
+</ul>
+<p>The screenshots on this page come from <code class="black">tools/make_3d_screenshots.mjs</code>. Run <code class="black">node "API Document/tools/make_3d_screenshots.mjs"</code> from the repository root to redraw them with the current library.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/basics/time-bar.html"><span class="dir">Previous</span><span class="label">Time Bar</span></a>
+<a class="next" href="../../graph-nexus/features/aggregate-links.html"><span class="dir">Next</span><span class="label">Aggregate Links</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#enable">Turning on the 3D View</a></li>
+<li class="lvl-2"><a href="#nodes">Node Depth</a></li>
+<li class="lvl-2"><a href="#camera">The Camera</a></li>
+<li class="lvl-2"><a href="#interaction">Interaction</a></li>
+<li class="lvl-2"><a href="#layouts">Layouts</a></li>
+<li class="lvl-2"><a href="#links">Links and Arrowheads</a></li>
+<li class="lvl-2"><a href="#appearance">Appearance Options</a></li>
+<li class="lvl-2"><a href="#rendering">Canvas and WebGL</a></li>
+<li class="lvl-2"><a href="#limits">Limitations</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

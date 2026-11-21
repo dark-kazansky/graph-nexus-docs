@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Using Nexus with Webpack — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="This quick start guide shows how to create a simple Nexus visualisation with Webpack. When you are finished, you will have a simple interactive Nexus chart">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html" class="current" aria-current="page">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Using Nexus with Webpack</h1><div class="images"><img src="../assets/installing/webpack_logo.png" class="img-float-right" style="max-width:200px"></div><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>This quick start guide shows how to create a simple Nexus visualisation with
+<a href="https://webpack.js.org/">Webpack</a>.
+When you are finished, you will have a simple interactive Nexus chart.</p><p>Note that if you store Nexus in your source control you must ensure it's not publicly available.
+Read more about the <a href="../best-practices/obfuscation-requirements.html">Obfuscation Requirements</a> before deploying your application.
+</p><h2 id="requirements">Requirements<a class="heading-anchor" href="#requirements" aria-label="Link to this section">#</a></h2><p>To follow this tutorial, you should have the latest version of
+<a href="https://nodejs.org/">Node.js</a> installed.
+To check your version, you can run <code class="black">node -v</code> in the console.
+</p><h2 id="step1">Step 1: Create a new package<a class="heading-anchor" href="#step1" aria-label="Link to this section">#</a></h2><p>Create a new directory named <strong>my-app</strong> and create a new npm package from this directory:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">mkdir my-app &amp;&amp; cd my-app
+npm init -y</span></code></pre><p>In the terminal from the <strong>my-app</strong> directory, add the following Webpack dependencies:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">npm add -D webpack@^5 webpack-cli@^4 html-webpack-plugin@^5 webpack-dev-server@^4 webpack-merge@^5</span></code></pre><div class="table-scroll"><table class="table" style="margin-top: 20px;"><thead><tr><th>Dependency</th><th>Description</th></tr></thead><tbody><tr><td><a href="https://webpack.js.org/">Webpack</a></td><td>The Webpack module bundler.</td></tr><tr><td><a href="https://www.npmjs.com/package/webpack-cli">webpack-cli</a></td><td>Adds a set of commands for Webpack configuration.</td></tr><tr><td><a href="https://www.npmjs.com/package/html-webpack-plugin">html-webpack-plugin</a></td><td>Simplifies creating HTML output files to be served to the generated bundles.</td></tr><tr><td><a href="https://www.npmjs.com/package/webpack-dev-server">webpack-dev-server</a></td><td>Allows using Webpack with a live-reloading development server.</td></tr><tr><td><a href="https://www.npmjs.com/package/webpack-merge">webpack-merge</a></td><td>Concatenates arrays and merges configuration objects to help manage configuration.</td></tr></tbody></table></div><h2 id="step2">Step 2: Create a boilerplate application<a class="heading-anchor" href="#step2" aria-label="Link to this section">#</a></h2><p>Create a new <strong>src</strong> folder inside the <strong>my-app</strong> directory.</p><p>Inside <strong>my-app/src</strong>, create a new <strong>template.html</strong> file with the following contents:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+  </span><span class="tag">&lt;head&gt;</span><span class="pln">
+    </span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"UTF-8"</span><span class="tag">&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/head&gt;</span><span class="pln">
+  </span><span class="tag">&lt;body&gt;</span><span class="pln">
+    </span><span class="com">&lt;!-- This is the HTML element that will contain the Nexus component --&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">'kl'</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">'</span><span class="pln">width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">800px</span><span class="pun">;</span><span class="pln"> height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">600px</span><span class="pun">;</span><span class="atv">'</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+  </span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></code></pre><p>Also inside <strong>my-app/src</strong>, create new a <strong>index.js</strong> file with the following contents:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">console.info('Hello World!');</span></code></pre><p>The <strong>index.js</strong> file will eventually contain our application code.</p><p>Back inside the main <strong>my-app</strong> directory,
+create a new <strong>webpack.config.mjs</strong> file containing Webpack configuration:
+</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">import</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> merge </span><span class="pun">}</span><span class="pln"> from </span><span class="str">'webpack-merge'</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> </span><span class="typ">HtmlWebpackPlugin</span><span class="pln"> from </span><span class="str">'html-webpack-plugin'</span><span class="pun">;</span><span class="pln">
+
+</span><span class="com">/** Create an absolute path from the current file */</span><span class="pln">
+</span><span class="kwd">const</span><span class="pln"> absPath </span><span class="pun">=</span><span class="pln"> path </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> URL</span><span class="pun">(</span><span class="pln">path</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">import</span><span class="pun">.</span><span class="pln">meta</span><span class="pun">.</span><span class="pln">url</span><span class="pun">).</span><span class="pln">pathname</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">const</span><span class="pln"> common </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  entry</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    main</span><span class="pun">:</span><span class="pln"> absPath</span><span class="pun">(</span><span class="str">'./src/index.js'</span><span class="pun">),</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+
+  plugins</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="pln">
+    </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">HtmlWebpackPlugin</span><span class="pun">({</span><span class="pln">
+      template</span><span class="pun">:</span><span class="pln"> absPath</span><span class="pun">(</span><span class="str">'./src/template.html'</span><span class="pun">),</span><span class="pln">
+      filename</span><span class="pun">:</span><span class="pln"> </span><span class="str">'index.html'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">}),</span><span class="pln">
+  </span><span class="pun">],</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">const</span><span class="pln"> development </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  mode</span><span class="pun">:</span><span class="pln"> </span><span class="str">'development'</span><span class="pun">,</span><span class="pln">
+  devServer</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">static</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      directory</span><span class="pun">:</span><span class="pln"> </span><span class="str">'./dist'</span><span class="pun">,</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    port</span><span class="pun">:</span><span class="pln"> </span><span class="lit">8000</span><span class="pun">,</span><span class="pln">
+    open</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+    compress</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pun">,</span><span class="pln">
+    hot</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+  devtool</span><span class="pun">:</span><span class="pln"> </span><span class="str">'eval-source-map'</span><span class="pln">
+</span><span class="pun">};</span><span class="pln">
+
+</span><span class="kwd">export</span><span class="pln"> </span><span class="kwd">default</span><span class="pln"> merge</span><span class="pun">(</span><span class="pln">common</span><span class="pun">,</span><span class="pln"> development</span><span class="pun">);</span></code></pre><h2 id="step3">Step 3: Run a web server<a class="heading-anchor" href="#step3" aria-label="Link to this section">#</a></h2><p>To configure an easy way of starting the dev server,
+add the following script to the existing file <strong>my-app/package.json</strong>:
+</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="pun">{</span><span class="pln">
+  </span><span class="str">"scripts"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">"start:dev"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"webpack-dev-server --progress"</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>After this you can start the dev server by running this command:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">npm run start:dev</span></code></pre><p>This will open a new browser window. In the developer tools console you should see the line:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">Hello World!</span></code></pre><p></p><h2 id="step4">Step 4: Create a chart<a class="heading-anchor" href="#step4" aria-label="Link to this section">#</a></h2><p>Now we'll integrate Nexus into the application.
+Download the Nexus package from the link below and place it in the <strong>my-app</strong> directory.
+</p>
+Download Nexus 7.5.0-6286156683<p>Next, open a new terminal window from the <strong>my-app</strong> directory and add Nexus as a package dependency:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">npm add file:./graph-nexus-1.0.0.tgz</span></code></pre><div class="notice"><div class="boxout" style="background-color: #00996412"><div class="boxout-icon"></div><div class="boxout-body" style="padding-left: 42px">Nexus also includes extra dependencies for <a href="../basics/map-mode.html">map mode</a>
+and <a href="../features/pdf-export.html">PDF export</a>. See their respective documentation for more information
+on how to use them.
+</div></div></div><p>Change <strong>my-app/src/index.js</strong> to import Nexus and load a chart containing one node:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">import</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pln"> from </span><span class="str">'graph-nexus'</span><span class="pun">;</span><span class="pln">
+
+async </span><span class="kwd">function</span><span class="pln"> main</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+
+  </span><span class="kwd">const</span><span class="pln"> chart </span><span class="pun">=</span><span class="pln"> await </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">({</span><span class="pln"> container</span><span class="pun">:</span><span class="pln"> </span><span class="str">'kl'</span><span class="pln"> </span><span class="pun">});</span><span class="pln">
+
+  await chart</span><span class="pun">.</span><span class="pln">load</span><span class="pun">({</span><span class="pln">
+    type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'LinkChart'</span><span class="pun">,</span><span class="pln">
+    items</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'id1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'#43976C'</span><span class="pun">,</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Hello World'</span><span class="pln"> </span><span class="pun">}]</span><span class="pln">
+  </span><span class="pun">});</span><span class="pln">
+
+  chart</span><span class="pun">.</span><span class="pln">zoom</span><span class="pun">(</span><span class="str">'fit'</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+main</span><span class="pun">();</span></code></pre><p>You should now see a simple Nexus chart in your browser:</p><p class="text-center"><img src="../assets/installing/01_hello-world.png" class="framed" style="max-width:50%"></p><p>This is your environment to develop your application.
+</p><h2 id="step5">Step 5: Bundle your files<a class="heading-anchor" href="#step5" aria-label="Link to this section">#</a></h2><p>To build an optimised, production-ready application we'd like a minified bundle without development-only Webpack runtime files.</p><p>To do this we'll split our configuration into two parts: <i>development</i> and <i>production</i>.
+The <a href="https://www.npmjs.com/package/webpack-merge">webpack-merge</a>
+dependency (which we installed earlier) and the <code class="black">NODE_ENV</code> environment variable will help us do this.
+</p><p>Add a production configuration to <strong>my-app/webpack.config.mjs</strong> which will output the application assets to <strong>./dist</strong>:
+</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">const</span><span class="pln"> production </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  mode</span><span class="pun">:</span><span class="pln"> </span><span class="str">'production'</span><span class="pun">,</span><span class="pln">
+
+  output</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    path</span><span class="pun">:</span><span class="pln"> absPath</span><span class="pun">(</span><span class="str">'./dist'</span><span class="pun">),</span><span class="pln">
+    filename</span><span class="pun">:</span><span class="pln"> </span><span class="str">'[name].bundle.js'</span><span class="pun">,</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+
+  performance</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Suppress warnings about bundle/asset sizes</span><span class="pln">
+    maxEntrypointSize</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1024000</span><span class="pun">,</span><span class="pln">
+    maxAssetSize</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1024000</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+
+  optimization</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    minimize</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+  </span><span class="pun">},</span><span class="pln">
+</span><span class="pun">};</span></code></pre><p>And replace <code class="black">export default</code> which will enable the production build when <code class="black">NODE_ENV</code> equals 'production':</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="kwd">export</span><span class="pln"> </span><span class="kwd">default</span><span class="pln"> merge</span><span class="pun">(</span><span class="pln">
+  common</span><span class="pun">,</span><span class="pln">
+  process</span><span class="pun">.</span><span class="pln">env</span><span class="pun">.</span><span class="pln">NODE_ENV </span><span class="pun">===</span><span class="pln"> production</span><span class="pun">.</span><span class="pln">mode </span><span class="pun">?</span><span class="pln"> production </span><span class="pun">:</span><span class="pln"> development
+</span><span class="pun">);</span></code></pre><p>And then add 2 more scripts to <strong>my-app/package.json</strong>:</p><pre class="prettyprint prettyprinted"><code class="lang-javascript"><span class="pun">{</span><span class="pln">
+  </span><span class="str">"scripts"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="str">"start:dev"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"webpack-dev-server --progress"</span><span class="pun">,</span><span class="pln"> </span><span class="com">// added in step 3</span><span class="pln">
+    </span><span class="str">"build"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"NODE_ENV=production webpack"</span><span class="pun">,</span><span class="pln">
+    </span><span class="str">"start:prod"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"serve ./dist"</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p>In this tutorial we'll use <code class="black">serve</code> to host the production assets. To install it, run:
+</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">npm add serve@^13</span></code></pre><p>Finally, run the commands to build the production assets and start the production server:
+</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">npm run build &amp;&amp; npm run start:prod</span></code></pre><p>You should now have a simple Nexus application bundled with Webpack, with both a development and production environment.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/installing/using-graph-nexus-with-vue.html"><span class="dir">Previous</span><span class="label">Using Nexus with Vue</span></a>
+<a class="next" href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html"><span class="dir">Next</span><span class="label">Using Nexus with plain JavaScript</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#requirements">Requirements</a></li>
+<li class="lvl-2"><a href="#step1">Step 1: Create a new package</a></li>
+<li class="lvl-2"><a href="#step2">Step 2: Create a boilerplate application</a></li>
+<li class="lvl-2"><a href="#step3">Step 3: Run a web server</a></li>
+<li class="lvl-2"><a href="#step4">Step 4: Create a chart</a></li>
+<li class="lvl-2"><a href="#step5">Step 5: Bundle your files</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

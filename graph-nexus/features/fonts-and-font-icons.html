@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fonts and Font Icons — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nexus lets you use custom fonts to match the fonts used in your applications. In addition, you can also add font icons to various items in the chart.">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html" class="current" aria-current="page">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Fonts and Font Icons</h1><h2 id="intro">Introduction<a class="heading-anchor" href="#intro" aria-label="Link to this section">#</a></h2><p>Nexus lets you use custom fonts to match the fonts used in your applications.
+In addition, you can also add font icons to various items in the chart.
+</p><p class="text-center"><img src="../assets/features/fonticons-title.png" style="max-width:650px"></p><h2 id="usingfonts">Using fonts<a class="heading-anchor" href="#usingfonts" aria-label="Link to this section">#</a></h2><p>Nexus uses 'sans-serif' as the default font family.
+To set a custom default font family, pass the name in the
+<a href="../api.html#ChartOptions_fontFamily">fontFamily</a> chart option.</p><p>To set a font family for a chart item such as a node, link, label or a glyph,
+you can also set the <code class="black">ff</code> property of the item.
+</p><h2 id="usingfonticons">Using font icons<a class="heading-anchor" href="#usingfonticons" aria-label="Link to this section">#</a></h2><p>While images offer you more reliable cross-browser support,
+font icons offers better scalability and let you change the font icon colour dynamically.
+</p><h3 id="addingfonticons">Adding font icons<a class="heading-anchor" href="#addingfonticons" aria-label="Link to this section">#</a></h3><p>To add a font icon, pass the Unicode value to the
+<a href="../api.html#ItemFormat_FontIcon_properties_t">t</a> property 
+of the <a href="../api.html#ItemFormat_Node_properties_fi">fi</a>
+property of the node or glyph.
+You can use
+<a href="../api.html#GraphNexus_getFontIcon">GraphNexus.getFontIcon()</a>
+to look up a Unicode value from a class name.</p><p>For example, using Font Awesome, a 
+font icon on a node would look like this:</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> fi</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">getFontIcon</span><span class="pun">(</span><span class="str">'fa-user'</span><span class="pun">)</span><span class="pln"> </span><span class="pun">}}</span></code></pre><p></p><p>Unless a font family is explicitly set on the item via the
+<a href="../api.html#ItemFormat_Node_properties_ff">ff</a> property,
+the icon will be rendered from the family specified in the 
+<a href="../api.html#ChartOptions_iconFontFamily">IconFontFamily</a> option.
+</p><h3 id="custom">Custom font families<a class="heading-anchor" href="#custom" aria-label="Link to this section">#</a></h3><p>Follow these steps to use custom font families in Nexus:</p><ol><li>Download and reference the
+<a href="https://github.com/typekit/webfontloader">TypeKit WebFontLoader</a>
+or link to it directly:</li><p></p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/webfontloader.js"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;&lt;/script&gt;</span></code></pre><p></p><li>Update your application's CSS with <code class="black">@font-face</code>
+rules to load your chosen fonts. 
+For example, to load Muli Bold, use:</li><p> </p><pre class="prettyprint prettyprinted"><code class="lang-css"><span class="lit">@font</span><span class="pun">-</span><span class="pln">face </span><span class="pun">{</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Muli'</span><span class="pun">;</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">style</span><span class="pun">:</span><span class="pln"> normal</span><span class="pun">;</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> bold</span><span class="pun">;</span><span class="pln">
+  src</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">local</span><span class="pun">(</span><span class="str">'Muli-Bold.ttf'</span><span class="pun">),</span><span class="pln"> url</span><span class="pun">(</span><span class="str">'path/to/fonts/Muli/Muli-Bold.ttf'</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p></p><li>Make sure your browsers can access the custom font files.</li><li>Use the
+<a href="https://github.com/typekit/webfontloader">TypeKit WebFontLoader</a>
+to load fonts.</li><li>Create the Nexus component and include the custom font family:</li><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// At the end of the page or on DOM ready</span><span class="pln">
+</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+  </span><span class="typ">WebFont</span><span class="pun">.</span><span class="pln">load</span><span class="pun">({</span><span class="pln">
+    custom</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      families</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'Muli'</span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="com">// Make sure to start Nexus in either case</span><span class="pln">
+    active</span><span class="pun">:</span><span class="pln"> startNexusGraph</span><span class="pun">,</span><span class="pln">
+    inactive</span><span class="pun">:</span><span class="pln"> startNexusGraph
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">})();</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> startNexusGraph</span><span class="pun">(){</span><span class="pln">
+  </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">({</span><span class="pln"> container</span><span class="pun">:</span><span class="pln"> </span><span class="str">'kl'</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> afterCreation</span><span class="pun">);</span><span class="pln"> 
+</span><span class="pun">}</span></code></pre><p></p></ol><h3 id="fontweights">Font weights and Font Awesome 5<a class="heading-anchor" href="#fontweights" aria-label="Link to this section">#</a></h3><p>Some font icon libraries, including Font Awesome 5,
+use font weights to provide variant styles for icons, such as regular
+() and solid ().
+</p><p>To use multiple font styles in Nexus,
+you must ensure that there is a unique font family declaration for each 
+desired style. There are two ways you can achieve this:</p><ol> <li> <p>Modify the library CSS file so that each weighted font declaration has a unique font family name.</p><p>For example, in Font Awesome, you can modify <strong>font-awesome.css</strong>
+so that the <code class="black">@font-face</code> declaration for 'Font Awesome 5 Free'
+becomes 'Font Awesome 5 Free Regular', and so on for each style you wish to support.
+For example, font-awesome.css edited this way looks like this:</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-css"><span class="lit">@font</span><span class="pun">-</span><span class="pln">face </span><span class="pun">{</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Font Awesome 5 Free Regular'</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">/* ... */</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">.</span><span class="pln">far </span><span class="pun">{</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Font Awesome 5 Free Regular'</span><span class="pun">;</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">400</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="lit">@font</span><span class="pun">-</span><span class="pln">face </span><span class="pun">{</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Font Awesome 5 Free Solid'</span><span class="pun">;</span><span class="pln">
+  </span><span class="com">/* ... */</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="pun">.</span><span class="pln">fa</span><span class="pun">,</span><span class="pln"> </span><span class="pun">.</span><span class="pln">fas </span><span class="pun">{</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Font Awesome 5 Free Solid'</span><span class="pun">;</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">900</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p></p></li><li><p>Create your own font family definitions in your application page
+and set them to use the font library's source files.
+For example, in Font Awesome 5, you might declare a 'solid' font family like this:
+</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-css"><span class="lit">@font</span><span class="pun">-</span><span class="pln">face </span><span class="pun">{</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Font Awesome 5 Free Solid'</span><span class="pun">;</span><span class="pln">
+  font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span class="pln"> </span><span class="lit">900</span><span class="pun">;</span><span class="pln">
+  src</span><span class="pun">:</span><span class="pln"> url</span><span class="pun">(</span><span class="str">"path/to/fonts/fontAwesome5/fa-solid-900.eot"</span><span class="pun">);</span><span class="pln">
+  </span><span class="com">/* Import backward compatibility fonts as required */</span><span class="pln">
+</span><span class="pun">}</span></code></pre><p></p></li></ol><p>Set the default font icon style by setting 
+<a href="../api.html#ChartOptions_iconFontFamily">iconFontFamily</a>:</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pln">chart</span><span class="pun">.</span><span class="pln">options</span><span class="pun">({</span><span class="pln"> iconFontFamily</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Font Awesome 5 Free Regular'</span><span class="pln"> </span><span class="pun">});</span></code></pre><p></p><p>For any icons using alternative styles,
+set the <code class="black">ff</code> property on the <code class="black">fi</code> object declaration.
+The item should look like this:</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> fi</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">getFontIcon</span><span class="pun">(</span><span class="str">'fa-user'</span><span class="pun">),</span><span class="pln"> ff</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Font Awesome 5 Free Solid'</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span></code></pre><p></p><h2 id="fontproblems">Troubleshooting<a class="heading-anchor" href="#fontproblems" aria-label="Link to this section">#</a></h2><p>This section offers help with some of the most common issues with using fonts and font icons.</p><h3 id="fontIconsCORS">Cannot access fonts and font icons from another domain<a class="heading-anchor" href="#fontIconsCORS" aria-label="Link to this section">#</a></h3><p>When loaded from a different domain to your app, fonts and font icons can fail to appear in your chart
+or in the screenshots taken with <a href="../api.html#Chart_toDataURL">chart.toDataURL()</a>.
+This is due to the
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>
+restrictions. See the <a href="../best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a> page for mode details.
+</p><h3 id="fonticonissue">Font icons missing in the chart<a class="heading-anchor" href="#fonticonissue" aria-label="Link to this section">#</a></h3><p>If you are not seeing the Font Icons any more in your chart,
+there's probably an issue with the font loader.
+An example of the issue can be seen in the following image:
+</p><p class="text-center"><img src="../assets/features/fonticons-no-font-icons.png" class="framed"></p><p>Follow these steps to fix the issue:</p><ol><li>Download and reference the 
+<a href="https://github.com/typekit/webfontloader">TypeKit WebFontLoader</a>
+or link to it directly:
+  </li><p></p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/webfontloader.js"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;&lt;/script&gt;</span></code></pre><p></p><li>Include the CSS file with the font icons in the page, for example, for Font Awesome:</li><p></p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"css/font-awesome.css"</span><span class="tag">&gt;</span></code></pre><p></p><li>Ensure the font files are reachable from the browser.</li><li>Load the fonts with the 
+<a href="https://github.com/typekit/webfontloader">TypeKit WebFontLoader</a>
+before creating the Nexus component, as shown below:
+</li><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// At the end of the page or on DOM ready</span><span class="pln">
+</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+  </span><span class="typ">WebFont</span><span class="pun">.</span><span class="pln">load</span><span class="pun">({</span><span class="pln">
+    custom</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      </span><span class="com">// Using the FontAwesome files in this example</span><span class="pln">
+      families</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'FontAwesome'</span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="com">// Make sure to start Nexus in either case</span><span class="pln">
+    active</span><span class="pun">:</span><span class="pln"> startNexusGraph</span><span class="pun">,</span><span class="pln">
+    inactive</span><span class="pun">:</span><span class="pln"> startNexusGraph
+  </span><span class="pun">});</span><span class="pln">
+</span><span class="pun">})();</span><span class="pln">
+
+</span><span class="kwd">function</span><span class="pln"> startNexusGraph</span><span class="pun">(){</span><span class="pln">
+  </span><span class="typ">GraphNexus</span><span class="pun">.</span><span class="pln">create</span><span class="pun">({</span><span class="pln"> container</span><span class="pun">:</span><span class="pln"> </span><span class="str">'kl'</span><span class="pln"> </span><span class="pun">},</span><span class="pln"> afterCreation</span><span class="pun">);</span><span class="pln"> 
+</span><span class="pun">}</span></code></pre><p></p></ol><h3 id="loadfails">WebFontLoader failing to load fonts<a class="heading-anchor" href="#loadfails" aria-label="Link to this section">#</a></h3><p>WebFontLoader can sometimes fail to load a font family and trigger the inactive event handler even 
+though the font has been downloaded. This can occur with Font Awesome 5 on Microsoft Edge.</p><p>The solution is to change the test string which the WebFontLoader uses
+to determine whether a font has loaded. For example:</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+
+  </span><span class="typ">WebFont</span><span class="pun">.</span><span class="pln">load</span><span class="pun">({</span><span class="pln">
+    custom</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      families</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'Font Awesome 5 Pro'</span><span class="pun">],</span><span class="pln">
+      </span><span class="com">// Specify the test string to use to check whether the font has loaded</span><span class="pln">
+      testString</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+        </span><span class="com">// Be sure to provide a unicode character which exists in the font library</span><span class="pln">
+        </span><span class="str">'Font Awesome 5 Pro'</span><span class="pun">:</span><span class="pln"> </span><span class="str">'\f188'</span><span class="pln">
+      </span><span class="pun">}</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    active</span><span class="pun">:</span><span class="pln"> startNexusGraph</span><span class="pun">,</span><span class="pln">
+    inactive</span><span class="pun">:</span><span class="pln"> startNexusGraph</span><span class="pun">,</span><span class="pln">
+    timeout</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln">
+  </span><span class="pun">})();</span><span class="pln">
+  
+</span><span class="pun">});</span></code></pre><p></p><p>See the
+<a href="https://github.com/typekit/webfontloader#custom">Custom</a>
+section of the WebFontLoader documentation for more details about test strings.
+</p><h3 id="characters">Font families with whitespace and number in name not rendering correctly<a class="heading-anchor" href="#characters" aria-label="Link to this section">#</a></h3><p>If you use a font family whose name contains a whitespace and ends in a number, e.g. "Exo 2" or "Goudy Bookletter 1911", 
+the text may not render correctly in the chart.
+This is due to certain CSS restrictions on acceptable characters and identifiers.</p><p>In addition to quoting the font family name, you also need to do one of the following: 
+</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// solution 1 - escape the whitespace before the number</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'n2'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'#43976C'</span><span class="pun">,</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Text'</span><span class="pun">,</span><span class="pln">  fs</span><span class="pun">:</span><span class="pln"> </span><span class="lit">14</span><span class="pun">,</span><span class="pln"> ff</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Exo\\ 2'</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
+
+ </span><span class="com">// solution 2 - wrap the font family name into additional set of quotes</span><span class="pln">
+</span><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'n2'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> c</span><span class="pun">:</span><span class="pln"> </span><span class="str">'#43976C'</span><span class="pun">,</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Text'</span><span class="pun">,</span><span class="pln">  fs</span><span class="pun">:</span><span class="pln"> </span><span class="lit">14</span><span class="pun">,</span><span class="pln"> ff</span><span class="pun">:</span><span class="pln"> </span><span class="str">"'Exo 2'"</span><span class="pln"> </span><span class="pun">}</span><span class="pln">           </span></code></pre><p></p><h3 id="multibyte">Font icons aren't rendering correctly<a class="heading-anchor" href="#multibyte" aria-label="Link to this section">#</a></h3><p>JavaScript strings use UTF-16 encoding. However, some icons may require 2 UTF-16 characters to be correctly identified.
+Similarly, some font families such as the
+<a href="https://github.com/Templarian/MaterialDesign-Webfont">Material Design</a>
+family may be using Unicode code points with characters encoded as surrogate pairs.</p><p>In these cases, it's not possible to use <code class="black">GraphNexus.getFontIcon()</code>. Instead, you need to add the icon by
+specifying the multi-byte Unicode string directly:
+</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="pun">{</span><span class="pln"> id</span><span class="pun">:</span><span class="pln"> </span><span class="str">'1'</span><span class="pun">,</span><span class="pln"> type</span><span class="pun">:</span><span class="pln"> </span><span class="str">'node'</span><span class="pun">,</span><span class="pln"> fi</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> t</span><span class="pun">:</span><span class="pln"> </span><span class="str">'\\u{F01E5}'</span><span class="pun">,</span><span class="pln"> ff</span><span class="pun">:</span><span class="pln"> </span><span class="str">'Material Design Icons'</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span></code></pre><p></p><p>You can find the Unicode strings for the font icons in the font family CSS file.
+</p><h3 id="timeout">Slow loading performance<a class="heading-anchor" href="#timeout" aria-label="Link to this section">#</a></h3><p>If you think that font loading is taking longer than expected,
+you can tweak the timeout limit of the WebFontLoader.
+For example:
+</p><p></p><pre class="prettyprint prettyprinted"><code class="lang-js"><span class="com">// At the end of the page or on DOM ready</span><span class="pln">
+</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+
+  </span><span class="typ">WebFont</span><span class="pun">.</span><span class="pln">load</span><span class="pun">({</span><span class="pln">
+    custom</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+      families</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="str">'FontAwesome'</span><span class="pun">]</span><span class="pln">
+    </span><span class="pun">},</span><span class="pln">
+    </span><span class="com">// Make sure to start Nexus in either case</span><span class="pln">
+    active</span><span class="pun">:</span><span class="pln"> startNexusGraph</span><span class="pun">,</span><span class="pln">
+    inactive</span><span class="pun">:</span><span class="pln"> startNexusGraph</span><span class="pun">,</span><span class="pln">
+    </span><span class="com">// Do not wait more than 3 seconds to load</span><span class="pln">
+    timeout</span><span class="pun">:</span><span class="pln"> </span><span class="lit">3000</span><span class="pln">
+  </span><span class="pun">})();</span><span class="pln">
+  
+</span><span class="pun">});</span></code></pre><p></p><h3 id="fonticonmultiple">Slow loading performance when using multiple font families<a class="heading-anchor" href="#fonticonmultiple" aria-label="Link to this section">#</a></h3><p>It can take a long time to load font icons from multiple font families. 
+To improve performance, you can create a single font family
+containing the font icons you want to use. 
+Loading a single family uses less bandwidth and avoids slow-running charts.</p><p>There are online tools available to help you create a custom font family.
+To create one using the
+<a href="http://fontello.com/">Fontello</a>
+icon fonts generator:
+</p><ol><li>From the 
+<a href="http://fontello.com/">Fontello</a>
+homepage, select the icons you want to add to your font family:
+</li><p class="text-center"><img src="../assets/features/fonticons-fontello.png" style="max-width:800px"></p><li>To add your own SVG font icons, drag them to the Custom Icons section near the top of the page.</li><li>When you're done, click<img src="../assets/features/fonticons-download.png" style="max-width:20%"></li><li>Update your application’s CSS file to include the custom font family.</li></ol><p>You can now use the custom font family in your application.</p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/features/combos-concepts.html"><span class="dir">Previous</span><span class="label">Combos Concepts</span></a>
+<a class="next" href="../../graph-nexus/features/graph-centrality.html"><span class="dir">Next</span><span class="label">Graph Centrality</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#intro">Introduction</a></li>
+<li class="lvl-2"><a href="#usingfonts">Using fonts</a></li>
+<li class="lvl-2"><a href="#usingfonticons">Using font icons</a></li>
+<li class="lvl-3"><a href="#addingfonticons">Adding font icons</a></li>
+<li class="lvl-3"><a href="#custom">Custom font families</a></li>
+<li class="lvl-3"><a href="#fontweights">Font weights and Font Awesome 5</a></li>
+<li class="lvl-2"><a href="#fontproblems">Troubleshooting</a></li>
+<li class="lvl-3"><a href="#fontIconsCORS">Cannot access fonts and font icons from another domain</a></li>
+<li class="lvl-3"><a href="#fonticonissue">Font icons missing in the chart</a></li>
+<li class="lvl-3"><a href="#loadfails">WebFontLoader failing to load fonts</a></li>
+<li class="lvl-3"><a href="#characters">Font families with whitespace and number in name not rendering correctly</a></li>
+<li class="lvl-3"><a href="#multibyte">Font icons aren&#x27;t rendering correctly</a></li>
+<li class="lvl-3"><a href="#timeout">Slow loading performance</a></li>
+<li class="lvl-3"><a href="#fonticonmultiple">Slow loading performance when using multiple font families</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>

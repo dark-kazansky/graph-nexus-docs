@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nexus API Index — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Every Nexus API symbol referred to by these guides, grouped by object, with the guides that describe each one.">
+<link rel="icon" href="../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../assets/doc.css">
+</head>
+<body data-root="../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../site/index.html">
+      <img class="logo-light" src="../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../site/index.html">Home</a>
+    <a href="../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group" open>
+<summary>Overview</summary><ul>
+<li><a href="../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../graph-nexus/api.html" class="current" aria-current="page">API Index</a></li>
+<li><a href="../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>About Nexus</summary><ul>
+<li><a href="../graph-nexus/about/accessibility.html">Accessibility</a></li>
+<li><a href="../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Nexus API Index</h1>
+<p class="lede">Every Nexus API symbol referred to by these guides, grouped by object, with the guides that describe each one.</p>
+<div class="notice"><div class="boxout"><div class="boxout-icon"></div><div class="boxout-body"><p>This index records the symbols the guides reference and where they are explained. It is not a full signature reference: parameter lists and return types are documented in the guide pages linked beside each entry.</p></div></div></div>
+<h2 id="GraphNexus">GraphNexus<a class="heading-anchor" href="#GraphNexus" aria-label="Link to this section">#</a></h2>
+<p>Entry point for creating components and global helpers.</p>
+<p class="api-count">16 referenced symbols</p>
+<div class="api-symbol" id="GraphNexus_callbacks"><div class="sig">GraphNexus.callbacks</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="GraphNexus_components"><div class="sig">GraphNexus.components</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="GraphNexus_coords"><div class="sig">GraphNexus.coords</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="GraphNexus_corsAdapter"><div class="sig">GraphNexus.corsAdapter</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></p></div>
+<div class="api-symbol" id="GraphNexus_create"><div class="sig">GraphNexus.create</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/chart-basics.html">Chart Basics</a> · <a href="basics/loading-data.html">Loading Data</a> · <a href="best-practices/resizing-components.html">Resizing Components</a> · <a href="installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></p></div>
+<div class="api-symbol" id="GraphNexus_createTimeline"><div class="sig">GraphNexus.createTimeline</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="GraphNexus_dashedLineSupport"><div class="sig">GraphNexus.dashedLineSupport</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="GraphNexus_fullScreenCapable"><div class="sig">GraphNexus.fullScreenCapable</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="GraphNexus_getFontIcon"><div class="sig">GraphNexus.getFontIcon</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/fonts-and-font-icons.html">Fonts and Font Icons</a></p></div>
+<div class="api-symbol" id="GraphNexus_getGraphEngine"><div class="sig">GraphNexus.getGraphEngine</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/combos-concepts.html">Combos Concepts</a> · <a href="features/self-links.html">Self Links</a></p></div>
+<div class="api-symbol" id="GraphNexus_info"><div class="sig">GraphNexus.info</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/troubleshooting.html">Troubleshooting</a></p></div>
+<div class="api-symbol" id="GraphNexus_mode"><div class="sig">GraphNexus.mode</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="integrations/webgl.html">WebGL</a></p></div>
+<div class="api-symbol" id="GraphNexus_paths"><div class="sig">GraphNexus.paths</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="GraphNexus_setSize"><div class="sig">GraphNexus.setSize</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/resizing-components.html">Resizing Components</a> · <a href="best-practices/troubleshooting.html">Troubleshooting</a></p></div>
+<div class="api-symbol" id="GraphNexus_toggleFullScreen"><div class="sig">GraphNexus.toggleFullScreen</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/resizing-components.html">Resizing Components</a></p></div>
+<div class="api-symbol" id="GraphNexus_webGLSupport"><div class="sig">GraphNexus.webGLSupport</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="integrations/webgl.html">WebGL</a></p></div>
+<h2 id="Chart">Chart<a class="heading-anchor" href="#Chart" aria-label="Link to this section">#</a></h2>
+<p>Methods on a chart instance returned by GraphNexus.create().</p>
+<p class="api-count">69 referenced symbols</p>
+<div class="api-symbol" id="Chart_animateProperties"><div class="sig">Chart.animateProperties</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_arrange"><div class="sig">Chart.arrange</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_bind"><div class="sig">Chart.bind</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_camera"><div class="sig">Chart.camera</div><p class="api-sources"><span class="label">Described in</span> <a href="features/3d-view.html">3D View</a> · <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_clear"><div class="sig">Chart.clear</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_combo"><div class="sig">Chart.combo</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_contains"><div class="sig">Chart.contains</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Chart_createLink"><div class="sig">Chart.createLink</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_destroy"><div class="sig">Chart.destroy</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_each"><div class="sig">Chart.each</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="Chart_each_options_items"><div class="sig">Chart.each.options.items</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="Chart_expand"><div class="sig">Chart.expand</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/layout-basics.html">Layout Basics</a> · <a href="basics/loading-data.html">Loading Data</a> · <a href="integrations/neo4j-tutorial.html">Neo4j Tutorial</a> · <a href="best-practices/troubleshooting.html">Troubleshooting</a></p></div>
+<div class="api-symbol" id="Chart_expand_options"><div class="sig">Chart.expand.options</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/loading-data.html">Loading Data</a></p></div>
+<div class="api-symbol" id="Chart_expand_options_arrange_name"><div class="sig">Chart.expand.options.arrange.name</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Chart_expand_options_layout_fix"><div class="sig">Chart.expand.options.layout.fix</div><p class="api-gloss">fix: &#x27;adaptive&#x27;</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_export"><div class="sig">Chart.export</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/chart-export.html">Chart Export</a> · <a href="best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a> · <a href="basics/map-mode.html">Map Mode</a> · <a href="features/pdf-export.html">PDF Export</a></p></div>
+<div class="api-symbol" id="Chart_export_options_doc_size"><div class="sig">Chart.export.options.doc.size</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_export_options_extents"><div class="sig">Chart.export.options.extents</div><p class="api-sources"><span class="label">Described in</span> <a href="features/chart-export.html">Chart Export</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_export_options_fitTo"><div class="sig">Chart.export.options.fitTo</div><p class="api-sources"><span class="label">Described in</span> <a href="features/chart-export.html">Chart Export</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_export_options_fonts"><div class="sig">Chart.export.options.fonts</div><p class="api-sources"><span class="label">Described in</span> <a href="features/chart-export.html">Chart Export</a></p></div>
+<div class="api-symbol" id="Chart_filter"><div class="sig">Chart.filter</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a> · <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a> · <a href="about/performance.html">Performance</a></p></div>
+<div class="api-symbol" id="Chart_filter_options_items"><div class="sig">Chart.filter.options.items</div><p class="api-sources"><span class="label">Described in</span> <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="Chart_foreground"><div class="sig">Chart.foreground</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a> · <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a> · <a href="installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a> · <a href="installing/using-graph-nexus-with-react.html">Using Nexus with React</a> · <a href="installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a> · <a href="installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></p></div>
+<div class="api-symbol" id="Chart_foreground_options_foregroundOpenCombos"><div class="sig">Chart.foreground.options.foregroundOpenCombos</div><p class="api-sources"><span class="label">Described in</span> <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="Chart_getAggregateInfo"><div class="sig">Chart.getAggregateInfo</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="Chart_getAggregateInfo_options"><div class="sig">Chart.getAggregateInfo.options</div><p class="api-gloss">aggregation information</p><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="Chart_getItem"><div class="sig">Chart.getItem</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a> · <a href="installing/using-graph-nexus-with-react.html">Using Nexus with React</a> · <a href="installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a> · <a href="installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></p></div>
+<div class="api-symbol" id="Chart_getItemInfoAt"><div class="sig">Chart.getItemInfoAt</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></p></div>
+<div class="api-symbol" id="Chart_graph"><div class="sig">Chart.graph</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_hide"><div class="sig">Chart.hide</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="Chart_labelPosition"><div class="sig">Chart.labelPosition</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_layout"><div class="sig">Chart.layout</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="about/accessibility.html">Accessibility</a> · <a href="integrations/angular-reference.html">Angular Reference</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/layout-basics.html">Layout Basics</a> · <a href="basics/map-mode.html">Map Mode</a> · <a href="integrations/react-reference.html">React Reference</a> · <a href="best-practices/troubleshooting.html">Troubleshooting</a> · <a href="installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a> · <a href="integrations/vue-reference.html">Vue Reference</a></p></div>
+<div class="api-symbol" id="Chart_layout_options"><div class="sig">Chart.layout.options</div><p class="api-gloss">layout options API</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_consistent"><div class="sig">Chart.layout.options.consistent</div><p class="api-gloss">consistent: true</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_fixed"><div class="sig">Chart.layout.options.fixed</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_level"><div class="sig">Chart.layout.options.level</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_mode"><div class="sig">Chart.layout.options.mode</div><p class="api-gloss">mode: &#x27;adaptive&#x27;</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_orderBy"><div class="sig">Chart.layout.options.orderBy</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_orderBy_property"><div class="sig">Chart.layout.options.orderBy.property</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_packing"><div class="sig">Chart.layout.options.packing</div><p class="api-gloss">packing: &#x27;adaptive&#x27;</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_stacking"><div class="sig">Chart.layout.options.stacking</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_stacking_arrange"><div class="sig">Chart.layout.options.stacking.arrange</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_layout_options_top"><div class="sig">Chart.layout.options.top</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Chart_load"><div class="sig">Chart.load</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="integrations/angular-reference.html">Angular Reference</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a> · <a href="basics/chart-basics.html">Chart Basics</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/loading-data.html">Loading Data</a> · <a href="basics/map-mode.html">Map Mode</a> · <a href="integrations/react-reference.html">React Reference</a> · <a href="installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a> · <a href="installing/using-graph-nexus-with-react.html">Using Nexus with React</a> · <a href="installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a> · <a href="integrations/vue-reference.html">Vue Reference</a></p></div>
+<div class="api-symbol" id="Chart_lock"><div class="sig">Chart.lock</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_map"><div class="sig">Chart.map</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_merge"><div class="sig">Chart.merge</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/loading-data.html">Loading Data</a> · <a href="basics/map-mode.html">Map Mode</a> · <a href="best-practices/troubleshooting.html">Troubleshooting</a></p></div>
+<div class="api-symbol" id="Chart_off"><div class="sig">Chart.off</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="Chart_on"><div class="sig">Chart.on</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="Chart_options"><div class="sig">Chart.options</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="integrations/angular-reference.html">Angular Reference</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a> · <a href="basics/map-mode.html">Map Mode</a> · <a href="integrations/react-reference.html">React Reference</a> · <a href="integrations/vue-reference.html">Vue Reference</a></p></div>
+<div class="api-symbol" id="Chart_pan"><div class="sig">Chart.pan</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_ping"><div class="sig">Chart.ping</div><p class="api-gloss">ping function</p><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="about/accessibility.html">Accessibility</a> · <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Chart_removeItem"><div class="sig">Chart.removeItem</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Chart_selection"><div class="sig">Chart.selection</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Chart_serialize"><div class="sig">Chart.serialize</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="about/accessibility.html">Accessibility</a> · <a href="features/aggregate-links.html">Aggregate Links</a> · <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="Chart_setContainer"><div class="sig">Chart.setContainer</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_setItem"><div class="sig">Chart.setItem</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_setProperties"><div class="sig">Chart.setProperties</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a> · <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_show"><div class="sig">Chart.show</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a> · <a href="basics/layout-basics.html">Layout Basics</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_toDataURL"><div class="sig">Chart.toDataURL</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a> · <a href="features/fonts-and-font-icons.html">Fonts and Font Icons</a></p></div>
+<div class="api-symbol" id="Chart_toDataURL_arguments_height"><div class="sig">Chart.toDataURL.arguments.height</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_toDataURL_arguments_width"><div class="sig">Chart.toDataURL.arguments.width</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_toDataURL_options_fit"><div class="sig">Chart.toDataURL.options.fit</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_unbind"><div class="sig">Chart.unbind</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Chart_viewCoordinates"><div class="sig">Chart.viewCoordinates</div><p class="api-sources"><span class="label">Described in</span> <a href="features/3d-view.html">3D View</a> · <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></p></div>
+<div class="api-symbol" id="Chart_viewOptions"><div class="sig">Chart.viewOptions</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_worldCoordinates"><div class="sig">Chart.worldCoordinates</div><p class="api-sources"><span class="label">Described in</span> <a href="features/3d-view.html">3D View</a> · <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></p></div>
+<div class="api-symbol" id="Chart_zoom"><div class="sig">Chart.zoom</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Chart_zoom_options_time"><div class="sig">Chart.zoom.options.time</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<h2 id="ChartOptions">ChartOptions<a class="heading-anchor" href="#ChartOptions" aria-label="Link to this section">#</a></h2>
+<p>Options that control chart appearance and behaviour.</p>
+<p class="api-count">18 referenced symbols</p>
+<div class="api-symbol" id="ChartOptions"><div class="sig">ChartOptions</div><p class="api-gloss">chart options API Reference</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ChartOptions_aggregateLinks"><div class="sig">ChartOptions.aggregateLinks</div><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="ChartOptions_aggregateLinks_aggregateByDirection"><div class="sig">ChartOptions.aggregateLinks.aggregateByDirection</div><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="ChartOptions_backColour"><div class="sig">ChartOptions.backColour</div><p class="api-gloss">background colour</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ChartOptions_bands"><div class="sig">ChartOptions.bands</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ChartOptions_combos_shape"><div class="sig">ChartOptions.combos.shape</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="ChartOptions_controlTheme"><div class="sig">ChartOptions.controlTheme</div><p class="api-gloss">dark theme</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ChartOptions_defaultStyles"><div class="sig">ChartOptions.defaultStyles</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="ChartOptions_drag_links"><div class="sig">ChartOptions.drag.links</div><p class="api-sources"><span class="label">Described in</span> <a href="features/self-links.html">Self Links</a></p></div>
+<div class="api-symbol" id="ChartOptions_fontFamily"><div class="sig">ChartOptions.fontFamily</div><p class="api-sources"><span class="label">Described in</span> <a href="features/fonts-and-font-icons.html">Fonts and Font Icons</a></p></div>
+<div class="api-symbol" id="ChartOptions_gradient"><div class="sig">ChartOptions.gradient</div><p class="api-gloss">background gradient</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ChartOptions_iconFontFamily"><div class="sig">ChartOptions.iconFontFamily</div><p class="api-sources"><span class="label">Described in</span> <a href="features/fonts-and-font-icons.html">Fonts and Font Icons</a></p></div>
+<div class="api-symbol" id="ChartOptions_logo"><div class="sig">ChartOptions.logo</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ChartOptions_navigation"><div class="sig">ChartOptions.navigation</div><p class="api-gloss">navigation controls</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ChartOptions_overview"><div class="sig">ChartOptions.overview</div><p class="api-gloss">overview window</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ChartOptions_selectedNode_re"><div class="sig">ChartOptions.selectedNode.re</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="ChartOptions_watermark"><div class="sig">ChartOptions.watermark</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ChartOptions_zoom_adaptiveStyling"><div class="sig">ChartOptions.zoom.adaptiveStyling</div><p class="api-sources"><span class="label">Described in</span> <a href="features/chart-export.html">Chart Export</a></p></div>
+<h2 id="ChartEvents">ChartEvents<a class="heading-anchor" href="#ChartEvents" aria-label="Link to this section">#</a></h2>
+<p>Events a chart raises, subscribed to with chart.on().</p>
+<p class="api-count">24 referenced symbols</p>
+<div class="api-symbol" id="ChartEvents"><div class="sig">ChartEvents</div><p class="api-sources"><span class="label">Described in</span> <a href="integrations/angular-reference.html">Angular Reference</a> · <a href="basics/events-basics.html">Events Basics</a> · <a href="integrations/react-reference.html">React Reference</a> · <a href="integrations/vue-reference.html">Vue Reference</a></p></div>
+<div class="api-symbol" id="ChartEvents_all"><div class="sig">ChartEvents.all</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_click"><div class="sig">ChartEvents.click</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_context-menu"><div class="sig">ChartEvents.context-menu</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_double-click"><div class="sig">ChartEvents.double-click</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_drag-end"><div class="sig">ChartEvents.drag-end</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_drag-move"><div class="sig">ChartEvents.drag-move</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_drag-over"><div class="sig">ChartEvents.drag-over</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_drag-start"><div class="sig">ChartEvents.drag-start</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_hover"><div class="sig">ChartEvents.hover</div><p class="api-gloss">hover events</p><p class="api-sources"><span class="label">Described in</span> <a href="about/accessibility.html">Accessibility</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_key-down"><div class="sig">ChartEvents.key-down</div><p class="api-sources"><span class="label">Described in</span> <a href="about/accessibility.html">Accessibility</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_key-up"><div class="sig">ChartEvents.key-up</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_link-aggregation"><div class="sig">ChartEvents.link-aggregation</div><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="ChartEvents_link-aggregation_returns_change"><div class="sig">ChartEvents.link-aggregation.returns.change</div><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="ChartEvents_map"><div class="sig">ChartEvents.map</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_pointer-down"><div class="sig">ChartEvents.pointer-down</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_pointer-move"><div class="sig">ChartEvents.pointer-move</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_pointer-up"><div class="sig">ChartEvents.pointer-up</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_prechange"><div class="sig">ChartEvents.prechange</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_progress"><div class="sig">ChartEvents.progress</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_selection-change"><div class="sig">ChartEvents.selection-change</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a> · <a href="basics/time-bar.html">Time Bar</a></p></div>
+<div class="api-symbol" id="ChartEvents_setDragOptions"><div class="sig">ChartEvents.setDragOptions</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_view-change"><div class="sig">ChartEvents.view-change</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="ChartEvents_wheel"><div class="sig">ChartEvents.wheel</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/events-basics.html">Events Basics</a></p></div>
+<h2 id="ItemFormat">ItemFormat<a class="heading-anchor" href="#ItemFormat" aria-label="Link to this section">#</a></h2>
+<p>The shape of node, link, glyph and label objects you load.</p>
+<p class="api-count">66 referenced symbols</p>
+<div class="api-symbol" id="ItemFormat"><div class="sig">ItemFormat</div><p class="api-sources"><span class="label">Described in</span> <a href="installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></p></div>
+<div class="api-symbol" id="ItemFormat_Donut"><div class="sig">ItemFormat.Donut</div><p class="api-gloss">donuts</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ItemFormat_FontIcon"><div class="sig">ItemFormat.FontIcon</div><p class="api-gloss">font icons</p><p class="api-sources"><span class="label">Described in</span> <a href="best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></p></div>
+<div class="api-symbol" id="ItemFormat_FontIcon_properties_t"><div class="sig">ItemFormat.FontIcon.properties.t</div><p class="api-sources"><span class="label">Described in</span> <a href="features/fonts-and-font-icons.html">Fonts and Font Icons</a></p></div>
+<div class="api-symbol" id="ItemFormat_Glyph"><div class="sig">ItemFormat.Glyph</div><p class="api-gloss">glyphs</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ItemFormat_Halo"><div class="sig">ItemFormat.Halo</div><p class="api-gloss">halos</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ItemFormat_Link_properties_a1"><div class="sig">ItemFormat.Link.properties.a1</div><p class="api-gloss">arrows</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ItemFormat_Link_properties_bg"><div class="sig">ItemFormat.Link.properties.bg</div><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="ItemFormat_Link_properties_d"><div class="sig">ItemFormat.Link.properties.d</div><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="ItemFormat_Link_properties_hi"><div class="sig">ItemFormat.Link.properties.hi</div><p class="api-gloss">marked as hidden</p><p class="api-sources"><span class="label">Described in</span> <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="ItemFormat_Link_properties_t"><div class="sig">ItemFormat.Link.properties.t</div><p class="api-gloss">labels</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node"><div class="sig">ItemFormat.Node</div><p class="api-gloss">Node API Reference</p><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label"><div class="sig">ItemFormat.Node.Label</div><p class="api-gloss">labels</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/chart-basics.html">Chart Basics</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_b"><div class="sig">ItemFormat.Node.Label.properties.b</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_borderRadius"><div class="sig">ItemFormat.Node.Label.properties.borderRadius</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_bw"><div class="sig">ItemFormat.Node.Label.properties.bw</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_fb"><div class="sig">ItemFormat.Node.Label.properties.fb</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_fbc"><div class="sig">ItemFormat.Node.Label.properties.fbc</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_fc"><div class="sig">ItemFormat.Node.Label.properties.fc</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_ff"><div class="sig">ItemFormat.Node.Label.properties.ff</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_fi"><div class="sig">ItemFormat.Node.Label.properties.fi</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_fs"><div class="sig">ItemFormat.Node.Label.properties.fs</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_margin"><div class="sig">ItemFormat.Node.Label.properties.margin</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_maxHeight"><div class="sig">ItemFormat.Node.Label.properties.maxHeight</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_maxWidth"><div class="sig">ItemFormat.Node.Label.properties.maxWidth</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_minHeight"><div class="sig">ItemFormat.Node.Label.properties.minHeight</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_minWidth"><div class="sig">ItemFormat.Node.Label.properties.minWidth</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_padding"><div class="sig">ItemFormat.Node.Label.properties.padding</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_position"><div class="sig">ItemFormat.Node.Label.properties.position</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_position_horizontal"><div class="sig">ItemFormat.Node.Label.properties.position.horizontal</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_position_vertical"><div class="sig">ItemFormat.Node.Label.properties.position.vertical</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_t"><div class="sig">ItemFormat.Node.Label.properties.t</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_textAlignment"><div class="sig">ItemFormat.Node.Label.properties.textAlignment</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_textAlignment_horizontal"><div class="sig">ItemFormat.Node.Label.properties.textAlignment.horizontal</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_textAlignment_vertical"><div class="sig">ItemFormat.Node.Label.properties.textAlignment.vertical</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_Label_properties_textWrap"><div class="sig">ItemFormat.Node.Label.properties.textWrap</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_bg"><div class="sig">ItemFormat.Node.properties.bg</div><p class="api-sources"><span class="label">Described in</span> <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_borderRadius"><div class="sig">ItemFormat.Node.properties.borderRadius</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_d"><div class="sig">ItemFormat.Node.properties.d</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_e"><div class="sig">ItemFormat.Node.properties.e</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_ff"><div class="sig">ItemFormat.Node.properties.ff</div><p class="api-sources"><span class="label">Described in</span> <a href="features/fonts-and-font-icons.html">Fonts and Font Icons</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_fi"><div class="sig">ItemFormat.Node.properties.fi</div><p class="api-sources"><span class="label">Described in</span> <a href="features/fonts-and-font-icons.html">Fonts and Font Icons</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_h"><div class="sig">ItemFormat.Node.properties.h</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_hi"><div class="sig">ItemFormat.Node.properties.hi</div><p class="api-sources"><span class="label">Described in</span> <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_minHeight"><div class="sig">ItemFormat.Node.properties.minHeight</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_minWidth"><div class="sig">ItemFormat.Node.properties.minWidth</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_oc"><div class="sig">ItemFormat.Node.properties.oc</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_oc_borderRadius"><div class="sig">ItemFormat.Node.properties.oc.borderRadius</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_oc_g"><div class="sig">ItemFormat.Node.properties.oc.g</div><p class="api-gloss">custom glyphs</p><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_oc_h"><div class="sig">ItemFormat.Node.properties.oc.h</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_oc_w"><div class="sig">ItemFormat.Node.properties.oc.w</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_parentId"><div class="sig">ItemFormat.Node.properties.parentId</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_pos"><div class="sig">ItemFormat.Node.properties.pos</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_pos_lat"><div class="sig">ItemFormat.Node.properties.pos.lat</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_pos_lng"><div class="sig">ItemFormat.Node.properties.pos.lng</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_sh"><div class="sig">ItemFormat.Node.properties.sh</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_t"><div class="sig">ItemFormat.Node.properties.t</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_w"><div class="sig">ItemFormat.Node.properties.w</div><p class="api-sources"><span class="label">Described in</span> <a href="features/node-and-combo-styling.html">Node and Combo Styling</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_x"><div class="sig">ItemFormat.Node.properties.x</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ItemFormat_Node_properties_y"><div class="sig">ItemFormat.Node.properties.y</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="ItemFormat_Time_Bar_Item"><div class="sig">ItemFormat.Time.Bar.Item</div><p class="api-gloss">time bar</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<div class="api-symbol" id="ItemFormat_Time_Bar_Item_properties_dt"><div class="sig">ItemFormat.Time.Bar.Item.properties.dt</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<div class="api-symbol" id="ItemFormat_Time_Bar_Item_properties_v"><div class="sig">ItemFormat.Time.Bar.Item.properties.v</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<div class="api-symbol" id="ItemFormat_TimePeriod"><div class="sig">ItemFormat.TimePeriod</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<div class="api-symbol" id="ItemFormat_TimePeriod_properties_dt1"><div class="sig">ItemFormat.TimePeriod.properties.dt1</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<div class="api-symbol" id="ItemFormat_TimePeriod_properties_dt2"><div class="sig">ItemFormat.TimePeriod.properties.dt2</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<h2 id="Combo">Combo<a class="heading-anchor" href="#Combo" aria-label="Link to this section">#</a></h2>
+<p>Methods for grouping, nesting and expanding combos.</p>
+<p class="api-count">19 referenced symbols</p>
+<div class="api-symbol" id="Combo"><div class="sig">Combo</div><p class="api-gloss">Combo Functions</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_arrange"><div class="sig">Combo.arrange</div><p class="api-gloss">chart.combo().arrange()</p><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Combo_arrange_options_gridShape"><div class="sig">Combo.arrange.options.gridShape</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Combo_arrange_options_name"><div class="sig">Combo.arrange.options.name</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_close"><div class="sig">Combo.close</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Combo_combine"><div class="sig">Combo.combine</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Combo_combine_arguments_comboDefinition"><div class="sig">Combo.combine.arguments.comboDefinition</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_combine_arguments_comboDefinition_open"><div class="sig">Combo.combine.arguments.comboDefinition.open</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Combo_combine_arguments_comboDefinition_style"><div class="sig">Combo.combine.arguments.comboDefinition.style</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_combine_options_arrange"><div class="sig">Combo.combine.options.arrange</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a> · <a href="basics/layout-basics.html">Layout Basics</a></p></div>
+<div class="api-symbol" id="Combo_find"><div class="sig">Combo.find</div><p class="api-gloss">chart.combo().find()</p><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_info"><div class="sig">Combo.info</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_isCombo"><div class="sig">Combo.isCombo</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_isOpen"><div class="sig">Combo.isOpen</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Combo_open"><div class="sig">Combo.open</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Combo_reveal"><div class="sig">Combo.reveal</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/combos-concepts.html">Combos Concepts</a></p></div>
+<div class="api-symbol" id="Combo_transfer"><div class="sig">Combo.transfer</div><p class="api-gloss">chart.combo().transfer()</p><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Combo_transfer_options_arrange"><div class="sig">Combo.transfer.options.arrange</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a></p></div>
+<div class="api-symbol" id="Combo_uncombine"><div class="sig">Combo.uncombine</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/combos.html">Combos</a></p></div>
+<h2 id="Graph">Graph<a class="heading-anchor" href="#Graph" aria-label="Link to this section">#</a></h2>
+<p>The chart-independent graph engine used for analysis.</p>
+<p class="api-count">18 referenced symbols</p>
+<div class="api-symbol" id="Graph"><div class="sig">Graph</div><p class="api-gloss">chart.graph()</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/combos.html">Combos</a> · <a href="features/combos-concepts.html">Combos Concepts</a> · <a href="features/graph-engine.html">Graph Engine</a></p></div>
+<div class="api-symbol" id="Graph_betweenness"><div class="sig">Graph.betweenness</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_betweenness_options_directed"><div class="sig">Graph.betweenness.options.directed</div><p class="api-gloss">directed:true</p><p class="api-sources"><span class="label">Described in</span> <a href="features/graph-centrality.html">Graph Centrality</a></p></div>
+<div class="api-symbol" id="Graph_clear"><div class="sig">Graph.clear</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_closeness"><div class="sig">Graph.closeness</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_closeness_options_direction"><div class="sig">Graph.closeness.options.direction</div><p class="api-gloss">direction:&#x27;any&#x27;</p><p class="api-sources"><span class="label">Described in</span> <a href="features/graph-centrality.html">Graph Centrality</a></p></div>
+<div class="api-symbol" id="Graph_clusters"><div class="sig">Graph.clusters</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_components"><div class="sig">Graph.components</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="Graph_degrees"><div class="sig">Graph.degrees</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_degrees_options_direction"><div class="sig">Graph.degrees.options.direction</div><p class="api-gloss">direction:&#x27;any&#x27;</p><p class="api-sources"><span class="label">Described in</span> <a href="features/graph-centrality.html">Graph Centrality</a></p></div>
+<div class="api-symbol" id="Graph_distances"><div class="sig">Graph.distances</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<div class="api-symbol" id="Graph_eigenCentrality"><div class="sig">Graph.eigenCentrality</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_kCores"><div class="sig">Graph.kCores</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_load"><div class="sig">Graph.load</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_neighbours"><div class="sig">Graph.neighbours</div><p class="api-gloss">chart.graph().neighbours()</p><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a> · <a href="installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a> · <a href="installing/using-graph-nexus-with-react.html">Using Nexus with React</a> · <a href="installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a> · <a href="installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></p></div>
+<div class="api-symbol" id="Graph_pageRank"><div class="sig">Graph.pageRank</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Graph_pageRank_options_directed"><div class="sig">Graph.pageRank.options.directed</div><p class="api-gloss">directed:true</p><p class="api-sources"><span class="label">Described in</span> <a href="features/graph-centrality.html">Graph Centrality</a></p></div>
+<div class="api-symbol" id="Graph_shortestPaths"><div class="sig">Graph.shortestPaths</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="features/aggregate-links.html">Aggregate Links</a></p></div>
+<h2 id="TimeBar">TimeBar<a class="heading-anchor" href="#TimeBar" aria-label="Link to this section">#</a></h2>
+<p>Methods on a time bar instance.</p>
+<p class="api-count">21 referenced symbols</p>
+<div class="api-symbol" id="TimeBar"><div class="sig">TimeBar</div><p class="api-gloss">function</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<div class="api-symbol" id="TimeBar_bind"><div class="sig">TimeBar.bind</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_clear"><div class="sig">TimeBar.clear</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_destroy"><div class="sig">TimeBar.destroy</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_getIds"><div class="sig">TimeBar.getIds</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_inRange"><div class="sig">TimeBar.inRange</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_load"><div class="sig">TimeBar.load</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_mark"><div class="sig">TimeBar.mark</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_merge"><div class="sig">TimeBar.merge</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_off"><div class="sig">TimeBar.off</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="TimeBar_on"><div class="sig">TimeBar.on</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/events-basics.html">Events Basics</a></p></div>
+<div class="api-symbol" id="TimeBar_options"><div class="sig">TimeBar.options</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></p></div>
+<div class="api-symbol" id="TimeBar_pan"><div class="sig">TimeBar.pan</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_pause"><div class="sig">TimeBar.pause</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_play"><div class="sig">TimeBar.play</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_range"><div class="sig">TimeBar.range</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></p></div>
+<div class="api-symbol" id="TimeBar_removeItem"><div class="sig">TimeBar.removeItem</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_selection"><div class="sig">TimeBar.selection</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_setContainer"><div class="sig">TimeBar.setContainer</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_unbind"><div class="sig">TimeBar.unbind</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="TimeBar_zoom"><div class="sig">TimeBar.zoom</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<h2 id="TimeBarOptions">TimeBarOptions<a class="heading-anchor" href="#TimeBarOptions" aria-label="Link to this section">#</a></h2>
+<p>Options that control time bar appearance and behaviour.</p>
+<p class="api-count">1 referenced symbol</p>
+<div class="api-symbol" id="TimeBarOptions"><div class="sig">TimeBarOptions</div><p class="api-gloss">option</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<h2 id="TimeBarEvents">TimeBarEvents<a class="heading-anchor" href="#TimeBarEvents" aria-label="Link to this section">#</a></h2>
+<p>Events raised by the time bar.</p>
+<p class="api-count">2 referenced symbols</p>
+<div class="api-symbol" id="TimeBarEvents"><div class="sig">TimeBarEvents</div><p class="api-sources"><span class="label">Described in</span> <a href="integrations/angular-reference.html">Angular Reference</a> · <a href="basics/events-basics.html">Events Basics</a> · <a href="integrations/react-reference.html">React Reference</a> · <a href="basics/time-bar.html">Time Bar</a> · <a href="integrations/vue-reference.html">Vue Reference</a></p></div>
+<div class="api-symbol" id="TimeBarEvents_change"><div class="sig">TimeBarEvents.change</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/time-bar.html">Time Bar</a></p></div>
+<h2 id="Map">Map<a class="heading-anchor" href="#Map" aria-label="Link to this section">#</a></h2>
+<p>Methods available in map mode.</p>
+<p class="api-count">8 referenced symbols</p>
+<div class="api-symbol" id="Map"><div class="sig">Map</div><p class="api-gloss">function</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Map_hide"><div class="sig">Map.hide</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Map_isShown"><div class="sig">Map.isShown</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Map_leafletMap"><div class="sig">Map.leafletMap</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Map_mapCoordinates"><div class="sig">Map.mapCoordinates</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<div class="api-symbol" id="Map_options"><div class="sig">Map.options</div><p class="api-gloss">chart.map().options()</p><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Map_show"><div class="sig">Map.show</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="Map_viewCoordinates"><div class="sig">Map.viewCoordinates</div><p class="api-sources"><span class="label">Described in</span> <a href="api-signatures.html">API Signatures</a></p></div>
+<h2 id="MapOptions">MapOptions<a class="heading-anchor" href="#MapOptions" aria-label="Link to this section">#</a></h2>
+<p>Options that control map mode.</p>
+<p class="api-count">4 referenced symbols</p>
+<div class="api-symbol" id="MapOptions"><div class="sig">MapOptions</div><p class="api-gloss">chart.map().options()</p><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="MapOptions_animate"><div class="sig">MapOptions.animate</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="MapOptions_leaflet"><div class="sig">MapOptions.leaflet</div><p class="api-sources"><span class="label">Described in</span> <a href="basics/map-mode.html">Map Mode</a></p></div>
+<div class="api-symbol" id="MapOptions_tiles"><div class="sig">MapOptions.tiles</div><p class="api-sources"><span class="label">Described in</span> <a href="best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a> · <a href="basics/map-mode.html">Map Mode</a></p></div>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../graph-nexus/index.html"><span class="dir">Previous</span><span class="label">Documentation Home</span></a>
+<a class="next" href="../graph-nexus/api-signatures.html"><span class="dir">Next</span><span class="label">API Signatures</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#GraphNexus">GraphNexus</a></li>
+<li class="lvl-2"><a href="#Chart">Chart</a></li>
+<li class="lvl-2"><a href="#ChartOptions">ChartOptions</a></li>
+<li class="lvl-2"><a href="#ChartEvents">ChartEvents</a></li>
+<li class="lvl-2"><a href="#ItemFormat">ItemFormat</a></li>
+<li class="lvl-2"><a href="#Combo">Combo</a></li>
+<li class="lvl-2"><a href="#Graph">Graph</a></li>
+<li class="lvl-2"><a href="#TimeBar">TimeBar</a></li>
+<li class="lvl-2"><a href="#TimeBarOptions">TimeBarOptions</a></li>
+<li class="lvl-2"><a href="#TimeBarEvents">TimeBarEvents</a></li>
+<li class="lvl-2"><a href="#Map">Map</a></li>
+<li class="lvl-2"><a href="#MapOptions">MapOptions</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Accessibility — Nexus Documentation | Graph Nexus</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nexus is a visual tool, so we don&#x27;t support many of the accessibility requirements for non-visual representations described in W3C’s Web Content Accessibil">
+<link rel="icon" href="../../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../../assets/doc.css">
+</head>
+<body data-root="../../">
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site">
+  <div class="logo">
+    <a href="../../site/index.html">
+      <img class="logo-light" src="../../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22">
+    </a>
+  </div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
+    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+  </button>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Documentation">
+    <a href="../../site/index.html">Home</a>
+    <a href="../../graph-nexus/index.html" class="current">Documentation</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+<div class="doc-layout">
+<nav class="doc-nav" id="doc-nav" aria-label="Graph Nexus documentation">
+<details class="doc-nav-group">
+<summary>Overview</summary><ul>
+<li><a href="../../graph-nexus/index.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/api.html">API Index</a></li>
+<li><a href="../../graph-nexus/api-signatures.html">API Signatures</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Installing Nexus</summary><ul>
+<li><a href="../../graph-nexus/installing/installing-graph-nexus.html">Installing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/importing-graph-nexus.html">Importing Nexus</a></li>
+<li><a href="../../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a></li>
+<li><a href="../../graph-nexus/installing/upgrading.html">Upgrading</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-angular.html">Using Nexus with Angular</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-rollup.html">Using Nexus with Rollup</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-vue.html">Using Nexus with Vue</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-webpack.html">Using Nexus with Webpack</a></li>
+<li><a href="../../graph-nexus/installing/using-graph-nexus-with-plain-javascript.html">Using Nexus with plain JavaScript</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Basics</summary><ul>
+<li><a href="../../graph-nexus/basics/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/basics/chart-basics.html">Chart Basics</a></li>
+<li><a href="../../graph-nexus/basics/combos.html">Combos</a></li>
+<li><a href="../../graph-nexus/basics/events-basics.html">Events Basics</a></li>
+<li><a href="../../graph-nexus/basics/layout-basics.html">Layout Basics</a></li>
+<li><a href="../../graph-nexus/basics/loading-data.html">Loading Data</a></li>
+<li><a href="../../graph-nexus/basics/map-mode.html">Map Mode</a></li>
+<li><a href="../../graph-nexus/basics/time-bar.html">Time Bar</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Features</summary><ul>
+<li><a href="../../graph-nexus/features/3d-view.html">3D View</a></li>
+<li><a href="../../graph-nexus/features/aggregate-links.html">Aggregate Links</a></li>
+<li><a href="../../graph-nexus/features/chart-export.html">Chart Export</a></li>
+<li><a href="../../graph-nexus/features/combos-concepts.html">Combos Concepts</a></li>
+<li><a href="../../graph-nexus/features/fonts-and-font-icons.html">Fonts and Font Icons</a></li>
+<li><a href="../../graph-nexus/features/graph-centrality.html">Graph Centrality</a></li>
+<li><a href="../../graph-nexus/features/graph-engine.html">Graph Engine</a></li>
+<li><a href="../../graph-nexus/features/node-and-combo-styling.html">Node and Combo Styling</a></li>
+<li><a href="../../graph-nexus/features/pdf-export.html">PDF Export</a></li>
+<li><a href="../../graph-nexus/features/right-to-left-text.html">Right-to-Left Text</a></li>
+<li><a href="../../graph-nexus/features/self-links.html">Self Links</a></li>
+<li><a href="../../graph-nexus/features/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Best Practices</summary><ul>
+<li><a href="../../graph-nexus/best-practices/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+<li><a href="../../graph-nexus/best-practices/coding-and-testing-tips.html">Coding and Testing Tips</a></li>
+<li><a href="../../graph-nexus/best-practices/cross-origin-images-cors.html">Cross-Origin Images (CORS)</a></li>
+<li><a href="../../graph-nexus/best-practices/image-formats.html">Image Formats</a></li>
+<li><a href="../../graph-nexus/best-practices/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/best-practices/resizing-components.html">Resizing Components</a></li>
+<li><a href="../../graph-nexus/best-practices/troubleshooting.html">Troubleshooting</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Third Party Integrations</summary><ul>
+<li><a href="../../graph-nexus/integrations/angular-reference.html">Angular Reference</a></li>
+<li><a href="../../graph-nexus/integrations/neo4j-tutorial.html">Neo4j Tutorial</a></li>
+<li><a href="../../graph-nexus/integrations/react-reference.html">React Reference</a></li>
+<li><a href="../../graph-nexus/integrations/third-party-libraries.html">Platforms and Dependencies</a></li>
+<li><a href="../../graph-nexus/integrations/vue-reference.html">Vue Reference</a></li>
+<li><a href="../../graph-nexus/integrations/webgl.html">WebGL</a></li>
+</ul></details>
+<details class="doc-nav-group" open>
+<summary>About Nexus</summary><ul>
+<li><a href="../../graph-nexus/about/accessibility.html" class="current" aria-current="page">Accessibility</a></li>
+<li><a href="../../graph-nexus/about/alpha-beta-features.html">Alpha and Beta Features</a></li>
+<li><a href="../../graph-nexus/about/deprecation-process.html">Deprecation Process</a></li>
+<li><a href="../../graph-nexus/about/performance.html">Performance</a></li>
+<li><a href="../../graph-nexus/about/security.html">Security</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Overview</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/docs.html">Documentation Home</a></li>
+<li><a href="../../graph-nexus/timeline/js/api.html">API Reference</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Getting Started</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/getting-started.html">Getting Started</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating.html">Updating</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Basics</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/timeline-basics.html">Timeline Essentials</a></li>
+<li><a href="../../graph-nexus/timeline/js/scales.html">Scales</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Items</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/entities.html">Entities</a></li>
+<li><a href="../../graph-nexus/timeline/js/events.html">Events</a></li>
+<li><a href="../../graph-nexus/timeline/js/markers.html">Markers</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-series-charts.html">Time Series Charts</a></li>
+<li><a href="../../graph-nexus/timeline/js/heatmap.html">Heatmap</a></li>
+<li><a href="../../graph-nexus/timeline/js/font-icons.html">Font Icons</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Data and Time</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-data.html">Handling Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/updating-data.html">Updating Data</a></li>
+<li><a href="../../graph-nexus/timeline/js/handling-time.html">Handling Time</a></li>
+<li><a href="../../graph-nexus/timeline/js/time-zones.html">Time Zones</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Interaction</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/handling-events.html">Handling Events</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · Integration</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/graph-nexus-integration.html">Nexus Integration</a></li>
+<li><a href="../../graph-nexus/timeline/js/export.html">Export</a></li>
+<li><a href="../../graph-nexus/timeline/js/migration.html">Migration</a></li>
+</ul></details>
+<details class="doc-nav-group">
+<summary>Timeline · About</summary><ul>
+<li><a href="../../graph-nexus/timeline/js/architecture.html">Architecture</a></li>
+<li><a href="../../graph-nexus/timeline/js/accessibility.html">Accessibility</a></li>
+<li><a href="../../graph-nexus/timeline/js/obfuscation-requirements.html">Obfuscation Requirements</a></li>
+<li><a href="../../graph-nexus/timeline/js/alpha-beta-features.html">Alpha, Beta and Deprecated Features</a></li>
+</ul></details>
+</nav>
+<main class="doc-content" id="content">
+<h1>Accessibility</h1><p>Nexus is a visual tool, so we don't support many of the accessibility requirements for non-visual representations described in W3C’s <a href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a> and <a href="http://www.section508.gov/">Section 508 of the Rehabilitation Act of 1973</a>. 
+Having said that, we work hard to make sure you can create applications that are as accessible and easy to use as possible. 
+Here are some guidelines.</p><h2 id="browser-and-os">Browser and operating system support<a class="heading-anchor" href="#browser-and-os" aria-label="Link to this section">#</a></h2><p>Operating systems and browsers have built-in accessibility features such as screen magnifiers, keyboard shortcuts and system speech packages. Check their accessibility documentation to see what comes for free. For example:</p><ul><li> <a href="https://support.apple.com/en-gb/accessibility">Apple: Accessibility Support</a></li><li> <a href="https://support.mozilla.org/en-US/kb/accessibility-features-firefox-make-firefox-and-we">Firefox: Accessibility Features</a></li><li> <a href="https://support.google.com/accessibility/android/answer/6006564?hl=en-GB">Google: Android Accessibility Overview</a></li></ul><h2 id="keyboard">Using a keyboard instead of a mouse<a class="heading-anchor" href="#keyboard" aria-label="Link to this section">#</a></h2><p> Nexus supports the following shortcuts by default, although some keys may differ depending on your keyboard: </p><div><div class="table-scroll"><table class="table"><thead><tr><th>Action</th><th>Shortcut</th></tr></thead><tbody><tr><td>Cancel and revert active dragging</td><td>Esc</td></tr><tr><td>Delete selected items</td><td>Del</td></tr><tr><td>Move selected items</td><td>Up, down, left, right arrows </td></tr><tr><td>Play timebar animation</td><td>Space</td></tr><tr><td>Select all</td><td>consistentCtrl + A</td></tr></tbody></table></div></div><p></p><p> Some standard mouse-free navigation is supported by your browser, such as using the TAB key to cycle through form controls. </p><p>You can attach to Nexus or JavaScript events to create more shortcuts within your application. Typically, you'll attach to the chart's <a href="../api.html#ChartEvents_key-down">key-down event</a> to trigger behaviours while the chart has focus, or to the page's <a href="https://developer.mozilla.org/en-US/docs/Web/Events/keydown">keydown event</a> otherwise.</p><p> In order for events bound to the Nexus chart or HTML element to fire, the chart must first be focussed. 
+This can be done by giving the focus to Nexus element, for example:</p><pre class="prettyprint prettyprinted"><code class="lang-html"><span class="pln">document.getElementById('kl').focus(true);   </span></code></pre><p></p><p>When planning keyboard shortcuts for your application, you should avoid overriding native browser and 
+operating system shortcuts that affect the browser behaviour (e.g. Ctrl+N, Ctrl+O, Ctrl+S, Ctrl+P, Ctrl+W). 
+Instead, it's better to extend native browser shortcuts for the page content (e.g. Ctrl+C/V/X/D, Ctrl+Z, Ctrl+A, Ctrl+F, Space).</p><h2 id="text-charts">Creating text versions of charts<a class="heading-anchor" href="#text-charts" aria-label="Link to this section">#</a></h2><p> To create a text version of a chart, use <a href="../api.html#Chart_serialize">chart.serialize</a> to export the chart content and parse it into text. You may consider creating lists of node and link labels. 
+The output can be reused by a text reader or text-to-speech system.</p><p> If you need to support alternative text for images, remove the JSON formatting from the text version of your chart and add hidden text boxes that describe the image. 
+Your text-to-speech system will then be able to process them.</p><h2 id="audio">Working with audio<a class="heading-anchor" href="#audio" aria-label="Link to this section">#</a></h2><p> Nexus does not have built-in text-to-speech capabilities. 
+If you want to play a chart animation at the same time as an audio soundtrack you’ve created, use the <a href="../api.html#Chart_layout">chart.layout</a> time option to make sure the animation matches the audio length. </p><p> You can also bind audio files to <a href="../api.html#ChartEvents_hover">hover events</a> so that labels are ‘read out loud’ when a user moves their mouse pointer over items.</p><h2 id="colours">Choosing colours<a class="heading-anchor" href="#colours" aria-label="Link to this section">#</a></h2><p>It’s important to choose colours carefully. 
+Users with colour deficiencies and blindness have difficulty distinguishing between contrasting colours with similar hues, saturation and lightness. 
+There are a number of free tools that can check your colour schemes for accessibility, including this useful <a href="https://snook.ca/technical/colour_contrast/colour.html#fg=48FF33,bg=333333">Colour Contrast Check</a>.</p><p>Avoid relying on colour alone to convey important information on your chart. Make sure your users can select alternative options such as size, halos, glyphs or animation.</p><h2 id="ping">Using ping with caution<a class="heading-anchor" href="#ping" aria-label="Link to this section">#</a></h2><p>Flashes or flickers on screen, or a rapid change in image sequence, can cause seizures in those with photosensitive epilepsy (PSE). 
+For details, see the W3C guidelines on <a href="https://www.w3.org/TR/WCAG20/#seizure">Seizures</a>. </p><p> The <a href="../api.html#Chart_ping">ping function</a> adds an animated effect to nodes and links. 
+If your users may be sensitive to flashing images, allow them to turn off this feature, or make sure the time and colour options comply with the W3C guidelines. </p>
+<nav class="page-nav" aria-label="Previous and next page">
+<a class="prev" href="../../graph-nexus/integrations/webgl.html"><span class="dir">Previous</span><span class="label">WebGL</span></a>
+<a class="next" href="../../graph-nexus/about/alpha-beta-features.html"><span class="dir">Next</span><span class="label">Alpha and Beta Features</span></a>
+</nav>
+</main>
+<aside class="doc-toc" aria-label="On this page">
+<h2>On this page</h2>
+<ul>
+<li class="lvl-2"><a href="#browser-and-os">Browser and operating system support</a></li>
+<li class="lvl-2"><a href="#keyboard">Using a keyboard instead of a mouse</a></li>
+<li class="lvl-2"><a href="#text-charts">Creating text versions of charts</a></li>
+<li class="lvl-2"><a href="#audio">Working with audio</a></li>
+<li class="lvl-2"><a href="#colours">Choosing colours</a></li>
+<li class="lvl-2"><a href="#ping">Using ping with caution</a></li>
+</ul>
+</aside>
+</div>
+<footer class="site">
+  <p>Graph Nexus</p>
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+</footer>
+<script src="../../assets/search-index.js"></script>
+<script src="../../assets/docs.js"></script>
+</body>
+</html>
