@@ -809,15 +809,15 @@ footer.site .legal { color: var(--grey-light); font-size: .8rem; }
 /* Logo swaps with the theme; the theme switch sits at the end of the header. */
 header.site .logo .logo-dark, [data-theme="dark"] header.site .logo .logo-light { display: none; }
 [data-theme="dark"] header.site .logo .logo-dark { display: block; }
-/* Theme switch: a 34px pill matching the header's GitHub button (thin --line border, --surface
+/* Theme switch: a compact 31x17 pill in the header's style (thin --line border, --surface
    track). The knob is --navy like the GitHub icon: sun on the left in light mode, moon on the
    right in dark mode. Checked = dark. The checkbox stays in the tab order (visually hidden,
    not display: none) so keyboard users can reach it. */
 .toggle-switch {
   position: relative;
   flex: none;
-  width: 62px;
-  height: 34px;
+  width: 31px;
+  height: 17px;
 }
 .switch-label {
   position: absolute;
@@ -825,39 +825,40 @@ header.site .logo .logo-dark, [data-theme="dark"] header.site .logo .logo-light 
   box-sizing: border-box;
   background-color: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 17px;
+  border-radius: 9px;
   cursor: pointer;
   transition: border-color .2s var(--ease), transform .16s var(--ease);
 }
 .switch-label:hover { border-color: var(--brand); }
 .toggle-switch .checkbox {
   position: absolute;
+  inset: -5px -3px;            /* clickable area 35x25 (above the 24px minimum) around the 17px pill */
   opacity: 0;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   margin: 0;
   cursor: pointer;
 }
 .slider {
   position: absolute;
   inset: 0;
-  border-radius: 17px;
+  border-radius: 9px;
 }
 .slider::before {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 26px;
-  height: 26px;
+  top: 1px;
+  left: 1px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  background: var(--navy) url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%222.2%22 stroke-linecap=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%224.2%22 fill=%22%23ffffff%22/%3E%3Cpath d=%22M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6%22/%3E%3C/svg%3E") center / 16px no-repeat;
+  background: var(--navy) url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%222.2%22 stroke-linecap=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%224.2%22 fill=%22%23ffffff%22/%3E%3Cpath d=%22M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6%22/%3E%3C/svg%3E") center / 9px no-repeat;
   transition: transform .2s var(--ease);
 }
 .checkbox:checked ~ .slider::before {
-  transform: translateX(28px);
+  transform: translateX(14px);
   background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath fill=%22%23120c0a%22 d=%22M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z%22/%3E%3C/svg%3E");
-  background-size: 15px;
+  background-size: 8px;
 }
 .toggle-switch .checkbox:focus-visible ~ .slider { outline: 2px solid var(--brand); outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { .slider::before, .switch-label { transition: none; } }
@@ -939,10 +940,10 @@ header.site .header-search + nav { margin-left: 0; }
 
 /* GitHub link in the header: a round icon button that opens the repo. */
 header.site nav a.gh-star {
-  display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px;
+  display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;
   border: 1px solid var(--line); border-radius: 50%; color: var(--navy);
 }
-header.site nav a.gh-star svg { width: 18px; height: 18px; }
+header.site nav a.gh-star svg { width: 24px; height: 24px; }
 header.site nav a.gh-star:hover { border-color: var(--brand); color: var(--brand); text-decoration: none; }
 @media (max-width: 600px) {
   /* Small screens: mark only (cropped from the same logo image); the logo already links home. */
