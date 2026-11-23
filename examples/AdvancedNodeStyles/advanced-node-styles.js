@@ -13,7 +13,8 @@ function highlightSelection(id) {
 // Font Awesome / Material code points -> the call that produced them, for the code panel.
 const iconNames = {};
 ['fa-user', 'fa-circle', 'fa-shuffle', 'fa-caret-down', 'fa-envelope', 'fa-code', 'fa-bug', 'fa-database',
-  'fa-hdd', 'fa-server', 'fa-desktop', 'fa-up-right-from-square'].forEach(name => {
+  'fa-hdd', 'fa-server', 'fa-desktop', 'fa-up-right-from-square',
+  'fa-credit-card', 'fa-temperature-half', 'fa-flag', 'fa-circle-check', 'fa-eye'].forEach(name => {
   iconNames[GraphNexus.getFontIcon(`fa-solid ${name}`)] = name;
 });
 
@@ -47,7 +48,7 @@ function setHovered({ id, labelIndex }, isHovered) {
   if (!node || node.t.length <= labelIndex) return;
   const labels = node.t.map(l => ({ ...l }));
   // Hover colour is the midpoint of the two styles' colours.
-  labels[labelIndex].fbc = isHovered ? '#9A9B9B' : nodeStyles[styleInverted ? 'inverted' : 'normal'].t[labelIndex].fbc;
+  labels[labelIndex].fbc = isHovered ? '#939197' : nodeStyles[styleInverted ? 'inverted' : 'normal'].t[labelIndex].fbc;
   chart.setProperties({ id, t: labels });
 }
 
@@ -115,12 +116,12 @@ async function start() {
     container: 'klchart',
     options: {
       handMode: true,
-      selectionColour: '#FF9933',
+      selectionColour: '#e09f3e',
       iconFontFamily: 'FontAwesomeSolid',
       fontFamily: 'Muli',
       overview: { icon: false },
       navigation: { shown: false },
-      backColour: 'rgb(238,238,238)',
+      backColour: '#f7f3f1',
     },
   });
   await chart.load(data);

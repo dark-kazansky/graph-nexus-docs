@@ -18,9 +18,9 @@ function makeProfileCardNode(id, x, y) {
       {
         fi: { t: icon('fa-user') },
         fs: 64,
-        fc: 'rgb(65, 105, 168)',
+        fc: 'rgb(109, 59, 110)',
         fbc: 'white',
-        b: 'rgb(29, 66, 117)',
+        b: 'rgb(74, 35, 75)',
         bw: 5,
         borderRadius: 60,
         minHeight: 100,
@@ -34,21 +34,21 @@ function makeProfileCardNode(id, x, y) {
         t: 'John Doe',
         fs: 30,
         fb: true,
-        fc: 'rgb(29, 66, 117)',
+        fc: 'rgb(74, 35, 75)',
         fbc: 'transparent',
         margin: '10 0 0 0',
       },
       {
         fi: { t: icon('fa-envelope') },
         fs: 12,
-        fc: 'rgb(65, 105, 168)',
+        fc: 'rgb(109, 59, 110)',
         fbc: 'transparent',
         margin: '10 0 0 0',
       },
       {
         t: 'john.doe@example.com',
         fs: 10,
-        fc: 'rgb(65, 105, 168)',
+        fc: 'rgb(109, 59, 110)',
         fbc: 'transparent',
         margin: '10 0 0 0',
         position: {
@@ -58,7 +58,7 @@ function makeProfileCardNode(id, x, y) {
       {
         fi: { t: icon('fa-code') },
         fs: 12,
-        fc: 'rgb(65, 105, 168)',
+        fc: 'rgb(109, 59, 110)',
         fbc: 'transparent',
         margin: '10 0 0 0',
       },
@@ -76,7 +76,7 @@ function makeProfileCardNode(id, x, y) {
         t: 'john.doe@example.com',
         fs: 10,
         fc: 'white',
-        fbc: 'rgb(65, 105, 168)',
+        fbc: 'rgb(109, 59, 110)',
         borderRadius: '0 0 6 6',
         margin: '10 0 0 0',
         padding: '10 0 10 0',
@@ -95,10 +95,10 @@ function makeBusinessProcessNode(id, x, y) {
     id,
     x,
     y,
-    c: '#f7f6ed',
+    c: '#fdf8f1',
     w: 480,
     h: 120,
-    b: '#C6CED2',
+    b: '#e6dccd',
     bw: 2,
     borderRadius: 10,
     t: [
@@ -154,7 +154,7 @@ function makeBusinessProcessNode(id, x, y) {
       {
         fi: {
           t: icon('fa-caret-down'),
-          c: '#F46649',
+          c: '#c8553d',
         },
         fs: 36,
         fbc: 'transparent',
@@ -174,7 +174,7 @@ function makeBusinessProcessNode(id, x, y) {
       {
         t: '45.12%',
         fs: 24,
-        fc: '#F46649',
+        fc: '#c8553d',
         fbc: 'transparent',
         textAlignment: {
           vertical: 'bottom',
@@ -189,7 +189,7 @@ function makeBusinessProcessNode(id, x, y) {
       },
       {
         fs: 0,
-        fbc: '#C6CED2',
+        fbc: '#e6dccd',
         minWidth: 482,
         minHeight: 18,
         borderRadius: [0, 0, 9, 9],
@@ -203,7 +203,7 @@ function makeBusinessProcessNode(id, x, y) {
         minWidth: 118.5,
         fs: 10,
         borderRadius: [0, 0, 0, 10],
-        fbc: '#F46649',
+        fbc: '#c8553d',
         position: {
           vertical: 'bottom',
           horizontal: 'left',
@@ -221,7 +221,7 @@ function makeShadowCircleNode(id, x, y, colour, icon, text) {
     x,
     y,
     c: colour,
-    b: '#283618',
+    b: '#3e5641',
     bw: 2,
     e: 1.5,
     ff: 'Muli',
@@ -254,7 +254,7 @@ function makeShadowCircleNode(id, x, y, colour, icon, text) {
       {
         fi: { t: icon, ff: 'MaterialIcons' },
         fs: 30,
-        fc: '#283618',
+        fc: '#3e5641',
         fbc: 'rgba(0, 0, 0, 0)',
         padding: {
           top: 6,
@@ -268,7 +268,7 @@ function makeShadowCircleNode(id, x, y, colour, icon, text) {
         t: text,
         fs: 10,
         fb: true,
-        fc: '#283618',
+        fc: '#3e5641',
         fbc: 'rgba(0, 0, 0, 0)',
       },
     ],
@@ -374,7 +374,84 @@ function makeInteractiveNode(id, x, y, backgroundColour, accentColour) {
   };
 }
 
-export const invertedNode = makeInteractiveNode('t2', 450, 100, '#404347', '#f4f3ee');
+/** Payment card: icon tile, amount, parties and a status pill. */
+function makePaymentNode(id, x, y) {
+  return {
+    type: 'node', id, x, y, c: '#fffdf9', b: '#e6dccd', bw: 2, w: 260, h: 'auto', borderRadius: 14, ff: 'Muli',
+    t: [
+      { fi: { t: icon('fa-credit-card') }, fs: 22, fc: 'white', fbc: '#6d3b6e', borderRadius: 10, minWidth: 44, minHeight: 44,
+        margin: '14 0 0 14', position: { horizontal: 'left', vertical: 'top' } },
+      { t: '12,450,000 VND', fs: 20, fb: true, fc: '#2b2d42', fbc: 'transparent', margin: '14 0 0 10', position: { vertical: 'inherit' } },
+      { t: 'Lotus Harbour  >  Cat Lai Freight', fs: 12, fc: '#5c6378', fbc: 'transparent', margin: '2 14 0 68', position: { horizontal: 'left' } },
+      { t: 'Settled', fs: 12, fb: true, fc: '#3e5641', fbc: '#dfe8d2', borderRadius: 12, padding: '4 10 3 10',
+        margin: '10 0 14 14', position: { horizontal: 'left' } },
+      { t: '23 Nov, 09:41', fs: 12, fc: '#8d99ae', fbc: 'transparent', margin: '0 14 0 0', position: { vertical: 'inherit', horizontal: 'right' } },
+    ],
+  };
+}
+
+/** Stacked bar: a title, three segments sized by share, and a legend. */
+function makeStackedBarNode(id, x, y) {
+  const segment = (share, colour, radius) => ({
+    t: '', fbc: colour, minWidth: Math.round(220 * share), minHeight: 14, borderRadius: radius, margin: 0, padding: 0,
+    position: { vertical: 'inherit' },
+  });
+  const legend = (text, colour, first) => ({
+    t: text, fs: 12, fc: colour, fb: true, fbc: 'transparent', margin: first ? '10 0 14 16' : '10 0 14 12',
+    position: first ? { horizontal: 'left' } : { vertical: 'inherit' },
+  });
+  return {
+    type: 'node', id, x, y, c: '#fffdf9', b: '#e6dccd', bw: 2, w: 252, h: 'auto', borderRadius: 14, ff: 'Muli',
+    t: [
+      { t: 'Stock by warehouse', fs: 14, fb: true, fc: '#2b2d42', fbc: 'transparent', margin: '14 0 10 16', position: { horizontal: 'left', vertical: 'top' } },
+      { ...segment(0.52, '#6d3b6e', '7 0 0 7'), margin: '0 0 0 16', position: { horizontal: 'left' } },
+      segment(0.31, '#b5446e', 0),
+      segment(0.17, '#edae49', '0 7 7 0'),
+      legend('52% Binh Duong', '#6d3b6e', true),
+      legend('31% Long An', '#b5446e'),
+      legend('17%', '#c08a2c'),
+    ],
+  };
+}
+
+/** Avatar: initials in a circle, a notification badge glyph and a name pill. */
+function makeAvatarNode(id, x, y) {
+  return {
+    type: 'node', id, x, y, c: '#b5446e', b: '#fbf5ec', bw: 4, e: 2.2, ff: 'Muli',
+    g: [{ p: 45, c: '#c8553d', b: 'white', t: '3', fc: 'white', e: 1.1 }],
+    t: [
+      { t: 'LN', fs: 26, fb: true, fc: 'white', fbc: 'transparent' },
+      { t: 'Linh Nguyen', fs: 13, fb: true, fc: 'white', fbc: '#2b2d42', borderRadius: 12, padding: '5 10 4 10', position: 's' },
+    ],
+  };
+}
+
+/** Sensor tile: icon, a large reading, its unit and where it was taken. */
+function makeSensorNode(id, x, y) {
+  return {
+    type: 'node', id, x, y, c: '#2b2d42', w: 170, h: 'auto', borderRadius: 16, ff: 'Muli',
+    t: [
+      { fi: { t: icon('fa-temperature-half') }, fs: 26, fc: '#edae49', fbc: 'transparent', margin: '14 0 0 16', position: { horizontal: 'left', vertical: 'top' } },
+      { t: 'Cold room 2', fs: 12, fc: '#c9c3d6', fbc: 'transparent', margin: '18 16 0 0', position: { vertical: 'inherit', horizontal: 'right' } },
+      { t: '3.6', fs: 40, fb: true, fc: 'white', fbc: 'transparent', margin: '6 0 0 16', position: { horizontal: 'left' } },
+      { t: '°C', fs: 18, fc: '#edae49', fbc: 'transparent', margin: '14 0 0 4', position: { vertical: 'inherit' } },
+      { t: 'Target 2 to 5 °C', fs: 11, fc: '#a3b18a', fbc: 'transparent', margin: '4 0 14 16', position: { horizontal: 'left' } },
+    ],
+  };
+}
+
+/** Tag pill: a small capsule with an icon and a word. */
+function makeTagNode(id, x, y, colour, iconName, text) {
+  return {
+    type: 'node', id, x, y, c: colour, w: 'auto', h: 34, borderRadius: 17, ff: 'Muli',
+    t: [
+      { fi: { t: icon(`fa-${iconName}`) }, fs: 14, fc: 'white', fbc: 'transparent', margin: '0 0 0 14' },
+      { t: text, fs: 14, fb: true, fc: 'white', fbc: 'transparent', margin: '0 16 0 8', position: { vertical: 'inherit' } },
+    ],
+  };
+}
+
+export const invertedNode = makeInteractiveNode('t2', 450, 100, '#2b2d42', '#fbf5ec');
 
 export const data = {
   type: 'LinkChart',
@@ -382,13 +459,13 @@ export const data = {
     {
       id: 't1-a',
       type: 'node',
-      c: '#A485D5',
+      c: '#e09f3e',
       w: 120,
       h: 170,
       x: -580,
       y: -130,
       bw: 3,
-      b: '#69738C',
+      b: '#5c6378',
       borderRadius: 10,
       t: [
         {
@@ -416,7 +493,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#69738C',
+          fbc: '#5c6378',
           borderRadius: '0 0 8.5 8.5',
           margin: 0,
           padding: 0,
@@ -429,7 +506,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#FF3C38',
+          fbc: '#d1495b',
           margin: 0,
           padding: 0,
           minWidth: 105.6,
@@ -445,13 +522,13 @@ export const data = {
     {
       id: 't1-b',
       type: 'node',
-      c: '#A485D5',
+      c: '#e09f3e',
       w: 120,
       h: 170,
       x: -430,
       y: -130,
       bw: 3,
-      b: '#69738C',
+      b: '#5c6378',
       borderRadius: 10,
       t: [
         {
@@ -479,7 +556,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#69738C',
+          fbc: '#5c6378',
           borderRadius: '0 0 8.5 8.5',
           margin: 0,
           padding: 0,
@@ -492,7 +569,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#FACA16',
+          fbc: '#edae49',
           margin: 0,
           padding: 0,
           minWidth: 70,
@@ -508,13 +585,13 @@ export const data = {
     {
       id: 't1-c',
       type: 'node',
-      c: '#4169A8',
+      c: '#5f8d6f',
       w: 120,
       h: 170,
       x: -580,
       y: 70,
       bw: 3,
-      b: '#69738C',
+      b: '#5c6378',
       borderRadius: 10,
       t: [
         {
@@ -542,7 +619,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#69738C',
+          fbc: '#5c6378',
           borderRadius: '0 0 8.5 8.5',
           margin: 0,
           padding: 0,
@@ -555,7 +632,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#65B540',
+          fbc: '#6a994e',
           margin: 0,
           padding: 0,
           minWidth: 20,
@@ -571,13 +648,13 @@ export const data = {
     {
       id: 't1-d',
       type: 'node',
-      c: '#4169A8',
+      c: '#5f8d6f',
       w: 120,
       h: 170,
       x: -430,
       y: 70,
       bw: 3,
-      b: '#69738C',
+      b: '#5c6378',
       borderRadius: 10,
       t: [
         {
@@ -605,7 +682,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#69738C',
+          fbc: '#5c6378',
           borderRadius: '0 0 8.5 8.5',
           margin: 0,
           padding: 0,
@@ -618,7 +695,7 @@ export const data = {
         },
         {
           fs: 0,
-          fbc: '#65B540',
+          fbc: '#6a994e',
           margin: 0,
           padding: 0,
           minWidth: 55,
@@ -631,11 +708,11 @@ export const data = {
         },
       ],
     },
-    makeInteractiveNode('t2', 450, 100, '#f4f3ee', '#404347'),
+    makeInteractiveNode('t2', 450, 100, '#fbf5ec', '#2b2d42'),
     {
       id: 'j1-rectangle',
       type: 'node',
-      c: '#6b8cc0',
+      c: '#b5446e',
       ff: 'Raleway',
       w: 'auto',
       h: 'auto',
@@ -646,8 +723,8 @@ export const data = {
         {
           fi: { t: icon('fa-shuffle') },
           fs: 50,
-          fc: '#6b8cc0',
-          fbc: '#404347',
+          fc: '#b5446e',
+          fbc: '#2b2d42',
           minHeight: 60,
           margin: '0 0 0 10',
           padding: { left: 10 },
@@ -657,7 +734,7 @@ export const data = {
           fs: 24,
           fb: true,
           fc: 'white',
-          fbc: '#404347',
+          fbc: '#2b2d42',
           minHeight: 60,
           margin: '0 10 0 -1',
           padding: { left: 11, right: 10 },
@@ -667,7 +744,7 @@ export const data = {
           t: 'Unavailable',
           fs: 16,
           fc: 'white',
-          fbc: '#404347',
+          fbc: '#2b2d42',
           borderRadius: 20,
           margin: { bottom: -20, left: -60 },
           padding: 8,
@@ -678,7 +755,7 @@ export const data = {
     {
       id: 'j2-rectangle',
       type: 'node',
-      c: '#9db3d6',
+      c: '#a3b18a',
       ff: 'Raleway',
       w: 'auto',
       h: 'auto',
@@ -689,8 +766,8 @@ export const data = {
         {
           fi: { t: icon('fa-database') },
           fs: 50,
-          fc: '#9db3d6',
-          fbc: '#404347',
+          fc: '#a3b18a',
+          fbc: '#2b2d42',
           minHeight: 60,
           margin: '0 0 0 10',
           padding: { left: 10 },
@@ -700,7 +777,7 @@ export const data = {
           fs: 24,
           fb: true,
           fc: 'white',
-          fbc: '#404347',
+          fbc: '#2b2d42',
           minHeight: 60,
           margin: '0 10 0 -1',
           padding: { left: 11, right: 10 },
@@ -710,7 +787,7 @@ export const data = {
           t: 'Unavailable',
           fs: 16,
           fc: 'white',
-          fbc: '#404347',
+          fbc: '#2b2d42',
           borderRadius: 20,
           margin: { bottom: -20, left: -60 },
           padding: 8,
@@ -721,7 +798,7 @@ export const data = {
     {
       id: 'j3-rectangle',
       type: 'node',
-      c: '#FFE642',
+      c: '#f2cc8f',
       ff: 'Raleway',
       w: 'auto',
       h: 'auto',
@@ -732,8 +809,8 @@ export const data = {
         {
           fi: { t: icon('fa-bug') },
           fs: 50,
-          fc: '#FFE642',
-          fbc: '#404347',
+          fc: '#f2cc8f',
+          fbc: '#2b2d42',
           minHeight: 60,
           margin: '0 0 0 10',
           padding: { left: 10 },
@@ -743,7 +820,7 @@ export const data = {
           fs: 24,
           fb: true,
           fc: 'white',
-          fbc: '#404347',
+          fbc: '#2b2d42',
           minHeight: 60,
           margin: '0 10 0 -1',
           padding: { left: 11, right: 10 },
@@ -751,9 +828,9 @@ export const data = {
         },
       ],
     },
-    makeShadowCircleNode('j4-circle', 247, -122, '#fefae0', '\u{e545}', 'Bloom'),
-    makeShadowCircleNode('j5-circle', 120, -144, '#f4f3ee', '\u{efd8}', 'Blow'),
-    makeShadowCircleNode('j6-circle', 203, -244, '#cd4631', '\u{ef55}', 'Burn'),
+    makeShadowCircleNode('j4-circle', 247, -122, '#fff7e6', '\u{e545}', 'Bloom'),
+    makeShadowCircleNode('j5-circle', 120, -144, '#fbf5ec', '\u{efd8}', 'Blow'),
+    makeShadowCircleNode('j6-circle', 203, -244, '#b23a48', '\u{ef55}', 'Burn'),
     makeProfileCardNode('j7-profile-card', -500, -400),
     {
       id: 'c1-circle',
@@ -764,11 +841,11 @@ export const data = {
       x: -220,
       y: 100,
       t: [
-        makeMaterialIconLabel('\uEF4A', 75, '#0f2e18'),
+        makeMaterialIconLabel('\uEF4A', 75, '#3e5641'),
         makeMaterialIconLabel('\uEF4A', 70, '#FFF'),
-        makeMaterialIconLabel('\uEF4A', 65, '#0f2e18'),
+        makeMaterialIconLabel('\uEF4A', 65, '#3e5641'),
         makeMaterialIconLabel('\uEF4A', 60, '#FFF'),
-        makeMaterialIconLabel('\uEF4A', 55, '#0f2e18'),
+        makeMaterialIconLabel('\uEF4A', 55, '#3e5641'),
         makeMaterialIconLabel('\uE1B8', 35, '#FFF'),
       ],
     },
@@ -781,11 +858,11 @@ export const data = {
       x: -30,
       y: 100,
       t: [
-        makeMaterialIconLabel('\uEB39', 75, '#001845'),
+        makeMaterialIconLabel('\uEB39', 75, '#4a234b'),
         makeMaterialIconLabel('\uEB39', 70, '#FFF'),
-        makeMaterialIconLabel('\uEB39', 65, '#001845'),
+        makeMaterialIconLabel('\uEB39', 65, '#4a234b'),
         makeMaterialIconLabel('\uEB39', 60, '#FFF'),
-        makeMaterialIconLabel('\uEB39', 55, '#001845'),
+        makeMaterialIconLabel('\uEB39', 55, '#4a234b'),
         makeMaterialIconLabel('\uEA1C', 35, '#FFF'),
       ],
     },
@@ -798,11 +875,11 @@ export const data = {
       x: 160,
       y: 100,
       t: [
-        makeMaterialIconLabel('\uEB36', 75, '#540b0e'),
+        makeMaterialIconLabel('\uEB36', 75, '#7a2e1d'),
         makeMaterialIconLabel('\uEB36', 70, '#FFF'),
-        makeMaterialIconLabel('\uEB36', 65, '#540b0e'),
+        makeMaterialIconLabel('\uEB36', 65, '#7a2e1d'),
         makeMaterialIconLabel('\uEB36', 60, '#FFF'),
-        makeMaterialIconLabel('\uEB36', 55, '#540b0e'),
+        makeMaterialIconLabel('\uEB36', 55, '#7a2e1d'),
         makeMaterialIconLabel('\uE1BD', 35, '#FFF'),
       ],
     },
@@ -811,7 +888,7 @@ export const data = {
       id: 'c3-online',
       type: 'node',
       borderRadius: '5 20 20 5',
-      c: '#343a40',
+      c: '#2b2d42',
       ff: 'Raleway',
       g: [
         {
@@ -819,7 +896,7 @@ export const data = {
           r: 67,
           e: 3,
           c: 'white',
-          fi: { t: icon('fa-user'), c: '#343a40' },
+          fi: { t: icon('fa-user'), c: '#2b2d42' },
         },
       ],
       t: [
@@ -838,7 +915,7 @@ export const data = {
             t: icon('fa-circle'),
           },
           fs: 15,
-          fc: '#38b000',
+          fc: '#6a994e',
           fbc: 'transparent',
           position: { horizontal: 63 },
         },
@@ -858,7 +935,7 @@ export const data = {
       id: 'c3-offline',
       type: 'node',
       borderRadius: '5 20 20 5',
-      c: '#6c757d',
+      c: '#8d99ae',
       ff: 'Raleway',
       g: [
         {
@@ -866,7 +943,7 @@ export const data = {
           r: 67,
           e: 3,
           c: 'white',
-          fi: { t: icon('fa-user'), c: '#343a40' },
+          fi: { t: icon('fa-user'), c: '#2b2d42' },
         },
       ],
       t: [
@@ -885,7 +962,7 @@ export const data = {
             t: icon('fa-circle'),
           },
           fs: 15,
-          fc: '#f50049',
+          fc: '#d1495b',
           fbc: 'transparent',
           position: { horizontal: 63 },
         },
@@ -901,5 +978,14 @@ export const data = {
       x: 480,
       y: -110,
     },
+
+    // ---------- second row: more node styles ----------
+    makePaymentNode('n1-payment', -500, 330),
+    makeStackedBarNode('n2-stacked', -190, 330),
+    makeAvatarNode('n3-avatar', 60, 320),
+    makeSensorNode('n4-sensor', 260, 330),
+    makeTagNode('n5-tag-priority', 500, 270, '#c8553d', 'flag', 'Priority'),
+    makeTagNode('n5-tag-verified', 500, 330, '#5f8d6f', 'circle-check', 'Verified'),
+    makeTagNode('n5-tag-watch', 500, 390, '#e09f3e', 'eye', 'Watchlist'),
   ],
 };

@@ -30,46 +30,48 @@
   src: url('../sdk/assets/fonts/fontawesome/webfonts/fa-solid-900.woff2') format('woff2');
 }
 
+/* Same look as the other examples (see ShipmentLanes): warm page, chart card, side panel with
+   red section labels. */
+:root { --ink: #1f1a17; --grey: #6b6560; --line: #e9dbd4; --bg: #fbf7f5; --brand: #c7141a; }
+
 * { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: var(--bg); color: var(--ink); font-family: 'Muli', sans-serif; }
 
-html, body {
-  margin: 0;
-  height: 100%;
-  background: #f2f5f6;
-  color: #333;
-  font-family: Muli, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 14px;
+.demo { display: flex; height: 100%; gap: 16px; padding: 16px; }
+.chart-area { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #f7f3f1; }
+#klchart { width: 100%; height: 100%; }
+
+.panel { width: 360px; flex: none; display: flex; flex-direction: column; min-height: 0; padding: 4px 4px 0; }
+.panel-head { display: flex; align-items: flex-start; gap: 8px; }
+.panel h1 { flex: 1; margin: 0 0 8px; font-size: 1.4rem; line-height: 1.25; }
+.panel h2 { margin: 20px 0 8px; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--brand); }
+.lede { margin: 0; color: var(--grey); font-size: .9rem; line-height: 1.45; }
+
+.icon-btn {
+  flex: none; display: flex; align-items: center; justify-content: center; width: 34px; height: 34px;
+  border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--grey); cursor: pointer;
 }
+.icon-btn:hover { border-color: var(--brand); color: var(--brand); }
+.icon-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
-.app { display: flex; height: 100vh; width: 100vw; padding: 8px; background: #f2f5f6; }
-.chart-area { position: relative; flex: 1; min-width: 0; }
-#klchart { width: 100%; height: 100%; background: #fff; }
-
-.rhs { width: 400px; flex-shrink: 0; margin-left: 14px; display: flex; flex-direction: column; overflow-y: auto; }
-.title-bar { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-.title-bar h1 { margin: 0; font: 400 24px Raleway, sans-serif; }
-.btn-icon { cursor: pointer; font-size: 18px; color: #2d383f; padding: 6px; }
-
-.tabsdiv { display: flex; gap: 4px; border-bottom: 2px solid #1d4275; }
-.tablinks {
-  flex: 1; padding: 8px; border: none; cursor: pointer;
-  background: #a9a9a9; color: #fff; font: inherit;
-}
-.tablinks.active { background: #1d4275; }
-
-.tabcontent { display: none; padding: 10px 2px; line-height: 1.5; }
-.tabcontent.is-visible { display: block; }
-.tabcontent h4, .tabcontent h5 { margin: 14px 0 6px; }
-.radio { display: block; margin: 6px 0; cursor: pointer; }
+/* Source of the selected node: grows to fill the panel and scrolls. */
 #display {
-  margin: 10px 0 0;
-  padding: 10px;
-  background: #fff;
-  border: 1px solid #ddd;
-  font: 12px/1.4 monospace;
-  white-space: pre-wrap;
-  word-break: keep-all;
-  user-select: text;
-  max-height: calc(100vh - 220px);
-  overflow: auto;
+  flex: 1 1 auto; min-height: 120px; margin: 0; padding: 12px 14px; overflow: auto;
+  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  font: 12px/1.5 'SF Mono', Menlo, Consolas, monospace; color: var(--ink);
+  white-space: pre-wrap; word-break: keep-all; user-select: text;
+}
+
+.about { flex: none; margin: 16px 0; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.about summary { padding: 10px 14px; font-weight: 700; font-size: .9rem; cursor: pointer; }
+.about summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 12px; }
+.about[open] { max-height: 45vh; overflow: auto; }
+.about p { margin: 0 14px 12px; color: var(--grey); font-size: .85rem; line-height: 1.45; }
+.about b { color: var(--ink); }
+
+@media (max-width: 760px) {
+  .demo { flex-direction: column; height: auto; min-height: 100%; }
+  .chart-area { min-height: 60vh; }
+  .panel { width: auto; }
+  #display { max-height: 50vh; }
 }

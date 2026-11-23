@@ -240,9 +240,8 @@ function drawIndividualEvents(ctx, model, rows, aggregation, xForTime, hitRegion
         const itemColor = resolveEventColor(model, event, item.id);
         ctx.fillStyle = itemColor;
         if (!duration) { ctx.beginPath(); ctx.arc(item.x, item.y, Math.max(4, lineWidth + 1), 0, Math.PI * 2); ctx.fill(); }
+        // Arrowheads only on targets; a source is marked by its dot alone.
         if (event.style.showArrows && item.role === 'to') arrow(ctx, duration ? x1 : item.x, item.y, x1, sourceCentre, itemColor);
-        // Chronograph paints a time-directed arrowhead ending at the join on source roles too.
-        else if (event.style.showArrows && item.role === 'from' && targets.length) arrow(ctx, item.x - 1, item.y, item.x - 2, item.y, itemColor);
         if (event.style.fontIcon) {
           const icon = event.style.fontIcon;
           ctx.fillStyle = icon.color || itemColor;
