@@ -4,17 +4,29 @@
 <meta charset="UTF-8">
 <title>Graph Nexus: interactive network charts and timelines for JavaScript</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Graph Nexus is a JavaScript SDK for interactive network charts and timelines: layouts, combos, graph analytics, 3D view and linked timelines, with no runtime dependencies.">
+<meta name="description" content="Graph Nexus is a JavaScript SDK for interactive network charts and timelines: seven automatic layouts, combos, graph analytics, 3D view and linked timelines, with no runtime dependencies.">
 <meta property="og:title" content="Graph Nexus: interactive network charts and timelines">
 <meta property="og:description" content="A JavaScript SDK for network visualization and timelines, with no runtime dependencies.">
 <meta property="og:image" content="assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/nexus-mark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
 <script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
 <link rel="stylesheet" href="../assets/doc.css">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does Graph Nexus need other libraries?","acceptedAnswer":{"@type":"Answer","text":"No. The package has no runtime dependencies. Map mode uses Leaflet, which ships inside the package and loads only when you switch a chart to a map."}},
+{"@type":"Question","name":"Which frameworks does it work with?","acceptedAnswer":{"@type":"Answer","text":"Plain JavaScript, React, Vue and Angular. The package includes components for all three frameworks, plus ES modules, CommonJS and a UMD bundle."}},
+{"@type":"Question","name":"Can I use it without a build step?","acceptedAnswer":{"@type":"Answer","text":"Yes. Copy dist/graph-nexus.umd.js into your app and load it with a script tag. It exposes a global GraphNexus object."}},
+{"@type":"Question","name":"Is there TypeScript support?","acceptedAnswer":{"@type":"Answer","text":"Yes. Typings ship with the package in src/graph-nexus.d.ts, so editors autocomplete every option and method."}},
+{"@type":"Question","name":"How does it handle large charts?","acceptedAnswer":{"@type":"Answer","text":"Charts can render with WebGL on the GPU, with canvas as a fallback. The force layout and the closeness and betweenness measures run in a WebAssembly core, and in a web worker on graphs over 600 items when your bundler supports it."}},
+{"@type":"Question","name":"Can a timeline and a chart work together?","acceptedAnswer":{"@type":"Answer","text":"Yes. Pair a Timeline with a chart so a time range filters the network and a selection highlights the same items in both views."}},
+{"@type":"Question","name":"Can people save what they see?","acceptedAnswer":{"@type":"Answer","text":"Yes. Export the chart as an image or as a PDF report."}}
+]}
+</script>
 </head>
 <body data-root="../">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -22,13 +34,13 @@
   <div class="logo"><a href="index.html"><img class="logo-light" src="../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22"></a></div>
   <div class="doc-search header-search" role="search">
     <label class="sr-only" for="doc-search-input">Search documentation</label>
-    <input id="doc-search-input" type="search" placeholder="Search guides and API  /" autocomplete="off">
+    <input id="doc-search-input" type="search" placeholder="Search guides and API" autocomplete="off">
     <ul class="search-results" role="listbox" aria-label="Search results"></ul>
   </div>
-  <nav aria-label="Documentation">
+  <nav aria-label="Main">
     <a href="index.html" class="current" aria-current="page">Home</a>
-    <a href="../graph-nexus/index.html">Documentation</a>
-    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    <a href="../graph-nexus/index.html">Document</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
   </nav>
   <div class="toggle-switch">
     <label class="switch-label">
@@ -40,128 +52,142 @@
 
 <main id="main">
   <section class="hero">
-    <div class="hero-copy">
-      <span class="kicker">Graph Nexus SDK</span>
-      <h1>See how your data <br>connects</h1>
-      <p class="hero-sub">A JavaScript SDK for interactive network charts and timelines.
-        Load nodes and links, pick a layout, and let people explore the relationships in their data.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="../graph-nexus/installing/installing-graph-nexus.html">Install Nexus</a>
-        <a class="btn btn-ghost" href="../graph-nexus/index.html">Read the docs</a>
-      </div>
-      <ul class="hero-facts" aria-label="Package facts">
-        <li>No runtime dependencies</li>
-        <li>TypeScript typings</li>
-        <li>React, Vue and Angular wrappers</li>
-      </ul>
+    <span class="eyebrow caption-2">JavaScript SDK for network charts and timelines</span>
+    <h1 class="heading-1">Map how data connects<br> in any JavaScript app</h1>
+    <p class="hero-sub title-2">Load nodes and links, pick one of seven layouts,<br> and let people explore the relationships in their data.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="../graph-nexus/installing/installing-graph-nexus.html">Install Graph Nexus
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z"/></svg></a>
     </div>
+    <ul class="facts caption-2" aria-label="Package facts">
+      <li>No runtime dependencies</li>
+      <li>TypeScript typings</li>
+      <li>React, Vue and Angular components</li>
+    </ul>
     <figure class="frame hero-shot">
       <video autoplay muted loop playsinline preload="auto" width="1600" height="948" poster="assets/hero.jpg" aria-label="A supply chain network of 44 companies starting as a grid. The organic layout untangles it, nodes grow by betweenness centrality to reveal chokepoints, and clicking a chip maker highlights its direct trading partners."><source src="assets/hero.mp4" type="video/mp4"><source src="assets/hero.webm" type="video/webm"></video>
-      <figcaption>Organic layout, then nodes sized by betweenness centrality and one supplier selected. Recorded from the Supplier network example.</figcaption>
+      <figcaption class="caption-5">Organic layout, then nodes sized by betweenness centrality and one supplier selected. Recorded from the Supplier network example.</figcaption>
     </figure>
   </section>
 
-  <section class="features reveal" aria-labelledby="features-title">
+  <section class="problem reveal" aria-labelledby="problem-title">
+    <div class="split">
+      <h2 id="problem-title" class="heading-4">A table of rows hides who is connected to whom</h2>
+      <div>
+        <p class="body-3">Suppliers, payments, services and messages are relationships. In a spreadsheet you scroll and filter to find one path.</p>
+        <p class="body-3">Graph Nexus draws the same records as a chart people can read at a glance, then lets them drag, zoom, group and filter it to answer the next question.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal" aria-labelledby="benefits-title">
     <div class="section-head">
-      <span class="kicker">What you can build</span>
-      <h2 id="features-title">Every animation here is drawn by Nexus</h2>
-      <p>Each one is recorded from an example that ships in the Examples folder, with its own data.</p>
+      <h2 id="benefits-title" class="heading-3">Every animation here is drawn by Graph Nexus</h2>
+      <p class="title-2">Each one is recorded from an example that ships in the package, with its own data.</p>
     </div>
     <div class="feature-grid">
       <a class="feature" href="../graph-nexus/basics/layout-basics.html">
-        <figure class="frame"><img src="assets/layouts.gif" width="720" height="408" loading="lazy" alt="The supplier network cycles through the automatic layouts, each named in a badge: organic; hierarchy as a tree under the plant; sequential as a flow from raw materials down to the plant; radial rings by distance from the plant; lens rings by connections; structural, grouping suppliers with the same buyer. A supplier is then dragged out of place and the tweak layout tidies it."></figure>
-        <h3>Automatic layouts</h3>
-        <p>Seven layouts arrange a chart in one call: organic, hierarchy, sequential, radial, lens, structural and tweak.</p>
+        <figure class="frame"><img src="assets/layouts.gif" width="720" height="408" loading="lazy" alt="The supplier network cycles through the automatic layouts, each named in a badge: organic, hierarchy, sequential, radial, lens and structural. A supplier is then dragged out of place and the tweak layout tidies it."></figure>
+        <h3 class="heading-6">A readable chart in one call</h3>
+        <p class="body-3">Seven automatic layouts: organic, hierarchy, sequential, radial, lens, structural and tweak.</p>
       </a>
       <a class="feature" href="../graph-nexus/features/aggregate-links.html">
         <figure class="frame"><img src="assets/combos.gif" width="800" height="461" loading="lazy" alt="Nine sites with one link per shipment group into three region combos: North, Central and South. The parallel links between regions then merge into one link per pair, labelled with the number of shipments."></figure>
-        <h3>Aggregate links and combos</h3>
-        <p>Merge parallel links into one with a count, split them by any property, and group nodes into combos that open and close.</p>
+        <h3 class="heading-6">Less clutter on busy networks</h3>
+        <p class="body-3">Merge parallel links into one with a count, and group nodes into combos that open and close.</p>
       </a>
       <a class="feature" href="../graph-nexus/features/node-and-combo-styling.html">
-        <figure class="frame"><img src="assets/node-styles.gif" width="800" height="456" loading="lazy" alt="A checkout request path built from styled card nodes: web storefront, API gateway, checkout, payments, card network and orders database. Each card shows an icon, status pill, latency, traffic and a CPU bar. Clicking Checkout, then Card network, brings each forward with its neighbours."></figure>
-        <h3>Rich node styling</h3>
-        <p>Turn nodes into service cards, KPI tiles and alert badges with multiple labels, font icons, status pills and progress bars.</p>
-      </a>
-      <a class="feature" href="../graph-nexus/features/3d-view.html">
-        <figure class="frame"><img src="assets/view-3d.gif" width="720" height="408" loading="lazy" alt="The supplier network drawn in 3D, turning one full circle around its centre."></figure>
-        <h3>3D view</h3>
-        <p>Switch the same chart into 3D with one option, then orbit the camera to see structure that overlaps in 2D.</p>
-      </a>
-      <a class="feature" href="../graph-nexus/timeline/js/docs.html">
-        <figure class="frame"><img src="assets/timeline.gif" width="800" height="460" loading="lazy" alt="A three week website relaunch: six people in three teams, tasks as bars, hand-offs as arrows between people, and kick-off, design freeze and launch markers. One person is focused, then the view zooms into the hand-off week."></figure>
-        <h3>Timelines</h3>
-        <p>Show people or things as rows and events over time: tasks as bars, hand-offs between rows, grouping, markers and zoom.</p>
+        <figure class="frame"><img src="assets/node-styles.gif" width="800" height="456" loading="lazy" alt="A checkout request path built from styled card nodes: web storefront, API gateway, checkout, payments, card network and orders database. Each card shows an icon, status pill, latency, traffic and a CPU bar."></figure>
+        <h3 class="heading-6">Nodes that carry your data</h3>
+        <p class="body-3">Service cards, KPI tiles and alert badges with several labels, font icons, status pills and progress bars.</p>
       </a>
       <a class="feature" href="../graph-nexus/timeline/js/graph-nexus-integration.html">
-        <figure class="frame"><img src="assets/timeline-graph.gif" width="800" height="462" loading="lazy" alt="A week of messages between six colleagues: the timeline on the left, who messaged whom on the right. Zooming the timeline into Wednesday filters the chart to the four people who talked that day, then selecting Phuc focuses his row."></figure>
-        <h3>Linked chart and timeline</h3>
-        <p>Pair a timeline with a chart so a time range filters the network and a selection highlights both views.</p>
+        <figure class="frame"><img src="assets/timeline-graph.gif" width="800" height="462" loading="lazy" alt="A week of messages between six colleagues: the timeline on the left, who messaged whom on the right. Zooming the timeline into Wednesday filters the chart to the four people who talked that day."></figure>
+        <h3 class="heading-6">Answer when as well as who</h3>
+        <p class="body-3">Pair a timeline with a chart so a time range filters the network and a selection highlights both views.</p>
       </a>
     </div>
   </section>
 
   <section class="tagline" aria-label="Summary">
-    <p class="tagline-text">Load your data. Pick a layout. Let people explore what connects.</p>
+    <p class="tagline-text heading-2">Load your data. Pick a layout. Let people explore what connects.</p>
   </section>
 
-  <section class="steps reveal" aria-labelledby="steps-title">
+  <section class="reveal" aria-labelledby="steps-title">
     <div class="section-head">
-      <span class="kicker">How it works</span>
-      <h2 id="steps-title">A working chart in three steps</h2>
+      <h2 id="steps-title" class="heading-3">A working chart in three steps</h2>
     </div>
     <ol class="step-list">
       <li class="step">
-        <span class="step-num">1</span>
-        <h3>Install the package</h3>
+        <span class="step-num caption-3">1</span>
+        <h3 class="title-1">Install the package</h3>
         <pre><code>npm install file:./graph-nexus-1.0.0.tgz</code></pre>
-        <a href="../graph-nexus/installing/installing-graph-nexus.html">Installation guide</a>
+        <a class="body-5" href="../graph-nexus/installing/installing-graph-nexus.html">Installation guide</a>
       </li>
       <li class="step">
-        <span class="step-num">2</span>
-        <h3>Load nodes and links</h3>
+        <span class="step-num caption-3">2</span>
+        <h3 class="title-1">Load nodes and links</h3>
         <pre><code>const chart = await GraphNexus.create('chart');
 await chart.load({ type: 'LinkChart', items });</code></pre>
-        <a href="../graph-nexus/basics/loading-data.html">Loading data</a>
+        <a class="body-5" href="../graph-nexus/basics/loading-data.html">Loading data</a>
       </li>
       <li class="step">
-        <span class="step-num">3</span>
-        <h3>Lay it out and listen</h3>
+        <span class="step-num caption-3">3</span>
+        <h3 class="title-1">Lay it out and listen</h3>
         <pre><code>await chart.layout('organic');
 chart.on('click', ({ id }) =&gt; show(id));</code></pre>
-        <a href="../graph-nexus/basics/events-basics.html">Events basics</a>
+        <a class="body-5" href="../graph-nexus/basics/events-basics.html">Events basics</a>
       </li>
     </ol>
   </section>
 
-  <section class="more reveal" aria-labelledby="more-title">
+  <section class="reveal" aria-labelledby="more-title">
     <div class="section-head">
-      <span class="kicker">Also in the package</span>
-      <h2 id="more-title">More you get out of the box</h2>
+      <h2 id="more-title" class="heading-3">Also in the package</h2>
     </div>
     <ul class="more-list">
-      <li><a href="../graph-nexus/features/graph-centrality.html"><strong>Graph analytics</strong><span>Degree, betweenness, closeness, PageRank and shortest paths.</span></a></li>
-      <li><a href="../graph-nexus/basics/map-mode.html"><strong>Map mode</strong><span>Place nodes on a Leaflet map by latitude and longitude.</span></a></li>
-      <li><a href="../graph-nexus/basics/time-bar.html"><strong>Time bar</strong><span>A compact histogram that filters the chart by time range.</span></a></li>
-      <li><a href="../graph-nexus/features/chart-export.html"><strong>Image and PDF export</strong><span>Save the chart as an image or a PDF report.</span></a></li>
-      <li><a href="../graph-nexus/features/fonts-and-font-icons.html"><strong>Fonts and font icons</strong><span>Font Awesome, Material Icons and bundled text fonts.</span></a></li>
-      <li><a href="../graph-nexus/integrations/webgl.html"><strong>WebGL rendering</strong><span>Draw large charts on the GPU, with canvas as a fallback.</span></a></li>
+      <li><a href="../graph-nexus/features/3d-view.html"><strong class="title-2">3D view</strong><span class="body-6">Switch the same chart into 3D with one option and orbit the camera.</span></a></li>
+      <li><a href="../graph-nexus/timeline/js/docs.html"><strong class="title-2">Timelines</strong><span class="body-6">People or things as rows, events over time, markers, grouping and zoom.</span></a></li>
+      <li><a href="../graph-nexus/features/graph-centrality.html"><strong class="title-2">Graph analytics</strong><span class="body-6">Degree, betweenness, closeness, PageRank and shortest paths.</span></a></li>
+      <li><a href="../graph-nexus/basics/map-mode.html"><strong class="title-2">Map mode</strong><span class="body-6">Place nodes on a Leaflet map by latitude and longitude.</span></a></li>
+      <li><a href="../graph-nexus/features/chart-export.html"><strong class="title-2">Image and PDF export</strong><span class="body-6">Save the chart as an image or a PDF report.</span></a></li>
+      <li><a href="../graph-nexus/integrations/webgl.html"><strong class="title-2">WebGL rendering</strong><span class="body-6">Draw large charts on the GPU, with canvas as a fallback.</span></a></li>
     </ul>
   </section>
 
+  <section class="faq reveal" aria-labelledby="faq-title">
+    <div class="section-head">
+      <h2 id="faq-title" class="heading-3">Questions before you install</h2>
+    </div>
+    <div class="faq-list">
+      <details><summary class="title-3">Does Graph Nexus need other libraries?</summary><p class="body-3">No. The package has no runtime dependencies. Map mode uses Leaflet, which ships inside the package and loads only when you switch a chart to a map.</p></details>
+      <details><summary class="title-3">Which frameworks does it work with?</summary><p class="body-3">Plain JavaScript, React, Vue and Angular. The package includes components for all three frameworks, plus ES modules, CommonJS and a UMD bundle. See <a href="../graph-nexus/installing/using-graph-nexus-with-react.html">Using Nexus with React</a>.</p></details>
+      <details><summary class="title-3">Can I use it without a build step?</summary><p class="body-3">Yes. Copy <code>dist/graph-nexus.umd.js</code> into your app and load it with a script tag. It exposes a global <code>GraphNexus</code> object.</p></details>
+      <details><summary class="title-3">Is there TypeScript support?</summary><p class="body-3">Yes. Typings ship with the package, so editors autocomplete every option and method. See <a href="../graph-nexus/installing/graph-nexus-and-typescript.html">Nexus and TypeScript</a>.</p></details>
+      <details><summary class="title-3">How does it handle large charts?</summary><p class="body-3">Charts can render with WebGL on the GPU, with canvas as a fallback. The force layout and the closeness and betweenness measures run in a WebAssembly core. See <a href="../graph-nexus/about/performance.html">Performance</a>.</p></details>
+      <details><summary class="title-3">Can a timeline and a chart work together?</summary><p class="body-3">Yes. Pair a Timeline with a chart so a time range filters the network and a selection highlights the same items in both views.</p></details>
+      <details><summary class="title-3">Can people save what they see?</summary><p class="body-3">Yes. Export the chart as an image or as a PDF report. See <a href="../graph-nexus/features/chart-export.html">Chart export</a>.</p></details>
+    </div>
+  </section>
+
   <section class="final-cta reveal" aria-labelledby="cta-title">
-    <h2 id="cta-title">Start with your first chart</h2>
-    <p>Install the package and follow the guide. You will have an interactive chart running in a few minutes.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="../graph-nexus/installing/installing-graph-nexus.html">Install Nexus</a>
-      <a class="btn btn-ghost" href="../graph-nexus/index.html">Read the docs</a>
+    <h2 id="cta-title" class="heading-3">Start with your first chart</h2>
+    <p class="title-2">Twelve example apps ship with the package and run locally,<br> so you can try Graph Nexus on your own data first.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="../graph-nexus/installing/installing-graph-nexus.html">Install Graph Nexus
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z"/></svg></a>
     </div>
   </section>
 </main>
 
 <footer class="site">
-  <p>Graph Nexus</p>
   <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+  <nav aria-label="Footer">
+    <a href="../graph-nexus/index.html">Documentation</a>
+    <a href="../graph-nexus/api.html">API reference</a>
+    <a href="../graph-nexus/about/security.html">Security</a>
+    <a href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener">GitHub</a>
+  </nav>
 </footer>
 <script src="../assets/search-index.js"></script>
 <script src="../assets/docs.js"></script>

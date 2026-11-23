@@ -386,7 +386,7 @@ SHELL = """<!DOCTYPE html>
 <link rel="icon" href="{root}assets/nexus-mark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Exo+2:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=block">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
 <script>(function(){{var t;try{{t=localStorage.getItem('nexus-docs-theme')}}catch(e){{}}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){{var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){{@view-transition{{navigation:auto}}}}';document.head.appendChild(s)}}}})()</script>
 <link rel="stylesheet" href="{root}assets/doc.css">
 </head>
@@ -399,7 +399,7 @@ SHELL = """<!DOCTYPE html>
     </a>
   </div>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="doc-nav" aria-label="Documentation menu">
-    <span aria-hidden="true">☰</span><span class="nav-toggle-label" aria-hidden="true">Docs</span>
+    <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path class="l1" d="M4 7h16"/><path class="l2" d="M4 12h16"/><path class="l3" d="M4 17h16"/></svg><span class="nav-toggle-label" aria-hidden="true">Docs</span>
   </button>
   <div class="doc-search header-search" role="search">
     <label class="sr-only" for="doc-search-input">Search documentation</label>
@@ -408,7 +408,7 @@ SHELL = """<!DOCTYPE html>
   </div>
   <nav aria-label="Documentation">
     <a href="{root}site/index.html">Home</a>
-    <a href="{root}graph-nexus/index.html" class="current">Documentation</a>
+    <a href="{root}graph-nexus/index.html" class="current">Document</a>
     <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
   </nav>
   <div class="toggle-switch">
