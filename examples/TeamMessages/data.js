@@ -9,8 +9,8 @@ export const people = {
   huy: { label: 'Huy', role: 'Designer', colour: '#ec1c24', icon: 'fa-pen-ruler' },
   trang: { label: 'Trang', role: 'Engineer', colour: '#f26f21', icon: 'fa-code' },
   phuc: { label: 'Phuc', role: 'Engineer', colour: '#f26f21', icon: 'fa-code' },
-  mai: { label: 'Mai', role: 'Support', colour: '#0e7490', icon: 'fa-headset' },
-  khoa: { label: 'Khoa', role: 'Sales', colour: '#0e7490', icon: 'fa-briefcase' },
+  mai: { label: 'Mai', role: 'Support', colour: '#1d4275', icon: 'fa-headset' },
+  khoa: { label: 'Khoa', role: 'Sales', colour: '#1d4275', icon: 'fa-briefcase' },
 };
 
 // [from, to, day (0 = Monday), hour]

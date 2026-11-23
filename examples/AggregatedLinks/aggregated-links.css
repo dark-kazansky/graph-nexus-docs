@@ -1,59 +1,60 @@
-/* Fonts come from the graph-nexus package assets. */
-@font-face {
-  font-family: 'Muli';
-  font-weight: 400;
-  src: url('../sdk/assets/fonts/Muli/Muli-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Muli';
-  font-weight: 700;
-  src: url('../sdk/assets/fonts/Muli/Muli-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-weight: 400;
-  src: url('../sdk/assets/fonts/Raleway/Raleway-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-weight: 700;
-  src: url('../sdk/assets/fonts/Raleway/Raleway-Bold.ttf') format('truetype');
-}
-/* Single-word family name so the canvas font shorthand needs no quoting. */
-@font-face {
-  font-family: 'FontAwesomeSolid';
-  font-weight: 900;
-  src: url('../sdk/assets/fonts/fontawesome/webfonts/fa-solid-900.woff2') format('woff2');
-}
+/* Same look as the other examples (see ShipmentLanes): warm page, white chart card, side panel
+   with red section labels and pill buttons. Fonts ship with graph-nexus (assets/fonts). */
+@font-face { font-family: 'Muli'; src: url('../sdk/assets/fonts/Muli/Muli-Regular.ttf'); }
+@font-face { font-family: 'Muli'; font-weight: 700; src: url('../sdk/assets/fonts/Muli/Muli-Bold.ttf'); }
+/* Single word family name so the canvas font shorthand needs no quoting. */
+@font-face { font-family: 'FontAwesomeSolid'; font-weight: 900; src: url('../sdk/assets/fonts/fontawesome/webfonts/fa-solid-900.woff2'); }
+
+:root { --ink: #1f1a17; --grey: #6b6560; --line: #e9dbd4; --bg: #fbf7f5; --brand: #c7141a; }
 
 * { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: var(--bg); color: var(--ink); font-family: 'Muli', sans-serif; }
 
-html, body {
-  margin: 0;
-  height: 100%;
-  background: #f2f5f6;
-  color: #333;
-  font-family: Muli, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 14px;
-}
-
-.app { display: flex; height: 100vh; width: 100vw; padding: 8px; background: #f2f5f6; }
-.chart-area { position: relative; flex: 1; min-width: 0; }
+.demo { display: flex; height: 100%; gap: 16px; padding: 16px; }
+.chart-area { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
 #klchart { width: 100%; height: 100%; background: #fff; }
 
-.rhs { width: 400px; flex-shrink: 0; margin-left: 14px; display: flex; flex-direction: column; overflow-y: auto; }
-.title-bar { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-.title-bar h1 { margin: 0; font: 400 24px Raleway, sans-serif; }
-.btn-icon { cursor: pointer; font-size: 18px; color: #2d383f; padding: 6px; }
+.panel { width: 300px; flex: none; overflow-y: auto; padding: 4px 4px 16px; }
+.panel-head { display: flex; align-items: flex-start; gap: 8px; }
+.panel h1 { flex: 1; margin: 0 0 8px; font-size: 1.4rem; line-height: 1.25; }
+.panel h2 { margin: 20px 0 8px; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--brand); }
+.lede { margin: 0; color: var(--grey); font-size: .9rem; line-height: 1.45; }
 
-.tabsdiv { display: flex; gap: 4px; border-bottom: 2px solid #00aa70; }
-.tablinks {
-  flex: 1; padding: 8px; border: none; cursor: pointer;
-  background: #a9a9a9; color: #fff; font: inherit;
+.icon-btn {
+  flex: none; display: flex; align-items: center; justify-content: center; width: 34px; height: 34px;
+  border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--grey); cursor: pointer;
 }
-.tablinks.active { background: #00aa70; }
+.icon-btn:hover { border-color: var(--brand); color: var(--brand); }
+.icon-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
-.tabcontent { display: none; padding: 10px 2px; line-height: 1.5; }
-.tabcontent.is-visible { display: block; }
-.tabcontent h4, .tabcontent h5 { margin: 14px 0 6px; }
-.radio { display: block; margin: 6px 0; cursor: pointer; }
+/* Radio inputs drawn as pill buttons; the input stays in place for keyboard and tests. */
+.choices { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; border: 0; }
+.choice { position: relative; }
+.choice input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+.choice span {
+  display: block; padding: 7px 12px; font: 700 .85rem 'Muli', sans-serif; color: var(--ink);
+  background: #fff; border: 1px solid var(--line); border-radius: 8px;
+  transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+.choice input:hover + span { border-color: var(--brand); color: var(--brand); }
+.choice input:checked + span { background: var(--brand); border-color: var(--brand); color: #fff; }
+.choice input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0; padding: 0; list-style: none; font-size: .85rem; color: var(--grey); }
+.legend li { display: flex; align-items: center; gap: 8px; }
+.legend i { width: 18px; height: 0; border-top: 3px solid var(--c); }
+.legend i.dashed { border-top-style: dashed; }
+
+.hint { margin: 20px 0 0; color: var(--grey); font-size: .85rem; line-height: 1.45; }
+
+.about { margin-top: 24px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.about summary { padding: 10px 14px; font-weight: 700; font-size: .9rem; cursor: pointer; }
+.about summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 12px; }
+.about p { margin: 0 14px 12px; color: var(--grey); font-size: .85rem; line-height: 1.45; }
+.about b { color: var(--ink); }
+
+@media (max-width: 760px) {
+  .demo { flex-direction: column; height: auto; min-height: 100%; }
+  .chart-area { min-height: 60vh; }
+  .panel { width: auto; overflow: visible; }
+}

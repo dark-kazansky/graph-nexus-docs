@@ -24,7 +24,7 @@ const sailHours = (a, b) => sail[`${a}-${b}`] || sail[`${b}-${a}`];
 const fleets = {
   north: { label: 'Northern loop', colour: '#ff7a59' },
   south: { label: 'Southern shuttle', colour: '#ffb23f' },
-  feeder: { label: 'Feeder', colour: '#5fc9b8' },
+  feeder: { label: 'Feeder', colour: '#6b8cc0' },
 };
 
 const vessels = [

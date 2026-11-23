@@ -76945,11 +76945,11 @@
     },
     "entityTypes": {
       "cluster0": {
-        "color": "#62B0E8",
+        "color": "#5B82C8",
         "typeLabel": "Cluster 1"
       },
       "cluster1": {
-        "color": "#27ab83",
+        "color": "#a9bde0",
         "typeLabel": "Cluster 2"
       },
       "cluster2": {

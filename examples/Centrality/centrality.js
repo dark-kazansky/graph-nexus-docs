@@ -1,10 +1,10 @@
 import GraphNexus from 'graph-nexus';
-import { data as enronData, colours } from './enron-data.js';
+import { data as smallData, colours, nodeCount } from './small-data.js';
 import { buildLargeData } from './large-data.js';
 
 // Datasets the panel can switch between. The large one is generated on first use.
 const datasets = {
-  enron: () => enronData,
+  small: () => smallData,
   large: (() => { let cached; return () => (cached = cached || buildLargeData()); })(),
 };
 
@@ -42,6 +42,7 @@ function debounce(fn, timeToWait = 100) {
 
 // Avoid reloading the mini chart too often while dragging a selection marquee.
 const loadMiniChart = debounce((items) => {
+  document.getElementById('miniContainer').classList.toggle('has-items', items.length > 0);
   miniChart.load({
     type: 'LinkChart',
     items,
@@ -137,7 +138,7 @@ async function loadDataset(name) {
 function klReady(charts) {
   [chart, miniChart] = charts;
 
-  loadDataset('enron');
+  loadDataset('small');
 
   // On selection change:
   //   1) style the targeted and neighbouring items
@@ -333,11 +334,9 @@ function registerClickHandler(id, fn) {
 
 function updateActiveState(nodes, activeValue) {
   nodes.forEach((node) => {
-    if (node.value === activeValue) {
-      node.classList.add('active');
-    } else {
-      node.classList.remove('active');
-    }
+    const on = node.value === activeValue;
+    node.classList.toggle('active', on);
+    node.setAttribute('aria-pressed', String(on));
   });
 }
 
@@ -353,6 +352,9 @@ function registerButtonGroup(className, handler) {
 }
 
 function initUI() {
+  const small = document.querySelector('.dataset[value="small"]');
+  if (small) small.textContent = `Small (${nodeCount})`;
+  document.querySelectorAll('.btn-group .btn').forEach((b) => b.setAttribute('aria-pressed', String(b.classList.contains('active'))));
   registerClickHandler('home', () => doZoom('fit'));
   registerClickHandler('zoomIn', () => doZoom('in'));
   registerClickHandler('zoomOut', () => doZoom('out'));

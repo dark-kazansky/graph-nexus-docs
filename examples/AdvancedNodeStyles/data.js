@@ -18,9 +18,9 @@ function makeProfileCardNode(id, x, y) {
       {
         fi: { t: icon('fa-user') },
         fs: 64,
-        fc: 'rgb(81, 136, 168)',
+        fc: 'rgb(65, 105, 168)',
         fbc: 'white',
-        b: 'rgb(0, 85, 135)',
+        b: 'rgb(29, 66, 117)',
         bw: 5,
         borderRadius: 60,
         minHeight: 100,
@@ -34,21 +34,21 @@ function makeProfileCardNode(id, x, y) {
         t: 'John Doe',
         fs: 30,
         fb: true,
-        fc: 'rgb(0, 85, 135)',
+        fc: 'rgb(29, 66, 117)',
         fbc: 'transparent',
         margin: '10 0 0 0',
       },
       {
         fi: { t: icon('fa-envelope') },
         fs: 12,
-        fc: 'rgb(81, 136, 168)',
+        fc: 'rgb(65, 105, 168)',
         fbc: 'transparent',
         margin: '10 0 0 0',
       },
       {
         t: 'john.doe@example.com',
         fs: 10,
-        fc: 'rgb(81, 136, 168)',
+        fc: 'rgb(65, 105, 168)',
         fbc: 'transparent',
         margin: '10 0 0 0',
         position: {
@@ -58,7 +58,7 @@ function makeProfileCardNode(id, x, y) {
       {
         fi: { t: icon('fa-code') },
         fs: 12,
-        fc: 'rgb(81, 136, 168)',
+        fc: 'rgb(65, 105, 168)',
         fbc: 'transparent',
         margin: '10 0 0 0',
       },
@@ -76,7 +76,7 @@ function makeProfileCardNode(id, x, y) {
         t: 'john.doe@example.com',
         fs: 10,
         fc: 'white',
-        fbc: 'rgb(81, 136, 168)',
+        fbc: 'rgb(65, 105, 168)',
         borderRadius: '0 0 6 6',
         margin: '10 0 0 0',
         padding: '10 0 10 0',
@@ -508,7 +508,7 @@ export const data = {
     {
       id: 't1-c',
       type: 'node',
-      c: '#61A899',
+      c: '#4169A8',
       w: 120,
       h: 170,
       x: -580,
@@ -571,7 +571,7 @@ export const data = {
     {
       id: 't1-d',
       type: 'node',
-      c: '#61A899',
+      c: '#4169A8',
       w: 120,
       h: 170,
       x: -430,
@@ -635,7 +635,7 @@ export const data = {
     {
       id: 'j1-rectangle',
       type: 'node',
-      c: '#11cef0',
+      c: '#6b8cc0',
       ff: 'Raleway',
       w: 'auto',
       h: 'auto',
@@ -646,7 +646,7 @@ export const data = {
         {
           fi: { t: icon('fa-shuffle') },
           fs: 50,
-          fc: '#11cef0',
+          fc: '#6b8cc0',
           fbc: '#404347',
           minHeight: 60,
           margin: '0 0 0 10',
@@ -678,7 +678,7 @@ export const data = {
     {
       id: 'j2-rectangle',
       type: 'node',
-      c: '#4ff7a9',
+      c: '#9db3d6',
       ff: 'Raleway',
       w: 'auto',
       h: 'auto',
@@ -689,7 +689,7 @@ export const data = {
         {
           fi: { t: icon('fa-database') },
           fs: 50,
-          fc: '#4ff7a9',
+          fc: '#9db3d6',
           fbc: '#404347',
           minHeight: 60,
           margin: '0 0 0 10',

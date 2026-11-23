@@ -13,7 +13,7 @@ export const roles = {
   mule: { label: 'Money mules', colour: '#ff9f43', icon: 'fa-user' },
   person: { label: 'Associates', colour: '#f3c27a', icon: 'fa-user' },
   shell: { label: 'Shell companies', colour: '#e8618c', icon: 'fa-building' },
-  exit: { label: 'Cash out', colour: '#5fc9b8', icon: 'fa-coins' },
+  exit: { label: 'Cash out', colour: '#6b8cc0', icon: 'fa-coins' },
 };
 
 export const entities = {

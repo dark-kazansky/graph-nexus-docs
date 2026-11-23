@@ -1,9 +1,9 @@
 /**
- * Large synthetic dataset for the Centrality demo: ~10k people with random
- * transaction links, 5% of them with no links at all.
+ * Large synthetic dataset for the Centrality demo: ~10k accounts with random
+ * transfer links, 5% of them with no links at all.
  *
  * Generated from a fixed seed, so every load builds the same graph (no 2MB
- * data file in the repo). Same item shape as enron-data.js.
+ * data file in the repo). Same item shape as small-data.js.
  */
 
 /** Small seeded PRNG (mulberry32). */
@@ -67,7 +67,7 @@ export function buildLargeData({ nodes = 10000, orphanRate = 0.05, extraLinks = 
       id2: b,
       d: { count: 1 + pick(400) },
       a2: true,
-      c: '#bcced8',
+      c: '#c5d2e6',
       w: 4,
     });
   };

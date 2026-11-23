@@ -2,7 +2,7 @@ import GraphNexus from 'graph-nexus';
 
 // Supply chain: assembly lines -> storage containers -> store.
 // Every link carries its transport type in d.via so the chart can aggregate by it.
-const teal = '#2dcda8';
+const brand = '#c7141a';
 const icon = name => GraphNexus.getFontIcon(`fa-solid fa-${name}`);
 
 const nodeTypes = {
@@ -12,19 +12,19 @@ const nodeTypes = {
 };
 
 const transports = {
-  road: { icon: 'truck', colour: '#dd3c3c' },
-  air: { icon: 'plane', colour: '#3377ff' },
-  rail: { icon: 'train', colour: '#048170' },
+  road: { icon: 'truck', colour: '#8a7a72' },
+  air: { icon: 'plane', colour: '#f26f21' },
+  rail: { icon: 'train', colour: '#1d4275' },
 };
 
 /** Pill-shaped label under a node or combo. */
 export const pillLabel = text => ({
-  t: text, position: 's', fbc: teal, fc: 'white', borderRadius: 15, padding: '6 4 4 4',
+  t: text, position: 's', fbc: brand, fc: 'white', borderRadius: 15, padding: '6 4 4 4',
 });
 
 function node(id, text, type) {
   const { icon: name, level } = nodeTypes[type];
-  return { type: 'node', id, c: 'white', b: teal, d: { level }, fi: { c: teal, t: icon(name) }, t: [pillLabel(text)] };
+  return { type: 'node', id, c: 'white', b: brand, d: { level }, fi: { c: brand, t: icon(name) }, t: [pillLabel(text)] };
 }
 
 let linkCount = 0;
@@ -70,7 +70,7 @@ function comboDef(chart, ids, childId, iconName, label) {
   return {
     ids, open: false, label,
     style: comboStyle(chart, childId, iconName, label),
-    openStyle: { t: [{ ...pillLabel(label), margin: 5 }] },
+    openStyle: { c: 'rgba(255,245,240,0.7)', b: brand, bw: 2, bs: 'dashed', t: [{ ...pillLabel(label), margin: 5 }] },
   };
 }
 

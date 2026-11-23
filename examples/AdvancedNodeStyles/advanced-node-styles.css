@@ -50,12 +50,12 @@ html, body {
 .title-bar h1 { margin: 0; font: 400 24px Raleway, sans-serif; }
 .btn-icon { cursor: pointer; font-size: 18px; color: #2d383f; padding: 6px; }
 
-.tabsdiv { display: flex; gap: 4px; border-bottom: 2px solid #00aa70; }
+.tabsdiv { display: flex; gap: 4px; border-bottom: 2px solid #1d4275; }
 .tablinks {
   flex: 1; padding: 8px; border: none; cursor: pointer;
   background: #a9a9a9; color: #fff; font: inherit;
 }
-.tablinks.active { background: #00aa70; }
+.tablinks.active { background: #1d4275; }
 
 .tabcontent { display: none; padding: 10px 2px; line-height: 1.5; }
 .tabcontent.is-visible { display: block; }

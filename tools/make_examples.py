@@ -18,7 +18,7 @@ from sdk_path import sdk_root
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'examples')
-SKIP_FILES = {'package.json', 'package-lock.json', 'run.sh', '.gitignore', '.DS_Store'}
+SKIP_FILES = {'package.json', 'package-lock.json', 'run.sh', '.gitignore', '.DS_Store', 'interaction-result.png'}
 SKIP_DIRS = {'node_modules', '.agents', '.git'}
 TEXT = ('.html', '.css', '.js')
 PREFIX = re.compile(r'(?:\./)?node_modules/graph-nexus/')

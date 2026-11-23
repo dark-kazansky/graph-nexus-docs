@@ -11,9 +11,9 @@ export const regions = {
 };
 
 export const modes = {
-  road: { label: 'road', colour: '#8a7a72', dash: 'solid', off: 0 },
-  sea: { label: 'sea', colour: '#0e7490', dash: 'solid', off: -22 },
-  air: { label: 'air', colour: '#f26f21', dash: 'dashed', off: 22 },
+  road: { label: 'road', colour: '#8a7a72', dash: 'solid', side: 0 },
+  sea: { label: 'sea', colour: '#1d4275', dash: 'solid', side: -1 },
+  air: { label: 'air', colour: '#f26f21', dash: 'dashed', side: 1 },
 };
 
 // [id, name, region, icon, y]

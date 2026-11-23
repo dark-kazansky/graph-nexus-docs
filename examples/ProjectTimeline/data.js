@@ -6,7 +6,7 @@ const day = (d, h = 9) => new Date(2026, 5, 1 + d, h, 0); // 1 Jun 2026 is a Mon
 export const teams = {
   design: { label: 'Design', colour: '#ec1c24' },
   eng: { label: 'Engineering', colour: '#f26f21' },
-  qa: { label: 'Quality', colour: '#0e7490' },
+  qa: { label: 'Quality', colour: '#1d4275' },
 };
 
 export const people = {
@@ -60,5 +60,5 @@ export const timelineData = {
 export const markers = [
   { label: 'Kick-off', time: day(0, 9), color: '#9d0b0f', labelColor: '#9d0b0f' },
   { label: 'Design freeze', time: day(7, 9), color: '#ec1c24', labelColor: '#c7141a' },
-  { label: 'Launch', time: day(19, 17), color: '#0e7490', labelColor: '#0e7490' },
+  { label: 'Launch', time: day(19, 17), color: '#1d4275', labelColor: '#1d4275' },
 ];

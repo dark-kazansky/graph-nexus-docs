@@ -22,15 +22,34 @@ const chart = await GraphNexus.create({
 });
 
 // Style every aggregate link: thickness and a label from the number of shipments it stands for.
-// When split by mode, each mode keeps its colour and its own offset so the links sit side by side.
-chart.on('link-aggregation', ({ id, links, change, aggregateByValue }) => {
-  if (change === 'deleted') return;
+// When split by mode, road runs straight and sea and air arc to either side. The arc grows with the
+// link's length, so the three labels stay apart when the chart zooms out (offsets are world units).
+const modeLinks = new Map(); // aggregate link id -> { side, id1, id2 }
+
+function modeOffset({ side, id1, id2 }) {
+  const [a, b] = chart.getItem([id1, id2]);
+  const length = a && b ? Math.hypot(a.x - b.x, a.y - b.y) : 0;
+  return side * Math.min(200, Math.max(120, length * 0.18));
+}
+
+// Recompute the arcs once nodes have moved (grouping, opening a region).
+function spreadModes() {
+  const props = [...modeLinks].map(([id, link]) => ({ id, off: modeOffset(link) }));
+  if (props.length) chart.setProperties(props);
+}
+
+chart.on('link-aggregation', ({ id, id1, id2, links, change, aggregateByValue }) => {
+  if (change === 'deleted') { modeLinks.delete(id); return; }
   const n = links.length;
+  const label = { fs: 15, fb: true, fbc: '#ffffff' };
   if (aggregateByValue) {
     const m = modes[aggregateByValue];
-    chart.setProperties({ id, c: m.colour, ls: m.dash, off: m.off, w: 1.5 + n, t: `${n} ${m.label}`, fs: 15, fb: true, fc: m.colour, fbc: '#ffffff' });
+    const link = { side: m.side, id1, id2 };
+    modeLinks.set(id, link);
+    chart.setProperties({ id, c: m.colour, ls: m.dash, off: modeOffset(link), w: 1.5 + n, t: `${n} ${m.label}`, fc: m.colour, ...label });
   } else {
-    chart.setProperties({ id, c: '#c7141a', ls: 'solid', off: 0, w: 1.5 + n * 0.9, t: `${n} shipments`, fs: 15, fb: true, fc: '#c7141a', fbc: '#ffffff' });
+    modeLinks.delete(id);
+    chart.setProperties({ id, c: '#c7141a', ls: 'solid', off: 0, w: 1.5 + n * 0.9, t: `${n} shipments`, fc: '#c7141a', ...label });
   }
 });
 
@@ -65,6 +84,7 @@ async function group(on) {
     const ids = [];
     chart.each({ type: 'node' }, n => { if (combo.isCombo(n.id)) ids.push(n.id); });
     await combo.uncombine(ids, { animate: true, time: 600, full: true });
+    spreadModes();
     await chart.zoom('fit', { animate: true, time: 400 });
     say('Sites shown individually.');
     return;
@@ -81,7 +101,8 @@ async function group(on) {
     openStyle: { c: 'rgba(255,245,240,0.7)', b: regions[r].colour, bw: 2, bs: 'dashed',
       t: { t: regions[r].label, fs: 14, fb: true, fc: regions[r].colour } },
   }));
-  await combo.combine(defs, { animate: true, time: 700, select: false, arrange: { name: 'grid', gridShape: { columns: 1 } } });
+  await combo.combine(defs, { animate: true, time: 700, select: false, arrange: { name: 'grid', gridShape: { columns: 1 }, tightness: 0 } });
+  spreadModes();
   await chart.zoom('fit', { animate: true, time: 400 });
   say('Grouped by region. Links between regions merge too. Double click a region to open it.');
 }
@@ -90,7 +111,7 @@ chart.on('double-click', ({ id, preventDefault }) => {
   const combo = chart.combo();
   if (id && combo.isCombo(id)) {
     const done = combo.isOpen(id) ? combo.close(id, { animate: true }) : combo.open(id, { animate: true });
-    done.then(() => chart.zoom('fit', { animate: true, time: 400 }));
+    done.then(() => { spreadModes(); return chart.zoom('fit', { animate: true, time: 400 }); });
     preventDefault();
   }
 });

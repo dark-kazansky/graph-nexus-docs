@@ -12,7 +12,7 @@ const aggregateOptions = {
 /** Styles each aggregate link: width and a counter glyph for its child count, plus the transport icon. */
 function styleAggregate({ change, links, aggregateByValue, id }) {
   if (change === 'deleted') return;
-  let colour = 'grey';
+  let colour = '#57534e';
   let typeGlyph;
   if (aggregateByValue) {
     const child = chart.getItem(links[0]);
@@ -49,7 +49,8 @@ async function start() {
   await Promise.all(['900 16px FontAwesomeSolid', '16px Muli', 'bold 16px Muli'].map(f => document.fonts.load(f)));
   chart = await GraphNexus.create({ container: 'klchart', options: {
     handMode: true,
-    selectionColour: '#f75252',
+    selectionColour: '#1f1a17',
+    backColour: '#ffffff',
     combos: { shape: 'rectangle' },
     iconFontFamily: 'FontAwesomeSolid',
     fontFamily: 'Muli',
