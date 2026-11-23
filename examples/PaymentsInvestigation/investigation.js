@@ -76,6 +76,8 @@ document.getElementById('fit').addEventListener('click', () => {
   chart.selection([]);
   timeline.focus([]);
   caseWindow();
+  // Setting the range from code fires no 'range' event, so refresh the chart filter here.
+  syncRange();
 });
 
 await syncRange();

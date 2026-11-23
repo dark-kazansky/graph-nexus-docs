@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Timelines with Graph Nexus</title>
-    <link rel="stylesheet" type="text/css" href="chronograph.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bank transfers: timeline and network chart with Graph Nexus</title>
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="chronograph.css" />
     <script type="importmap">
       { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
     </script>
@@ -12,15 +13,20 @@
   </head>
   <body>
     <main class="demo">
-      <section class="lhs"><div class="kg" id="kg"></div></section>
-      <section class="rhs">
-        <div class="kl" id="kl"></div>
-        <div class="search-box">
-          <label for="searchInput">Search for person:</label>
-          <input id="searchInput" list="searchList" autocomplete="off" />
-          <datalist id="searchList"></datalist>
-        </div>
-      </section>
+      <header class="bar">
+        <h1>Red River Imports, November transfers</h1>
+        <label class="search">
+          <span class="sr-only">Find an account</span>
+          <input id="search" list="accounts" placeholder="Find an account" autocomplete="off" />
+          <datalist id="accounts"></datalist>
+        </label>
+        <button id="fit" type="button">Whole month</button>
+      </header>
+      <p id="info" aria-live="polite">Zoom the timeline to filter the chart. Click an account in either view, or a transfer for its details.</p>
+      <div class="views">
+        <section class="pane" aria-label="Transfers over time"><div id="timeline"></div></section>
+        <section class="pane" aria-label="Who paid whom"><div id="chart"></div></section>
+      </div>
     </main>
   </body>
 </html>
