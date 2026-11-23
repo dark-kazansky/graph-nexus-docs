@@ -158,7 +158,7 @@ header.site nav a.gh-star svg { width: 20px; height: 20px; }
 
 /* ---------- search ---------- */
 .doc-search { position: relative; }
-.header-search { flex: 0 1 280px; min-width: 0; }
+.header-search { flex: 0 1 auto; width: 448px; min-width: 0; }  /* the header sizes to its content, so the width must be explicit */
 .doc-search input {
   width: 100%; height: 40px; padding: 0 var(--s-100) 0 var(--s-500);
   border: 1px solid var(--line); border-radius: 8px;
