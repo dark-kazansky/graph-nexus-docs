@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Incident timeline with Graph Nexus</title>
+    <link rel="stylesheet" href="incident-timeline.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="incident-timeline.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <header class="bar">
+        <h1>Production week, 16 to 22 November</h1>
+        <ul class="legend" aria-label="Legend">
+          <li><i class="dot" style="--c: #1d4275"></i>Deploy</li>
+          <li><i class="bar-swatch" style="--c: #c7141a"></i>Incident</li>
+          <li><i class="bar-swatch" style="--c: #9a8f88"></i>Maintenance</li>
+          <li><i class="arrow" style="--c: #f26f21"></i>Page to another team</li>
+        </ul>
+        <button id="fit" type="button">Whole week</button>
+      </header>
+      <p id="info" aria-live="polite">Thursday night a full disk on the Orders DB stopped Checkout saving orders for over an hour. Click a service to focus it, or an event for its details.</p>
+      <div id="timeline"></div>
+    </main>
+  </body>
+</html>

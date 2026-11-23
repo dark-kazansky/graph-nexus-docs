@@ -691,10 +691,21 @@ export function renderTimeline(ctx, size, model, state = {}) {
     aggregationState: state.aggregationState, now,
   });
   drawRows(ctx, model, rows, geometry, aggregation, hitRegions, entityPositions, xForTime);
+  // Events that start before the visible range must not paint over the label area, nor claim
+  // clicks there: clip the event layers to the timeline and trim their hit regions to match.
+  const firstEventRegion = hitRegions.length;
+  ctx.save();
+  ctx.beginPath(); ctx.rect(geometry.timeline.x1, 0, geometry.timeline.x2 - geometry.timeline.x1, height); ctx.clip();
   drawHeatmap(ctx, aggregation, hitRegions, eventPositions);
   drawSummaries(ctx, aggregation, hitRegions, eventPositions);
   drawFolds(ctx, model, rows, aggregation, xForTime, hitRegions, eventPositions);
   drawIndividualEvents(ctx, model, rows, aggregation, xForTime, hitRegions, eventPositions);
+  ctx.restore();
+  for (let i = hitRegions.length - 1; i >= firstEventRegion; i--) {
+    const region = hitRegions[i];
+    region.x1 = Math.max(region.x1, geometry.timeline.x1);
+    if (region.x2 <= region.x1) hitRegions.splice(i, 1);
+  }
   const charts = drawCharts(ctx, model, geometry, xForTime, hitRegions, state.chartHighlight || null);
   drawMarkers(ctx, model, geometry, xForTime);
   const pingPoints = drawPings(ctx, model, rows, state.pings || [], xForTime, now);
