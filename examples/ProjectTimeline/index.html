@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project timeline with Graph Nexus</title>
+    <link rel="stylesheet" href="project-timeline.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="project-timeline.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <header class="bar">
+        <h1>Website relaunch, June 2026</h1>
+        <p id="info" aria-live="polite">Bars are tasks, arrows are hand-offs. Click a person to focus their work.</p>
+        <button id="fit" type="button">Whole project</button>
+      </header>
+      <div id="timeline"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Combos and aggregate links with Graph Nexus</title>
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="shipment-lanes.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="shipment-lanes.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <div class="chart-area"><div id="chart"></div></div>
+      <aside class="panel">
+        <h1>Shipment lanes</h1>
+        <p class="lede">A week of shipments between nine sites in three regions. Each link is one shipment: grey by road, teal by sea, orange dashed by air.</p>
+
+        <h2>Aggregate links</h2>
+        <div class="buttons">
+          <button type="button" data-toggle="merge" aria-pressed="false">Merge parallel links</button>
+          <button type="button" data-toggle="byMode" aria-pressed="false">Split by transport mode</button>
+        </div>
+
+        <h2>Combos</h2>
+        <div class="buttons">
+          <button type="button" data-toggle="group" aria-pressed="false">Group by region</button>
+        </div>
+
+        <p id="status" aria-live="polite"></p>
+      </aside>
+    </main>
+  </body>
+</html>

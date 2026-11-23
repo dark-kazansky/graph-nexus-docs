@@ -151,3 +151,26 @@ h1, h2, h3 { color: var(--strong); }
   .faq-list summary { padding: var(--s-100) var(--s-200); }
   .faq-list p { padding: 0 var(--s-200) var(--s-200); }
 }
+
+/* ---------- examples page (examples/index.html) ---------- */
+.page-head { padding-top: var(--s-800); text-align: center; }
+.page-head h1 { max-width: 680px; margin: 0 auto; letter-spacing: -.03em; }
+.examples { padding-top: var(--s-700); }
+.example-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-600) var(--s-300); margin: 0; padding: 0; list-style: none; }
+.example { display: flex; flex-direction: column; height: 100%; color: inherit; }
+.example:hover { text-decoration: none; }
+.example .frame { aspect-ratio: 960 / 617; transition: transform .5s var(--ease), border-color .3s var(--ease); }
+.example .frame img { height: 100%; object-fit: cover; object-position: left top; }
+.example:hover .frame { transform: translateY(-4px); border-color: var(--faint); }
+.example:active .frame { transform: scale(.98); }
+.example-tag { margin-top: var(--s-200); color: var(--muted); }
+.example h2 { margin-top: var(--s-50); color: var(--strong); }
+.example p { margin-top: var(--s-75); color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .example:hover .frame { transform: none; } }
+@media (max-width: 900px) { .example-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) {
+  .page-head { padding-top: var(--s-600); }
+  .page-head h1 { font-size: 2.25rem; line-height: 2.5rem; }
+  .page-head h1 br, .page-head .hero-sub br { display: none; }
+  .example-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s-500); }
+}

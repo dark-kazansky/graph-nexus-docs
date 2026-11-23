@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Timelines with Graph Nexus</title>
+    <link rel="stylesheet" type="text/css" href="chronograph.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="chronograph.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <section class="lhs"><div class="kg" id="kg"></div></section>
+      <section class="rhs">
+        <div class="kl" id="kl"></div>
+        <div class="search-box">
+          <label for="searchInput">Search for person:</label>
+          <input id="searchInput" list="searchList" autocomplete="off" />
+          <datalist id="searchList"></datalist>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

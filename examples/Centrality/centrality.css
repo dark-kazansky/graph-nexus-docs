@@ -1,0 +1,259 @@
+/* Light theme matching the reference Centrality demo. */
+@font-face {
+  font-family: 'Muli';
+  font-weight: 400;
+  src: url('fonts/Muli-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-weight: 700;
+  src: url('fonts/Muli-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 400;
+  src: url('fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Font Awesome 5 Free Solid';
+  font-weight: 900;
+  src: url('fonts/fa-solid-900.woff2') format('woff2');
+}
+
+:root {
+  --page: #f2f5f6;
+  --text: #333;
+  --accent: #00aa70;
+  --btn: #a9a9a9;
+  --btn-active: #009968;
+  --btn-hover: #00c980;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--page);
+  color: var(--text);
+  font-family: Muli, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  padding: 8px;
+  background: var(--page);
+}
+
+/* Main chart */
+.chart-area {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+#klchart {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+/* Font Awesome glyphs used by the overlay and title bar. */
+.fa {
+  font-family: 'Font Awesome 5 Free Solid';
+  font-weight: 900;
+  font-style: normal;
+  line-height: 1;
+}
+.fa-home::before { content: '\f015'; }
+.fa-random::before { content: '\f074'; }
+.fa-arrows-alt::before { content: '\f0b2'; }
+.fa-edit::before { content: '\f044'; }
+.fa-plus-square::before { content: '\f0fe'; }
+.fa-minus-square::before { content: '\f146'; }
+.fa-expand::before { content: '\f065'; }
+
+/* Overlay controls (top-left) */
+.controloverlay {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  z-index: 10;
+  background: rgba(250, 250, 250, 0.8);
+  border: solid 1px #ededed;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.controloverlay ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+}
+
+.controloverlay li {
+  margin-bottom: 3px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.controloverlay li:last-child {
+  margin-bottom: 0;
+}
+
+.controloverlay a {
+  display: block;
+  color: #2d383f;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Right-hand control panel */
+.rhs {
+  width: 400px;
+  flex-shrink: 0;
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.title-bar .title {
+  font-family: Raleway, sans-serif;
+}
+
+.tabsdiv {
+  display: flex;
+  gap: 3.6px;
+  height: 51px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.tablinks {
+  height: 51px;
+  padding: 14px 16px;
+  background: transparent;
+  color: var(--accent);
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.tablinks.active {
+  color: #555;
+  border-bottom-color: var(--accent);
+}
+
+.tabcontent {
+  display: none;
+  padding: 16px 12px;
+  line-height: 1.43;
+}
+
+.tabcontent.is-visible {
+  display: block;
+}
+
+.tabcontent p {
+  margin: 0 0 10px;
+}
+
+.tabcontent h4 {
+  margin: 10px 0;
+  font-size: 17.5px;
+}
+
+/* Mini chart */
+#miniContainer {
+  background: #fff;
+  margin: 10px 18px 10px 10px;
+}
+
+#minikl {
+  height: 232px;
+}
+
+/* Button rows: label left, buttons right. */
+.btn-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-right: 8px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 3.6px;
+}
+
+.btn {
+  padding: 8px 16px;
+  background: var(--btn);
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn.active {
+  background: var(--btn-active);
+}
+
+/* Hover wins over active, as in the reference. */
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+/* Size buttons: full width, three per row. */
+.btn-group.size-btn {
+  /* The grid hangs 4px left of the column; that strip is clipped, as in the reference. */
+  clip-path: inset(0 0 0 4px);
+  flex-wrap: wrap;
+  gap: 4px 0;
+  margin: 4px 8px 0 -4px;
+}
+
+.btn-group.size-btn .btn {
+  width: calc(100% / 3 + 0.2px);
+  margin-right: -0.4px;
+}
+
+.btn-icon {
+  display: block;
+  width: 40px;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  background: var(--btn-active);
+}
+
+.btn-icon .fa {
+  display: inline-block;
+  width: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+}

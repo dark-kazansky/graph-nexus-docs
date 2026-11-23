@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3D view with Graph Nexus</title>
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="view-3d.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="view-3d.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <div class="chart-area"><div id="chart"></div><div class="layout-badge" id="layoutBadge" aria-live="polite"></div></div>
+      <aside class="panel">
+        <h1>3D data centre</h1>
+        <p class="lede">57 devices from the internet edge down to the servers. Drag to orbit, scroll to zoom, click a device to see its links.</p>
+
+        <h2>Layout in 3D</h2>
+        <div class="buttons">
+          <button type="button" data-layout="organic" aria-pressed="true">Organic</button>
+          <button type="button" data-layout="hierarchy" aria-pressed="false">Hierarchy</button>
+          <button type="button" data-layout="sequential" aria-pressed="false">Sequential</button>
+          <button type="button" data-layout="radial" aria-pressed="false">Radial</button>
+          <button type="button" data-layout="lens" aria-pressed="false">Lens</button>
+          <button type="button" data-layout="structural" aria-pressed="false">Structural</button>
+        </div>
+
+        <h2>Camera and look</h2>
+        <div class="buttons">
+          <button type="button" data-toggle="rotate" aria-pressed="true">Auto rotate</button>
+          <button type="button" data-toggle="fog" aria-pressed="false">Fog</button>
+          <button type="button" data-toggle="shading" aria-pressed="false">Shading</button>
+          <button type="button" id="reset">Reset camera</button>
+        </div>
+
+        <p id="status" aria-live="polite"></p>
+      </aside>
+    </main>
+  </body>
+</html>

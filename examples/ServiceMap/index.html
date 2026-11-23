@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Service map with Graph Nexus</title>
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="service-map.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="service-map.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <div class="chart-area"><div id="chart"></div></div>
+      <aside class="panel">
+        <h1>Checkout platform</h1>
+        <p class="lede">Each card is a single Nexus node styled with labels: icon tile, status pill, metrics and a CPU bar.</p>
+        <div id="details" aria-live="polite"></div>
+      </aside>
+    </main>
+  </body>
+</html>

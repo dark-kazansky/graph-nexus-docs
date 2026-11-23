@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fleet timeline with Graph Nexus</title>
+    <link rel="stylesheet" href="fleet-timeline.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="fleet-timeline.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <header class="bar">
+        <h1>Coastal fleet, August to September 2026</h1>
+        <p id="info" aria-live="polite">Click a vessel to focus its rotation, or a port call for its details.</p>
+        <button id="fit" type="button">Fit all</button>
+      </header>
+      <div id="timeline"></div>
+    </main>
+  </body>
+</html>

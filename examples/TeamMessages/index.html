@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Linked timeline and chart with Graph Nexus</title>
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="team-messages.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="team-messages.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <header class="bar">
+        <h1>Launch week messages</h1>
+        <p id="info" aria-live="polite">Zoom the timeline to filter the chart. Click a person in either view.</p>
+        <button id="fit" type="button">Whole week</button>
+      </header>
+      <div class="views">
+        <section class="pane" aria-label="Messages over time"><div id="timeline"></div></section>
+        <section class="pane" aria-label="Who messaged whom"><div id="chart"></div></section>
+      </div>
+    </main>
+  </body>
+</html>

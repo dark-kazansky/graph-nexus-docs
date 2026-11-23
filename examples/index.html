@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Examples: twelve Graph Nexus apps you can open in the browser</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Twelve working Graph Nexus apps: supplier networks, social network analysis, combos, styled nodes, timelines linked to charts and a 3D view. Each runs in the browser with its own data.">
+<meta property="og:title" content="Graph Nexus examples">
+<meta property="og:description" content="Twelve working Graph Nexus apps that run in the browser.">
+<meta property="og:image" content="thumbs/supplier-network.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/nexus-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<script>(function(){var t;try{t=localStorage.getItem('nexus-docs-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t);if(location.protocol!=='file:'){var s=document.createElement('style');s.textContent='@media (prefers-reduced-motion: no-preference){@view-transition{navigation:auto}}';document.head.appendChild(s)}})()</script>
+<link rel="stylesheet" href="../assets/doc.css">
+<link rel="stylesheet" href="../site/style.css">
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="logo"><a href="../site/index.html"><img class="logo-light" src="../assets/nexus-logo.png" alt="Graph Nexus" width="173" height="22"><img class="logo-dark" src="../assets/nexus-logo-white.png" alt="Graph Nexus" width="173" height="22"></a></div>
+  <div class="doc-search header-search" role="search">
+    <label class="sr-only" for="doc-search-input">Search documentation</label>
+    <input id="doc-search-input" type="search" placeholder="Search guides and API" autocomplete="off">
+    <ul class="search-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+  <nav aria-label="Main">
+    <a href="../site/index.html">Home</a>
+    <a href="index.html" class="current" aria-current="page">Examples</a>
+    <a href="../graph-nexus/index.html">Document</a>
+    <a class="gh-star" href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener" aria-label="Graph Nexus on GitHub (opens in a new tab)"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+  </nav>
+  <div class="toggle-switch">
+    <label class="switch-label">
+      <input type="checkbox" class="checkbox" aria-label="Dark mode">
+      <span class="slider" aria-hidden="true"></span>
+    </label>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-head">
+    <h1 class="heading-2">Twelve apps built<br> with Graph Nexus</h1>
+    <p class="hero-sub title-2">Each example is a complete app with its own data. Open one, click around,<br> then read its source to see how it is put together.</p>
+  </section>
+
+  <section class="examples" aria-label="Examples">
+    <ul class="example-grid">
+      <li><a class="example" href="SupplierNetwork/index.html">
+        <figure class="frame"><img src="thumbs/supplier-network.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Supplier network example"></figure>
+        <span class="example-tag caption-4">Layouts and analytics</span>
+        <h2 class="heading-6">Supplier network</h2>
+        <p class="body-6">Nexa Devices and 43 suppliers across four tiers and eight countries. Try each layout, size suppliers by betweenness, group by country or switch to 3D.</p>
+      </a></li>
+      <li><a class="example" href="Centrality/index.html">
+        <figure class="frame"><img src="thumbs/centrality.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Social network analysis example"></figure>
+        <span class="example-tag caption-4">Graph analytics</span>
+        <h2 class="heading-6">Social network analysis</h2>
+        <p class="body-6">Size an email network by degree, closeness, betweenness, PageRank or eigencentrality, then load a 10k node dataset or view it in 3D.</p>
+      </a></li>
+      <li><a class="example" href="View3D/index.html">
+        <figure class="frame"><img src="thumbs/view-3d.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the 3D view example"></figure>
+        <span class="example-tag caption-4">3D</span>
+        <h2 class="heading-6">3D view</h2>
+        <p class="body-6">A data centre of 57 devices from the internet edge down to the servers. Orbit, zoom and switch layouts in 3D.</p>
+      </a></li>
+      <li><a class="example" href="ShipmentLanes/index.html">
+        <figure class="frame"><img src="thumbs/shipment-lanes.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Combos and aggregate links example"></figure>
+        <span class="example-tag caption-4">Combos</span>
+        <h2 class="heading-6">Combos and aggregate links</h2>
+        <p class="body-6">A week of shipments between nine sites in three regions. Merge parallel links, split them by transport mode and group sites by region.</p>
+      </a></li>
+      <li><a class="example" href="AggregatedLinks/index.html">
+        <figure class="frame"><img src="thumbs/aggregated-links.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Aggregating links example"></figure>
+        <span class="example-tag caption-4">Aggregate links</span>
+        <h2 class="heading-6">Aggregating links</h2>
+        <p class="body-6">Switch between no aggregation, all links and aggregation by category, and double click combos to open or close them.</p>
+      </a></li>
+      <li><a class="example" href="ServiceMap/index.html">
+        <figure class="frame"><img src="thumbs/service-map.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Service map example"></figure>
+        <span class="example-tag caption-4">Node styling</span>
+        <h2 class="heading-6">Service map</h2>
+        <p class="body-6">A checkout platform where every card is one node styled with an icon tile, status pill, metrics and a CPU bar.</p>
+      </a></li>
+      <li><a class="example" href="AdvancedNodeStyles/index.html">
+        <figure class="frame"><img src="thumbs/advanced-node-styles.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Advanced node styles example"></figure>
+        <span class="example-tag caption-4">Node styling</span>
+        <h2 class="heading-6">Advanced node styles</h2>
+        <p class="body-6">Custom shaped nodes built from label objects. Select a node to see the source code that draws it.</p>
+      </a></li>
+      <li><a class="example" href="ChronoGraph/index.html">
+        <figure class="frame"><img src="thumbs/chrono-graph.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Timeline with a network chart example"></figure>
+        <span class="example-tag caption-4">Timeline and chart</span>
+        <h2 class="heading-6">Timeline with a network chart</h2>
+        <p class="body-6">Months of contact between people as a heatmap timeline beside the network they form. Search for a person to find them in both.</p>
+      </a></li>
+      <li><a class="example" href="TeamMessages/index.html">
+        <figure class="frame"><img src="thumbs/team-messages.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Linked timeline and chart example"></figure>
+        <span class="example-tag caption-4">Timeline and chart</span>
+        <h2 class="heading-6">Linked timeline and chart</h2>
+        <p class="body-6">Launch week messages between colleagues. Zoom the timeline to filter the chart and click a person in either view.</p>
+      </a></li>
+      <li><a class="example" href="PaymentsInvestigation/index.html">
+        <figure class="frame"><img src="thumbs/payments-investigation.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Payments investigation example"></figure>
+        <span class="example-tag caption-4">Timeline and chart</span>
+        <h2 class="heading-6">Payments investigation</h2>
+        <p class="body-6">A case of structured deposits. Zoom or pan the timeline to filter the network of parties and accounts.</p>
+      </a></li>
+      <li><a class="example" href="ProjectTimeline/index.html">
+        <figure class="frame"><img src="thumbs/project-timeline.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Project timeline example"></figure>
+        <span class="example-tag caption-4">Timeline</span>
+        <h2 class="heading-6">Project timeline</h2>
+        <p class="body-6">A website relaunch: tasks as bars, handoffs as arrows between people, and markers for key dates.</p>
+      </a></li>
+      <li><a class="example" href="FleetTimeline/index.html">
+        <figure class="frame"><img src="thumbs/fleet-timeline.jpg" width="960" height="617" loading="lazy" alt="Screenshot of the Fleet timeline example"></figure>
+        <span class="example-tag caption-4">Timeline</span>
+        <h2 class="heading-6">Fleet timeline</h2>
+        <p class="body-6">A coastal fleet over two months. Click a vessel to focus its rotation, or a port call for its details.</p>
+      </a></li>
+    </ul>
+  </section>
+
+  <section class="final-cta reveal" aria-labelledby="cta-title">
+    <h2 id="cta-title" class="heading-3">Build your own chart</h2>
+    <p class="title-2">The same package powers every example above.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="../graph-nexus/installing/installing-graph-nexus.html">Install Graph Nexus
+        <svg viewBox="0 0 256 256" aria-hidden="true"><path fill="currentColor" d="M221.66 133.66l-72 72a8 8 0 0 1-11.32-11.32L196.69 136H40a8 8 0 0 1 0-16h156.69l-58.35-58.34a8 8 0 0 1 11.32-11.32l72 72a8 8 0 0 1 0 11.32Z"/></svg></a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <p class="legal">© 2026 Graph Nexus. All rights reserved.</p>
+  <nav aria-label="Footer">
+    <a href="../graph-nexus/index.html">Documentation</a>
+    <a href="../graph-nexus/api.html">API reference</a>
+    <a href="../graph-nexus/about/security.html">Security</a>
+    <a href="https://github.com/dark-kazansky/graph-nexus" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</footer>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+<script src="../site/landing.js"></script>
+</body>
+</html>

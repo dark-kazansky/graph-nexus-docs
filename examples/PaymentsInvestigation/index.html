@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payments investigation with Graph Nexus</title>
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="investigation.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="investigation.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <header class="bar">
+        <h1>Case 2026-031: structured deposits</h1>
+        <p id="info" aria-live="polite">Zoom or pan the timeline to filter the network. Click a party in either view.</p>
+        <button id="fit" type="button">Reset</button>
+      </header>
+      <div class="views">
+        <section class="pane" aria-label="Transfers over time"><div id="timeline"></div></section>
+        <section class="pane" aria-label="Money flow network"><div id="chart"></div></section>
+      </div>
+    </main>
+  </body>
+</html>

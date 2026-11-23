@@ -73,6 +73,7 @@
 .body-5 { font-size: .875rem; line-height: 1.25rem; font-weight: 500; }
 .caption-2 { font-size: .875rem; line-height: 1.25rem; font-weight: 400; }
 .caption-3 { font-size: .75rem; line-height: 1rem; font-weight: 600; }
+.caption-4 { font-size: .75rem; line-height: 1rem; font-weight: 500; }
 .caption-5 { font-size: .75rem; line-height: 1rem; font-weight: 400; }
 
 * { box-sizing: border-box; }
@@ -545,7 +546,7 @@ footer.site nav a:hover { color: var(--strong); }
 
 @media (max-width: 760px) {
   /* The logo already links home; the docs menu button covers the current section. */
-  header.site nav a[href$="site/index.html"], header.site nav a[href="index.html"] { display: none; }
+  header.site nav a[href$="site/index.html"], header.site nav a[href="index.html"]:first-child { display: none; }
 }
 
 @media (max-width: 600px) {
@@ -555,7 +556,9 @@ footer.site nav a:hover { color: var(--strong); }
 
 @media (max-width: 480px) {
   header.site .header-search { display: none; }
-  header.site nav { margin-left: auto; }
+  header.site { gap: var(--s-75); }
+  header.site nav { margin-left: auto; gap: 0; }
+  header.site nav a:not(.gh-star) { padding: 0 var(--s-75); }
 }
 
 @media (pointer: coarse) {
@@ -578,3 +581,6 @@ footer.site nav a:hover { color: var(--strong); }
   .doc-nav-group, body.nav-open .doc-nav-group { transform: none; transition-delay: 0s !important; }
   .doc-card:hover, .page-nav a:hover { transform: none; }
 }
+
+/* Very narrow phones: the header keeps menu, Examples, Document and theme; GitHub drops out. */
+@media (max-width: 400px) { header.site nav a.gh-star { display: none; } }

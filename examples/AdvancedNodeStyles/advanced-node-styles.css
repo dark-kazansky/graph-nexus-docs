@@ -1,0 +1,75 @@
+/* Fonts come from the graph-nexus package assets. */
+@font-face {
+  font-family: 'MaterialIcons';
+  src: url('../sdk/assets/fonts/material-icons/material-icons.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Muli';
+  font-weight: 400;
+  src: url('../sdk/assets/fonts/Muli/Muli-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-weight: 700;
+  src: url('../sdk/assets/fonts/Muli/Muli-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 400;
+  src: url('../sdk/assets/fonts/Raleway/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 700;
+  src: url('../sdk/assets/fonts/Raleway/Raleway-Bold.ttf') format('truetype');
+}
+/* Single-word family name so the canvas font shorthand needs no quoting. */
+@font-face {
+  font-family: 'FontAwesomeSolid';
+  font-weight: 900;
+  src: url('../sdk/assets/fonts/fontawesome/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #f2f5f6;
+  color: #333;
+  font-family: Muli, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.app { display: flex; height: 100vh; width: 100vw; padding: 8px; background: #f2f5f6; }
+.chart-area { position: relative; flex: 1; min-width: 0; }
+#klchart { width: 100%; height: 100%; background: #fff; }
+
+.rhs { width: 400px; flex-shrink: 0; margin-left: 14px; display: flex; flex-direction: column; overflow-y: auto; }
+.title-bar { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.title-bar h1 { margin: 0; font: 400 24px Raleway, sans-serif; }
+.btn-icon { cursor: pointer; font-size: 18px; color: #2d383f; padding: 6px; }
+
+.tabsdiv { display: flex; gap: 4px; border-bottom: 2px solid #00aa70; }
+.tablinks {
+  flex: 1; padding: 8px; border: none; cursor: pointer;
+  background: #a9a9a9; color: #fff; font: inherit;
+}
+.tablinks.active { background: #00aa70; }
+
+.tabcontent { display: none; padding: 10px 2px; line-height: 1.5; }
+.tabcontent.is-visible { display: block; }
+.tabcontent h4, .tabcontent h5 { margin: 14px 0 6px; }
+.radio { display: block; margin: 6px 0; cursor: pointer; }
+#display {
+  margin: 10px 0 0;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  font: 12px/1.4 monospace;
+  white-space: pre-wrap;
+  word-break: keep-all;
+  user-select: text;
+  max-height: calc(100vh - 220px);
+  overflow: auto;
+}

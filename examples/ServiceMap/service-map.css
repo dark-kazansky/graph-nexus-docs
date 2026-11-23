@@ -1,0 +1,22 @@
+/* Fonts ship with graph-nexus (assets/fonts). */
+@font-face { font-family: 'Muli'; src: url('../sdk/assets/fonts/Muli/Muli-Regular.ttf'); }
+@font-face { font-family: 'Muli'; font-weight: 700; src: url('../sdk/assets/fonts/Muli/Muli-Bold.ttf'); }
+@font-face { font-family: 'FontAwesomeSolid'; font-weight: 900; src: url('../sdk/assets/fonts/fontawesome/webfonts/fa-solid-900.woff2'); }
+
+:root { --ink: #1f1a17; --grey: #6b6560; --line: #e9dbd4; --bg: #fbf7f5; --brand: #c7141a; }
+
+html, body { height: 100%; margin: 0; background: var(--bg); color: var(--ink); font-family: 'Muli', sans-serif; }
+.demo { display: flex; height: 100%; gap: 16px; padding: 16px; box-sizing: border-box; }
+.chart-area { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
+#chart { width: 100%; height: 100%; }
+.panel { width: 300px; padding: 8px 8px 0; }
+.panel h1 { margin: 0 0 8px; font-size: 1.4rem; }
+.panel h2 { margin: 24px 0 4px; font-size: 1.1rem; }
+.lede, .hint, .owner { color: var(--grey); font-size: .9rem; line-height: 1.4; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 16px 0; font-size: .9rem; }
+dt { color: var(--grey); }
+dd { margin: 0; font-weight: 700; text-transform: capitalize; }
+.status-healthy { color: #0f7a53; }
+.status-degraded { color: #b4470c; }
+.status-down { color: var(--brand); }
+@media (max-width: 760px) { .demo { flex-direction: column; } .panel { width: auto; } .chart-area { min-height: 60vh; } }

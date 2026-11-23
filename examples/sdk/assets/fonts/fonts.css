@@ -1,0 +1,6 @@
+/* Fonts bundled with Graph Nexus (SIL Open Font License 1.1, see OFL.txt in each folder).
+   Use with chart.options({ fontFamily: 'Muli' }) or 'Raleway'. */
+@font-face { font-family: 'Muli'; src: url('Muli/Muli-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'Muli'; src: url('Muli/Muli-Bold.ttf') format('truetype'); font-weight: 700; }
+@font-face { font-family: 'Raleway'; src: url('Raleway/Raleway-Regular.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'Raleway'; src: url('Raleway/Raleway-Bold.ttf') format('truetype'); font-weight: 700; }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Social Network Analysis</title>
+    <link rel="stylesheet" type="text/css" href="centrality.css" />
+
+    <!-- Demo logic as a native ES module, no bundle. "graph-nexus" is a file:../.. dependency
+         (the parent repo); the import map points the bare specifier at its ES module source. -->
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="centrality.js" type="module"></script>
+  </head>
+  <body>
+    <section class="app" id="fullscreen">
+      <!-- Main chart -->
+      <div class="chart-area">
+        <div id="klchart"></div>
+        <div class="controloverlay">
+          <ul>
+            <li><a id="home" title="Home"><i class="fa fa-home"></i></a></li>
+            <li><a id="layout" title="Layout chart"><i class="fa fa-random"></i></a></li>
+            <li><a id="changeMode" title="Drag mode"><i class="fa fa-arrows-alt" id="iconMode"></i></a></li>
+            <li><a id="zoomIn" title="Zoom in"><i class="fa fa-plus-square"></i></a></li>
+            <li><a id="zoomOut" title="Zoom out"><i class="fa fa-minus-square"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right-hand controls -->
+      <aside class="rhs">
+        <div class="title-bar">
+          <svg class="title" viewBox="0 0 360 60" style="max-width: 360px; max-height: 60px; font-size: 24px; flex: 1;"><text x="0" y="38">Transaction Network Analysis</text></svg>
+          <a class="btn btn-icon" id="fullscreenButton" title="Fullscreen"><i class="fa fa-expand"></i></a>
+        </div>
+
+        <div class="tabsdiv">
+          <button class="tablinks active" type="button" data-tab="controlsTab">Controls</button>
+          <button class="tablinks" type="button" data-tab="aboutTab">About</button>
+        </div>
+
+        <!-- Controls tab -->
+        <div class="tabcontent is-visible" id="controlsTab">
+          <p>Click a node to see its neighbours. Select size strategy below.</p>
+
+          <div id="miniContainer">
+            <div id="minikl"></div>
+          </div>
+
+          <div class="btn-row">
+            <p>View:</p>
+            <div class="btn-group">
+              <button class="view btn active" type="button" value="2d">2D</button>
+              <button class="view btn" type="button" value="3d">3D</button>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <p>Dataset:</p>
+            <div class="btn-group">
+              <button class="dataset btn active" type="button" value="enron">Enron (156)</button>
+              <button class="dataset btn" type="button" value="large">Large (10k)</button>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <p>Transaction Volumes:</p>
+            <div class="btn-group">
+              <button class="volume btn active" type="button" value="off">Off</button>
+              <button class="volume btn" type="button" value="on">On</button>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <p>Size:</p>
+          </div>
+          <div class="btn-group size-btn">
+            <button class="size btn active" type="button" value="same">Same</button>
+            <button class="size btn" type="button" value="degrees">Degree</button>
+            <button class="size btn" type="button" value="closeness">Closeness</button>
+            <button class="size btn" type="button" value="betweenness">Betweenness</button>
+            <button class="size btn" type="button" value="pageRank">PageRank</button>
+            <button class="size btn" type="button" value="eigenCentrality">EigenCentrality</button>
+          </div>
+
+          <div class="btn-row">
+            <p>Analyse:</p>
+            <div class="btn-group">
+              <button class="direction btn" type="button" value="from">Sent</button>
+              <button class="direction btn" type="button" value="to">Received</button>
+              <button class="direction btn active" type="button" value="any">All</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- About tab -->
+        <div class="tabcontent" id="aboutTab">
+          <h4>Centrality Analysis</h4>
+          <p>Centrality algorithms can be used to score the network in different ways.
+            We can use these scores to modify the size of nodes, highlighting influential
+            individuals.</p>
+          <p><b>Degrees</b> counts the number of directly connected nodes each node has.</p>
+          <p><b>Closeness</b> measures how many steps each node is from every other node in the graph.
+            It helps identify 'broadcasters', or people who have good influence over the network.</p>
+          <p><b>Betweenness</b> counts the number of shortest paths all nodes are on, identifying important
+            'bridges' in the network. In sociology, this has been shown to correlate with seniority in
+            organisations.</p>
+          <p><b>Eigenvector centrality</b> is a measure of influence that takes into account the number of
+            links each person has and the number of links their connections have, and so on throughout the
+            network. It is an effective measure of influence in social networks and malware propagation.</p>
+          <p><b>PageRank</b> identifies important nodes by counting incoming links and weighting according
+            to the relative scores of their originating nodes. It helps identify nodes which are indirectly
+            influential to the network.</p>
+          <h4>3D View</h4>
+          <p>Switch <b>View</b> to 3D to lay the network out in depth. Left-drag to rotate, right-drag
+            to pan, wheel to zoom. Clicking a node brings it to the centre; nearer nodes draw larger and on
+            top, and far ones fade.</p>
+        </div>
+      </aside>
+    </section>
+
+    <script>
+      // Minimal tab switching (no framework needed).
+      document.querySelectorAll('.tablinks').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tablinks').forEach((b) => b.classList.remove('active'));
+          document.querySelectorAll('.tabcontent').forEach((c) => c.classList.remove('is-visible'));
+          btn.classList.add('active');
+          document.getElementById(btn.dataset.tab).classList.add('is-visible');
+        });
+      });
+      // Fullscreen toggle, as in the reference title bar.
+      document.getElementById('fullscreenButton').addEventListener('click', () => {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else document.getElementById('fullscreen').requestFullscreen();
+      });
+    </script>
+  </body>
+</html>

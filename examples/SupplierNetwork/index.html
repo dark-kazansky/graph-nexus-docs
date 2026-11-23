@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Supplier network with Graph Nexus</title>
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="supplier-network.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="supplier-network.js" type="module"></script>
+  </head>
+  <body>
+    <main class="demo">
+      <div class="chart-area"><div id="chart"></div><div class="layout-badge" id="layoutBadge" aria-live="polite" hidden></div></div>
+      <aside class="panel">
+        <h1>Supplier network</h1>
+        <p class="lede">Nexa Devices and 43 suppliers across four tiers and eight countries. Links run from supplier to buyer, one per shipment lane.</p>
+
+        <h2>Layout</h2>
+        <div class="buttons">
+          <button type="button" data-group="layout" data-layout="organic" aria-pressed="true">Organic</button>
+          <button type="button" data-group="layout" data-layout="hierarchy" aria-pressed="false">Hierarchy</button>
+          <button type="button" data-group="layout" data-layout="sequential" aria-pressed="false">Sequential</button>
+          <button type="button" data-group="layout" data-layout="radial" aria-pressed="false">Radial</button>
+          <button type="button" data-group="layout" data-layout="lens" aria-pressed="false">Lens</button>
+          <button type="button" data-group="layout" data-layout="structural" aria-pressed="false">Structural</button>
+          <button type="button" data-group="layout" data-layout="tweak" aria-pressed="false">Tweak</button>
+        </div>
+
+        <h2>Analyse</h2>
+        <div class="buttons">
+          <button type="button" data-toggle="size" aria-pressed="false">Size by betweenness</button>
+          <button type="button" data-toggle="group" aria-pressed="false">Group by country</button>
+          <button type="button" data-toggle="aggregate" aria-pressed="false">Merge parallel lanes</button>
+          <button type="button" data-toggle="view3d" aria-pressed="false">3D view</button>
+        </div>
+
+        <p id="status" aria-live="polite"></p>
+      </aside>
+    </main>
+  </body>
+</html>

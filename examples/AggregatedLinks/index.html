@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Aggregating Links</title>
+    <!-- Font Awesome classes let GraphNexus.getFontIcon('fa-solid fa-…') resolve icon code points. -->
+    <link rel="stylesheet" href="../sdk/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="aggregated-links.css" />
+    <script type="importmap">
+      { "imports": { "graph-nexus": "../sdk/src/graph-nexus.js" } }
+    </script>
+    <script src="aggregated-links.js" type="module"></script>
+  </head>
+  <body>
+    <section class="app" id="fullscreen">
+      <div class="chart-area"><div id="klchart"></div></div>
+
+      <aside class="rhs">
+        <div class="title-bar">
+          <h1>Aggregating Links</h1>
+          <a class="btn-icon" id="fullscreenButton" title="Fullscreen"><i class="fa-solid fa-expand"></i></a>
+        </div>
+
+        <div class="tabsdiv">
+          <button class="tablinks active" type="button" data-tab="controlsTab">Controls</button>
+          <button class="tablinks" type="button" data-tab="aboutTab">About</button>
+        </div>
+
+        <div class="tabcontent is-visible" id="controlsTab">
+          <p>Switch between link aggregation options and double-click combos to open and close them,
+            showing different levels of detail.</p>
+          <h5>Link aggregation</h5>
+          <label class="radio"><input type="radio" name="aggregateLinks" value="false" /> None</label>
+          <label class="radio"><input type="radio" name="aggregateLinks" value="true" /> All links</label>
+          <label class="radio"><input type="radio" name="aggregateLinks" value="via" checked /> Aggregate by link category</label>
+        </div>
+
+        <div class="tabcontent" id="aboutTab">
+          <h4>Why Aggregated Links?</h4>
+          <p>A chart with many links between individual pairs of nodes or combos becomes cluttered and hard to
+            read. The <b>aggregateLinks</b> chart option draws each group of links that share properties as one
+            aggregate link.</p>
+          <p>Besides aggregating every link between a pair of nodes, set <b>aggregateBy</b> to aggregate only links
+            that share a custom <b>d</b> property, and <b>aggregateByDirection</b> to split them by direction.</p>
+          <p>A <b>link-aggregation</b> event fires each time an aggregate link is created, updated or deleted,
+            so you can style it, here with a width and a counter glyph for its child count.</p>
+          <h4>Aggregate links and combos</h4>
+          <p>Aggregate links are especially useful with nested combos, which can reveal many underlying links when
+            opened. For closed combos they organise links at any nesting level while still showing which combos
+            are connected.</p>
+          <p>Key APIs: chart option <b>aggregateLinks</b>, <b>chart.on('link-aggregation')</b>.</p>
+        </div>
+      </aside>
+    </section>
+
+    <script>
+      document.querySelectorAll('.tablinks').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tablinks').forEach((b) => b.classList.remove('active'));
+          document.querySelectorAll('.tabcontent').forEach((c) => c.classList.remove('is-visible'));
+          btn.classList.add('active');
+          document.getElementById(btn.dataset.tab).classList.add('is-visible');
+        });
+      });
+      document.getElementById('fullscreenButton').addEventListener('click', () => {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else document.getElementById('fullscreen').requestFullscreen();
+      });
+    </script>
+  </body>
+</html>

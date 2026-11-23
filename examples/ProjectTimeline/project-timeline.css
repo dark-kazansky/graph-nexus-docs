@@ -1,0 +1,17 @@
+/* Muli ships with graph-nexus (assets/fonts). */
+@font-face { font-family: 'Muli'; src: url('../sdk/assets/fonts/Muli/Muli-Regular.ttf'); }
+@font-face { font-family: 'Muli'; font-weight: 700; src: url('../sdk/assets/fonts/Muli/Muli-Bold.ttf'); }
+
+:root { --ink: #1f1a17; --grey: #6b6560; --line: #e9dbd4; --bg: #fbf7f5; --brand: #c7141a; }
+html, body { height: 100%; margin: 0; background: var(--bg); color: var(--ink); font-family: 'Muli', sans-serif; }
+.demo { display: flex; flex-direction: column; height: 100%; padding: 16px; box-sizing: border-box; gap: 12px; }
+.bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.bar h1 { margin: 0; font-size: 1.15rem; }
+.bar p { margin: 0; flex: 1; min-width: 240px; color: var(--grey); font-size: .9rem; }
+.bar button {
+  padding: 6px 14px; font: 700 .85rem 'Muli', sans-serif; color: #fff;
+  background: var(--brand); border: 0; border-radius: 8px; cursor: pointer;
+}
+.bar button:hover { background: #9d0b0f; }
+.bar button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+#timeline, .pane { flex: 1; min-height: 300px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
