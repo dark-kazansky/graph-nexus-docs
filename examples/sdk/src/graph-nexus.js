@@ -2171,14 +2171,14 @@ function createChart(container, initialOptions, onDestroy) {
     animateProperties,
 
     hide(ids) {
-      asList(ids).forEach(id => { const item = nodes[id] || links[id]; if (item) item.hi = true; });
+      asList(ids).forEach(id => { const item = nodes[id] || links[id]; if (item) { item.hi = true; delete item._singleton; } });
       changed();
       return Promise.resolve();
     },
 
     show(ids, showLinks = false) {
       const list = asList(ids);
-      list.forEach(id => { const item = nodes[id] || links[id]; if (item) delete item.hi; });
+      list.forEach(id => { const item = nodes[id] || links[id]; if (item) { delete item.hi; delete item._singleton; } });
       if (showLinks) {
         const set = new Set(list);
         Object.values(links).forEach(l => {
@@ -2195,8 +2195,13 @@ function createChart(container, initialOptions, onDestroy) {
       if (type !== 'link') {
         Object.values(nodes).forEach(n => {
           if (isComboNode(n)) return;
+          delete n._singleton;
           if (fn(n)) delete n.hi; else n.hi = true;
         });
+      } else {
+        // Link filters do not judge nodes, but nodes an earlier pass hid only for having no visible
+        // links must be judged again, or widening the filter could never bring them back.
+        Object.values(nodes).forEach(n => { if (n._singleton) { delete n.hi; delete n._singleton; } });
       }
       Object.values(links).forEach(l => {
         const endsShown = !nodes[l.id1]?.hi && !nodes[l.id2]?.hi;
@@ -2206,7 +2211,7 @@ function createChart(container, initialOptions, onDestroy) {
       if (opts.hideSingletons) {
         const linked = new Set();
         Object.values(links).forEach(l => { if (!l.hi) { linked.add(l.id1); linked.add(l.id2); } });
-        Object.values(nodes).forEach(n => { if (!isComboNode(n) && !n.hi && !linked.has(n.id)) n.hi = true; });
+        Object.values(nodes).forEach(n => { if (!isComboNode(n) && !n.hi && !linked.has(n.id)) { n.hi = true; n._singleton = true; } });
       }
       Object.values(nodes).forEach(n => { if (!isComboNode(n)) result[n.hi ? 'hidden' : 'shown'].nodes.push(n.id); });
       Object.values(links).forEach(l => result[l.hi ? 'hidden' : 'shown'].links.push(l.id));
