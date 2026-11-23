@@ -9,10 +9,13 @@ const [timelineData, chartData, labels] = await Promise.all([
 ]);
 
 // The dataset has 10 self-calls (same id twice); the timeline rejects duplicate entityIds.
-Object.values(timelineData.events).forEach((ev) => { ev.entityIds = [...new Set(ev.entityIds)]; });
-
-// The phone icon font is declared in CSS but unused by the page, so load it before the first draw.
-await document.fonts.load('900 16px "Font Awesome 5 Free"');
+// Each call is shown at the moment it started, as a dot like the other timelines, rather than
+// as a bar over its few minutes; the chart still filters on the full call times.
+Object.values(timelineData.events).forEach((ev) => {
+  ev.entityIds = [...new Set(ev.entityIds)];
+  ev.time = new Date(ev.time.start);
+});
+delete timelineData.eventTypes.default.fontIcon;
 
 const timeline = createTimeline('kg');
 timeline.set(timelineData);
