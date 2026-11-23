@@ -1,3 +1,4 @@
+import { cssFontFamily } from '../fontFamily.js';
 import { DATE_TIME_FORMATS } from './defaults.js';
 import { aggregateEvents, resolveEventColor } from './aggregation.js';
 import { deriveRows } from './rows.js';
@@ -68,7 +69,7 @@ function drawGlyph(ctx, row, x, y, options, hitRegions) {
   const icon = (typeof glyph === 'object' && glyph.fontIcon) || entity.style.fontIcon;
   if (icon) {
     ctx.fillStyle = icon.color || color;
-    ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, row.height * 0.55 * (icon.scale ?? 1))}px ${icon.fontFamily || options.fontFamily}`;
+    ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, row.height * 0.55 * (icon.scale ?? 1))}px ${cssFontFamily(icon.fontFamily || options.fontFamily)}`;
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillText(icon.text || '', x + (icon.dx || 0), y + (icon.dy || 0));
   } else {
@@ -133,7 +134,7 @@ function drawRows(ctx, model, rows, geometry, aggregation, hitRegions, entityPos
       const icon = typeof glyph === 'object' ? glyph.fontIcon : null;
       ctx.fillStyle = typeof glyph === 'object' && glyph.color ? glyph.color : lineColor;
       if (icon) {
-        ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, row.height * 0.55 * (icon.scale ?? 1))}px ${icon.fontFamily || options.fontFamily}`;
+        ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, row.height * 0.55 * (icon.scale ?? 1))}px ${cssFontFamily(icon.fontFamily || options.fontFamily)}`;
         ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(icon.text || '', glyphX + (icon.dx || 0), centre + (icon.dy || 0));
       } else { ctx.beginPath(); ctx.arc(glyphX, centre, GLYPH_RADIUS, 0, Math.PI * 2); ctx.fill(); }
       hitRegions.push({ targetType: 'glyph', id: row.id, entityIds: [...row.entityIds], x1: glyphX - 7, x2: glyphX + 7, y1: centre - 7, y2: centre + 7 });
@@ -144,7 +145,7 @@ function drawRows(ctx, model, rows, geometry, aggregation, hitRegions, entityPos
       ctx.fillStyle = options.entities.labelBackgroundColor;
       ctx.fillRect(textX - 2, row.y1, Math.max(0, geometry.label.x2 - textX), row.height);
     }
-    ctx.font = `${Math.max(8, row.height * 0.65)}px ${options.fontFamily}`;
+    ctx.font = `${Math.max(8, row.height * 0.65)}px ${cssFontFamily(options.fontFamily)}`;
     ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
     ctx.fillStyle = representative?.style.labelColor || '#e5e8eb';
     ctx.fillText(truncate(ctx, row.label || '', Math.max(0, geometry.label.x2 - textX - 34), options.entities.truncateLabelsAt), textX, centre);
@@ -245,7 +246,7 @@ function drawIndividualEvents(ctx, model, rows, aggregation, xForTime, hitRegion
         if (event.style.fontIcon) {
           const icon = event.style.fontIcon;
           ctx.fillStyle = icon.color || itemColor;
-          ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, 10 * (icon.scale ?? 1))}px ${icon.fontFamily || options.fontFamily}`;
+          ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, 10 * (icon.scale ?? 1))}px ${cssFontFamily(icon.fontFamily || options.fontFamily)}`;
           ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
           ctx.fillText(icon.text || '', item.x + (icon.dx || 0), item.y + (icon.dy || 0));
         }
@@ -331,7 +332,7 @@ function drawCharts(ctx, model, geometry, xForTime, hitRegions, highlightedPoint
   const height = (geometry.chart.y2 - geometry.chart.y1) / Math.max(1, rows.length);
   rows.forEach((row, rowIndex) => {
     const y1 = geometry.chart.y1 + rowIndex * height; const y2 = y1 + height;
-    ctx.fillStyle = row.labelColor; ctx.font = `11px ${model.options().fontFamily}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.fillStyle = row.labelColor; ctx.font = `11px ${cssFontFamily(model.options().fontFamily)}`; ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
     ctx.fillText(truncate(ctx, row.label, geometry.label.x2 - 8, 40), 8, (y1 + y2) / 2);
     hitRegions.push({ targetType: 'timeSeriesChart', id: row.id, label: row.label, x1: 0, x2: geometry.label.x2, y1, y2 });
     const values = row.charts.flatMap(chart => chart.data.map(point => point.value));
@@ -407,13 +408,13 @@ function drawMarkers(ctx, model, geometry, xForTime) {
       const icon = style.fontIcon;
       if (icon) {
         ctx.fillStyle = icon.color || color;
-        ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, options.scales.textSize * (icon.scale ?? 1))}px ${icon.fontFamily || options.fontFamily}`;
+        ctx.font = `${icon.fontWeight || 'normal'} ${Math.max(8, options.scales.textSize * (icon.scale ?? 1))}px ${cssFontFamily(icon.fontFamily || options.fontFamily)}`;
         ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
         ctx.fillText(icon.text || '', markerX + (icon.dx || 0), edgeY + direction * 9 + (icon.dy || 0));
       } else {
         ctx.fillStyle = color; ctx.beginPath(); ctx.arc(markerX, edgeY + direction * 9, 4, 0, Math.PI * 2); ctx.fill();
       }
-      ctx.font = `${options.scales.textSize}px ${options.fontFamily}`;
+      ctx.font = `${options.scales.textSize}px ${cssFontFamily(options.fontFamily)}`;
       const text = style.label;
       if (!text) return;
       const labelX = markerX + 6;
@@ -560,7 +561,7 @@ function drawScale(ctx, model, geometry, position, xForTime, range, hitRegions) 
   if (options.scales.backgroundColor) { ctx.fillStyle = options.scales.backgroundColor; ctx.fillRect(0, y1, geometry.width, geometry.scaleHeight); }
   if (options.scales.borderColor) { ctx.strokeStyle = options.scales.borderColor; ctx.beginPath(); ctx.moveTo(0, position === 'top' ? y2 - 0.5 : y1 + 0.5); ctx.lineTo(geometry.width, position === 'top' ? y2 - 0.5 : y1 + 0.5); ctx.stroke(); }
   const pixels = Math.max(1, geometry.timeline.x2 - geometry.timeline.x1);
-  ctx.font = `${options.scales.textSize}px ${options.fontFamily}`; ctx.fillStyle = options.scales.textColor;
+  ctx.font = `${options.scales.textSize}px ${cssFontFamily(options.fontFamily)}`; ctx.fillStyle = options.scales.textColor;
   ctx.strokeStyle = options.scales.borderColor || options.scales.textColor;
   const middle = y1 + geometry.scaleHeight / 2;
   const { interval: lower, slot: lowerSlot } = selectScaleInterval(ctx, options, range, pixels);
@@ -585,7 +586,7 @@ function drawScaleGuide(ctx, model, geometry, state, xForTime) {
   const slot = options.scaleGuide.textFormat === 'auto' ? 'dateTimeSeconds' : null;
   const format = slot ? defaultScaleFormat(slot, options.scales) : options.scaleGuide.textFormat;
   const label = formatTime(time.time, time.timeNanoseconds, format, options.scales);
-  ctx.font = `${options.scales.textSize}px ${options.fontFamily}`; ctx.fillStyle = options.scaleGuide.textColor; ctx.textAlign = 'center';
+  ctx.font = `${options.scales.textSize}px ${cssFontFamily(options.fontFamily)}`; ctx.fillStyle = options.scaleGuide.textColor; ctx.textAlign = 'center';
   if (options.scaleGuide.showAtTop) { ctx.textBaseline = 'top'; ctx.fillText(label, x, 1); }
   if (options.scaleGuide.showAtBottom) { ctx.textBaseline = 'bottom'; ctx.fillText(label, x, geometry.height - 1); }
   ctx.restore();
@@ -659,9 +660,9 @@ export function renderTimeline(ctx, size, model, state = {}) {
   const top = (options.scales.showAtTop ? scaleHeight : 0) + margins.top;
   const bottom = (options.scales.showAtBottom ? scaleHeight : 0) + margins.bottom;
   ctx.clearRect(0, 0, width, height); ctx.fillStyle = options.backgroundColor; ctx.fillRect(0, 0, width, height);
-  ctx.font = `12px ${options.fontFamily}`;
+  ctx.font = `12px ${cssFontFamily(options.fontFamily)}`;
   const allLabels = Object.values(model.normalized.entities).map(entity => entity.style.label);
-  ctx.font = `${options.entities.standardRowHeight * 0.65}px ${options.fontFamily}`;
+  ctx.font = `${options.entities.standardRowHeight * 0.65}px ${cssFontFamily(options.fontFamily)}`;
   const autoWidth = Math.min(width * 0.95, LABEL_X + LABEL_PAD + Math.max(0, ...allLabels.map(label => ctx.measureText(truncate(ctx, label, Infinity, options.entities.truncateLabelsAt)).width)));
   const labelWidth = state.labelAreaMode === 'fixed' ? Math.max(40, Math.min(width - 40, state.labelAreaWidth)) : autoWidth;
   const chartAvailable = options.scales.wrapping === 'off' && Object.keys(model.normalized.charts).length > 0;

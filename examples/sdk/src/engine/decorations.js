@@ -7,6 +7,7 @@
  * Every helper draws into a CanvasRenderingContext2D-like `g` (the screen,
  * an offscreen canvas, or the SVG/PDF recorders in exporters.js).
  */
+import { cssFontFamily } from './fontFamily.js';
 
 export const COMPASS = { n: [0, -1], ne: [0.7071, -0.7071], e: [1, 0], se: [0.7071, 0.7071], s: [0, 1], sw: [-0.7071, 0.7071], w: [-1, 0], nw: [-0.7071, -0.7071] };
 const DONUT_COLOURS = ['#e53935', '#1e88e5', '#43a047', '#fdd835', '#8e24aa', '#fb8c00', '#00acc1', '#6d4c41'];
@@ -64,7 +65,7 @@ export function truncate(text, opts) {
   return `${text.slice(0, Math.max(0, max - 3))}...`;
 }
 
-const font = (px, family, bold) => `${bold ? 'bold ' : ''}${px}px ${family || 'sans-serif'}`;
+const font = (px, family, bold) => `${bold ? 'bold ' : ''}${px}px ${cssFontFamily(family)}`;
 
 /* ---------------------------------------------------------------------------
  * Donut
@@ -157,7 +158,7 @@ export function drawGlyph(g, glyph, x, y, gr, env) {
   } else if (glyph.fi && glyph.fi.t != null) {
     const ch = typeof glyph.fi.t === 'number' ? String.fromCodePoint(glyph.fi.t) : String(glyph.fi.t);
     g.fillStyle = glyph.fi.c || (iconOnly ? '#000' : '#fff');
-    g.font = `${inner * 1.6}px ${glyph.fi.ff || env.iconFontFamily || 'sans-serif'}`;
+    g.font = `${inner * 1.6}px ${cssFontFamily(glyph.fi.ff || env.iconFontFamily)}`;
     g.textAlign = 'center';
     g.textBaseline = 'middle';
     g.fillText(ch, x, y);
@@ -268,7 +269,7 @@ function measureLabel(g, label, node, scale, env, nodeW, nodeH) {
     lines = labelLines(g, text, maxW != null ? maxW * scale : label.minWidth && label.minWidth !== 'stretch' ? label.minWidth * scale : null, label.textWrap);
   }
   if (!label.fi) g.font = font(fs, family, bold);
-  else g.font = `${fs}px ${label.fi.ff || env.iconFontFamily || 'sans-serif'}`;
+  else g.font = `${fs}px ${cssFontFamily(label.fi.ff || env.iconFontFamily)}`;
   const textW = Math.max(...lines.map(l => g.measureText(l).width), 0);
   const textH = label.fi ? fs : lines.length * fs * 1.2;
   let w = textW + (pad.left + pad.right) * scale;
@@ -301,7 +302,7 @@ function measureLabel(g, label, node, scale, env, nodeW, nodeH) {
     g.textBaseline = 'middle';
     g.textAlign = align === 'left' ? 'left' : align === 'right' ? 'right' : 'center';
     const tx = align === 'left' ? innerX : align === 'right' ? innerX + innerW : innerX + innerW / 2;
-    if (label.fi) g.font = `${fs}px ${label.fi.ff || env.iconFontFamily || 'sans-serif'}`;
+    if (label.fi) g.font = `${fs}px ${cssFontFamily(label.fi.ff || env.iconFontFamily)}`;
     else g.font = font(fs, family, bold);
     const lineH = label.fi ? fs : fs * 1.2;
     lines.forEach((line, i) => g.fillText(line, tx, ty + (i + 0.5) * lineH));

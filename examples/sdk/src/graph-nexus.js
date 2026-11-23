@@ -20,6 +20,7 @@
  *   - Combo links are drawn by rerouting child links; there are no combo-link objects.
  */
 
+import { cssFontFamily } from './engine/fontFamily.js';
 import { createGraphEngine } from './engine/graphEngine.js';
 import { wasmActive } from './engine/wasmCore.js';
 import { DEFAULT_NODE_RADIUS, DEFAULT_BORDER_WIDTH, runLayout, arrangeNodes } from './engine/layouts.js';
@@ -175,7 +176,7 @@ function fitLabel(g, text, r, family) {
 /** The line split fitLabel uses, with its widest line in em units (widest 0: nothing to draw). */
 function searchLabelFit(g, text, family) {
   const words = text.split(/\s+/).filter(Boolean);
-  g.font = `100px ${family}`;
+  g.font = `100px ${cssFontFamily(family)}`;
   const width = line => g.measureText(line).width / 100; // em units
   // Scored at r = 1: the winner is the same for every r.
   const r = 1;
@@ -1248,7 +1249,7 @@ function createChart(container, initialOptions, onDestroy) {
       const ux = along ? mid.ux : 1;
       const uy = along ? mid.uy : 0;
       let off = label ? 0 : -((glyphs.length - 1) * gr * 1.1);
-      if (label) { g.font = `${(link.fs || 14) * s}px ${link.ff || env.fontFamily}`; off += g.measureText(label).width / 2 + gr + 4; }
+      if (label) { g.font = `${(link.fs || 14) * s}px ${cssFontFamily(link.ff || env.fontFamily)}`; off += g.measureText(label).width / 2 + gr + 4; }
       glyphs.forEach(gl => { drawGlyph(g, gl, mid.x + ux * off, mid.y + uy * off, gr * (gl.e || 1), env); off += gr * 2.2; });
     }
     [['t1', 0.18], ['t2', 0.82]].forEach(([key, frac]) => {
@@ -1382,7 +1383,7 @@ function createChart(container, initialOptions, onDestroy) {
       const ch = typeof node.fi.t === 'number' ? String.fromCodePoint(node.fi.t) : String(node.fi.t);
       const al = align(node.fi.t);
       g.fillStyle = node.fi.c || '#000';
-      g.font = `${Math.min(hw, hh) * 1.1 * (al.e ?? 1)}px ${node.fi.ff || chartOptions.iconFontFamily || 'sans-serif'}`;
+      g.font = `${Math.min(hw, hh) * 1.1 * (al.e ?? 1)}px ${cssFontFamily(node.fi.ff || chartOptions.iconFontFamily)}`;
       g.textAlign = 'center';
       g.textBaseline = 'middle';
       g.fillText(ch, p.x + ((al.dx || 0) / 100) * hw * 2, p.y + ((al.dy || 0) / 100) * hh * 2);
@@ -1439,7 +1440,7 @@ function createChart(container, initialOptions, onDestroy) {
       let fontPx;
       if (node.fs) { lines = label.split(/\r\n|\r|\n/); fontPx = node.fs * s; } else ({ lines, fontPx } = fitLabel(g, label, Math.min(hw, hh), family));
       if (fontPx < MIN_LABEL_PX) return;
-      g.font = `${node.fb ? 'bold ' : ''}${fontPx}px ${family}`;
+      g.font = `${node.fb ? 'bold ' : ''}${fontPx}px ${cssFontFamily(family)}`;
       if (node.fbc) {
         const wMax = Math.max(...lines.map(l => g.measureText(l).width));
         const hTot = lines.length * LABEL_LINE_ADVANCE * fontPx;

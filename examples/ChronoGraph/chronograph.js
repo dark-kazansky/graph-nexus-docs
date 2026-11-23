@@ -11,6 +11,9 @@ const [timelineData, chartData, labels] = await Promise.all([
 // The dataset has 10 self-calls (same id twice); the timeline rejects duplicate entityIds.
 Object.values(timelineData.events).forEach((ev) => { ev.entityIds = [...new Set(ev.entityIds)]; });
 
+// The phone icon font is declared in CSS but unused by the page, so load it before the first draw.
+await document.fonts.load('900 16px "Font Awesome 5 Free"');
+
 const timeline = createTimeline('kg');
 timeline.set(timelineData);
 timeline.fit();

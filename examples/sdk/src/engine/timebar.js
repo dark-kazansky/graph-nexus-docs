@@ -7,6 +7,7 @@
  * minScale and heightChange.
  */
 
+import { cssFontFamily } from './fontFamily.js';
 import { createEmitter } from './events.js';
 
 const SEC = 1000;
@@ -279,7 +280,7 @@ export function createTimebar(container, initialOptions = {}) {
 
     // Axis.
     ctx.fillStyle = options.fontColour;
-    ctx.font = `${options.fontSize}px ${options.fontFamily}`;
+    ctx.font = `${options.fontSize}px ${cssFontFamily(options.fontFamily)}`;
     ctx.textBaseline = 'middle';
     ctx.textAlign = 'left';
     const u = unit();
